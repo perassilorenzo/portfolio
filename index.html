@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>Lorenzo Perassi</title>
+</head>
+<body>
+
+    <div class="lp-music-sticky">
+        <button id="musicToggle" class="lp-music-btn" onclick="startMusic()">▶</button>
+
+        <div class="lp-music-label">
+            <p>Convergence</p>
+        </div>
+
+        <audio id="bgMusic" loop>
+            <source src="assets/Convergence.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top lp-navbar px-4">
+        <a class="navbar-brand lp-brand" href="#hero">lorenzo perassi</a>
+        <button class="navbar-toggler lp-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navLinks">
+            <ul class="navbar-nav gap-4 align-items-lg-center">
+                <li class="nav-item"><a class="nav-link lp-nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link lp-nav-link" href="#what-i-do">What I do</a></li>
+                <li class="nav-item"><a class="nav-link lp-nav-link" href="https://linktr.ee/lollo_pera" target="_blank">Socials</a></li>
+                <li class="nav-item d-none d-lg-block lp-nav-divider">│</li>
+                <li class="nav-item"><a class="nav-link lp-nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="lp-hero d-flex align-items-center" id="hero">
+        <div class="lp-hero-content pe-4">
+            <h1 class="lp-hero-title">lorenzo<br>perassi</h1>
+            <div class="marquee">
+                <div class="marquee-track">
+                    content creation • fashion • coding • music • lifestyle • technology •
+                    content creation • fashion • coding • music • lifestyle • technology •
+                </div>
+            </div>
+            <p class="mt-3 lp-text-secondary">Documento la mia vita, le mie passioni, e i miei progetti attraverso contenuti, moda e tecnologia.</p>
+            <div class="d-flex flex-wrap gap-3 mt-3">
+                <button class="lp-btn"><a href="#projects" class="nav-link">Guarda i progetti</a></button>
+                <button class="lp-btn"><a href="#contact" class="nav-link">Contattami</a></button>
+            </div>
+            <hr class="lp-hr mt-4">
+            <div class="lp-text-secondary lp-hero-footer">
+                <p class="small">190+ contenuti pubblicati <br>200k+ visualizzazioni mensili totali <br>Collaborazioni con brand locali, magazine musicali e progetti digitali.</p>
+                <div class="d-flex justify-content-between flex-wrap gap-2 mt-2">
+                    <a href="https://www.instagram.com/diario_di_uno_09" class="lp-social-link" target="_blank">Instagram</a>
+                    <a href="https://www.tiktok.com/@diario_di_uno_09" class="lp-social-link" target="_blank">TikTok</a>
+                    <a href="https://www.youtube.com/@diario_di_uno_09" class="lp-social-link" target="_blank">Youtube</a>
+                    <a href="https://linktr.ee/lollo_pera" class="lp-social-link" target="_blank">Linktree</a>
+                </div>
+            </div>
+        </div>
+        <div class="lp-hero-image ms-auto">
+            <img src="assets/intro-image.png" alt="Lorenzo Perassi" class="lp-hero-img">
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about d-flex align-items-center mt-5 pt-5" id="about">
+        <div class="">
+            <img src="assets/about-image.png" alt="Lorenzo Perassi foto" class="lp-about-img">
+        </div>
+        <div class="ps-5 ms-5 lp-about-content">
+            <h2 class="lp-big-title">about</h2>
+            <h3 class="lp-text-secondary lp-subtitle-offset">Chi sono</h3>
+            <p class="mt-3 ms-2 lp-text-secondary lp-content-about">Sono Lorenzo Perassi, creator digitale e studente di Informatica. <br><br>Negli ultimi anni ho iniziato a costruire il mio percorso online sperimentando tra content creation, fashion, videomaking, coding e altri macro argomenti, scegliendo di raccontare sui social diversi aspetti della mia vita e delle mie passioni. <br><br>Utilizzo le piattaforme digitali come uno spazio dove condividere progetti, esperimenti creativi, routine, outfit, lavoro pratico e crescita personale, oltre che per creare connessioni, farmi conoscere e portarmi opportunità. <br><br>Parallelamente collaboro con brand locali, pagine creative e magazine musicali, lavorando su contenuti, comunicazioni online e progetti creativi. <br><br>Attualmente sto iniziando a lavorare in un'agenzia digitale, collaborando alla gestione e creazione di contenuti per profili personali e aziende.</p>
+        </div>
+    </section>
+
+    <br><br><br>
+
+    <!-- cosa faccio -->
+    <section class="lp-section" id="what-i-do">
+        <div class="ms-4 ps-2 mb-4">
+            <h2 class="lp-big-title">WHAT I DO</h2>
+            <h3 class="lp-text-secondary lp-subtitle-offset">Cosa faccio</h3>
+        </div>
+        <div class="d-flex justify-content-between flex-wrap gap-3 px-4">
+
+            <div class="lp-activity-card">
+                <div class="lp-activity-info">
+                    <h4 class="text-center fs-5 fw-bold">01 - Content Creation</h4>
+                    <p class="lp-text-secondary">Creo contenuti per piattaforme social combinando storytelling, progetti personali, lavoro pratico come il cucito, routine e sperimentazione creativa.</p>
+                </div>
+                <video src="assets/2026_04_26_15_52_13_IMG_8322.MOV" autoplay muted loop playsinline class="lp-activity-video"></video>
+                <div class="lp-activity-tags">
+                    <div class="marquee">
+                        <div class="marquee-track">
+                            Instagram • TikTok • Youtube • Edits • Capcut • Canva •
+                            Instagram • TikTok • Youtube • Edits • Capcut • Canva •
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lp-activity-card">
+                <div class="lp-activity-info">
+                    <h4 class="text-center fs-5 fw-bold">02 - Fashion & Custom Projects</h4>
+                    <p class="lp-text-secondary">Lavoro su customizzazioni, design e sperimentazione nel mondo fashion. <br><br>Attualmente sto collaborando al design, alla prototipazione e alla creazione delle camicie per gli investitori di CRYBU S.R.L.</p>
+                </div>
+                <video src="assets/2026_05_06_16_21_36_IMG_8478.MOV" autoplay muted loop playsinline class="lp-activity-video"></video>
+                <div class="lp-activity-tags">
+                    <div class="marquee">
+                        <div class="marquee-track">
+                            Fashion • Custom Design • Styling • Sewing • Prototipazione • Outfits •
+                            Fashion • Custom Design • Styling • Sewing • Prototipazione • Outfits •
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lp-activity-card">
+                <div class="lp-activity-info">
+                    <h4 class="text-center fs-5 fw-bold">03 - Informatica & Tecnologia</h4>
+                    <p class="lp-text-secondary">L'informatica è una delle mie passioni principali. La studio sia a scuola che da autodidatta, approfondendo sviluppo web, programmazione, AI, cybersecurity e tecnologia in generale. <br><br>Nel tempo libero porto avanti progetti personali, sperimento nuove tecnologie e continuo a formarmi online anche attraverso percorsi come OliCyber.</p>
+                </div>
+                <video src="assets/2026_04_25_14_54_30_IMG_8268.MOV" autoplay muted loop playsinline class="lp-activity-video"></video>
+                <div class="lp-activity-tags">
+                    <div class="marquee">
+                        <div class="marquee-track">
+                            HTML • CSS • JavaScript • Python • Git • Cybersecurity • n8n • C • C# • Bash •
+                            HTML • CSS • JavaScript • Python • Git • Cybersecurity • n8n • C • C# • Bash •
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="lp-hr mx-3">
+
+    <!-- DIGITAL PRESENCE -->
+    <section class="lp-section">
+        <div class="ms-4 ps-2 mb-2">
+            <h2 class="lp-big-title">DIGITAL PRESENCE</h2>
+            <h3 class="lp-text-secondary lp-subtitle-offset">Presenza Online</h3>
+        </div>
+        <p class="pt-3 lp-text-secondary container d-flex justify-content-center">Utilizzo le piattaforme social come un diario per condividere quello che faccio quotidianamente tra lifestyle, moda, tecnologia, musica, progetti personali e sperimentazione digitale.</p>
+
+        <div class="container-exentended">
+
+            <div class="d-flex justify-content-center lp-presence-videos">
+                
+                <div class="lp-presence-video">
+                    <video src="assets/video01.mp4" autoplay muted loop playsinline class=""></video>
+                    <p>Outfits</p>
+                </div>
+                
+                <div class="lp-presence-video">
+                    <video src="assets/video02.mp4" autoplay muted loop playsinline class=""></video>
+                    <p>Rubrica Music Mood</p>
+                </div>
+
+                <div class="lp-presence-video">
+                    <video src="assets/video03.mp4" autoplay muted loop playsinline class="lp-mid-video"></video>
+                    <p>Routine</p>
+                </div>
+
+                <div class="lp-presence-video">
+                    <video src="assets/video04.mp4" autoplay muted loop playsinline class="lp-horizontal-video"></video>
+                    <p>Aesthetic Short Films</p>
+                </div>
+
+                <div class="lp-presence-video">
+                    <video src="assets/video05.mp4" autoplay muted loop playsinline class=""></video>
+                    <p>Sewing</p>
+                </div>            
+            </div>
+            <div class="d-flex justify-content-center lp-presence-videos">
+                
+                <div class="lp-presence-video">
+                    <video src="assets/video06.mp4" autoplay muted loop playsinline class="lp-horizontal-video"></video>
+                    <p>Personal Reflections</p>
+                </div>
+
+                <div class="lp-presence-video">
+                    <video src="assets/video07.mp4" autoplay muted loop playsinline class=""></video>
+                    <p>Drum & Music</p>
+                </div>
+
+                <div class="lp-presence-video">
+                    <video src="assets/video08.mp4" autoplay muted loop playsinline class=""></video>
+                    <p>Fashion Brand Collabs</p>
+                </div>
+
+                <div class="lp-presence-video">
+                    <video src="assets/video09.mp4" autoplay muted loop playsinline class=""></video>
+                    <p>Sports</p>
+                </div>
+                
+                <div class="lp-presence-video">
+                    <video src="assets/video10.mp4" autoplay muted loop playsinline class=""></video>
+                    <p>Study & Tech</p>
+                </div>            
+
+            </div>
+
+            
+    </div>
+        
+
+        <div class="d-flex justify-content-between px-5 mt-3 flex-wrap gap-3">
+            <p class="lp-text-secondary small">Instagram<br>190+ contenuti pubblicati</p>
+            <p class="lp-text-secondary small">TikTok<br>Video fino a 200k visualizzazioni</p>
+        </div>
+    </section>
+
+    <hr class="lp-hr mx-3">
+
+    <!-- PROJECTS -->
+    <section class="lp-section" id="projects">
+        <div class="ms-5 ps-3 mb-2">
+            <h2 class="lp-big-title">PROJECTS</h2>
+            <h3 class="lp-text-secondary lp-subtitle-offset">Progetti Selezionati</h3>
+        </div>
+
+        <div class="d-flex flex-wrap justify-content-between px-3">
+            <div class="lp-project-card d-flex align-items-center">
+                <img src="assets/548891602_17878643229400276_4335531291404571750_n.jpg" alt="Diario di uno 09" class="lp-project-img rounded-circle">
+                <div class="ps-2">
+                    <h4 class="fs-5 fw-bold mb-1">Diario di uno 09</h4>
+                    <p class="lp-text-secondary small mb-2">Progetto personale di content creation dove documento idee, crescita personale, passioni, creatività e sperimentazione digitale</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="lp-badge">Content Creation</span>
+                        <span class="lp-badge">Storytelling</span>
+                        <span class="lp-badge">Creative Identity</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lp-project-card d-flex align-items-center">
+                <img src="assets/logo-01.png" alt="CRYBU" class="lp-project-img rounded-circle bg-white">
+                <div class="ps-2">
+                    <h4 class="fs-5 fw-bold mb-1">CRYBU</h4>
+                    <p class="lp-text-secondary small mb-2">Collaborazione creativa di fashion design & sartoria</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="lp-badge">Fashion Design</span>
+                        <span class="lp-badge">Prototipazione</span>
+                        <span class="lp-badge">Produzione Sartoriale</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between px-3">
+            <div class="lp-project-card d-flex align-items-center">
+                <img src="assets/project-fashion-image.jpeg" alt="" class="lp-project-img rounded-circle bg-white">
+                <div class="ps-2">
+                    <h4 class="fs-5 fw-bold mb-1">Fashion Customization</h4>
+                    <p class="lp-text-secondary small mb-2">Customizzazione e creazione di capi attraverso sperimentazione estetica, design e lavoro pratico.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="lp-badge">Fashion</span>
+                        <span class="lp-badge">Handmade | Custom</span>
+                        <span class="lp-badge">Sewing</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lp-project-card d-flex align-items-center">
+                <img src="" alt="" class="lp-project-img rounded-circle">
+                <div class="ps-2">
+                    <h4 class="fs-5 fw-bold mb-1">Collaborations</h4>
+                    <p class="lp-text-secondary small mb-2">Collaborazioni con brand locali, piccoli marchi di abbigliamento, magazine musicali e creator digitali.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="lp-badge">Content Creation</span>
+                        <span class="lp-badge">Fashion Brand</span>
+                        <span class="lp-badge">Magazine Musicali</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between px-3">
+
+            <div class="lp-project-card d-flex align-items-center">
+                <img src="assets/project-omnia-image.jpg" alt="" class="lp-project-img rounded-circle bg-white">
+                <div class="ps-2">
+                    <h4 class="fs-5 fw-bold mb-1">Agency</h4>
+                    <p class="lp-text-secondary small mb-2">Esperienza part-time in un’agenzia digitale, lavorando su alcuni progetti settimanali principalmente legati alla creazione di contenuti e gestione della presenza online.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="lp-badge">Digital Marketing</span>
+                        <span class="lp-badge">Social Media</span>
+                        <span class="lp-badge">Video Editing</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lp-project-card d-flex align-items-center">
+                <img src="assets/project-saluzzo-image.avif" alt="" class="lp-project-img rounded-circle bg-white">
+                <div class="ps-2">
+                    <h4 class="fs-5 fw-bold mb-1">Affitti brevi a Saluzzo</h4>
+                    <p class="lp-text-secondary small mb-2">Progetto di branding e sviluppo web di appartamento nel centro storico di Saluzzo. Studio dell’identità del brand, posizionamento SEO e progettazione di una landing page orientata a conversione e ospitalità professionale.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="lp-badge">Brand Identity</span>
+                        <span class="lp-badge">Web Design</span>
+                        <span class="lp-badge">SEO Strategy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+    <hr class="lp-hr mx-3">
+
+    <div class="d-flex justify-content-around flex-wrap gap-4 px-4 lp-section">
+
+        <!-- COLLABORATIONS -->
+        <div class="lp-card lp-collab-card">
+            <div class="mb-4">
+                <h2 class="lp-big-title">COLLABORATIONS</h2>
+                <h3 class="lp-text-secondary lp-subtitle-offset">Collaborazioni</h3>
+            </div>
+            <div class="d-flex align-items-center gap-4 my-4">
+                <img src="assets/317062969_606791741201597_6059850371880419656_n (1).jpg" alt="" class="lp-collab-img rounded-circle">
+                <div>
+                    <h3>Aleyesure</h3>
+                    <p class="lp-text-secondary small">All'interno dei miei video sponsorizzo capi di abbigliamento di Aleyesure, brand locale che porta avanti lo slogan "Support local business".</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-4 my-4">
+                <img src="assets/453437125_410088654834177_1870542348851143564_n.jpg" alt="" class="lp-collab-img rounded-circle">
+                <div>
+                    <h3>StageStreetwear</h3>
+                    <p class="lp-text-secondary small">Creo contenuti di styling all'interno del negozio StageStreetware che riporta anch'esso il Made in Italy utilizzando il massimismo come base fashion</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-4 my-4">
+                <img src="assets/515840484_17844040752526701_7246610692396126231_n.jpg" alt="" class="lp-collab-img rounded-circle">
+                <div>
+                    <h3>NewGenMusic4</h3>
+                    <p class="lp-text-secondary small">Portiamo avanti una rubrica che mette insieme la musica e l'abbigliamento. Questa pagina è un magazine no profit che ha come obiettivo sponsorizzare piccoli artisti della new gen.</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-4 my-4">
+                <img src="assets/702991291_17878014891604179_8450394377283182033_n.jpg" alt="" class="lp-collab-img rounded-circle">
+                <div>
+                    <h3>RAFX</h3>
+                    <p class="lp-text-secondary small">Collaboro come volto di questa nuova pagina che ha come obiettivo sponsorizzare musica di piccoli giovani artisti</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOOLS -->
+        <div class="lp-card lp-tools-card">
+
+            <div class="mb-4">
+                <h2 class="lp-big-title">TOOLS</h2>
+                <h3 class="lp-text-secondary lp-subtitle-offset">Strumenti & Competenze</h3>
+            </div>
+
+            <table class="table table-dark table-borderless align-middle">
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Level</th>
+                        <th>Context</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML | CSS</td>
+                        <td>Intermediate</td>
+                        <td>School & Self-taught</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript | C | C#</td>
+                        <td>Beginner</td>
+                        <td>School</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Beginner</td>
+                        <td>Self-taught</td>
+                    </tr>
+                    <tr>
+                        <td>Git | Bash</td>
+                        <td>Intermediate</td>
+                        <td>School & Self-taugh</td>
+                    </tr>
+                    <tr>
+                        <td>VSCode</td>
+                        <td>Advanced</td>
+                        <td>School + Self-taught</td>
+                    </tr>
+                    <tr>
+                        <td>Visual Studio</td>
+                        <td>Beginner</td>
+                        <td>School</td>
+                    </tr>
+                    <tr>
+                        <td>CapCut | Filmora | Edits</td>
+                        <td>Intermediate</td>
+                        <td>Work & Self-taught</td>
+                    </tr>
+                    <tr>
+                        <td>Canva</td>
+                        <td>Advanced</td>
+                        <td>Work & Self-taught</td>
+                    </tr>
+                    <tr>
+                        <td>Lightroom</td>
+                        <td>Beginner</td>
+                        <td>Work</td>
+                    </tr>
+                    <tr>
+                        <td>n8n</td>
+                        <td>Beginner</td>
+                        <td>Self-taught</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <hr class="lp-hr mx-3">
+
+    <div id="contact"></div>
+
+    <section class="pt-5 mt-5 d-flex">
+
+        
+        <div class="contact-form-wrapper">
+            
+            <h2 class="lp-big-title">CONTACT</h2>
+            <h3 class="lp-text-secondary ps-4 lp-text-sbutitle-offset">Restiamo in contatto</h3>
+            
+            <p class="lp-text-secondary mt-3 mb-4 ps-4">Scrivimi per collaborazioni, idee o progetti.</p>
+            
+            <form class="lp-contact-form">
+                
+                <input type="text" name="nome" class="lp-input" placeholder="Il tuo nome" required>
+                <input type="email" name="email" class="lp-input" placeholder="La tua email" required>
+                <input type="text" name="oggetto" class="lp-input" placeholder="Oggetto">
+                <textarea name="messaggio" class="lp-textarea" placeholder="Il tuo messaggio..." rows="6" required></textarea>
+
+                <button type="submit" class="lp-btn mt-3">Invia messaggio</button>
+
+            </form>
+            
+        </div>
+        <img src="assets/contact-image.png" alt="Contattami" class="contact-image">
+
+    </section>
+    <hr class="lp-hr mx-3">
+
+    <!-- booking -->
+
+    <section class="lp-section px-4" id="booking">
+
+        <div class="mb-4 ms-5">
+            <h2 class="lp-big-title">BOOKING</h2>
+            <h3 class="lp-text-secondary lp-subtitle-offset">Agenda personale</h3>
+            <p class="lp-text-secondary text-center">Clicca su uno slot per creare o modificare un appuntamento!</p>
+        </div>
+
+        <div class="m-5 mt-2" id="calendar"></div>
+
+    </section>
+
+    <!-- modale -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title">Evento</h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <input id="title" class="form-control mb-2" placeholder="Titolo evento">
+                    <textarea id="desc" class="form-control" placeholder="Descrizione"></textarea>
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Annulla</button>
+                    <button type="button" class="btn btn-primary" id="save">Salva</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- footer -->
+
+    <footer class="lp-footer">
+
+        <div class="lp-footer-container">
+
+            <div class="lp-footer-col">
+                <h2 class="lp-footer-title">LORENZO PERASSI</h2>
+                <p class="lp-footer-text">Content creator, fashion, tech & self-growth</p>
+            </div>
+
+            <div class="lp-footer-col">
+                <h3 class="lp-footer-subtitle">Pages</h3>
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="lp-footer-col">
+                <h3 class="lp-footer-subtitle">Social</h3>
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+                <a href="#">YouTube</a>
+                <a href="#">Linktree</a>
+            </div>
+
+            <div class="lp-footer-col">
+                <h3 class="lp-footer-subtitle">Contact</h3>
+                <p class="lp-footer-text">Dispobile per collaborazioni</p>
+            </div>
+
+        </div>
+
+        <div class="lp-footer-bottom">
+            <p>&copy; 2026 Lorenzo Perassi — Tutti i diritti riservati</p>
+        </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
