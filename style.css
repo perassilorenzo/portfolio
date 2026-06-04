@@ -14,13 +14,51 @@
 }
 
 * {
-    scrollbar-width: none; 
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    overflow-x: hidden;
 }
 
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-family: Arial, Helvetica, sans-serif;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button,
+input,
+textarea,
+select,
+fieldset {
+    border: none;
+    background: none;
+    outline: none;
 }
 
 .lp-text-secondary {
