@@ -23,42 +23,151 @@
     box-sizing: inherit;
 }
 
+/* Ensure no element forces horizontal overflow in flex children */
+.lp-hero-content,
+.lp-activity-card,
+.lp-project-card,
+.lp-collab-card,
+.lp-tools-card,
+.contact-form-wrapper,
+.lp-presence-videos,
+.lp-presence-video {
+    min-width: 0;
+}
+
+/* Global safe text rules */
+p,
+h1,h2,h3,h4,h5,h6,
+a,span,li,label,button {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+/* make sure html/body enforce box-sizing and prevent horizontal scroll */
+html, body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
 html,
 body {
     margin: 0;
     padding: 0;
     min-height: 100%;
     overflow-x: hidden;
+    overscroll-behavior-x: none;
+}
+
+/* =========================
+   GLOBAL MOBILE FIX
+========================= */
+
+html, body {
+    overflow-x: hidden !important;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* =========================
+   FIX TESTO FUORI SCHERMO
+========================= */
+
+p, h1, h2, h3, h4, h5, span {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* =========================
+   FIX CONTENITORI
+========================= */
+
+div, section {
+    max-width: 100%;
+}
+
+/* =========================
+   IMMAGINI E VIDEO SICURI
+========================= */
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================
+   FIX FLEX CHE ROMPONO MOBILE
+========================= */
+
+.d-flex {
+    flex-wrap: wrap;
+}
+
+/* =========================
+   MOBILE HARD RESET
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden !important;
+    }
+
+    .lp-hero,
+    .about,
+    .lp-section {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .lp-activity-card,
+    .lp-project-card,
+    .lp-card {
+        width: 100% !important;
+    }
+}
+
+/* Global safety: prevent horizontal overflow and ensure text wraps */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Defensive rules for text and form elements to never escape viewport */
+p,
+h1,h2,h3,h4,h5,h6,
+a,span,li,label,button,
+input,textarea {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    box-sizing: border-box;
+}
+
+/* Allow flex children to shrink and avoid overflow in flex containers */
+.d-flex > *, .row > * {
+    min-width: 0;
+}
+
+/* Ensure images and media don't force overflow */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-family: Arial, Helvetica, sans-serif;
-}
-
-img,
-video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-button,
-input,
-textarea,
-select {
-    font: inherit;
-}
-
-button,
-input,
-textarea,
-select,
-fieldset {
-    border: none;
-    background: none;
-    outline: none;
 }
 
 .lp-text-secondary {
@@ -83,6 +192,55 @@ fieldset {
     backdrop-filter: blur(12px);
     border: 1px solid var(--border-color);
     border-radius: 20px;
+}
+
+.lp-navbar,
+.container-exentended,
+.lp-section,
+.lp-hero,
+.about,
+.lp-card,
+.lp-activity-card,
+.lp-project-card,
+.contact-form-wrapper {
+    max-width: 100%;
+}
+
+.lp-navbar .navbar-collapse {
+    overflow: hidden;
+}
+
+.lp-navbar .navbar-toggler {
+    border-color: var(--border-color);
+}
+
+.container-exentended {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button,
+.lp-nav-link,
+.lp-text-secondary {
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .lp-brand {
@@ -274,6 +432,63 @@ fieldset {
     width: calc(50% - 16px);
 }
 
+/* DIGITAL PRESENCE: assicurati che i video siano 16:9 e stiano su una sola riga */
+.lp-presence-videos {
+    display: flex;
+    gap: 16px;
+    flex-wrap: nowrap; /* mantiene i video sulla stessa riga */
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    scroll-behavior: smooth;
+    padding: 12px 8px;
+    scroll-snap-type: x mandatory;
+    cursor: grab;
+}
+
+.lp-presence-videos.active-drag {
+    cursor: grabbing;
+}
+
+.lp-presence-videos::-webkit-scrollbar {
+    height: 8px;
+}
+
+.lp-presence-videos::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.lp-presence-videos::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+}
+
+.lp-presence-video {
+    flex: 0 0 auto;
+    width: 220px; /* larghezza base per layout portrait */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    scroll-snap-align: start;
+}
+
+.lp-presence-video video {
+    width: 100%;
+    aspect-ratio: 9 / 16; /* rapporto portrait 9:16 richiesto */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #000;
+}
+
+@media (max-width: 768px) {
+    .lp-presence-video {
+        width: 180px;
+    }
+}
+
 
 /* projects */
 
@@ -341,40 +556,45 @@ fieldset {
 
 
 
+/* booking */
 
-.lp-presence-video{
-    width: 20%;
-    margin: 0 10px;
-    border-radius: 20px;
-    background: #000;
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
 }
 
-.lp-presence-video > video{
-    width: 100%;
-    border-radius: 20px 20px 0 0;
+.day {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 12px;
 }
 
-.lp-presence-videos{
-    padding: 20px 100px;
-}
-
-.lp-presence-video > p{
+.day h5 {
     text-align: center;
-    padding-top: 5px;
-    font-size: larger;
-    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--text-secondary);
 }
 
-.lp-horizontal-video{
-    margin-top: 65%;
-    border-radius: 0 !important;
-    padding-bottom: 57%;
+.slot {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    margin: 6px 0;
+    border-radius: 8px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+    color: var(--text-secondary);
 }
 
-.lp-mid-video{
-    margin-top: 30%;
-    border-radius: 0 !important;
-    padding-bottom: 24%;
+.slot:hover {
+    transform: scale(1.03);
+    border-color: var(--accent-silver);
+    color: var(--text-primary);
 }
 
 .table td, .table th {
@@ -565,106 +785,589 @@ fieldset {
     letter-spacing: 1px;
 }
 
-/* media --> responsive */
-/* tablet */
+/* modern responsive overrides */
 
-/* @media (max-width: 991px) {
-    .contact-split{
-        flex-direction: column;
+@media (max-width: 1024px) {
+    .lp-section {
+        padding: 0 24px;
     }
-    
-    .contact-image{
-        height: 300px;
+
+    /* Mobile/Tablet structural fixes (<=1024px) */
+    /* Prevent any horizontal overflow and ensure single-column flow */
+    *{
+        max-width: 100%;
+        box-sizing: border-box;
     }
-    
-    .contact-form-wrapper{
-        padding: 32px 24px;
+
+    /* Turn main flex layouts into vertical stacks */
+    .d-flex,
+    .d-flex.justify-content-between,
+    .d-flex.align-items-center,
+    .row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 16px;
     }
-    
+
+    .d-flex > *, .row > * {
+        width: 100% !important;
+        min-width: 0;
+    }
+
+    /* HERO: image above text, centered */
+    .lp-hero {
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding-top: 84px;
+        gap: 24px;
+    }
+
+    .lp-hero-image,
+    .lp-hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 12px !important;
+    }
+
+    /* Ensure image appears before text in DOM order on mobile/tablet */
+    .lp-hero-image {
+        order: -1 !important;
+    }
+
+    .lp-hero-content {
+        order: 0 !important;
+    }
+
+    .lp-hero-img {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 18px !important;
+        display: block;
+    }
+
+    /* Social buttons: 4 inline without overflow on mobile/tablet */
+    .lp-hero-footer .d-flex {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .lp-hero-footer .lp-social-link {
+        flex: 0 0 calc((100% - 36px) / 4) !important;
+        max-width: calc((100% - 36px) / 4) !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        padding: 8px 6px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* WHAT I DO card text spacing: only vertical padding/margin on responsive */
+    .lp-activity-info {
+        position: static !important;
+        min-height: auto !important;
+        height: auto !important;
+        padding: 18px 0 !important;
+        margin: 0 !important;
+    }
+
+    .lp-activity-info > .lp-text-secondary {
+        position: static !important;
+        top: auto !important;
+        transform: none !important;
+        padding: 0 20px 0 20px !important;
+        margin: 0 0 16px 0 !important;
+    }
+
+    .lp-activity-tags {
+        margin-top: 16px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .lp-activity-card {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+
+    /* MUSIC WIDGET: small floating bottom-right */
+    .lp-music-sticky {
+        position: fixed !important;
+        bottom: 12px !important;
+        right: 12px !important;
+        top: auto !important;
+        transform: none !important;
+        padding: 8px !important;
+        border-radius: 12px !important;
+        z-index: 1200 !important;
+    }
+
+    .lp-music-btn {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 16px !important;
+    }
+
+    .lp-music-label p { display: none !important; }
+
+    /* DIGITAL PRESENCE: single-row horizontal scroller on mobile/tablet */
+    .lp-presence-videos {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scroll-behavior: smooth !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 16px !important;
+        padding-inline: 12px !important;
+        touch-action: pan-x !important;
+        align-items: flex-start !important;
+    }
+
+    .lp-presence-video {
+        flex: 0 0 min(280px, 85%) !important;
+        width: min(280px, 85%) !important;
+        max-width: min(280px, 85%) !important;
+        min-width: 220px !important;
+        scroll-snap-align: start !important;
+        margin: 0 !important;
+    }
+
+    .lp-presence-video > video {
+        width: 100% !important;
+        aspect-ratio: 16 / 9 !important;
+        object-fit: cover !important;
+        height: auto !important;
+        display: block !important;
+    }
+
     .lp-navbar {
         width: 92%;
         top: 12px;
+        padding: 14px 18px;
     }
-    
-    #navLinks {
+
+    .lp-navbar .navbar-toggler {
+        z-index: 1100;
+    }
+
+    .navbar-collapse.show {
         background: var(--bg-secondary);
-        border-radius: 12px;
+        border-radius: 16px;
         padding: 16px 20px;
-        margin-top: 12px;
-        border: 1px solid var(--border-color);
+        box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+        width: 100%;
     }
-    
+
+    #navLinks {
+        background: transparent;
+        border: none;
+        margin-top: 12px;
+    }
+
+    #navLinks .navbar-nav {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+
     .lp-hero {
         flex-direction: column-reverse;
         align-items: center;
         padding-top: 100px;
         text-align: center;
+        gap: 32px;
     }
-    
+
+    .lp-hero-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .lp-hero-content {
         width: 100%;
-        padding: 32px 24px;
-        margin: 0;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 16px;
     }
-    
+
     .lp-hero-img {
+        width: 100%;
+        max-width: 92%;
         height: auto;
-        max-height: 55vw;
-        width: auto;
-        max-width: 90%;
         border-radius: 30px;
     }
-    
+
     .lp-hero-footer .d-flex {
         justify-content: center;
     }
-    
-    .about {
-        flex-direction: column reverse;
+
+    /* Reduce vertical spacing between social buttons and hero image on mobile/tablet */
+    .lp-hero {
+        gap: 12px !important;
+        padding-top: 64px !important;
     }
-        
+
+    .lp-hero-footer {
+        margin-bottom: 4px !important;
+        padding-bottom: 0 !important;
+    }
+
+    .lp-hero-image {
+        margin-top: 6px !important;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 32px;
+    }
+
     .lp-about-img {
-        height: 400px;
         width: 100%;
+        max-width: 100%;
+        height: auto;
         border-radius: 0;
     }
-    
+
     .lp-about-content {
+        width: 100%;
         max-width: 100%;
-        padding: 32px 24px;
+        padding: 0;
         margin: 0;
     }
-    
-    .lp-activity-card {
+
+    .lp-presence-videos {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 16px;
+        padding: 20px 0;
+        margin: 0;
+        width: auto;
+    }
+
+    .lp-presence-video {
+        flex: 0 0 240px;
+        width: 240px;
+        max-width: 240px;
+        min-width: 240px;
+        margin: 0;
+    }
+
+    .lp-presence-video > video {
         width: 100%;
-        min-width: unset;
+        height: auto;
+        object-fit: cover;
     }
-    
-    .lp-activity-video {
-        height: 320px;
+
+    .lp-horizontal-video,
+    .lp-mid-video {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        padding-bottom: 0;
+        object-fit: cover;
     }
-    
-    .lp-activity-info {
-        min-height: unset;
+
+    .lp-project-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 16px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .lp-project-card .lp-project-img,
+    .lp-project-card .lp-project-placeholder {
+        width: clamp(70px, 16%, 100px);
+        aspect-ratio: 1 / 1;
+        height: auto;
+        margin: 0 0 16px 0;
+    }
+
+    .lp-collab-card,
+    .lp-tools-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .lp-collab-img {
+        width: clamp(70px, 12%, 80px);
+        aspect-ratio: 1 / 1;
+        height: auto;
+    }
+
+    .contact-split {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .contact-form-wrapper {
+        width: 100%;
+        padding: 24px 16px 40px;
+    }
+
+    .contact-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .lp-footer {
+        padding: 40px 24px 24px;
+    }
+
+    .lp-footer-container {
+        gap: 30px;
+    }
+
+    .lp-footer-col {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .lp-music-sticky {
+        right: 16px;
     }
 }
 
-/* mobile */
+@media (max-width: 768px) {
+    .lp-section {
+        padding: 0 20px;
+    }
 
-/* @media (max-width: 767px) {
+    .lp-navbar {
+        width: calc(100% - 32px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .lp-navbar .navbar-toggler {
+        z-index: 1200;
+    }
+
+    .lp-hero {
+        padding-top: 90px;
+        gap: 28px;
+    }
+
+    .container-exentended {
+        overflow-x: visible !important;
+    }
+
+    .lp-presence-videos {
+        /* mobile/tablet: single-row horizontal scroller */
+        display: inline-flex !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch !important;
+        scroll-behavior: smooth !important;
+        scroll-snap-type: x mandatory !important;
+        padding-inline: 16px !important;
+        gap: 16px !important;
+        touch-action: pan-x !important;
+        margin: 0 !important;
+        width: auto !important;
+    }
+
+    .lp-presence-video {
+        flex: 0 0 240px !important;
+        width: 240px !important;
+        min-width: 240px !important;
+        max-width: 240px !important;
+        margin: 0 12px 0 0 !important;
+        scroll-snap-align: start !important;
+    }
+
+    .lp-hero-content {
+        padding: 20px 16px;
+    }
+
+    /* ABOUT: fix text overflow and spacing on mobile */
+    .about .lp-about-content {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .lp-content-about {
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .lp-hero-title {
+        font-size: clamp(2.5rem, 10vw, 56px);
+    }
+
+    .lp-big-title {
+        font-size: clamp(2rem, 8vw, 48px);
+    }
+
     .lp-project-card {
+        padding: 18px;
+    }
+
+    .lp-collab-card,
+    .lp-tools-card {
+        padding: 20px;
+    }
+
+    .lp-music-sticky {
+        position: fixed;
+        bottom: 16px;
+        top: auto;
+        right: 16px;
+        transform: none;
+        padding: 10px;
+        border-radius: 14px;
+    }
+
+    .lp-music-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .lp-music-label p {
+        display: none;
+    }
+
+    .lp-footer {
+        padding: 30px 16px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lp-section {
+        padding: 0 16px;
+    }
+
+    .lp-navbar {
+        width: calc(100% - 24px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .lp-navbar .navbar-toggler {
+        z-index: 1100;
+    }
+
+    #navLinks {
+        padding: 12px 16px;
+    }
+
+    #navLinks .navbar-nav {
+        gap: 12px;
+    }
+
+    .lp-hero {
+        padding-top: 80px;
+        gap: 24px;
+    }
+
+    .container-exentended {
+        overflow-x: visible !important;
+    }
+
+    .lp-presence-videos {
+        display: inline-flex !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding-inline: 16px !important;
+        margin: 0 !important;
+        gap: 16px !important;
+        touch-action: pan-x !important;
+        width: auto !important;
+    }
+
+    .lp-presence-video {
+        flex: 0 0 240px !important;
+        width: 240px !important;
+        max-width: 240px !important;
+        min-width: 240px !important;
+        margin: 0 12px 0 0 !important;
+    }
+
+    .lp-presence-video > video {
+        height: auto;
+    }
+
+    .lp-hero-content {
+        max-width: 100%;
+        padding: 16px 12px;
+    }
+
+    .lp-hero-title {
+        font-size: clamp(2.2rem, 10vw, 48px);
+    }
+
+    .lp-big-title {
+        font-size: clamp(1.8rem, 8vw, 40px);
+    }
+
+    .lp-about-content {
+        padding: 16px 12px;
+    }
+
+    .lp-horizontal-video,
+    .lp-mid-video {
         width: 100%;
         height: auto;
-        min-height: 140px;
-        margin: 8px 0;
+        aspect-ratio: 16 / 9;
     }
-    
-    .lp-presence-img {
-        width: 100%;
-        height: 300px;
+
+    .lp-project-card {
+        margin: 12px 0;
     }
-    
-    .lp-collab-card, .lp-tools-card {
-        width: 100%;
+
+    .lp-collab-img {
+        margin: 0 auto;
     }
-} */ 
+
+    .contact-form-wrapper {
+        padding: 24px 16px 40px;
+    }
+
+    .lp-footer {
+        padding: 24px 16px 16px;
+    }
+
+    .lp-footer-container {
+        gap: 20px;
+    }
+
+    .lp-music-sticky {
+        bottom: 12px;
+        right: 12px;
+        top: auto;
+        width: auto;
+    }
+}
+
+ 
