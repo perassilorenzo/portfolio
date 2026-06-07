@@ -789,14 +789,10 @@ button,
     width: 100%;
     height: 100vh;
     overflow: hidden;
-}
-
-.img-portfolio img {
-    width: 100%;
-    height: 100vh;
     object-fit: cover;
     object-position: center;
 }
+
 /* modern responsive overrides */
 
 @media (max-width: 1024px) {
