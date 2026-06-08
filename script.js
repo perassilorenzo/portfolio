@@ -1,22 +1,30 @@
-// musica
-
-const music = document.getElementById("bgMusic");
-const btn = document.getElementById("musicToggle");
-
-let playing = false;
-
-function startMusic(){
-    if (!playing) {
-        music.play();
-        btn.textContent = "⏸";
-    } else {
-        music.pause();
-        btn.textContent = "▶";
-    }
-    playing = !playing;
-};
-
 document.addEventListener("DOMContentLoaded", function () {
+    // Background Music Control
+    const music = document.getElementById("bgMusic");
+    const musicBtn = document.getElementById("musicToggle");
+
+    if (music && musicBtn) {
+        let playing = false;
+
+        musicBtn.addEventListener("click", () => {
+            if (!playing) {
+                music.play()
+                    .then(() => {
+                        musicBtn.textContent = "⏸";
+                        playing = true;
+                    })
+                    .catch((error) => {
+                        console.error("Audio playback failed:", error);
+                    });
+            } else {
+                music.pause();
+                musicBtn.textContent = "▶";
+                playing = false;
+            }
+        });
+    }
+
+    // Bootstrap Navbar Auto-Collapse on Link Click (Mobile/Tablet)
     const navCollapseEl = document.getElementById("navLinks");
     const navToggler = document.querySelector(".navbar-toggler");
 
@@ -33,49 +41,50 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Drag / mouse-scroll support for Digital Presence carousels
-    const scrollers = document.querySelectorAll('.lp-presence-videos');
+    // Drag & Touch Scroll Support for Digital Presence Videos
+    const scrollers = document.querySelectorAll(".lp-presence-videos");
     scrollers.forEach((scroller) => {
         let isDown = false;
         let startX;
         let scrollLeft;
 
-        scroller.addEventListener('mousedown', (e) => {
+        // Mouse Drag events
+        scroller.addEventListener("mousedown", (e) => {
             isDown = true;
-            scroller.classList.add('active-drag');
+            scroller.classList.add("active-drag");
             startX = e.pageX - scroller.offsetLeft;
             scrollLeft = scroller.scrollLeft;
             e.preventDefault();
         });
 
-        scroller.addEventListener('mouseleave', () => {
+        scroller.addEventListener("mouseleave", () => {
             isDown = false;
-            scroller.classList.remove('active-drag');
+            scroller.classList.remove("active-drag");
         });
 
-        scroller.addEventListener('mouseup', () => {
+        scroller.addEventListener("mouseup", () => {
             isDown = false;
-            scroller.classList.remove('active-drag');
+            scroller.classList.remove("active-drag");
         });
 
-        scroller.addEventListener('mousemove', (e) => {
+        scroller.addEventListener("mousemove", (e) => {
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - scroller.offsetLeft;
-            const walk = (x - startX) * 1.5; // scroll speed
+            const walk = (x - startX) * 1.5; // scroll speed multiplier
             scroller.scrollLeft = scrollLeft - walk;
         });
 
-        // touch
-        scroller.addEventListener('touchstart', (e) => {
+        // Touch swipe events for mobile devices
+        scroller.addEventListener("touchstart", (e) => {
             startX = e.touches[0].pageX - scroller.offsetLeft;
             scrollLeft = scroller.scrollLeft;
-        }, {passive: true});
+        }, { passive: true });
 
-        scroller.addEventListener('touchmove', (e) => {
+        scroller.addEventListener("touchmove", (e) => {
             const x = e.touches[0].pageX - scroller.offsetLeft;
             const walk = (x - startX) * 1.5;
             scroller.scrollLeft = scrollLeft - walk;
-        }, {passive: true});
+        }, { passive: true });
     });
 });
