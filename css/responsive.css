@@ -3,6 +3,213 @@
    ========================================================================== */
 
 /* ==========================================================================
+   max-width: 575px (phones)
+   ========================================================================== */
+@media (max-width: 575px) {
+  /* Hide hero side image on phones — clutters the compact layout */
+  .lp-hero-image {
+    display: none;
+  }
+
+  /* Section title margins — align with container padding */
+  .lp-section .ms-4 {
+    margin-left: 0 !important;
+    padding-left: 24px !important;
+  }
+
+  /* Collab cards — tighter padding */
+  .lp-collab-card .d-flex {
+    gap: 12px;
+  }
+
+  .lp-collab-img {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+  }
+
+  /* Footer — brand full width, links side by side */
+  .lp-footer {
+    padding: 32px 20px 16px;
+    margin-top: 40px;
+  }
+
+  .lp-footer-container {
+    gap: 20px;
+  }
+
+  .lp-footer-col {
+    min-width: auto;
+  }
+
+  .lp-footer-col:first-child {
+    flex-basis: 100%;
+  }
+
+  .lp-footer-col:not(:first-child) {
+    flex: 1;
+  }
+
+  .lp-footer-bottom {
+    margin-top: 32px;
+    padding-top: 16px;
+  }
+
+  /* Digital presence — smaller video cards */
+  .lp-presence-videos {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .lp-presence-video {
+    flex: 0 0 160px;
+  }
+
+  .container-extended::after {
+    height: calc(100% - 60px);
+  }
+
+  /* Project cards — tighter */
+  .lp-project-card {
+    padding: 10px;
+    gap: 12px;
+    min-height: auto;
+  }
+
+  .lp-project-img,
+  .lp-project-placeholder {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+  }
+
+  .lp-project-card h4 {
+    font-size: 0.95rem;
+  }
+
+  .lp-project-card p {
+    font-size: 0.8rem;
+  }
+
+  /* Tools table — smaller font */
+  .lp-tools-card table {
+    font-size: 0.8rem;
+  }
+
+  .lp-tools-card th,
+  .lp-tools-card td {
+    padding: 10px 6px;
+  }
+
+  /* Badges wrap better */
+  .lp-badge {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+
+  /* About card — mobile refinements */
+  .about-inner {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .about-img-wrap {
+    flex: 0 0 38%;
+    max-width: 140px;
+  }
+
+  .about-text-top .lp-big-title {
+    font-size: clamp(1.4rem, 7vw, 2rem);
+  }
+
+  .about-text-top .lp-subtitle-offset {
+    font-size: 0.85rem;
+    margin-top: -6px;
+    margin-bottom: 6px;
+  }
+
+  .about-intro {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .about-rest {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    padding-top: 12px;
+  }
+
+  /* Contact — mobile responsive */
+  .contact-form-wrapper {
+    display: contents;
+  }
+
+  .lp-contact-form {
+    display: contents;
+  }
+
+  .lp-contact-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .lp-contact-section .lp-big-title {
+    flex-basis: 100%;
+    font-size: clamp(1.4rem, 7vw, 2rem);
+  }
+
+  .lp-contact-section .lp-subtitle-offset {
+    flex-basis: 100%;
+  }
+
+  .lp-contact-section p.lp-text-secondary {
+    flex-basis: 100%;
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .contact-image {
+    flex: 0 0 38%;
+    max-width: 140px;
+    height: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    order: 1;
+    margin: 0;
+  }
+
+  .contact-top-fields {
+    flex: 1;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .contact-top-fields .lp-input {
+    font-size: 0.85rem;
+    padding: 12px 14px;
+  }
+
+  textarea {
+    flex-basis: 100%;
+    order: 2;
+  }
+
+  button[type="submit"] {
+    flex-basis: 100%;
+    order: 3;
+  }
+}
+
+/* ==========================================================================
    min-width: 576px (small tablets, landscape phones)
    ========================================================================== */
 
@@ -37,31 +244,69 @@
     padding: 12px 24px;
   }
 
+  /* Hero — reset order for tablet, keep column */
+  .lp-hero-image {
+    order: 0;
+    max-width: 260px;
+  }
+
+  .lp-hero-img {
+    max-width: 260px;
+  }
+
   /* About — row layout */
-  .about {
+  .about-inner {
     flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
     align-items: center;
-    text-align: left;
-    gap: 60px;
+  }
+
+  .about-img-wrap {
+    flex: 0 0 auto;
+    max-width: 320px;
   }
 
   .lp-about-img {
-    max-width: 360px;
+    max-width: 320px;
   }
 
   .lp-about-content {
-    align-items: flex-start;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
   }
 
-  .lp-content-about {
+  .about-text-top {
+    min-width: auto;
+  }
+
+  .about-text-top .lp-big-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    letter-spacing: -2px;
+  }
+
+  .about-text-top .lp-subtitle-offset {
+    font-size: 1.1rem;
+    margin-top: -10px;
+    margin-bottom: 24px;
+  }
+
+  .about-intro {
     font-size: 1.05rem;
     line-height: 1.8;
-    text-align: left;
   }
 
-  .lp-subtitle-offset {
-    margin-left: 0;
+  .about-rest {
+    border-top: none;
+    padding-top: 0;
+    font-size: 1.05rem;
+    line-height: 1.8;
   }
 
   /* Activities — more spacious */
@@ -115,8 +360,20 @@
     padding: 8px 16px;
   }
 
+  /* Contact — reset image order on tablet */
+  .contact-image {
+    order: 0;
+    max-width: 300px;
+    height: 340px;
+  }
+
   .lp-contact-section {
     padding: 0 24px;
+  }
+
+  /* Hide scroll hint on tablet+ */
+  .container-extended::before {
+    display: none;
   }
 }
 
@@ -181,6 +438,7 @@
     text-align: left;
     gap: 60px;
     padding: 140px 24px 80px;
+    min-height: 100dvh;
   }
 
   .lp-hero-content {
@@ -236,8 +494,12 @@
     margin-top: 100px;
   }
 
-  .lp-about-img {
+  .about-img-wrap {
     max-width: 400px;
+  }
+
+  .lp-about-img {
+    max-width: 100%;
   }
 
   /* Activities */
@@ -322,9 +584,9 @@
   }
 
   .contact-image {
+    order: 0;
     max-width: 500px;
     height: 550px;
-    order: 0;
     margin: 0;
   }
 }

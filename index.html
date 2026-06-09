@@ -36,7 +36,7 @@
       <div class="lp-music-label">
         <p>Convergence</p>
       </div>
-      <audio id="bgMusic" loop>
+      <audio id="bgMusic" loop preload="auto">
         <source src="assets/Convergence.mp3" type="audio/mp3" />
       </audio>
     </div>
@@ -155,32 +155,39 @@
 
     <!-- ABOUT -->
     <section class="about d-flex align-items-center mt-5 pt-5" id="about">
-      <div class="">
-        <img
-          src="assets/about-image.png"
-          alt="Lorenzo Perassi foto"
-          class="lp-about-img"
-        />
-      </div>
-      <div class="ps-5 ms-5 lp-about-content">
-        <h2 class="lp-big-title">about</h2>
-        <h3 class="lp-text-secondary lp-subtitle-offset">Chi sono</h3>
-        <p class="mt-3 ms-2 lp-text-secondary lp-content-about">
-          Sono Lorenzo Perassi, creator digitale e studente di Informatica.
-          <br /><br />Negli ultimi anni ho iniziato a costruire il mio percorso
-          online sperimentando tra content creation, fashion, videomaking,
-          coding e altri macro argomenti, scegliendo di raccontare sui social
-          diversi aspetti della mia vita e delle mie passioni.
-          <br /><br />Utilizzo le piattaforme digitali come uno spazio dove
-          condividere progetti, esperimenti creativi, routine, outfit, lavoro
-          pratico e crescita personale, oltre che per creare connessioni, farmi
-          conoscere e portarmi opportunità. <br /><br />Parallelamente collaboro
-          con brand locali, pagine creative e magazine musicali, lavorando su
-          contenuti, comunicazioni online e progetti creativi.
-          <br /><br />Attualmente sto iniziando a lavorare in un'agenzia
-          digitale, collaborando alla gestione e creazione di contenuti per
-          profili personali e aziende.
-        </p>
+      <div class="about-inner">
+        <div class="about-img-wrap">
+          <img
+            src="assets/about-image.png"
+            alt="Lorenzo Perassi foto"
+            class="lp-about-img"
+          />
+        </div>
+        <div class="lp-about-content">
+          <div class="about-text-top">
+            <h2 class="lp-big-title">about</h2>
+            <h3 class="lp-text-secondary lp-subtitle-offset">Chi sono</h3>
+            <p class="lp-text-secondary lp-content-about about-intro">
+              Sono Lorenzo Perassi, creator digitale e studente di Informatica.
+              <br /><br />Negli ultimi anni ho iniziato a costruire il mio
+              percorso online sperimentando tra content creation, fashion,
+              videomaking, coding e altri macro argomenti, scegliendo di
+              raccontare sui social diversi aspetti della mia vita e delle mie
+              passioni.
+            </p>
+          </div>
+          <p class="lp-text-secondary lp-content-about about-rest">
+            Utilizzo le piattaforme digitali come uno spazio dove condividere
+            progetti, esperimenti creativi, routine, outfit, lavoro pratico e
+            crescita personale, oltre che per creare connessioni, farmi
+            conoscere e portarmi opportunità. <br /><br />Parallelamente
+            collaboro con brand locali, pagine creative e magazine musicali,
+            lavorando su contenuti, comunicazioni online e progetti creativi.
+            <br /><br />Attualmente sto iniziando a lavorare in un'agenzia
+            digitale, collaborando alla gestione e creazione di contenuti per
+            profili personali e aziende.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -209,6 +216,8 @@
               muted
               loop
               playsinline
+              webkit-playsinline
+              preload="auto"
               class="lp-activity-video"
             ></video>
           </div>
@@ -239,6 +248,8 @@
               muted
               loop
               playsinline
+              webkit-playsinline
+              preload="auto"
               class="lp-activity-video"
             ></video>
           </div>
@@ -272,6 +283,8 @@
               muted
               loop
               playsinline
+              webkit-playsinline
+              preload="auto"
               class="lp-activity-video"
             ></video>
           </div>
@@ -303,6 +316,18 @@
       </p>
 
       <div class="container-extended">
+        <button
+          class="scroll-btn scroll-btn--left"
+          aria-label="Scorri a sinistra"
+        >
+          ‹
+        </button>
+        <button
+          class="scroll-btn scroll-btn--right"
+          aria-label="Scorri a destra"
+        >
+          ›
+        </button>
         <div class="lp-presence-videos">
           <div class="lp-presence-video">
             <video
@@ -311,6 +336,8 @@
               muted
               loop
               playsinline
+              webkit-playsinline
+              preload="auto"
               class=""
             ></video>
             <p>Outfits</p>
@@ -322,6 +349,8 @@
               muted
               loop
               playsinline
+              webkit-playsinline
+              preload="auto"
               class=""
             ></video>
             <p>Rubrica Music Mood</p>
@@ -333,6 +362,8 @@
               muted
               loop
               playsinline
+              webkit-playsinline
+              preload="auto"
               class="lp-mid-video"
             ></video>
             <p>Routine</p>
@@ -344,6 +375,8 @@
               muted
               loop
               playsinline
+              webkit-playsinline
+              preload="auto"
               class="lp-horizontal-video"
             ></video>
             <p>Aesthetic Short Films</p>
@@ -355,6 +388,8 @@
               muted
               loop
               playsinline
+              webkit-playsinline
+              preload="auto"
               class=""
             ></video>
             <p>Sewing</p>
@@ -366,6 +401,8 @@
               muted
               loop
               playsinline
+              webkit-playsinline
+              preload="auto"
               class="lp-horizontal-video"
             ></video>
             <p>Personal Reflections</p>
@@ -377,6 +414,8 @@
               muted
               loop
               playsinline
+              webkit-playsinline
+              preload="auto"
               class=""
             ></video>
             <p>Drum & Music</p>
@@ -388,6 +427,8 @@
               muted
               loop
               playsinline
+              webkit-playsinline
+              preload="auto"
               class=""
             ></video>
             <p>Fashion Brand Collabs</p>
@@ -399,6 +440,8 @@
               muted
               loop
               playsinline
+              webkit-playsinline
+              preload="auto"
               class=""
             ></video>
             <p>Sports</p>
@@ -410,6 +453,8 @@
               muted
               loop
               playsinline
+              webkit-playsinline
+              preload="auto"
               class=""
             ></video>
             <p>Study & Tech</p>
@@ -523,7 +568,12 @@
           />
           <div class="ps-2">
             <h4 class="fs-5 fw-bold mb-1">Agency</h4>
-            <p class="lp-text-secondary small mb-2">Stage e supporto alla creazione di contenuti digitali e comunicazione social per un’agenzia locale. Mi occupo di editing video, grafiche e caption utilizzando strumenti come CapCut, Canva e Lightroom.</p>
+            <p class="lp-text-secondary small mb-2">
+              Stage e supporto alla creazione di contenuti digitali e
+              comunicazione social per un’agenzia locale. Mi occupo di editing
+              video, grafiche e caption utilizzando strumenti come CapCut, Canva
+              e Lightroom.
+            </p>
             <div class="d-flex flex-wrap gap-2">
               <span class="lp-badge">Digital Marketing</span>
               <span class="lp-badge">Social Media</span>
@@ -540,7 +590,10 @@
           <div class="ps-2">
             <h4 class="fs-5 fw-bold mb-1">Affitti brevi a Saluzzo</h4>
             <p class="lp-text-secondary small mb-2">
-              Sviluppo di un sito per affitti brevi a Saluzzo, con focus su prenotazioni dirette, branding e SEO. Include anche la creazione di una landing page per un appartamento nel centro storico, orientata alla conversione e all’ospitalità professionale.
+              Sviluppo di un sito per affitti brevi a Saluzzo, con focus su
+              prenotazioni dirette, branding e SEO. Include anche la creazione
+              di una landing page per un appartamento nel centro storico,
+              orientata alla conversione e all’ospitalità professionale.
             </p>
             <div class="d-flex flex-wrap gap-2">
               <span class="lp-badge">Brand Identity</span>
@@ -586,7 +639,8 @@
           <div>
             <h3>StageStreetwear</h3>
             <p class="lp-text-secondary small">
-                Progetto creativo che unisce video, streetwear e custom cappellini.
+              Progetto creativo che unisce video, streetwear e custom
+              cappellini.
             </p>
           </div>
         </div>
@@ -614,7 +668,10 @@
           <div>
             <h3>RAFFER RECORDS</h3>
             <p class="lp-text-secondary small">
-              Collaboro come volto dell'etichetta, occupandomi della comunicazione e della presentazione di nuove collaborazioni e giovani artisti emergenti, contribuendo a dare visibilità ai loro progetti musicali.
+              Collaboro come volto dell'etichetta, occupandomi della
+              comunicazione e della presentazione di nuove collaborazioni e
+              giovani artisti emergenti, contribuendo a dare visibilità ai loro
+              progetti musicali.
             </p>
           </div>
         </div>
@@ -699,34 +756,40 @@
     <section class="lp-contact-section" id="contact">
       <div class="contact-form-wrapper">
         <h2 class="lp-big-title">CONTACT</h2>
-        <h3 class="lp-text-secondary ps-4 lp-subtitle-offset">
+        <h3 class="lp-text-secondary lp-subtitle-offset">
           Restiamo in contatto
         </h3>
-        <p class="lp-text-secondary mt-3 mb-4 ps-4">
+        <p class="lp-text-secondary mt-3 mb-4">
           Scrivimi per collaborazioni, idee o progetti.
         </p>
 
-        <form class="lp-contact-form" action="https://formspree.io/f/mvznrbeq" method="post">
-          <input
-            type="text"
-            name="nome"
-            class="lp-input"
-            placeholder="Il tuo nome"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            class="lp-input"
-            placeholder="La tua email"
-            required
-          />
-          <input
-            type="text"
-            name="oggetto"
-            class="lp-input"
-            placeholder="Oggetto"
-          />
+        <form
+          class="lp-contact-form"
+          action="https://formspree.io/f/mvznrbeq"
+          method="post"
+        >
+          <div class="contact-top-fields">
+            <input
+              type="text"
+              name="nome"
+              class="lp-input"
+              placeholder="Il tuo nome"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              class="lp-input"
+              placeholder="La tua email"
+              required
+            />
+            <input
+              type="text"
+              name="oggetto"
+              class="lp-input"
+              placeholder="Oggetto"
+            />
+          </div>
           <textarea
             name="messaggio"
             class="lp-textarea"
