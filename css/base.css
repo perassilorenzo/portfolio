@@ -1,0 +1,138 @@
+/* ==========================================================================
+   DESIGN TOKENS
+   ========================================================================== */
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-card: #151515;
+  --text-primary: #f5f5f5;
+  --text-secondary: #a1a1aa;
+  --accent-silver: #d6d6d6;
+  --accent-blue: #6e7bff;
+  --border-color: #232323;
+  --border-hover: #333333;
+  --blur-bg: rgba(255, 255, 255, 0.03);
+  --font-sans:
+    "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  --font-mono: "Space Mono", monospace;
+  --font-brand: "IBM Plex Mono", monospace;
+  --section-gap: 80px;
+}
+
+/* ==========================================================================
+   RESET
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+button,
+input,
+textarea {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================================================================
+   SCROLLBAR
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 4px;
+  border: 2px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* ==========================================================================
+   GLOBAL UTILITIES
+   ========================================================================== */
+.lp-text-secondary {
+  color: var(--text-secondary);
+}
+
+.lp-hr {
+  border-color: var(--border-color);
+  opacity: 0.8;
+  margin: 60px 0;
+}
+
+.lp-section {
+  margin-top: var(--section-gap);
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+.lp-big-title {
+  font-size: clamp(2rem, 8vw, 4.5rem);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: -2px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.lp-subtitle-offset {
+  margin-top: -10px;
+  margin-bottom: 24px;
+  font-family: var(--font-brand);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   KEYFRAMES
+   ========================================================================== */
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

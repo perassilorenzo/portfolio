@@ -1,0 +1,808 @@
+/* ==========================================================================
+   COMPONENTS: MUSIC PLAYER
+   ========================================================================== */
+.lp-music-sticky {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+.lp-music-sticky:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.lp-music-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.lp-music-btn:hover {
+  border-color: var(--accent-silver);
+  transform: scale(1.05);
+}
+
+.lp-music-label {
+  display: none;
+}
+
+.lp-music-label p {
+  margin: 0;
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   COMPONENTS: NAVBAR
+   ========================================================================== */
+.lp-navbar {
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 1200px;
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 10px 20px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1000;
+}
+
+.lp-navbar:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(10, 10, 10, 0.85);
+}
+
+.lp-navbar .navbar-collapse {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  margin-top: 12px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.lp-navbar .navbar-nav {
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.lp-brand {
+  font-family: var(--font-brand);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+}
+
+.lp-toggler {
+  border: 1px solid var(--border-color);
+  padding: 6px 10px;
+}
+
+.lp-toggler:focus {
+  box-shadow: none;
+}
+
+.lp-nav-link {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.lp-nav-link:hover {
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.lp-nav-divider {
+  display: none;
+}
+
+/* ==========================================================================
+   COMPONENTS: BUTTONS & SOCIAL LINKS
+   ========================================================================== */
+.lp-btn {
+  display: inline-block;
+  color: var(--text-secondary);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lp-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-silver);
+  background-color: rgba(255, 255, 255, 0.03);
+  transform: translateY(-2px);
+}
+
+.lp-social-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.lp-social-link:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-silver);
+  background-color: rgba(255, 255, 255, 0.02);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   COMPONENTS: MARQUEE
+   ========================================================================== */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 16px 0;
+}
+
+.marquee-track {
+  display: inline-block;
+  animation: marqueeScroll 12s linear infinite;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   COMPONENTS: BADGES
+   ========================================================================== */
+.lp-badge {
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: 30px;
+  background: var(--accent-silver);
+  color: #000;
+  font-weight: 700;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.lp-badge:hover {
+  background: var(--text-primary);
+}
+
+/* ==========================================================================
+   COMPONENTS: FORM ELEMENTS
+   ========================================================================== */
+.lp-input,
+.lp-textarea {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 14px 18px;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+}
+
+.lp-input:focus,
+.lp-textarea:focus {
+  border-color: var(--accent-silver);
+  background-color: var(--bg-card);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.01);
+}
+
+.lp-textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   COMPONENTS: TABLES
+   ========================================================================== */
+.lp-tools-card table {
+  width: 100%;
+  font-size: 0.9rem;
+  border-collapse: collapse;
+}
+
+.lp-tools-card th,
+.lp-tools-card td {
+  padding: 14px 10px;
+  text-align: left;
+}
+
+.lp-tools-card th {
+  color: var(--text-primary);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.lp-tools-card td {
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.lp-tools-card tr:last-child td {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   SECTION: COVER IMAGE
+   ========================================================================== */
+.img-portfolio {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+  background-color: var(--bg-primary);
+  border-radius: 0 0 24px 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   SECTION: HERO
+   ========================================================================== */
+.lp-hero {
+  min-height: 100vh;
+  padding: 100px 24px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.lp-hero-content {
+  max-width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lp-hero-title {
+  font-size: clamp(2.5rem, 10vw, 56px);
+  font-family: var(--font-brand);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin: 0 0 24px;
+}
+
+.lp-hero-footer {
+  width: 100%;
+  border-top: 1px solid var(--border-color);
+  padding-top: 24px;
+}
+
+.lp-hero-footer .d-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.lp-hero-footer .lp-social-link {
+  flex: 1 1 calc(50% - 12px);
+  max-width: calc(50% - 12px);
+  box-sizing: border-box;
+  text-align: center;
+  padding: 8px 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lp-hero-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.lp-hero-img {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lp-hero-img:hover {
+  transform: scale(1.02) translateY(-4px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+}
+
+/* ==========================================================================
+   SECTION: ABOUT
+   ========================================================================== */
+.about {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+}
+
+.lp-about-img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lp-about-img:hover {
+  transform: scale(1.01) translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.lp-about-content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.lp-content-about {
+  width: 100%;
+  max-width: 100%;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   SECTION: ACTIVITIES (WHAT I DO)
+   ========================================================================== */
+.lp-activities-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.lp-activity-card {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, #141416 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lp-activity-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+}
+
+.lp-activity-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.lp-activity-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lp-activity-info h4 {
+  font-family: var(--font-brand);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.lp-activity-info p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.lp-activity-video {
+  width: 40%;
+  max-width: 160px;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+  background: #000;
+  flex-shrink: 0;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.lp-activity-video:hover {
+  transform: scale(1.02);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+}
+
+.lp-activity-tags {
+  display: none;
+  background: rgba(10, 10, 10, 0.8);
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  padding: 8px 16px;
+  overflow: hidden;
+}
+
+.lp-activity-tags .marquee {
+  margin: 0;
+}
+
+.lp-activity-tags .marquee-track {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  animation-duration: 16s;
+}
+
+/* ==========================================================================
+   SECTION: DIGITAL PRESENCE
+   ========================================================================== */
+.container-extended {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+.lp-presence-videos {
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  scroll-behavior: smooth;
+  padding: 10px 16px;
+  scroll-snap-type: x mandatory;
+  cursor: grab;
+  scrollbar-width: none;
+}
+
+.lp-presence-videos::-webkit-scrollbar {
+  display: none;
+}
+
+.lp-presence-videos.active-drag {
+  cursor: grabbing;
+}
+
+.lp-presence-video {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  scroll-snap-align: start;
+  transition: all 0.3s ease;
+}
+
+.lp-presence-video video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  background: #000;
+}
+
+.lp-presence-video:hover video {
+  transform: scale(1.03);
+  border-color: var(--accent-silver);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.05);
+}
+
+.lp-presence-video p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.lp-presence-video:hover p {
+  color: var(--text-primary);
+}
+
+/* Horizontal video in digital presence — letterboxing */
+.lp-horizontal-video {
+  object-fit: contain !important;
+  background: #000 !important;
+}
+
+/* ==========================================================================
+   SECTION: PROJECTS
+   ========================================================================== */
+.lp-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.lp-project-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  min-height: 140px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lp-project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.lp-project-img,
+.lp-project-placeholder {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  object-fit: cover;
+  margin: 0;
+}
+
+.lp-project-placeholder {
+  background-color: var(--bg-card);
+  border: 1px dashed var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.lp-project-card:hover .lp-project-placeholder {
+  background-color: var(--border-color);
+}
+
+.lp-project-card .ps-2 {
+  flex: 1;
+  padding-left: 0;
+}
+
+/* ==========================================================================
+   SECTION: COLLABORATIONS & TOOLS
+   ========================================================================== */
+.lp-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 36px;
+  flex: 1;
+}
+
+.lp-collab-card,
+.lp-tools-card {
+  width: 100%;
+  min-width: 280px;
+}
+
+.lp-collab-card .d-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin: 16px 0;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.lp-collab-card .d-flex:hover {
+  transform: translateX(6px);
+}
+
+.lp-collab-card .d-flex > div {
+  flex: 1;
+}
+
+.lp-collab-img {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  object-fit: cover;
+  margin: 0;
+}
+
+.lp-collab-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.lp-collab-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ==========================================================================
+   SECTION: CONTACT
+   ========================================================================== */
+.lp-contact-section {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-form-wrapper {
+  flex: 1;
+}
+
+.lp-contact-form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-image {
+  width: 100%;
+  max-width: 380px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  order: 1;
+}
+
+/* ==========================================================================
+   SECTION: FOOTER
+   ========================================================================== */
+.lp-footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 60px 24px 20px;
+  margin-top: var(--section-gap);
+}
+
+.lp-footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lp-footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 200px;
+}
+
+.lp-footer-title {
+  font-family: var(--font-brand);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.lp-footer-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+.lp-footer-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.lp-footer a {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.lp-footer a:hover {
+  color: var(--text-primary);
+  transform: translateX(4px);
+}
+
+.lp-footer-bottom {
+  border-top: 1px solid var(--border-color);
+  margin-top: 60px;
+  padding-top: 24px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}

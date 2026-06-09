@@ -1,0 +1,347 @@
+/* ==========================================================================
+   RESPONSIVE — MOBILE-FIRST BREAKPOINTS
+   ========================================================================== */
+
+/* ==========================================================================
+   min-width: 576px (small tablets, landscape phones)
+   ========================================================================== */
+
+/* ==========================================================================
+   min-width: 768px (tablet portrait)
+   ========================================================================== */
+@media (min-width: 768px) {
+  :root {
+    --section-gap: 100px;
+  }
+
+  .lp-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* Music player — show label */
+  .lp-music-label {
+    display: block;
+  }
+
+  .lp-music-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  /* Navbar — larger */
+  .lp-navbar {
+    width: 90%;
+    top: 20px;
+    padding: 12px 24px;
+  }
+
+  /* About — row layout */
+  .about {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 60px;
+  }
+
+  .lp-about-img {
+    max-width: 360px;
+  }
+
+  .lp-about-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .lp-content-about {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .lp-subtitle-offset {
+    margin-left: 0;
+  }
+
+  /* Activities — more spacious */
+  .lp-activities-container {
+    gap: 32px;
+    padding: 0 24px;
+  }
+
+  .lp-activity-card {
+    padding: 28px;
+    gap: 24px;
+  }
+
+  .lp-activity-inner {
+    gap: 32px;
+  }
+
+  .lp-activity-info h4 {
+    font-size: 1.2rem;
+  }
+
+  .lp-activity-info p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .lp-activity-video {
+    width: 260px;
+    max-width: none;
+    height: 380px;
+    border-radius: 16px;
+  }
+
+  .lp-activity-tags {
+    display: block;
+  }
+
+  /* Digital presence — larger videos */
+  .lp-presence-videos {
+    padding: 20px 24px;
+    gap: 20px;
+  }
+
+  .lp-presence-video {
+    flex: 0 0 240px;
+  }
+
+  .lp-hero-footer .lp-social-link {
+    flex: 1 1 120px;
+    max-width: 120px;
+    padding: 8px 16px;
+  }
+
+  .lp-contact-section {
+    padding: 0 24px;
+  }
+}
+
+/* ==========================================================================
+   min-width: 992px (Bootstrap lg — navbar expands)
+   ========================================================================== */
+@media (min-width: 992px) {
+  .lp-navbar .navbar-collapse {
+    background: none;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .lp-navbar .navbar-nav {
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .lp-nav-divider {
+    display: inline;
+    color: var(--border-color);
+    font-weight: 300;
+  }
+}
+
+/* ==========================================================================
+   min-width: 1024px (desktop)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  :root {
+    --section-gap: 120px;
+  }
+
+  /* Music player — vertical on right side */
+  .lp-music-sticky {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    flex-direction: column;
+    padding: 16px 12px;
+    border-radius: 16px;
+  }
+
+  .lp-music-label {
+    display: block;
+  }
+
+  .lp-music-label p {
+    display: block;
+  }
+
+  /* Hero — row layout */
+  .lp-hero {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 60px;
+    padding: 140px 24px 80px;
+  }
+
+  .lp-hero-content {
+    flex: 1.2;
+    max-width: 580px;
+    align-items: flex-start;
+    order: 0;
+  }
+
+  .lp-hero-title {
+    font-size: clamp(3rem, 6vw, 4.8rem);
+    line-height: 1.05;
+    margin: 0 0 24px;
+  }
+
+  .lp-hero-image {
+    flex: 0.8;
+    width: auto;
+    margin: 0;
+    order: 0;
+  }
+
+  .lp-hero-img {
+    max-width: 700px;
+    width: 700px;
+    border-radius: 24px;
+  }
+
+  .lp-hero-footer .lp-social-link {
+    flex: none;
+    max-width: none;
+  }
+
+  .lp-hero-footer .d-flex {
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .lp-hero-footer {
+    width: auto;
+  }
+
+  /* Cover image — full viewport height on desktop */
+  .img-portfolio {
+    height: 100vh;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* About */
+  .about {
+    margin-top: 100px;
+  }
+
+  .lp-about-img {
+    max-width: 400px;
+  }
+
+  /* Activities */
+  .lp-activities-container {
+    gap: 48px;
+  }
+
+  .lp-activity-card {
+    padding: 36px;
+    gap: 28px;
+  }
+
+  .lp-activity-inner {
+    gap: 48px;
+  }
+
+  .lp-activity-info {
+    gap: 16px;
+  }
+
+  .lp-activity-info h4 {
+    font-size: 1.35rem;
+  }
+
+  .lp-activity-info p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .lp-activity-video {
+    width: 320px;
+    height: 480px;
+    border-radius: 18px;
+  }
+
+  /* Projects — grid layout */
+  .lp-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .lp-project-card {
+    padding: 24px;
+    gap: 24px;
+    min-height: 180px;
+  }
+
+  .lp-project-img,
+  .lp-project-placeholder {
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+  }
+
+  .lp-project-placeholder {
+    font-size: 2rem;
+  }
+
+  /* Collab & Tools — side by side */
+  .lp-collab-card,
+  .lp-tools-card {
+    width: 48%;
+  }
+
+  .lp-collab-card .d-flex {
+    gap: 24px;
+    margin: 24px 0;
+  }
+
+  .lp-collab-img {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+  }
+
+  /* Contact — row layout */
+  .lp-contact-section {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    margin-top: 100px;
+  }
+
+  .contact-image {
+    max-width: 500px;
+    height: 550px;
+    order: 0;
+    margin: 0;
+  }
+}
+
+/* ==========================================================================
+   min-width: 1280px (large desktop)
+   ========================================================================== */
+@media (min-width: 1280px) {
+  .lp-hero-img {
+    max-width: 700px;
+  }
+
+  .contact-image {
+    max-width: 500px;
+  }
+
+  .lp-footer {
+    padding: 80px 24px 30px;
+  }
+}
