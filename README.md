@@ -1,82 +1,86 @@
-# 👋 Lorenzo Perassi — Portfolio
+# Lorenzo Perassi — Portfolio
 
-Personal portfolio website built to present my work, projects, skills, and creative journey across content creation, fashion, and technology.
+Personal portfolio website built to showcase my work, projects, and creative journey across content creation, fashion, and technology.
 
----
-
-## 🌐 Live Website
-
-👉 https://perassilorenzo.github.io/portfolio
+🌐 **Live:** https://perassilorenzo.github.io/portfolio
 
 ---
 
-## 🚀 About This Project
+## About
 
-This website is my personal digital space where I document and showcase:
+This is my digital space where I document and showcase:
 
-- 🎥 Content creation and social media projects  
-- 🧵 Fashion and custom clothing work  
-- 💻 Programming and technology studies  
-- 📸 Lifestyle, music, and creative experiments  
-- 🤝 Collaborations with brands and digital projects  
+- Content creation and social media projects
+- Fashion and custom clothing work
+- Programming and technology studies
+- Music, lifestyle, and creative experiments
+- Brand collaborations and digital projects
 
 The goal is to combine all my interests into a single structured online identity.
 
 ---
 
-## 🧩 Features
+## Sections
 
-- Responsive layout using Bootstrap 5  
-- Hero section with personal branding  
-- Animated marquee elements  
-- Sections for About, Projects, Skills, and Collaborations  
-- Embedded videos and media content  
-- Contact form for collaborations  
-- Personal booking/agenda system  
-- Social media integration  
-
----
-
-## 🛠️ Technologies Used
-
-- HTML5  
-- CSS3  
-- JavaScript  
-- Bootstrap 5  
+- **Hero** — Personal branding with animated marquee, stats, and social links
+- **About** — Who I am, my background, and what I do
+- **What I Do** — Content Creation, Fashion & Custom, Informatics & Tech
+- **Digital Presence** — Embedded social content showcase with drag/touch scroll
+- **Projects** — Selected works (Diario di uno 09, CRYBU, Fashion Custom, Collaborations, Agency, Affitti brevi a Saluzzo)
+- **Collaborations** — Partners: Aleyesure, StageStreetwear, NewGenMusic4, RAFFER RECORDS
+- **Tools & Skills** — Skill level table (HTML/CSS, JS, Python, Git, video editing, etc.)
+- **Contact** — Contact form powered by Formspree
 
 ---
 
-## 📁 Project Structure
+## Features
 
-- index.html → main website structure  
-- style.css → custom styling  
-- script.js → interactivity (music, booking system, etc.)  
-- assets/ → images, videos, media files  
-
----
-
-## 🎯 Purpose
-
-This project is not just a portfolio, but a representation of my evolution as:
-
-- creator  
-- student  
-- developer  
-- designer  
-
-It combines creative work and technical development into one digital identity.
+- Responsive layout (Bootstrap 5)
+- Animated marquee elements
+- Background music toggle (Convergence.mp3)
+- Drag & touch scroll for video gallery
+- Auto-collapse navbar on mobile
+- Contact form via Formspree (serverless form backend)
 
 ---
 
-## 📫 Contact
+## Tech Stack
 
-- Instagram: @diario_di_uno_09  
-- TikTok: @diario_di_uno_09  
-- YouTube: @diario_di_uno_09  
-- Linktree: https://linktr.ee/lollo_pera  
+- HTML5
+- CSS3 (base.css, sections.css, responsive.css)
+- JavaScript (vanilla)
+- Bootstrap 5.3
 
 ---
 
-## ⚡ Status
+## Project Structure
 
-Continuously evolving and updated with new projects, collaborations, and experiments.
+```
+├── index.html
+├── css/
+│   ├── base.css
+│   ├── sections.css
+│   └── responsive.css
+├── script.js
+└── assets/
+    ├── images (portfolio, project shots, collab logos)
+    ├── videos (content showcase)
+    └── Convergence.mp3 (background music)
+```
+
+---
+
+## Contact
+
+- Instagram: [@diario_di_uno_09](https://www.instagram.com/diario_di_uno_09)
+- TikTok: [@diario_di_uno_09](https://www.tiktok.com/@diario_di_uno_09)
+- YouTube: [@diario_di_uno_09](https://www.youtube.com/@diario_di_uno_09)
+- Linktree: https://linktr.ee/lollo_pera
+
+---
+
+## Status
+
+This project evolves alongside my journey — new projects, collaborations, experiments, and growing coding skills are reflected here as I learn and build.
+
+Built with ❤️ by Lorenzo Perassi
