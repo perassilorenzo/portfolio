@@ -42,129 +42,97 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Drag & Touch Scroll Support for Digital Presence Videos
-  const scrollers = document.querySelectorAll(".lp-presence-videos");
-  scrollers.forEach((scroller) => {
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    // Mouse Drag events
-    scroller.addEventListener("mousedown", (e) => {
-      isDown = true;
-      scroller.classList.add("active-drag");
-      startX = e.pageX - scroller.offsetLeft;
-      scrollLeft = scroller.scrollLeft;
-      e.preventDefault();
-    });
-
-    scroller.addEventListener("mouseleave", () => {
-      isDown = false;
-      scroller.classList.remove("active-drag");
-    });
-
-    scroller.addEventListener("mouseup", () => {
-      isDown = false;
-      scroller.classList.remove("active-drag");
-    });
-
-    scroller.addEventListener("mousemove", (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - scroller.offsetLeft;
-      const walk = (x - startX) * 1.5; // scroll speed multiplier
-      scroller.scrollLeft = scrollLeft - walk;
-    });
-
-    // Touch swipe events for mobile devices
-    scroller.addEventListener(
-      "touchstart",
-      (e) => {
-        startX = e.touches[0].pageX - scroller.offsetLeft;
-        scrollLeft = scroller.scrollLeft;
-      },
-      { passive: true },
-    );
-
-    scroller.addEventListener(
-      "touchmove",
-      (e) => {
-        const x = e.touches[0].pageX - scroller.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        scroller.scrollLeft = scrollLeft - walk;
-      },
-      { passive: true },
-    );
-  });
-
-  // Digital Presence auto-scroll & arrows
+  // Digital Presence — drag, infinite auto-scroll & arrows
   const dv = document.querySelector(".lp-presence-videos");
-  if (dv && dv.scrollWidth > dv.clientWidth) {
-    // duplicate children for seamless infinite wrap
-    const origChildren = Array.from(dv.children);
-    origChildren.forEach((child) => dv.appendChild(child.cloneNode(true)));
-    const origW = dv.scrollWidth / 2;
+  if (dv) {
+    const orig = Array.from(dv.children);
+    orig.forEach((c) => dv.appendChild(c.cloneNode(true)));
+    const hw = dv.scrollWidth / 2;
 
-    let p = false,
-      aid = null,
-      t;
-    const step = 0.5;
-    function tk() {
-      if (!p) {
-        let n = dv.scrollLeft + step;
-        if (n >= origW) n = 0;
+    let drag = false,
+      paused = false,
+      rid = null,
+      rt;
+    let sx, sl;
+
+    function tick() {
+      if (!paused) {
+        let n = dv.scrollLeft + 0.6;
+        if (n >= hw) n = 0;
         dv.scrollLeft = n;
       }
-      aid = requestAnimationFrame(tk);
+      rid = requestAnimationFrame(tick);
     }
-    function ps() {
-      p = true;
-    }
-    function rs() {
-      p = false;
-    }
-    function wrapCheck() {
-      if (dv.scrollLeft >= origW) dv.scrollLeft = 0;
-      else if (dv.scrollLeft < 0) dv.scrollLeft = origW;
+    function wrap() {
+      if (dv.scrollLeft >= hw) dv.scrollLeft = 0;
+      else if (dv.scrollLeft < 0) dv.scrollLeft = 0;
     }
 
-    dv.addEventListener("touchstart", ps, { passive: true });
-    dv.addEventListener("mousedown", ps);
+    dv.addEventListener("mousedown", (e) => {
+      drag = true;
+      paused = true;
+      dv.classList.add("active-drag");
+      sx = e.pageX - dv.offsetLeft;
+      sl = dv.scrollLeft;
+    });
+    document.addEventListener("mousemove", (e) => {
+      if (!drag) return;
+      dv.scrollLeft = sl - (e.pageX - dv.offsetLeft - sx) * 1.5;
+    });
+    document.addEventListener("mouseup", () => {
+      if (!drag) return;
+      drag = false;
+      paused = false;
+      dv.classList.remove("active-drag");
+      wrap();
+    });
+
+    dv.addEventListener(
+      "touchstart",
+      (e) => {
+        paused = true;
+        sx = e.touches[0].pageX - dv.offsetLeft;
+        sl = dv.scrollLeft;
+      },
+      { passive: true },
+    );
+    dv.addEventListener(
+      "touchmove",
+      (e) => {
+        dv.scrollLeft = sl - (e.touches[0].pageX - dv.offsetLeft - sx) * 1.5;
+      },
+      { passive: true },
+    );
     dv.addEventListener(
       "touchend",
       () => {
-        wrapCheck();
-        clearTimeout(t);
-        t = setTimeout(rs, 3000);
+        paused = false;
+        wrap();
       },
       { passive: true },
     );
-    dv.addEventListener("mouseup", () => {
-      wrapCheck();
-      clearTimeout(t);
-      t = setTimeout(rs, 3000);
-    });
-    dv.addEventListener("mouseleave", () => {
-      clearTimeout(t);
-      t = setTimeout(rs, 3000);
-    });
-    aid = requestAnimationFrame(tk);
+
+    rid = requestAnimationFrame(tick);
+    const amt = dv.querySelector(".lp-presence-video")?.offsetWidth + 16 || 176;
     const lb = document.querySelector(".scroll-btn--left");
     const rb = document.querySelector(".scroll-btn--right");
-    const amt = dv.querySelector(".lp-presence-video")?.offsetWidth + 16 || 176;
     if (lb)
       lb.addEventListener("click", () => {
-        ps();
-        clearTimeout(t);
+        paused = true;
         dv.scrollBy({ left: -amt, behavior: "smooth" });
-        t = setTimeout(rs, 3000);
+        clearTimeout(rt);
+        rt = setTimeout(() => {
+          paused = false;
+        }, 3000);
       });
     if (rb)
       rb.addEventListener("click", () => {
-        ps();
-        clearTimeout(t);
+        paused = true;
         dv.scrollBy({ left: amt, behavior: "smooth" });
-        t = setTimeout(rs, 3000);
+        clearTimeout(rt);
+        rt = setTimeout(() => {
+          paused = false;
+        }, 3000);
       });
   }
 
@@ -238,35 +206,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Typewriter
   const tw = document.querySelector(".lp-typewriter");
   if (tw) {
-    const words = [
-      "content creator",
-      "fashion",
-      "coding",
-      "music",
-      "lifestyle",
-      "technology",
-    ];
-    let i = 0,
-      c = 0,
-      dir = 1;
+    const text =
+      "Documento la mia vita, le mie passioni, e i miei progetti attraverso contenuti, moda e tecnologia.";
+    let c = 0;
     function twTick() {
-      const w = words[i];
-      tw.textContent = w.slice(0, c);
-      if (dir === 1) {
-        c++;
-        if (c > w.length) {
-          dir = -1;
-          setTimeout(twTick, 2000);
-          return;
-        }
-      } else {
-        c--;
-        if (c < 0) {
-          dir = 1;
-          i = (i + 1) % words.length;
-        }
-      }
-      setTimeout(twTick, dir === 1 ? 80 : 30);
+      tw.textContent = text.slice(0, c);
+      c++;
+      if (c <= text.length) setTimeout(twTick, 30);
     }
     twTick();
   }
@@ -311,12 +257,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Project filters
   function fFilter(f) {
-    const all = document.querySelectorAll(".lp-project-card");
-    let n = 0;
-    all.forEach((c) => {
+    document.querySelectorAll(".lp-project-card").forEach((c) => {
       const empty = c.classList.contains("lp-project-card--empty");
-      const hide = f === "all" ? empty || ++n > 3 : !empty;
-      c.classList.toggle("hide", hide);
+      if (f === "all") {
+        c.classList.toggle("hide", empty);
+      } else {
+        c.classList.toggle("hide", !empty);
+      }
     });
   }
 
@@ -330,22 +277,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
     fFilter("all");
-  }
-
-  // Lightbox
-  const lb = document.getElementById("lightbox");
-  const lbImg = document.getElementById("lightboxImg");
-  if (lb && lbImg) {
-    document
-      .querySelectorAll(".lp-project-img, .lp-collab-img")
-      .forEach((img) => {
-        img.addEventListener("click", (e) => {
-          e.stopPropagation();
-          lbImg.src = img.src;
-          lb.classList.add("open");
-        });
-        img.style.cursor = "pointer";
-      });
   }
 
   // Tech tooltips
@@ -362,7 +293,6 @@ document.addEventListener("DOMContentLoaded", function () {
       ctx +
       "</span>";
     item.appendChild(tip);
-    // click toggle for mobile
     item.addEventListener("click", (e) => {
       e.stopPropagation();
       document
@@ -376,6 +306,22 @@ document.addEventListener("DOMContentLoaded", function () {
       .querySelectorAll(".lp-tech-item.show-tip")
       .forEach((el) => el.classList.remove("show-tip"));
   });
+
+  // Lightbox
+  const lb = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lightboxImg");
+  if (lb && lbImg) {
+    document
+      .querySelectorAll(".lp-project-img, .lp-collab-img")
+      .forEach((img) => {
+        img.addEventListener("click", (e) => {
+          e.stopPropagation();
+          lbImg.src = img.src;
+          lb.classList.add("open");
+        });
+        img.style.cursor = "pointer";
+      });
+  }
 
   // Form feedback
   const form = document.querySelector(".lp-contact-form");

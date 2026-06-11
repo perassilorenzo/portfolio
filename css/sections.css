@@ -153,6 +153,18 @@
   transform: translateY(-2px);
 }
 
+.lp-btn-wa {
+  background: #25d366;
+  border-color: #25d366;
+  color: #fff;
+}
+
+.lp-btn-wa:hover {
+  background: #20bd5a;
+  border-color: #20bd5a;
+  color: #fff;
+}
+
 .lp-social-link {
   color: var(--text-secondary);
   font-weight: 500;
@@ -183,6 +195,7 @@
 
 .marquee-track {
   display: inline-block;
+  white-space: nowrap;
   animation: marqueeScroll 12s linear infinite;
   font-family: var(--font-mono);
   color: var(--text-secondary);
@@ -274,9 +287,6 @@
   height: auto;
   max-height: 85vh;
   object-fit: contain;
-  background-color: var(--bg-primary);
-  border-radius: 0 0 24px 24px;
-  border-bottom: 1px solid var(--border-color);
 }
 
 /* ==========================================================================
@@ -401,15 +411,7 @@
   height: auto;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: 20px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.lp-about-img:hover {
-  transform: scale(1.01) translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .lp-about-content {
@@ -454,7 +456,7 @@
 .lp-activities-container {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   padding: 0 24px;
   max-width: 1100px;
   margin: 0 auto;
@@ -463,85 +465,128 @@
 .lp-activity-card {
   background: linear-gradient(135deg, var(--bg-secondary) 0%, #141416 100%);
   border: 1px solid var(--border-color);
-  border-radius: 28px;
-  padding: 24px;
+  border-radius: 20px;
+  padding: 12px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 6px;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .lp-activity-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   border-color: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .lp-activity-inner {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
+}
+
+.lp-activity-left {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .lp-activity-info {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 3px;
 }
 
 .lp-activity-info h4 {
   font-family: var(--font-brand);
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  margin: 0 0 8px;
+  margin: 0;
+  letter-spacing: -0.3px;
 }
 
 .lp-activity-info p {
-  font-size: 0.85rem;
-  line-height: 1.5;
+  font-size: 0.78rem;
+  line-height: 1.45;
   color: var(--text-secondary);
   margin: 0;
 }
 
 .lp-activity-video {
-  width: 40%;
-  max-width: 160px;
-  height: 200px;
+  width: 90px;
+  max-width: 90px;
+  height: 130px;
   border-radius: 12px;
   object-fit: cover;
   border: 1px solid var(--border-color);
   background: #000;
   flex-shrink: 0;
   transition: all 0.4s ease;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .lp-activity-video:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
   border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .lp-activity-tags {
-  display: none;
+  display: block;
   background: rgba(10, 10, 10, 0.8);
   border: 1px solid var(--border-color);
   border-radius: 40px;
-  padding: 8px 16px;
+  padding: 4px 12px;
   overflow: hidden;
 }
 
 .lp-activity-tags .marquee {
   margin: 0;
+  width: auto;
+  overflow: visible;
 }
 
 .lp-activity-tags .marquee-track {
-  font-size: 0.8rem;
+  display: flex;
+  gap: 0;
+  width: max-content;
+  font-size: 0.7rem;
   font-family: var(--font-mono);
-  animation-duration: 16s;
+  animation: marqueeScroll 20s linear infinite;
+  letter-spacing: 0.5px;
+}
+
+.lp-sewing-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 0.65rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  letter-spacing: 0.3px;
+}
+
+.lp-sewing-btn:hover {
+  border-color: var(--accent-silver);
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.03);
+  transform: translateY(-1px);
+}
+
+.lp-sewing-btn span:first-child {
+  font-size: 0.8rem;
 }
 
 /* ==========================================================================
@@ -638,9 +683,7 @@
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-x;
-  scroll-behavior: smooth;
   padding: 10px 16px;
-  scroll-snap-type: x mandatory;
   cursor: grab;
   scrollbar-width: none;
 }
@@ -957,19 +1000,19 @@
    ========================================================================== */
 .lp-tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 14px;
 }
 
 .lp-tech-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
-  padding: 12px 6px;
+  gap: 8px;
+  padding: 18px 8px;
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 14px;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -1013,15 +1056,15 @@
 }
 
 .lp-tech-item i {
-  font-size: 1.6rem;
+  font-size: 2.2rem;
 }
 
 .lp-tech-item span {
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   color: var(--text-secondary);
   font-weight: 500;
   text-align: center;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 /* ==========================================================================
@@ -1124,70 +1167,6 @@
 }
 
 /* ==========================================================================
-   WHATSAPP BUTTON
-   ========================================================================== */
-/* ==========================================================================
-   FASHION PHOTO PLACEHOLDER
-   ========================================================================== */
-.lp-fashion-photos {
-  margin-top: 16px;
-  display: flex;
-  gap: 12px;
-}
-
-.lp-photo-placeholder {
-  flex: 0 0 120px;
-  height: 140px;
-  border: 1px dashed var(--border-color);
-  border-radius: 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: var(--text-secondary);
-  font-size: 0.75rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.lp-photo-placeholder:hover {
-  border-color: var(--accent-silver);
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.lp-photo-placeholder span:first-child {
-  font-size: 1.6rem;
-}
-
-/* ==========================================================================
-   WHATSAPP BUTTON
-   ========================================================================== */
-.lp-whatsapp-btn {
-  position: fixed;
-  bottom: 80px;
-  left: 20px;
-  z-index: 998;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #25d366;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
-  transition: all 0.3s ease;
-}
-
-.lp-whatsapp-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
-  color: #fff;
-}
-
-/* ==========================================================================
    PARALLAX HERO IMAGE
    ========================================================================== */
 .lp-hero-img {
@@ -1199,14 +1178,14 @@
    ========================================================================== */
 @media (max-width: 575px) {
   .lp-tech-grid {
-    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+    gap: 10px;
   }
   .lp-tech-item {
-    padding: 8px 4px;
+    padding: 12px 6px;
   }
   .lp-tech-item i {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
   .lp-filter-bar {
     padding: 0 16px;
