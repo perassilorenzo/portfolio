@@ -550,7 +550,7 @@
 .container-extended {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 0;
   position: relative;
 }
@@ -635,6 +635,7 @@
   gap: 16px;
   flex-wrap: nowrap;
   overflow-x: auto;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-x;
   scroll-behavior: smooth;
@@ -749,6 +750,27 @@
 
 .lp-project-card:hover .lp-project-placeholder {
   background-color: var(--border-color);
+}
+
+.lp-project-card.hide {
+  display: none !important;
+}
+
+.lp-project-card--empty {
+  border-style: dashed;
+  opacity: 0.6;
+  cursor: default;
+}
+
+.lp-project-card--empty:hover {
+  opacity: 0.85;
+  border-color: var(--accent-silver);
+}
+
+.lp-project-card--empty .lp-project-placeholder {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--text-secondary);
 }
 
 .lp-project-card .ps-2 {
@@ -924,4 +946,274 @@
   text-align: center;
   color: var(--text-secondary);
   font-size: 0.85rem;
+}
+
+.lp-nav-link.active {
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   TECH GRID (replaces tools table)
+   ========================================================================== */
+.lp-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 12px;
+}
+
+.lp-tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 6px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.lp-tech-item:hover {
+  border-color: var(--accent-silver);
+  transform: translateY(-2px);
+}
+
+.lp-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-size: 0.7rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  font-family: var(--font-sans);
+}
+
+.lp-tech-item:hover .lp-tooltip,
+.lp-tech-item.show-tip .lp-tooltip {
+  opacity: 1;
+}
+
+.lp-tooltip-level {
+  font-weight: 600;
+  color: var(--accent-silver);
+}
+
+.lp-tooltip-context {
+  color: var(--text-secondary);
+}
+
+.lp-tech-item i {
+  font-size: 1.6rem;
+}
+
+.lp-tech-item span {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.1;
+}
+
+/* ==========================================================================
+   NOW CARD
+   ========================================================================== */
+.lp-now-card {
+  max-width: 600px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.lp-now-card p {
+  margin: 8px 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.lp-now-card strong {
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   PROJECT FILTERS
+   ========================================================================== */
+.lp-filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  padding: 0 24px;
+}
+
+.lp-filter-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-sans);
+}
+
+.lp-filter-btn:hover {
+  border-color: var(--accent-silver);
+  color: var(--text-primary);
+}
+
+.lp-filter-btn.active {
+  background: var(--accent-silver);
+  color: #000;
+  border-color: var(--accent-silver);
+}
+
+/* ==========================================================================
+   LIGHTBOX
+   ========================================================================== */
+.lp-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lp-lightbox.open {
+  display: flex;
+}
+
+.lp-lightbox-img {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.lp-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.lp-lightbox-close:hover {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   WHATSAPP BUTTON
+   ========================================================================== */
+/* ==========================================================================
+   FASHION PHOTO PLACEHOLDER
+   ========================================================================== */
+.lp-fashion-photos {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+.lp-photo-placeholder {
+  flex: 0 0 120px;
+  height: 140px;
+  border: 1px dashed var(--border-color);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.lp-photo-placeholder:hover {
+  border-color: var(--accent-silver);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.lp-photo-placeholder span:first-child {
+  font-size: 1.6rem;
+}
+
+/* ==========================================================================
+   WHATSAPP BUTTON
+   ========================================================================== */
+.lp-whatsapp-btn {
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  z-index: 998;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+  transition: all 0.3s ease;
+}
+
+.lp-whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+  color: #fff;
+}
+
+/* ==========================================================================
+   PARALLAX HERO IMAGE
+   ========================================================================== */
+.lp-hero-img {
+  will-change: transform;
+}
+
+/* ==========================================================================
+   RESPONSIVE FILTERS
+   ========================================================================== */
+@media (max-width: 575px) {
+  .lp-tech-grid {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 8px;
+  }
+  .lp-tech-item {
+    padding: 8px 4px;
+  }
+  .lp-tech-item i {
+    font-size: 1.3rem;
+  }
+  .lp-filter-bar {
+    padding: 0 16px;
+    gap: 6px;
+  }
+  .lp-filter-btn {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
 }

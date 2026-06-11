@@ -29,13 +29,15 @@
   box-sizing: border-box;
 }
 
-html,
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   min-height: 100%;
-  overflow-x: hidden;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-sans);
@@ -135,4 +137,189 @@ a {
   to {
     transform: translateX(-50%);
   }
+}
+
+/* ==========================================================================
+   REVEAL ON SCROLL
+   ========================================================================== */
+.lp-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lp-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lp-stagger > .lp-reveal:nth-child(1) {
+  transition-delay: 0s;
+}
+.lp-stagger > .lp-reveal:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.lp-stagger > .lp-reveal:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.lp-stagger > .lp-reveal:nth-child(4) {
+  transition-delay: 0.3s;
+}
+.lp-stagger > .lp-reveal:nth-child(5) {
+  transition-delay: 0.4s;
+}
+.lp-stagger > .lp-reveal:nth-child(6) {
+  transition-delay: 0.5s;
+}
+
+/* ==========================================================================
+   BACK TO TOP
+   ========================================================================== */
+.lp-back-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 998;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(12px);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.lp-back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.lp-back-to-top:hover {
+  border-color: var(--accent-silver);
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   FOCUS VISIBLE (accessibility)
+   ========================================================================== */
+.lp-focus-visible *:focus-visible {
+  outline: 2px solid var(--accent-silver);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ==========================================================================
+   READING PROGRESS BAR
+   ========================================================================== */
+.lp-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent-silver);
+  z-index: 9999;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* ==========================================================================
+   FORM FEEDBACK
+   ========================================================================== */
+.lp-form-feedback {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: none;
+}
+
+.lp-form-feedback.success {
+  display: block;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #22c55e;
+}
+
+.lp-form-feedback.error {
+  display: block;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+/* ==========================================================================
+   COUNTER
+   ========================================================================== */
+.lp-counter {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   TYPEWRITER
+   ========================================================================== */
+.lp-typewriter::after {
+  content: "|";
+  animation: lpBlink 0.8s step-end infinite;
+  color: var(--accent-silver);
+}
+
+@keyframes lpBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ==========================================================================
+   COPY EMAIL BUTTON
+   ========================================================================== */
+.lp-copy-btn {
+  background: none;
+  border: none;
+  color: var(--accent-blue);
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+
+.lp-copy-btn:hover {
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   GRADIENT DIVIDER
+   ========================================================================== */
+.lp-divider {
+  height: 1px;
+  margin: 60px 12px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--border-color),
+    var(--accent-silver),
+    var(--border-color),
+    transparent
+  );
+  opacity: 0.6;
 }

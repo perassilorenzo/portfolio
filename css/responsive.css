@@ -101,6 +101,16 @@
     padding: 10px 6px;
   }
 
+  /* Fashion placeholder — smaller on mobile */
+  .lp-photo-placeholder {
+    flex: 0 0 80px;
+    height: 100px;
+  }
+
+  .lp-photo-placeholder span:first-child {
+    font-size: 1.2rem;
+  }
+
   /* Badges wrap better */
   .lp-badge {
     font-size: 0.7rem;
@@ -338,6 +348,15 @@
     max-width: none;
     height: 380px;
     border-radius: 16px;
+  }
+
+  .lp-fashion-photos {
+    margin-top: 20px;
+  }
+
+  .lp-photo-placeholder {
+    flex: 0 0 140px;
+    height: 160px;
   }
 
   .lp-activity-tags {

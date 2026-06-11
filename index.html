@@ -3,6 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lorenzo Perassi, content creator digitale e studente di Informatica. Scopri progetti di content creation, fashion design, sviluppo web, video editing e collaborazioni con brand locali, magazine musicali e realtà digitali."
+    />
+    <meta name="author" content="Lorenzo Perassi" />
+    <meta property="og:title" content="Lorenzo Perassi" />
+    <meta
+      property="og:description"
+      content="Content creator, fashion, tech & self-growth. Documento la mia vita, le mie passioni, e i miei progetti."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/PORTFOLIO.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23f5f5f5'>LP</text></svg>"
+    />
+    <link rel="canonical" href="https://lorenzoperassi.it/" />
     <title>Lorenzo Perassi</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -22,9 +41,46 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       defer
     ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Lorenzo Perassi",
+        "givenName": "Lorenzo",
+        "familyName": "Perassi",
+        "jobTitle": "Content Creator & Student",
+        "description": "Content creator digitale e studente di Informatica. Creazione contenuti, fashion design, sviluppo web e collaborazioni creative.",
+        "url": "https://lorenzoperassi.it",
+        "image": "assets/intro-image.png",
+        "sameAs": [
+          "https://www.instagram.com/diario_di_uno_09",
+          "https://www.tiktok.com/@diario_di_uno_09",
+          "https://www.youtube.com/@diario_di_uno_09",
+          "https://linktr.ee/lollo_pera"
+        ],
+        "knowsAbout": [
+          "Content Creation",
+          "Fashion Design",
+          "Video Editing",
+          "Web Development",
+          "Photography",
+          "Social Media"
+        ]
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div
+      id="readingProgress"
+      class="lp-progress-bar"
+      role="progressbar"
+      aria-label="Progresso lettura"
+    ></div>
     <div class="lp-music-sticky">
       <button
         id="musicToggle"
@@ -85,7 +141,11 @@
 
     <!-- HERO -->
 
-    <img src="assets/PORTFOLIO.png" alt="" class="img-portfolio" />
+    <img
+      src="assets/PORTFOLIO.png"
+      alt="Lorenzo Perassi — copertina portfolio"
+      class="img-portfolio"
+    />
 
     <section class="lp-hero d-flex align-items-center" id="hero">
       <div class="lp-hero-content pe-4">
@@ -98,8 +158,7 @@
           </div>
         </div>
         <p class="mt-3 lp-text-secondary">
-          Documento la mia vita, le mie passioni, e i miei progetti attraverso
-          contenuti, moda e tecnologia.
+          <span class="lp-typewriter"></span>
         </p>
         <div class="d-flex flex-wrap gap-3 mt-3">
           <a href="#projects" class="lp-btn text-decoration-none nav-link"
@@ -109,12 +168,13 @@
             >Contattami</a
           >
         </div>
-        <hr class="lp-hr mt-4" />
+        <div class="lp-divider mt-4"></div>
         <div class="lp-text-secondary lp-hero-footer">
           <p class="small">
-            190+ contenuti pubblicati <br />200k+ visualizzazioni mensili totali
-            <br />Collaborazioni con brand locali, magazine musicali e progetti
-            digitali.
+            <span class="lp-counter" data-target="190">0</span>+ contenuti
+            pubblicati <br /><span class="lp-counter" data-target="200">0</span
+            >k+ visualizzazioni mensili totali <br />Collaborazioni con brand
+            locali, magazine musicali e progetti digitali.
           </p>
           <div class="d-flex justify-content-between flex-wrap gap-2 mt-2">
             <a
@@ -149,18 +209,20 @@
           src="assets/intro-image.png"
           alt="Lorenzo Perassi"
           class="lp-hero-img"
+          data-speed="0.95"
         />
       </div>
     </section>
 
     <!-- ABOUT -->
     <section class="about d-flex align-items-center mt-5 pt-5" id="about">
-      <div class="about-inner">
+      <div class="about-inner lp-reveal">
         <div class="about-img-wrap">
           <img
             src="assets/about-image.png"
-            alt="Lorenzo Perassi foto"
+            alt="Lorenzo Perassi — ritratto"
             class="lp-about-img"
+            loading="lazy"
           />
         </div>
         <div class="lp-about-content">
@@ -195,12 +257,12 @@
 
     <!-- cosa faccio -->
     <section class="lp-section" id="what-i-do">
-      <div class="ms-4 ps-2 mb-4">
+      <div class="ms-4 ps-2 mb-4 lp-reveal">
         <h2 class="lp-big-title">WHAT I DO</h2>
         <h3 class="lp-text-secondary lp-subtitle-offset">Cosa faccio</h3>
       </div>
-      <div class="lp-activities-container">
-        <div class="lp-activity-card">
+      <div class="lp-activities-container lp-stagger">
+        <div class="lp-activity-card lp-reveal">
           <div class="lp-activity-inner">
             <div class="lp-activity-info">
               <h4>01 — Content Creation</h4>
@@ -231,7 +293,7 @@
           </div>
         </div>
 
-        <div class="lp-activity-card">
+        <div class="lp-activity-card lp-reveal">
           <div class="lp-activity-inner">
             <div class="lp-activity-info">
               <h4>02 — Fashion & Custom Projects</h4>
@@ -253,6 +315,15 @@
               class="lp-activity-video"
             ></video>
           </div>
+          <div class="lp-fashion-photos">
+            <div
+              class="lp-photo-placeholder"
+              onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'});setTimeout(()=>{let b=document.querySelector('.lp-filter-btn[data-filter=fashion]');if(b)b.click()},500)"
+            >
+              <span>📸</span>
+              <span>Sewing process</span>
+            </div>
+          </div>
           <div class="lp-activity-tags">
             <div class="marquee">
               <div class="marquee-track">
@@ -264,7 +335,7 @@
           </div>
         </div>
 
-        <div class="lp-activity-card">
+        <div class="lp-activity-card lp-reveal">
           <div class="lp-activity-inner">
             <div class="lp-activity-info">
               <h4>03 — Informatica & Tecnologia</h4>
@@ -301,11 +372,11 @@
       </div>
     </section>
 
-    <hr class="lp-hr mx-3" />
+    <div class="lp-divider"></div>
 
     <!-- DIGITAL PRESENCE -->
-    <section class="lp-section">
-      <div class="ms-4 ps-2 mb-2">
+    <section class="lp-section lp-reveal">
+      <div class="ms-4 ps-2 mb-2 lp-reveal">
         <h2 class="lp-big-title">DIGITAL PRESENCE</h2>
         <h3 class="lp-text-secondary lp-subtitle-offset">Presenza Online</h3>
       </div>
@@ -315,7 +386,7 @@
         personali e sperimentazione digitale.
       </p>
 
-      <div class="container-extended">
+      <div class="container-extended lp-reveal">
         <button
           class="scroll-btn scroll-btn--left"
           aria-label="Scorri a sinistra"
@@ -472,7 +543,7 @@
       </div>
     </section>
 
-    <hr class="lp-hr mx-3" />
+    <div class="lp-divider"></div>
 
     <!-- PROJECTS -->
     <section class="lp-section" id="projects">
@@ -482,9 +553,16 @@
           Progetti Selezionati
         </h3>
       </div>
+      <div class="lp-filter-bar px-3">
+        <button class="lp-filter-btn active" data-filter="all">All</button>
+        <button class="lp-filter-btn" data-filter="fashion">Fashion</button>
+      </div>
 
-      <div class="lp-projects-grid px-3">
-        <div class="lp-project-card d-flex align-items-center">
+      <div class="lp-projects-grid px-3 lp-reveal">
+        <div
+          class="lp-project-card d-flex align-items-center"
+          data-category="content"
+        >
           <img
             src="assets/548891602_17878643229400276_4335531291404571750_n.jpg"
             alt="Diario di uno 09"
@@ -504,7 +582,10 @@
             </div>
           </div>
         </div>
-        <div class="lp-project-card d-flex align-items-center">
+        <div
+          class="lp-project-card d-flex align-items-center"
+          data-category="fashion"
+        >
           <img
             src="assets/logo-01.png"
             alt="CRYBU"
@@ -522,10 +603,13 @@
             </div>
           </div>
         </div>
-        <div class="lp-project-card d-flex align-items-center">
+        <div
+          class="lp-project-card d-flex align-items-center"
+          data-category="fashion"
+        >
           <img
             src="assets/project-fashion-image.jpeg"
-            alt=""
+            alt="Progetto fashion customization"
             class="lp-project-img rounded-circle bg-white"
           />
           <div class="ps-2">
@@ -541,7 +625,10 @@
             </div>
           </div>
         </div>
-        <div class="lp-project-card d-flex align-items-center">
+        <div
+          class="lp-project-card d-flex align-items-center"
+          data-category="content"
+        >
           <div
             class="lp-project-placeholder rounded-circle d-flex align-items-center justify-content-center"
           >
@@ -560,7 +647,10 @@
             </div>
           </div>
         </div>
-        <div class="lp-project-card d-flex align-items-center">
+        <div
+          class="lp-project-card d-flex align-items-center"
+          data-category="content"
+        >
           <img
             src="assets/project-omnia-image.jpg"
             alt="Agency Logo"
@@ -581,10 +671,13 @@
             </div>
           </div>
         </div>
-        <div class="lp-project-card d-flex align-items-center">
+        <div
+          class="lp-project-card d-flex align-items-center"
+          data-category="web"
+        >
           <img
             src="assets/project-saluzzo-image.avif"
-            alt=""
+            alt="Progetto sito web affitti brevi Saluzzo"
             class="lp-project-img rounded-circle bg-white"
           />
           <div class="ps-2">
@@ -602,15 +695,53 @@
             </div>
           </div>
         </div>
+        <div
+          class="lp-project-card d-flex align-items-center lp-project-card--empty"
+        >
+          <div
+            class="lp-project-placeholder rounded-circle d-flex align-items-center justify-content-center"
+          >
+            +
+          </div>
+          <div class="ps-2">
+            <h4 class="fs-5 fw-bold mb-1">Nuovo progetto</h4>
+            <p class="lp-text-secondary small mb-2">
+              Aggiungi qui immagini e descrizione del tuo prossimo progetto
+              fashion.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="lp-badge">In arrivo</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="lp-project-card d-flex align-items-center lp-project-card--empty"
+        >
+          <div
+            class="lp-project-placeholder rounded-circle d-flex align-items-center justify-content-center"
+          >
+            +
+          </div>
+          <div class="ps-2">
+            <h4 class="fs-5 fw-bold mb-1">Nuovo progetto</h4>
+            <p class="lp-text-secondary small mb-2">
+              Aggiungi qui immagini e descrizione del tuo prossimo progetto
+              fashion.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="lp-badge">In arrivo</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <br /><br />
-    <hr class="lp-hr mx-3" />
+    <div class="lp-divider"></div>
 
     <div class="d-flex justify-content-around flex-wrap gap-4 px-4 lp-section">
       <!-- COLLABORATIONS -->
-      <div class="lp-card lp-collab-card">
+      <div class="lp-card lp-collab-card lp-reveal">
         <div class="mb-4">
           <h2 class="lp-big-title">COLLABORATIONS</h2>
           <h3 class="lp-text-secondary lp-subtitle-offset">Collaborazioni</h3>
@@ -618,7 +749,7 @@
         <div class="d-flex align-items-center gap-4 my-4">
           <img
             src="assets/317062969_606791741201597_6059850371880419656_n (1).jpg"
-            alt=""
+            alt="Logo Aleyesure"
             class="lp-collab-img rounded-circle"
           />
           <div>
@@ -633,7 +764,7 @@
         <div class="d-flex align-items-center gap-4 my-4">
           <img
             src="assets/453437125_410088654834177_1870542348851143564_n.jpg"
-            alt=""
+            alt="Logo StageStreetwear"
             class="lp-collab-img rounded-circle"
           />
           <div>
@@ -647,7 +778,7 @@
         <div class="d-flex align-items-center gap-4 my-4">
           <img
             src="assets/515840484_17844040752526701_7246610692396126231_n.jpg"
-            alt=""
+            alt="Logo NewGenMusic4"
             class="lp-collab-img rounded-circle"
           />
           <div>
@@ -662,7 +793,7 @@
         <div class="d-flex align-items-center gap-4 my-4">
           <img
             src="assets/raffer-records.jpg"
-            alt=""
+            alt="Logo RAFFER RECORDS"
             class="lp-collab-img rounded-circle"
           />
           <div>
@@ -678,82 +809,134 @@
       </div>
 
       <!-- TOOLS -->
-      <div class="lp-card lp-tools-card">
+      <div class="lp-card lp-tools-card lp-reveal">
         <div class="mb-4">
           <h2 class="lp-big-title">TOOLS</h2>
           <h3 class="lp-text-secondary lp-subtitle-offset">
             Strumenti & Competenze
           </h3>
         </div>
-
-        <table class="table table-dark table-borderless align-middle">
-          <thead>
-            <tr>
-              <th>Skill</th>
-              <th>Level</th>
-              <th>Context</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>HTML | CSS</td>
-              <td>Intermediate</td>
-              <td>School & Self-taught</td>
-            </tr>
-            <tr>
-              <td>JavaScript | C | C#</td>
-              <td>Beginner</td>
-              <td>School</td>
-            </tr>
-            <tr>
-              <td>Python</td>
-              <td>Beginner</td>
-              <td>Self-taught</td>
-            </tr>
-            <tr>
-              <td>Git | Bash</td>
-              <td>Intermediate</td>
-              <td>School & Self-taugh</td>
-            </tr>
-            <tr>
-              <td>VSCode</td>
-              <td>Advanced</td>
-              <td>School & Self-taught</td>
-            </tr>
-            <tr>
-              <td>Visual Studio</td>
-              <td>Beginner</td>
-              <td>School</td>
-            </tr>
-            <tr>
-              <td>CapCut | Filmora | Edits</td>
-              <td>Intermediate</td>
-              <td>Work & Self-taught</td>
-            </tr>
-            <tr>
-              <td>Canva</td>
-              <td>Advanced</td>
-              <td>Work & Self-taught</td>
-            </tr>
-            <tr>
-              <td>Lightroom</td>
-              <td>Beginner</td>
-              <td>Work</td>
-            </tr>
-            <tr>
-              <td>n8n</td>
-              <td>Beginner</td>
-              <td>Self-taught</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="lp-tech-grid">
+          <div
+            class="lp-tech-item"
+            data-level="advanced"
+            data-context="Web development"
+          >
+            <i class="devicon-html5-plain colored"></i>
+            <span>HTML</span>
+          </div>
+          <div
+            class="lp-tech-item"
+            data-level="advanced"
+            data-context="Web development"
+          >
+            <i class="devicon-css3-plain colored"></i>
+            <span>CSS</span>
+          </div>
+          <div
+            class="lp-tech-item"
+            data-level="advanced"
+            data-context="Web development"
+          >
+            <i class="devicon-javascript-plain colored"></i>
+            <span>JS</span>
+          </div>
+          <div
+            class="lp-tech-item"
+            data-level="intermediate"
+            data-context="Academic"
+          >
+            <i class="devicon-c-plain colored"></i>
+            <span>C</span>
+          </div>
+          <div
+            class="lp-tech-item"
+            data-level="intermediate"
+            data-context="Academic"
+          >
+            <i class="devicon-csharp-plain colored"></i>
+            <span>C#</span>
+          </div>
+          <div
+            class="lp-tech-item"
+            data-level="advanced"
+            data-context="Personal projects"
+          >
+            <i class="devicon-python-plain colored"></i>
+            <span>Python</span>
+          </div>
+          <div
+            class="lp-tech-item"
+            data-level="advanced"
+            data-context="Version control"
+          >
+            <i class="devicon-git-plain colored"></i>
+            <span>Git</span>
+          </div>
+          <div
+            class="lp-tech-item"
+            data-level="intermediate"
+            data-context="DevOps"
+          >
+            <i class="devicon-bash-plain colored"></i>
+            <span>Bash</span>
+          </div>
+          <div
+            class="lp-tech-item"
+            data-level="advanced"
+            data-context="Daily driver"
+          >
+            <i class="devicon-vscode-plain colored"></i>
+            <span>VSCode</span>
+          </div>
+          <div
+            class="lp-tech-item"
+            data-level="intermediate"
+            data-context="Academic"
+          >
+            <i class="devicon-visualstudio-plain colored"></i>
+            <span>VS</span>
+          </div>
+          <div
+            class="lp-tech-item"
+            data-level="advanced"
+            data-context="Content creation"
+          >
+            <i class="devicon-canva-original colored"></i>
+            <span>Canva</span>
+          </div>
+          <div
+            class="lp-tech-item"
+            data-level="advanced"
+            data-context="Photo editing"
+          >
+            <i class="devicon-photoshop-plain colored"></i>
+            <span>Lightroom</span>
+          </div>
+          <div
+            class="lp-tech-item"
+            data-level="advanced"
+            data-context="Video editing"
+          >
+            <i class="devicon-capcut-plain colored" style="display: none"></i>
+            <span>CapCut</span>
+          </div>
+          <div
+            class="lp-tech-item"
+            data-level="intermediate"
+            data-context="Automation"
+          >
+            <i class="devicon-n8n-plain colored" style="display: none"></i>
+            <span>n8n</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <hr class="lp-hr mx-3" />
+    <div class="lp-divider"></div>
 
     <!-- CONTACT -->
-    <section class="lp-contact-section" id="contact">
+    <section class="lp-contact-section lp-reveal" id="contact">
       <div class="contact-form-wrapper">
         <h2 class="lp-big-title">CONTACT</h2>
         <h3 class="lp-text-secondary lp-subtitle-offset">
@@ -798,19 +981,58 @@
             required
           ></textarea>
           <button type="submit" class="lp-btn mt-3">Invia messaggio</button>
+          <div id="formFeedback" class="lp-form-feedback" role="alert"></div>
         </form>
+        <p class="lp-text-secondary mt-4 small">
+          Oppure
+          <button
+            class="lp-copy-btn"
+            onclick="navigator.clipboard.writeText('perassi.lorenzo1804@gmail.com').then(() => this.textContent='Copiata!').catch(() => {})"
+          >
+            copiami l'email
+          </button>
+        </p>
       </div>
       <img
         src="assets/contact-image.png"
         alt="Contattami"
         class="contact-image"
+        loading="lazy"
       />
     </section>
-    <hr class="lp-hr mx-3" />
+    <div class="lp-divider"></div>
 
     <!-- modale -->
+    <button id="backToTop" class="lp-back-to-top" aria-label="Torna su">
+      ↑
+    </button>
+    <a
+      id="whatsappBtn"
+      class="lp-whatsapp-btn"
+      href="https://wa.me/393293360374"
+      target="_blank"
+      rel="noopener"
+      aria-label="Scrivimi su WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <path
+          fill="currentColor"
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
+    </a>
+    <div
+      id="lightbox"
+      class="lp-lightbox"
+      role="dialog"
+      aria-label="Anteprima immagine"
+      onclick="this.classList.remove('open')"
+    >
+      <span class="lp-lightbox-close">&times;</span>
+      <img class="lp-lightbox-img" id="lightboxImg" alt="" />
+    </div>
 
-    <footer class="lp-footer">
+    <footer class="lp-footer lp-reveal">
       <div class="lp-footer-container">
         <div class="lp-footer-col">
           <h2 class="lp-footer-title">LORENZO PERASSI</h2>
