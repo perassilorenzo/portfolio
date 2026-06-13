@@ -503,7 +503,7 @@
               playsinline
               webkit-playsinline
               preload="auto"
-              class="lp-mid-video"
+              class=""
             ></video>
             <p>Routine</p>
           </div>
@@ -624,6 +624,7 @@
       <div class="lp-filter-bar px-3">
         <button class="lp-filter-btn active" data-filter="all">All</button>
         <button class="lp-filter-btn" data-filter="fashion">Fashion</button>
+        <button class="lp-filter-btn" data-filter="tech">Tech</button>
       </div>
 
       <div class="lp-projects-grid px-3 lp-reveal">
@@ -741,7 +742,7 @@
         </div>
         <div
           class="lp-project-card d-flex align-items-center"
-          data-category="web"
+          data-category="tech"
         >
           <img
             src="assets/project-saluzzo-image.avif"
@@ -765,17 +766,29 @@
         </div>
         <div
           class="lp-project-card d-flex align-items-center lp-project-card--empty"
+          data-category="tech"
         >
           <div
             class="lp-project-placeholder rounded-circle d-flex align-items-center justify-content-center"
           >
-            +
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
           </div>
           <div class="ps-2">
-            <h4 class="fs-5 fw-bold mb-1">Nuovo progetto</h4>
+            <h4 class="fs-5 fw-bold mb-1">Progetto Tech</h4>
             <p class="lp-text-secondary small mb-2">
-              Aggiungi qui immagini e descrizione del tuo prossimo progetto
-              fashion.
+              Prossimo progetto in arrivo — sviluppo web, automazione o
+              cybersecurity.
             </p>
             <div class="d-flex flex-wrap gap-2">
               <span class="lp-badge">In arrivo</span>
@@ -784,17 +797,30 @@
         </div>
         <div
           class="lp-project-card d-flex align-items-center lp-project-card--empty"
+          data-category="tech"
         >
           <div
             class="lp-project-placeholder rounded-circle d-flex align-items-center justify-content-center"
           >
-            +
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
+              />
+            </svg>
           </div>
           <div class="ps-2">
-            <h4 class="fs-5 fw-bold mb-1">Nuovo progetto</h4>
+            <h4 class="fs-5 fw-bold mb-1">Progetto Tech</h4>
             <p class="lp-text-secondary small mb-2">
-              Aggiungi qui immagini e descrizione del tuo prossimo progetto
-              fashion.
+              Prossimo progetto in arrivo — sviluppo web, automazione o
+              cybersecurity.
             </p>
             <div class="d-flex flex-wrap gap-2">
               <span class="lp-badge">In arrivo</span>
@@ -1180,7 +1206,27 @@
     </section>
     <div class="lp-divider"></div>
 
-    <!-- modale -->
+    <!-- project detail modal -->
+    <div
+      id="projectModal"
+      class="lp-modal"
+      role="dialog"
+      aria-label="Dettaglio progetto"
+    >
+      <div class="lp-modal-backdrop" onclick="closeProjectModal()"></div>
+      <div class="lp-modal-content">
+        <button class="lp-modal-close" onclick="closeProjectModal()">
+          &times;
+        </button>
+        <img class="lp-modal-img" id="modalImg" alt="" />
+        <div class="lp-modal-body">
+          <h2 class="lp-modal-title" id="modalTitle"></h2>
+          <p class="lp-modal-desc" id="modalDesc"></p>
+          <div class="d-flex flex-wrap gap-2" id="modalBadges"></div>
+        </div>
+      </div>
+    </div>
+
     <button id="backToTop" class="lp-back-to-top" aria-label="Torna su">
       ↑
     </button>

@@ -57,15 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function tick() {
       if (!paused) {
-        let n = dv.scrollLeft + 0.6;
-        if (n >= hw) n = 0;
-        dv.scrollLeft = n;
+        dv.scrollLeft += 0.6;
+        if (dv.scrollLeft >= hw) dv.scrollLeft -= hw;
       }
       rid = requestAnimationFrame(tick);
-    }
-    function wrap() {
-      if (dv.scrollLeft >= hw) dv.scrollLeft = 0;
-      else if (dv.scrollLeft < 0) dv.scrollLeft = 0;
     }
 
     dv.addEventListener("mousedown", (e) => {
@@ -84,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
       drag = false;
       paused = false;
       dv.classList.remove("active-drag");
-      wrap();
+      if (dv.scrollLeft >= hw || dv.scrollLeft < 0) dv.scrollLeft = 0;
     });
 
     dv.addEventListener(
@@ -107,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "touchend",
       () => {
         paused = false;
-        wrap();
+        if (dv.scrollLeft >= hw || dv.scrollLeft < 0) dv.scrollLeft = 0;
       },
       { passive: true },
     );
@@ -150,24 +145,64 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   document.querySelectorAll(".lp-reveal").forEach((el) => rvObs.observe(el));
 
-  // Nav highlight
+  // Nav highlight + sliding indicator
   const secs = document.querySelectorAll("section[id]");
   const nls = document.querySelectorAll('.lp-nav-link[href^="#"]');
-  const scObs = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          nls.forEach((l) => l.classList.remove("active"));
-          const a = document.querySelector(
-            `.lp-nav-link[href="#${e.target.id}"]`,
-          );
-          if (a) a.classList.add("active");
-        }
-      });
-    },
-    { threshold: 0.3, rootMargin: "-80px 0px 0px 0px" },
-  );
-  secs.forEach((s) => scObs.observe(s));
+  const navUl = document.querySelector(".lp-navbar .navbar-nav");
+  let ind;
+  if (navUl && window.innerWidth >= 992) {
+    ind = document.createElement("div");
+    ind.className = "lp-nav-indicator";
+    navUl.style.position = "relative";
+    navUl.appendChild(ind);
+    function moveInd(el) {
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      const pr = navUl.getBoundingClientRect();
+      ind.style.left = r.left - pr.left + "px";
+      ind.style.width = r.width + "px";
+    }
+    moveInd(
+      document.querySelector('.lp-nav-link.active, .lp-nav-link[href="#hero"]'),
+    );
+    const scObs2 = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            nls.forEach((l) => l.classList.remove("active"));
+            const a = document.querySelector(
+              `.lp-nav-link[href="#${e.target.id}"]`,
+            );
+            if (a) {
+              a.classList.add("active");
+              moveInd(a);
+            }
+          }
+        });
+      },
+      { threshold: 0.3, rootMargin: "-80px 0px 0px 0px" },
+    );
+    secs.forEach((s) => scObs2.observe(s));
+    addEventListener("resize", () =>
+      moveInd(document.querySelector(".lp-nav-link.active")),
+    );
+  } else {
+    const scObs2 = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            nls.forEach((l) => l.classList.remove("active"));
+            const a = document.querySelector(
+              `.lp-nav-link[href="#${e.target.id}"]`,
+            );
+            if (a) a.classList.add("active");
+          }
+        });
+      },
+      { threshold: 0.3, rootMargin: "-80px 0px 0px 0px" },
+    );
+    secs.forEach((s) => scObs2.observe(s));
+  }
 
   // Back to top
   const bt = document.getElementById("backToTop");
@@ -241,6 +276,21 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   document.querySelectorAll(".lp-counter").forEach((el) => ctObs.observe(el));
 
+  // Pause videos outside viewport
+  const vObs = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.play().catch(() => {});
+        } else {
+          e.target.pause();
+        }
+      });
+    },
+    { threshold: 0.3 },
+  );
+  document.querySelectorAll("video").forEach((v) => vObs.observe(v));
+
   // Parallax hero image
   const hi = document.querySelector(".lp-hero-img");
   if (hi) {
@@ -258,11 +308,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Project filters
   function fFilter(f) {
     document.querySelectorAll(".lp-project-card").forEach((c) => {
+      const cat = c.dataset.category;
       const empty = c.classList.contains("lp-project-card--empty");
       if (f === "all") {
         c.classList.toggle("hide", empty);
       } else {
-        c.classList.toggle("hide", !empty);
+        c.classList.toggle("hide", cat !== f);
       }
     });
   }
@@ -278,6 +329,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     fFilter("all");
   }
+
+  // Project modal
+  const pm = document.getElementById("projectModal");
+  if (pm) {
+    document
+      .querySelectorAll(".lp-project-card:not(.lp-project-card--empty)")
+      .forEach((c) => {
+        c.addEventListener("click", () => {
+          const img = c.querySelector("img");
+          document.getElementById("modalImg").src = img ? img.src : "";
+          document.getElementById("modalTitle").textContent =
+            c.querySelector("h4").textContent;
+          document.getElementById("modalDesc").textContent =
+            c.querySelector("p").textContent;
+          const badges = c.querySelectorAll(".lp-badge");
+          const container = document.getElementById("modalBadges");
+          container.innerHTML = "";
+          badges.forEach((b) => {
+            const s = document.createElement("span");
+            s.className = "lp-badge";
+            s.textContent = b.textContent;
+            container.appendChild(s);
+          });
+          pm.classList.add("open");
+        });
+        c.style.cursor = "pointer";
+      });
+  }
+
+  window.closeProjectModal = function () {
+    pm.classList.remove("open");
+  };
 
   // Tech tooltips
   document.querySelectorAll(".lp-tech-item").forEach((item) => {
