@@ -101,7 +101,10 @@ document.addEventListener("DOMContentLoaded", function () {
     dv.addEventListener(
       "touchend",
       () => {
-        paused = false;
+        clearTimeout(rt);
+        rt = setTimeout(() => {
+          paused = false;
+        }, 4000);
         if (dv.scrollLeft >= hw || dv.scrollLeft < 0) dv.scrollLeft = 0;
       },
       { passive: true },
@@ -282,12 +285,13 @@ document.addEventListener("DOMContentLoaded", function () {
       entries.forEach((e) => {
         if (e.isIntersecting) {
           e.target.play().catch(() => {});
+          vObs.unobserve(e.target);
         } else {
           e.target.pause();
         }
       });
     },
-    { threshold: 0.3 },
+    { threshold: 0 },
   );
   document.querySelectorAll("video").forEach((v) => vObs.observe(v));
 
@@ -308,8 +312,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Project filters
   function fFilter(f) {
     document.querySelectorAll(".lp-project-card").forEach((c) => {
-      const cat = c.dataset.category;
       const empty = c.classList.contains("lp-project-card--empty");
+      const cat = c.dataset.category;
       if (f === "all") {
         c.classList.toggle("hide", empty);
       } else {
@@ -390,51 +394,135 @@ document.addEventListener("DOMContentLoaded", function () {
       .forEach((el) => el.classList.remove("show-tip"));
   });
 
-  // Lightbox
+  // Lightbox gallery
   const lb = document.getElementById("lightbox");
-  const lbImg = document.getElementById("lightboxImg");
-  if (lb && lbImg) {
+  const lbMedia = document.getElementById("lbMedia");
+  const lbPrev = document.getElementById("lbPrev");
+  const lbNext = document.getElementById("lbNext");
+  const lbDots = document.getElementById("lbDots");
+  let mediaList = [];
+  let mediaIdx = 0;
+  let touchX = 0;
+
+  if (lb && lbMedia) {
+    function isVideo(src) {
+      return /\.(mp4|mov|webm|avi|mkv)$/i.test(src);
+    }
+
+    function renderDots() {
+      lbDots.innerHTML = "";
+      if (mediaList.length <= 1) return;
+      mediaList.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.className = "lp-lightbox-dot";
+        if (i === mediaIdx) dot.classList.add("active");
+        dot.addEventListener("click", (e) => {
+          e.stopPropagation();
+          mediaIdx = i;
+          renderMedia();
+        });
+        lbDots.appendChild(dot);
+      });
+    }
+
+    function renderMedia() {
+      const src = mediaList[mediaIdx];
+      lbMedia.innerHTML = "";
+      if (isVideo(src)) {
+        const v = document.createElement("video");
+        v.src = src;
+        v.muted = true;
+        v.loop = true;
+        v.autoplay = true;
+        v.playsInline = true;
+        lbMedia.appendChild(v);
+        v.play().catch(() => {});
+      } else {
+        const i = document.createElement("img");
+        i.src = src;
+        i.alt = "";
+        lbMedia.appendChild(i);
+      }
+      renderDots();
+      lbPrev.style.display = mediaList.length > 1 ? "" : "none";
+      lbNext.style.display = mediaList.length > 1 ? "" : "none";
+    }
+
+    function navMedia(d) {
+      if (!mediaList.length) return;
+      mediaIdx = (mediaIdx + d + mediaList.length) % mediaList.length;
+      renderMedia();
+    }
+
+    function openMedia(list, idx) {
+      mediaList = list;
+      mediaIdx = idx;
+      lb.classList.add("open");
+      renderMedia();
+    }
+
     document
       .querySelectorAll(".lp-project-img, .lp-collab-img")
       .forEach((img) => {
         img.addEventListener("click", (e) => {
           e.stopPropagation();
-          lbImg.src = img.src;
-          lb.classList.add("open");
+          const card = img.closest("[data-media]");
+          if (card) {
+            const raw = card.dataset.media;
+            if (raw) {
+              const list = raw
+                .split("|")
+                .map((s) => s.trim())
+                .filter(Boolean);
+              if (list.length) {
+                openMedia(list, 0);
+                return;
+              }
+            }
+          }
+          openMedia([img.src], 0);
         });
         img.style.cursor = "pointer";
       });
-  }
 
-  // Form feedback
-  const form = document.querySelector(".lp-contact-form");
-  const fb = document.getElementById("formFeedback");
-  if (form && fb) {
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      fb.className = "lp-form-feedback";
-      fb.textContent = "Invio in corso...";
-      fb.style.display = "block";
-      try {
-        const res = await fetch(form.action, {
-          method: "POST",
-          body: data,
-          headers: { Accept: "application/json" },
-        });
-        if (res.ok) {
-          fb.className = "lp-form-feedback success";
-          fb.textContent =
-            "Messaggio inviato con successo! Ti risponderò presto.";
-          form.reset();
-        } else {
-          throw new Error();
-        }
-      } catch {
-        fb.className = "lp-form-feedback error";
-        fb.textContent =
-          "Errore nell'invio. Riprova più tardi o scrivimi direttamente su Instagram.";
-      }
+    lbPrev.addEventListener("click", (e) => {
+      e.stopPropagation();
+      navMedia(-1);
     });
+
+    lbNext.addEventListener("click", (e) => {
+      e.stopPropagation();
+      navMedia(1);
+    });
+
+    lb.addEventListener(
+      "touchstart",
+      (e) => {
+        touchX = e.changedTouches[0].screenX;
+      },
+      { passive: true },
+    );
+
+    lb.addEventListener(
+      "touchend",
+      (e) => {
+        const dx = e.changedTouches[0].screenX - touchX;
+        if (Math.abs(dx) > 50) navMedia(dx > 0 ? -1 : 1);
+      },
+      { passive: true },
+    );
+
+    document.addEventListener("keydown", (e) => {
+      if (!lb.classList.contains("open")) return;
+      if (e.key === "ArrowLeft") navMedia(-1);
+      if (e.key === "ArrowRight") navMedia(1);
+      if (e.key === "Escape") window.closeLightbox();
+    });
+
+    window.closeLightbox = function () {
+      lb.classList.remove("open");
+      lbMedia.innerHTML = "";
+      mediaList = [];
+    };
   }
 });

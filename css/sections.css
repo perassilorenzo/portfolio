@@ -775,9 +775,20 @@
   cursor: default;
 }
 
+.lp-project-card--empty[data-category="fashion"] {
+  border-style: solid;
+  opacity: 1;
+  cursor: pointer;
+}
+
 .lp-project-card--empty:hover {
   opacity: 0.85;
   border-color: var(--accent-silver);
+}
+
+.lp-project-card--empty[data-category="fashion"]:hover {
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .lp-project-card--empty .lp-project-placeholder {
@@ -961,7 +972,7 @@
   font-size: 0.85rem;
 }
 
-.lp-nav-link.active {
+.navbar-nav .lp-nav-link.active {
   color: var(--text-secondary);
 }
 
@@ -1083,6 +1094,7 @@
   z-index: 10000;
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(8px);
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -1092,9 +1104,17 @@
   display: flex;
 }
 
-.lp-lightbox-img {
+.lp-lightbox-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lp-lightbox-media img,
+.lp-lightbox-media video {
   max-width: 90vw;
-  max-height: 85vh;
+  max-height: 80vh;
   border-radius: 12px;
   object-fit: contain;
 }
@@ -1109,10 +1129,62 @@
   line-height: 1;
   opacity: 0.7;
   transition: opacity 0.2s;
+  z-index: 1;
 }
 
 .lp-lightbox-close:hover {
   opacity: 1;
+}
+
+.lp-lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: var(--text-primary);
+  font-size: 2rem;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+  line-height: 1;
+}
+
+.lp-lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lp-lightbox-prev {
+  left: 10px;
+}
+
+.lp-lightbox-next {
+  right: 10px;
+}
+
+.lp-lightbox-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+  min-height: 12px;
+}
+
+.lp-lightbox-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.lp-lightbox-dot.active {
+  background: var(--text-primary);
 }
 
 /* ==========================================================================

@@ -1,0 +1,10 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "scripts": {
+    "start": "bun server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

@@ -185,7 +185,10 @@
   }
 
   .scroll-btn {
-    display: none;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
   }
 
   /* Projects */
@@ -427,7 +430,7 @@
   }
 
   .scroll-btn {
-    display: none;
+    display: flex;
   }
 
   .lp-music-sticky {
