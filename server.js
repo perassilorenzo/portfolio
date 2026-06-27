@@ -1,9 +1,10 @@
 import express from "express";
+import compression from "compression";
 
 const app = express();
 app.use(express.json({ limit: "10kb" }));
+app.use(compression());
 
-// Block sensitive files from static serving
 const BLOCKED = [
   "server.js",
   "package.json",
@@ -21,6 +22,19 @@ app.use((req, res, next) => {
     return res.status(404).end();
   next();
 });
-app.use(express.static("."));
+app.use(
+  express.static(".", {
+    maxAge: 0,
+    setHeaders: (res, path) => {
+      if (
+        path.match(
+          /\.(png|jpg|jpeg|avif|webp|gif|svg|ico|mp4|mov|webm|mp3|woff2?|ttf|css|js)$/,
+        )
+      ) {
+        res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+      }
+    },
+  }),
+);
 
 app.listen(3000, () => console.log("http://localhost:3000"));

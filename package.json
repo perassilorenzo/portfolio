@@ -5,6 +5,11 @@
     "start": "bun server.js"
   },
   "dependencies": {
+    "compression": "^1.8.1",
     "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "csso-cli": "^4.0.2",
+    "terser": "^5.48.0"
   }
 }
