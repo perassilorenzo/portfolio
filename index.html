@@ -132,6 +132,231 @@
       onload="this.media='all'"
     />
     <script src="script.js" defer></script>
+    <style>
+      .lp-lang-group {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+      .lp-lang-btn {
+        background: transparent;
+        border: 1px solid var(--border-color);
+        color: var(--text-secondary);
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        letter-spacing: 0.5px;
+      }
+      .lp-lang-btn:hover {
+        border-color: var(--accent-silver);
+        color: var(--text-primary);
+      }
+      .lp-lang-btn.active {
+        background: var(--accent-silver);
+        color: var(--bg-primary);
+        border-color: var(--accent-silver);
+      }
+      .lp-timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+      }
+      .lp-timeline-item {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 36px;
+        position: relative;
+      }
+      .lp-timeline-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 56px;
+        min-width: 56px;
+        position: relative;
+      }
+      .lp-timeline-side::after {
+        content: "";
+        position: absolute;
+        top: 28px;
+        bottom: -36px;
+        left: 50%;
+        width: 2px;
+        background: linear-gradient(
+          to bottom,
+          var(--accent-silver),
+          var(--border-color) 60%,
+          transparent
+        );
+        transform: translateX(-50%);
+      }
+      .lp-timeline-item:last-child .lp-timeline-side::after {
+        display: none;
+      }
+      .lp-timeline-dot {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--accent-silver);
+        z-index: 2;
+        flex-shrink: 0;
+        box-shadow: 0 0 0 4px var(--bg-primary);
+        transition: all 0.3s ease;
+      }
+      .lp-timeline-item:hover .lp-timeline-dot {
+        transform: scale(1.3);
+        box-shadow:
+          0 0 0 4px var(--bg-primary),
+          0 0 20px rgba(214, 214, 214, 0.4);
+      }
+      .lp-timeline-logo {
+        margin-top: 14px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: #fff;
+        border: 2px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+        transition: all 0.3s ease;
+      }
+      .lp-timeline-item:hover .lp-timeline-logo {
+        border-color: var(--accent-silver);
+        transform: scale(1.05);
+      }
+      .lp-timeline-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .lp-timeline-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-brand);
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--accent-silver);
+        background: var(--bg-card);
+      }
+      .lp-timeline-content {
+        flex: 1;
+        min-width: 0;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-left: 3px solid var(--accent-silver);
+        border-radius: 12px;
+        padding: 18px 24px 20px;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+      }
+      .lp-timeline-content:hover {
+        border-color: var(--border-hover);
+        border-left-color: var(--accent-silver);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+        transform: translateX(4px);
+      }
+      .lp-timeline-date {
+        display: inline-block;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        color: var(--bg-primary);
+        background: var(--accent-silver);
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        padding: 3px 12px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+      }
+      .lp-timeline-content h4 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin: 0 0 6px;
+        color: var(--text-primary);
+      }
+      .lp-timeline-content p {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        margin: 0 0 12px;
+        line-height: 1.6;
+      }
+      .lp-timeline-content .lp-badge {
+        font-size: 0.6rem;
+        padding: 3px 10px;
+        background: rgba(214, 214, 214, 0.1);
+        color: var(--accent-silver);
+        border: 1px solid rgba(214, 214, 214, 0.2);
+        border-radius: 6px;
+      }
+      .lp-timeline-content .lp-badge:hover {
+        background: rgba(214, 214, 214, 0.2);
+        color: var(--text-primary);
+      }
+      @media (max-width: 767px) {
+        .lp-timeline-item {
+          gap: 14px;
+          margin-bottom: 28px;
+        }
+        .lp-timeline-side {
+          width: 40px;
+          min-width: 40px;
+        }
+        .lp-timeline-side::after {
+          top: 24px;
+          bottom: -28px;
+        }
+        .lp-timeline-dot {
+          width: 12px;
+          height: 12px;
+          box-shadow: 0 0 0 3px var(--bg-primary);
+        }
+        .lp-timeline-logo {
+          margin-top: 10px;
+          width: 40px;
+          height: 40px;
+          border-width: 1.5px;
+        }
+        .lp-timeline-placeholder {
+          font-size: 0.9rem;
+        }
+        .lp-timeline-content {
+          padding: 12px 14px 14px;
+          border-left-width: 2px;
+        }
+        .lp-timeline-content h4 {
+          font-size: 0.88rem;
+        }
+        .lp-timeline-content p {
+          font-size: 0.76rem;
+          margin-bottom: 8px;
+        }
+        .lp-timeline-date {
+          font-size: 0.6rem;
+          padding: 1px 8px;
+          margin-bottom: 8px;
+        }
+        .lp-timeline-content .lp-badge {
+          font-size: 0.55rem;
+          padding: 2px 8px;
+        }
+        .lp-timeline-content:hover {
+          transform: none;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -174,13 +399,28 @@
       <div class="collapse navbar-collapse justify-content-end" id="navLinks">
         <ul class="navbar-nav gap-4 align-items-lg-center">
           <li class="nav-item">
-            <a class="nav-link lp-nav-link" href="#about">About</a>
+            <a
+              class="nav-link lp-nav-link"
+              href="#about"
+              data-lang-key="navAbout"
+              >About</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link lp-nav-link" href="#what-i-do">What I do</a>
+            <a
+              class="nav-link lp-nav-link"
+              href="#what-i-do"
+              data-lang-key="navWhat"
+              >What I do</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link lp-nav-link" href="#projects">Projects</a>
+            <a
+              class="nav-link lp-nav-link"
+              href="#projects"
+              data-lang-key="navProjects"
+              >Projects</a
+            >
           </li>
           <li class="nav-item">
             <a
@@ -188,12 +428,22 @@
               href="https://linktr.ee/lollo_pera"
               target="_blank"
               rel="noopener"
+              data-lang-key="navSocials"
               >Socials</a
             >
           </li>
           <li class="nav-item d-none d-lg-block lp-nav-divider">│</li>
           <li class="nav-item">
-            <a class="nav-link lp-nav-link" href="#contact">Contact</a>
+            <a
+              class="nav-link lp-nav-link"
+              href="#contact"
+              data-lang-key="navContact"
+              >Contact</a
+            >
+          </li>
+          <li class="nav-item lp-lang-group ms-lg-3">
+            <button class="lp-lang-btn active" data-lang-btn="it">IT</button>
+            <button class="lp-lang-btn" data-lang-btn="en">EN</button>
           </li>
         </ul>
       </div>
@@ -221,10 +471,16 @@
           <span class="lp-typewriter"></span>
         </p>
         <div class="d-flex flex-wrap gap-3 mt-3">
-          <a href="#projects" class="lp-btn text-decoration-none nav-link"
+          <a
+            href="#projects"
+            class="lp-btn text-decoration-none nav-link"
+            data-lang-key="heroBtn1"
             >Guarda i progetti</a
           >
-          <a href="#contact" class="lp-btn text-decoration-none nav-link"
+          <a
+            href="#contact"
+            class="lp-btn text-decoration-none nav-link"
+            data-lang-key="heroBtn2"
             >Contattami</a
           >
         </div>
@@ -288,8 +544,17 @@
         <div class="lp-about-content">
           <div class="about-text-top">
             <h2 class="lp-big-title">about</h2>
-            <h3 class="lp-text-secondary lp-subtitle-offset">Chi sono</h3>
-            <p class="lp-text-secondary lp-content-about about-intro">
+            <h3
+              class="lp-text-secondary lp-subtitle-offset"
+              data-lang-key="aboutSub"
+            >
+              Chi sono
+            </h3>
+            <p
+              class="lp-text-secondary lp-content-about about-intro"
+              data-lang-key="aboutP1"
+              data-lang-html
+            >
               Sono Lorenzo Perassi, creator digitale e studente di Informatica.
               <br /><br />Negli ultimi anni ho iniziato a costruire il mio
               percorso online sperimentando tra content creation, fashion,
@@ -298,7 +563,11 @@
               passioni.
             </p>
           </div>
-          <p class="lp-text-secondary lp-content-about about-rest">
+          <p
+            class="lp-text-secondary lp-content-about about-rest"
+            data-lang-key="aboutP2"
+            data-lang-html
+          >
             Utilizzo le piattaforme digitali come uno spazio dove condividere
             progetti, esperimenti creativi, routine, outfit, lavoro pratico e
             crescita personale, oltre che per creare connessioni, farmi
@@ -319,15 +588,17 @@
     <section class="lp-section" id="what-i-do">
       <div class="ms-4 ps-2 mb-4 lp-reveal">
         <h2 class="lp-big-title">WHAT I DO</h2>
-        <h3 class="lp-text-secondary lp-subtitle-offset">Cosa faccio</h3>
+        <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="widSub">
+          Cosa faccio
+        </h3>
       </div>
       <div class="lp-activities-container lp-stagger">
         <div class="lp-activity-card lp-reveal">
           <div class="lp-activity-inner">
             <div class="lp-activity-left">
               <div class="lp-activity-info">
-                <h4>01 — Content Creation</h4>
-                <p>
+                <h4 data-lang-key="wid1Title">01 — Content Creation</h4>
+                <p data-lang-key="wid1Desc">
                   Creo contenuti per piattaforme social combinando storytelling,
                   progetti personali, lavoro pratico come il cucito, routine e
                   sperimentazione creativa.
@@ -364,8 +635,10 @@
           <div class="lp-activity-inner">
             <div class="lp-activity-left">
               <div class="lp-activity-info">
-                <h4>02 — Fashion & Custom Projects</h4>
-                <p>
+                <h4 data-lang-key="wid2Title">
+                  02 — Fashion & Custom Projects
+                </h4>
+                <p data-lang-key="wid2Desc">
                   Lavoro su customizzazioni, design e sperimentazione nel mondo
                   fashion. <br /><br />Attualmente sto collaborando al design,
                   alla prototipazione e alla creazione delle camicie per gli
@@ -409,8 +682,8 @@
           <div class="lp-activity-inner">
             <div class="lp-activity-left">
               <div class="lp-activity-info">
-                <h4>03 — Informatica & Tecnologia</h4>
-                <p>
+                <h4 data-lang-key="wid3Title">03 — Informatica & Tecnologia</h4>
+                <p data-lang-key="wid3Desc">
                   L'informatica è una delle mie passioni principali. La studio
                   sia a scuola che da autodidatta, approfondendo sviluppo web,
                   programmazione, AI, cybersecurity e tecnologia in generale.
@@ -454,9 +727,14 @@
     <section class="lp-section lp-reveal">
       <div class="ms-4 ps-2 mb-2 lp-reveal">
         <h2 class="lp-big-title">DIGITAL PRESENCE</h2>
-        <h3 class="lp-text-secondary lp-subtitle-offset">Presenza Online</h3>
+        <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="dpSub">
+          Presenza Online
+        </h3>
       </div>
-      <p class="pt-3 lp-text-secondary container d-flex justify-content-center">
+      <p
+        class="pt-3 lp-text-secondary container d-flex justify-content-center"
+        data-lang-key="dpDesc"
+      >
         Utilizzo le piattaforme social come un diario per condividere quello che
         faccio quotidianamente tra lifestyle, moda, tecnologia, musica, progetti
         personali e sperimentazione digitale.
@@ -625,22 +903,47 @@
     <section class="lp-section" id="projects">
       <div class="ms-5 ps-3 mb-2">
         <h2 class="lp-big-title">PROJECTS</h2>
-        <h3 class="lp-text-secondary lp-subtitle-offset">
+        <h3
+          class="lp-text-secondary lp-subtitle-offset"
+          data-lang-key="projSub"
+        >
           Progetti Selezionati
         </h3>
       </div>
       <div class="lp-filter-bar px-3">
-        <button class="lp-filter-btn active" data-filter="all">All</button>
-        <button class="lp-filter-btn" data-filter="client-work">
+        <button
+          class="lp-filter-btn active"
+          data-filter="all"
+          data-lang-key="projAll"
+        >
+          All
+        </button>
+        <button
+          class="lp-filter-btn"
+          data-filter="client-work"
+          data-lang-key="projClient"
+        >
           Client Work
         </button>
-        <button class="lp-filter-btn" data-filter="currently-building">
+        <button
+          class="lp-filter-btn"
+          data-filter="currently-building"
+          data-lang-key="projBuilding"
+        >
           Currently Building
         </button>
-        <button class="lp-filter-btn" data-filter="personal-project">
+        <button
+          class="lp-filter-btn"
+          data-filter="personal-project"
+          data-lang-key="projPersonal"
+        >
           Personal Project
         </button>
-        <button class="lp-filter-btn" data-filter="fashion-customization">
+        <button
+          class="lp-filter-btn"
+          data-filter="fashion-customization"
+          data-lang-key="projFashion"
+        >
           Fashion Customization
         </button>
       </div>
@@ -908,28 +1211,87 @@
     <section class="lp-section lp-reveal">
       <div class="ms-5 ps-3 mb-2">
         <h2 class="lp-big-title">EXPERIENCE</h2>
-        <h3 class="lp-text-secondary lp-subtitle-offset">Esperienze</h3>
+        <h3
+          class="lp-text-secondary lp-subtitle-offset"
+          data-lang-key="timelineSub"
+        >
+          Esperienze
+        </h3>
       </div>
-      <div class="lp-projects-grid px-3">
-        <div class="lp-project-card d-flex align-items-center" data-media="">
-          <img
-            src="assets/project-agency.jpg"
-            alt="Agency Logo"
-            class="lp-project-img rounded-circle bg-white"
-            loading="lazy"
-          />
-          <div class="ps-2">
-            <h4 class="fs-5 fw-bold mb-1">Agency</h4>
-            <p class="lp-text-secondary small mb-2">
-              Stage e supporto alla creazione di contenuti digitali e
-              comunicazione social per un'agenzia locale. Mi occupo di editing
-              video, grafiche e caption utilizzando strumenti come CapCut, Canva
-              e Lightroom.
+      <div class="lp-timeline px-3">
+        <div class="lp-timeline-item lp-reveal">
+          <div class="lp-timeline-side">
+            <div class="lp-timeline-dot"></div>
+            <div class="lp-timeline-logo">
+              <img
+                src="assets/project-agency.jpg"
+                alt="Omnia4Web"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="lp-timeline-content">
+            <div class="lp-timeline-date">Mag 2026 — Presente</div>
+            <h4 data-lang-key="tl1Title">Omnia4Web</h4>
+            <p data-lang-key="tl1Desc">
+              Supporto alla creazione di contenuti digitali e comunicazione
+              social. Editing video, grafiche e caption.
             </p>
             <div class="d-flex flex-wrap gap-2">
               <span class="lp-badge">Digital Marketing</span>
               <span class="lp-badge">Social Media</span>
               <span class="lp-badge">Video Editing</span>
+            </div>
+          </div>
+        </div>
+        <div class="lp-timeline-item lp-reveal">
+          <div class="lp-timeline-side">
+            <div class="lp-timeline-dot"></div>
+            <div class="lp-timeline-logo">
+              <img
+                src="assets/project-diario.jpg"
+                alt="Diario di uno 09"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="lp-timeline-content">
+            <div class="lp-timeline-date">Mar 2025 — Presente</div>
+            <h4 data-lang-key="tl6Title">Content Creator — Diario di uno 09</h4>
+            <p data-lang-key="tl6Desc">
+              Progetto personale di content creation dove documento idee,
+              crescita personale, passioni e sperimentazione digitale su
+              Instagram, TikTok e YouTube.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="lp-badge">Content Creation</span>
+              <span class="lp-badge">Storytelling</span>
+              <span class="lp-badge">Social Media</span>
+            </div>
+          </div>
+        </div>
+        <div class="lp-timeline-item lp-reveal">
+          <div class="lp-timeline-side">
+            <div class="lp-timeline-dot"></div>
+            <div class="lp-timeline-logo">
+              <img
+                src="assets/experience-bertolotto.png"
+                alt="Bertolotto Porte"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="lp-timeline-content">
+            <div class="lp-timeline-date">6–18 Lug 2026</div>
+            <h4 data-lang-key="tl8Title">Bertolotto Porte — Stage IT</h4>
+            <p data-lang-key="tl8Desc">
+              Stage estivo di 2 settimane come IT, con focus su gestione
+              documentale e digitalizzazione archivi.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="lp-badge">IT Support</span>
+              <span class="lp-badge">Document Management</span>
+              <span class="lp-badge">Digitalizzazione</span>
             </div>
           </div>
         </div>
@@ -944,7 +1306,12 @@
       <div class="lp-card lp-collab-card lp-reveal">
         <div class="mb-4">
           <h2 class="lp-big-title">COLLABORATIONS</h2>
-          <h3 class="lp-text-secondary lp-subtitle-offset">Collaborazioni</h3>
+          <h3
+            class="lp-text-secondary lp-subtitle-offset"
+            data-lang-key="collabSub"
+          >
+            Collaborazioni
+          </h3>
         </div>
         <div class="d-flex align-items-center gap-4 my-4">
           <img
@@ -954,8 +1321,8 @@
             loading="lazy"
           />
           <div>
-            <h3>Aleyesure</h3>
-            <p class="lp-text-secondary small">
+            <h3 data-lang-key="collab1Name">Aleyesure</h3>
+            <p class="lp-text-secondary small" data-lang-key="collab1Desc">
               All'interno dei miei video sponsorizzo capi di abbigliamento di
               Aleyesure, brand locale che porta avanti lo slogan "Support local
               business".
@@ -970,8 +1337,8 @@
             loading="lazy"
           />
           <div>
-            <h3>StageStreetwear</h3>
-            <p class="lp-text-secondary small">
+            <h3 data-lang-key="collab2Name">StageStreetwear</h3>
+            <p class="lp-text-secondary small" data-lang-key="collab2Desc">
               Progetto creativo che unisce video, streetwear e custom
               cappellini.
             </p>
@@ -985,8 +1352,8 @@
             loading="lazy"
           />
           <div>
-            <h3>NewGenMusic4</h3>
-            <p class="lp-text-secondary small">
+            <h3 data-lang-key="collab3Name">NewGenMusic4</h3>
+            <p class="lp-text-secondary small" data-lang-key="collab3Desc">
               Portiamo avanti una rubrica che mette insieme la musica e
               l'abbigliamento. Questa pagina è un magazine no profit che ha come
               obiettivo sponsorizzare piccoli artisti della new gen.
@@ -1001,8 +1368,8 @@
             loading="lazy"
           />
           <div>
-            <h3>RAFFER RECORDS</h3>
-            <p class="lp-text-secondary small">
+            <h3 data-lang-key="collab4Name">RAFFER RECORDS</h3>
+            <p class="lp-text-secondary small" data-lang-key="collab4Desc">
               Collaboro come volto dell'etichetta, occupandomi della
               comunicazione e della presentazione di nuove collaborazioni e
               giovani artisti emergenti, contribuendo a dare visibilità ai loro
@@ -1016,7 +1383,10 @@
       <div class="lp-card lp-tools-card lp-reveal">
         <div class="mb-4">
           <h2 class="lp-big-title">TOOLS</h2>
-          <h3 class="lp-text-secondary lp-subtitle-offset">
+          <h3
+            class="lp-text-secondary lp-subtitle-offset"
+            data-lang-key="toolsSub"
+          >
             Strumenti & Competenze
           </h3>
         </div>
@@ -1231,10 +1601,13 @@
     <section class="lp-contact-section lp-reveal" id="contact">
       <div class="contact-form-wrapper">
         <h2 class="lp-big-title">CONTACT</h2>
-        <h3 class="lp-text-secondary lp-subtitle-offset">
+        <h3
+          class="lp-text-secondary lp-subtitle-offset"
+          data-lang-key="contactSub"
+        >
           Restiamo in contatto
         </h3>
-        <p class="lp-text-secondary mt-3 mb-4">
+        <p class="lp-text-secondary mt-3 mb-4" data-lang-key="contactDesc">
           Scrivimi per collaborazioni, idee o progetti.
         </p>
 
@@ -1250,6 +1623,7 @@
               class="lp-input"
               placeholder="Il tuo nome"
               required
+              data-lang-key="contactName"
             />
             <input
               type="email"
@@ -1257,12 +1631,14 @@
               class="lp-input"
               placeholder="La tua email"
               required
+              data-lang-key="contactEmail"
             />
             <input
               type="text"
               name="oggetto"
               class="lp-input"
               placeholder="Oggetto"
+              data-lang-key="contactSubject"
             />
           </div>
           <textarea
@@ -1271,8 +1647,11 @@
             placeholder="Il tuo messaggio..."
             rows="6"
             required
+            data-lang-key="contactMsg"
           ></textarea>
-          <button type="submit" class="lp-btn mt-3">Invia messaggio</button>
+          <button type="submit" class="lp-btn mt-3" data-lang-key="contactBtn">
+            Invia messaggio
+          </button>
         </form>
         <p class="lp-text-secondary mt-4 small">
           Oppure
@@ -1356,13 +1735,13 @@
       <div class="lp-footer-container">
         <div class="lp-footer-col">
           <h2 class="lp-footer-title">LORENZO PERASSI</h2>
-          <p class="lp-footer-text">
+          <p class="lp-footer-text" data-lang-key="footerTag">
             Content creator, fashion, tech & self-growth
           </p>
         </div>
 
         <div class="lp-footer-col">
-          <h3 class="lp-footer-subtitle">Pages</h3>
+          <h3 class="lp-footer-subtitle" data-lang-key="footerPages">Pages</h3>
           <a href="#hero">Home</a>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
@@ -1370,7 +1749,9 @@
         </div>
 
         <div class="lp-footer-col">
-          <h3 class="lp-footer-subtitle">Social</h3>
+          <h3 class="lp-footer-subtitle" data-lang-key="footerSocial">
+            Social
+          </h3>
           <a
             href="https://www.instagram.com/diario_di_uno_09"
             target="_blank"
@@ -1395,13 +1776,19 @@
         </div>
 
         <div class="lp-footer-col">
-          <h3 class="lp-footer-subtitle">Contact</h3>
-          <p class="lp-footer-text">Dispobile per collaborazioni</p>
+          <h3 class="lp-footer-subtitle" data-lang-key="footerContact">
+            Contact
+          </h3>
+          <p class="lp-footer-text" data-lang-key="footerAvailable">
+            Dispobile per collaborazioni
+          </p>
         </div>
       </div>
 
       <div class="lp-footer-bottom">
-        <p>&copy; 2026 Lorenzo Perassi — Tutti i diritti riservati</p>
+        <p data-lang-key="footerCopy">
+          &copy; 2026 Lorenzo Perassi — Tutti i diritti riservati
+        </p>
       </div>
     </footer>
   </body>

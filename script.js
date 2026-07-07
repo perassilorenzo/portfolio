@@ -424,4 +424,169 @@ document.addEventListener("DOMContentLoaded", function () {
         (E.classList.remove("open"), (b.innerHTML = ""), (k = []));
       }));
   }
+  const LANG = {
+    it: {
+      navAbout: "About",
+      navWhat: "What I do",
+      navProjects: "Projects",
+      navSocials: "Socials",
+      navContact: "Contact",
+      heroBtn1: "Guarda i progetti",
+      heroBtn2: "Contattami",
+      aboutSub: "Chi sono",
+      aboutP1:
+        "Sono Lorenzo Perassi, creator digitale e studente di Informatica. Negli ultimi anni ho iniziato a costruire il mio percorso online sperimentando tra content creation, fashion, videomaking, coding e altri macro argomenti, scegliendo di raccontare sui social diversi aspetti della mia vita e delle mie passioni.",
+      aboutP2:
+        "Utilizzo le piattaforme digitali come uno spazio dove condividere progetti, esperimenti creativi, routine, outfit, lavoro pratico e crescita personale, oltre che per creare connessioni, farmi conoscere e portarmi opportunit\u00e0.<br><br>Collaboro con brand locali e progetti digitali, lavorando su contenuti, comunicazioni online e soluzioni creative.<br><br>Attualmente sono in stage come IT presso Bertolotto Porte e collaboro con l'agenzia Omnia4Web.",
+      widSub: "Cosa faccio",
+      wid1Title: "01 \u2014 Content Creation",
+      wid1Desc:
+        "Creo contenuti per piattaforme social combinando storytelling, progetti personali, lavoro pratico come il cucito, routine e sperimentazione creativa.",
+      wid2Title: "02 \u2014 Fashion & Custom Projects",
+      wid2Desc:
+        "Lavoro su customizzazioni, design e sperimentazione nel mondo fashion, con progetti di sartoria e rielaborazione di capi.",
+      wid3Title: "03 \u2014 Informatica & Tecnologia",
+      wid3Desc:
+        "L'informatica \u00e8 una delle mie passioni principali. La studio sia a scuola che da autodidatta, approfondendo sviluppo web, programmazione, AI, cybersecurity e tecnologia in generale.<br><br>Nel tempo libero porto avanti progetti personali, sperimento nuove tecnologie e continuo a formarmi online anche attraverso percorsi come OliCyber.",
+      dpSub: "Presenza Online",
+      dpDesc:
+        "Utilizzo le piattaforme social come un diario per condividere quello che faccio quotidianamente tra lifestyle, moda, tecnologia, progetti personali e sperimentazione digitale.",
+      projSub: "Progetti Selezionati",
+      projAll: "All",
+      projClient: "Client Work",
+      projBuilding: "Currently Building",
+      projPersonal: "Personal Project",
+      projFashion: "Fashion Customization",
+      timelineSub: "Esperienze",
+      tl1Title: "Omnia4Web",
+      tl1Desc:
+        "Supporto alla creazione di contenuti digitali e comunicazione social. Editing video, grafiche e caption.",
+      tl6Title: "Content Creator \u2014 Diario di uno 09",
+      tl6Desc:
+        "Progetto personale di content creation dove documento idee, crescita personale, passioni e sperimentazione digitale su Instagram, TikTok e YouTube.",
+      tl8Title: "Bertolotto Porte \u2014 Stage IT",
+      tl8Desc:
+        "Stage estivo di 2 settimane come IT, con focus su gestione documentale e digitalizzazione archivi.",
+      collabSub: "Collaborazioni",
+      collab1Name: "Aleyesure",
+      collab1Desc:
+        'All\'interno dei miei video sponsorizzo capi di abbigliamento di Aleyesure, brand locale che porta avanti lo slogan "Support local business".',
+      collab2Name: "StageStreetwear",
+      collab2Desc:
+        "Progetto creativo che unisce video, streetwear e custom cappellini.",
+      collab3Name: "NewGenMusic4",
+      collab3Desc:
+        "Portiamo avanti una rubrica che mette insieme la musica e l'abbigliamento. Questa pagina \u00e8 un magazine no profit che ha come obiettivo sponsorizzare piccoli artisti della new gen.",
+      collab4Name: "RAFFER RECORDS",
+      collab4Desc:
+        "Collaboro come volto dell'etichetta, occupandomi della comunicazione e della presentazione di nuove collaborazioni e giovani artisti emergenti, contribuendo a dare visibilit\u00e0 ai loro progetti musicali.",
+      toolsSub: "Strumenti & Competenze",
+      contactSub: "Restiamo in contatto",
+      contactDesc: "Scrivimi per collaborazioni, idee o progetti.",
+      contactName: "Il tuo nome",
+      contactEmail: "La tua email",
+      contactSubject: "Oggetto",
+      contactMsg: "Il tuo messaggio...",
+      contactBtn: "Invia messaggio",
+      footerTag: "Content creator, fashion, tech & self-growth",
+      footerPages: "Pages",
+      footerSocial: "Social",
+      footerContact: "Contact",
+      footerAvailable: "Disponibile per collaborazioni",
+      footerCopy: "Tutti i diritti riservati",
+    },
+    en: {
+      navAbout: "About",
+      navWhat: "What I do",
+      navProjects: "Projects",
+      navSocials: "Socials",
+      navContact: "Contact",
+      heroBtn1: "View Projects",
+      heroBtn2: "Contact Me",
+      aboutSub: "About Me",
+      aboutP1:
+        "I'm Lorenzo Perassi, digital creator and Computer Science student. Over the past few years I've built my online presence experimenting across content creation, fashion, videomaking, coding and more, choosing to share different aspects of my life and passions on social media.",
+      aboutP2:
+        "I use digital platforms as a space to share projects, creative experiments, routines, outfits, hands-on work and personal growth, as well as to build connections and create opportunities.<br><br>I collaborate with local brands and digital projects, working on content, online communications and creative solutions.<br><br>I'm currently an IT intern at Bertolotto Porte and working with the Omnia4Web agency.",
+      widSub: "What I do",
+      wid1Title: "01 \u2014 Content Creation",
+      wid1Desc:
+        "I create content for social platforms combining storytelling, personal projects, hands-on work like sewing, routines and creative experimentation.",
+      wid2Title: "02 \u2014 Fashion & Custom Projects",
+      wid2Desc:
+        "I work on customizations, design and experimentation in fashion, with tailoring and garment rework projects.",
+      wid3Title: "03 \u2014 IT & Technology",
+      wid3Desc:
+        "Computer science is one of my main passions. I study it both at school and independently, exploring web development, programming, AI, cybersecurity and technology in general.",
+      dpSub: "Digital Presence",
+      dpDesc:
+        "I use social platforms as a diary to share what I do daily across lifestyle, fashion, technology, personal projects and digital experimentation.",
+      projSub: "Selected Projects",
+      projAll: "All",
+      projClient: "Client Work",
+      projBuilding: "Currently Building",
+      projPersonal: "Personal Project",
+      projFashion: "Fashion Customization",
+      timelineSub: "Experience",
+      tl1Title: "Omnia4Web",
+      tl1Desc:
+        "Supporting digital content creation and social communication. Video editing, graphics and captions.",
+      tl6Title: "Content Creator \u2014 Diario di uno 09",
+      tl6Desc:
+        "Personal content creation project documenting ideas, personal growth, passions and digital experimentation on Instagram, TikTok and YouTube.",
+      tl8Title: "Bertolotto Porte \u2014 IT Internship",
+      tl8Desc:
+        "2-week summer IT internship focused on document management and archive digitalization.",
+      collabSub: "Collaborations",
+      collab1Name: "Aleyesure",
+      collab1Desc:
+        'In my videos I sponsor clothing items from Aleyesure, a local brand carrying the slogan "Support local business".',
+      collab2Name: "StageStreetwear",
+      collab2Desc:
+        "Creative project merging video, streetwear and custom caps.",
+      collab3Name: "NewGenMusic4",
+      collab3Desc:
+        "We run a column combining music and fashion. This page is a non-profit magazine aimed at promoting new gen artists.",
+      collab4Name: "RAFFER RECORDS",
+      collab4Desc:
+        "I collaborate as the face of the label, handling communication and presentation of new collaborations and emerging young artists, helping give visibility to their musical projects.",
+      toolsSub: "Tools & Skills",
+      contactSub: "Stay in touch",
+      contactDesc: "Write me for collaborations, ideas or projects.",
+      contactName: "Your name",
+      contactEmail: "Your email",
+      contactSubject: "Subject",
+      contactMsg: "Your message...",
+      contactBtn: "Send message",
+      footerTag: "Content creator, fashion, tech & self-growth",
+      footerPages: "Pages",
+      footerSocial: "Social",
+      footerContact: "Contact",
+      footerAvailable: "Available for collaborations",
+      footerCopy: "All rights reserved",
+    },
+  };
+  let _lang = localStorage.getItem("lang") || "it";
+  function setLang($) {
+    _lang = $;
+    localStorage.setItem("lang", $);
+    document.querySelectorAll(".lp-lang-btn").forEach(function (e) {
+      e.classList.toggle("active", e.dataset.langBtn === $);
+    });
+    document.querySelectorAll("[data-lang-key]").forEach(function (e) {
+      var o = e.dataset.langKey;
+      if (LANG[$][o]) {
+        if (e.dataset.langHtml) e.innerHTML = LANG[$][o];
+        else if (e.tagName === "INPUT" || e.tagName === "TEXTAREA")
+          e.placeholder = LANG[$][o];
+        else e.textContent = LANG[$][o];
+      }
+    });
+  }
+  document.querySelectorAll(".lp-lang-btn").forEach(function (e) {
+    e.addEventListener("click", function () {
+      setLang(e.dataset.langBtn);
+    });
+  });
+  setLang(_lang);
 });
