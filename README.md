@@ -4,8 +4,7 @@
 </picture>
 
 <p align="center">
-  <a href="https://lorenzoperassi.it"><strong>lorenzoperassi.it</strong></a> ·
-  <a href="https://perassilorenzo.github.io/portfolio">GitHub Pages</a>
+  <a href="https://lorenzoperassi.it"><strong>lorenzoperassi.it</strong></a>
 </p>
 
 <p align="center">
@@ -13,6 +12,7 @@
   <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white" alt="CSS3">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000" alt="JavaScript">
   <img src="https://img.shields.io/badge/Bootstrap_5-7952B3?logo=bootstrap&logoColor=white" alt="Bootstrap 5">
+  <img src="https://img.shields.io/badge/Express-000000?logo=express&logoColor=white" alt="Express">
   <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
 </p>
 
@@ -24,54 +24,60 @@ Portfolio personale di Lorenzo Perassi — content creator, studente di Informat
 
 ## sezioni
 
-| Sezione          | Descrizione                                                                 |
-| ---------------- | --------------------------------------------------------------------------- |
-| Hero             | Branding personale con marquee animato, typewriter, contatori e link social |
-| About            | Chi sono, background e percorso                                             |
-| What I Do        | Content creation, fashion & custom, informatica & tech                      |
-| Activity         | Tre aree principali con video dimostrativi                                  |
-| Digital Presence | Vetrina social scrollabile con drag/touch                                   |
-| **Projects**     | Diario di uno 09 · CRYBU · Affitti brevi a Saluzzo · Fashion Customization  |
-| **Experience**   | Stage in agenzia — creazione contenuti digitali                             |
-| Collaborations   | Aleyesure · StageStreetwear · NewGenMusic4 · RAFFER RECORDS                 |
-| Tools & Skills   | Griglia tecnologica con livelli e tooltip                                   |
-| Contact          | Form (Formspree) + WhatsApp                                                 |
+| Sezione          | Descrizione                                                                   |
+| ---------------- | ----------------------------------------------------------------------------- |
+| Hero             | Branding personale con typewriter, contatori animati e link social            |
+| About            | Chi sono, background e percorso                                               |
+| What I Do        | Content creation, fashion & custom, informatica & tech con video dimostrativi |
+| Digital Presence | Vetrina social scrollabile con drag/touch e auto-scroll infinito              |
+| Projects         | Diario di uno 09 · CRYBU · Affitti brevi a Saluzzo · Fashion Customization    |
+| Experience       | Omnia4Web · Content Creator · Stage IT presso Bertolotto Porte                |
+| Collaborations   | Aleyesure · StageStreetwear · NewGenMusic4 · RAFFER RECORDS                   |
+| Tools & Skills   | Griglia tecnologica con tooltip di livello e contesto                         |
+| Contact          | Form (Formspree) + WhatsApp                                                   |
 
 ## tech stack
 
-- **HTML5** — Semantico, accessibile, SEO-ready
-- **CSS3** — Custom properties, gradienti, glassmorphism
-- **JavaScript** (vanilla) — IntersectionObserver, drag scroll, lightbox, filtri
+- **HTML5** — Semantico, accessibile, SEO-ready con JSON-LD, Open Graph, Twitter Cards
+- **CSS3** — Custom properties, animazioni, glassmorphism, responsive
+- **JavaScript** (vanilla) — IntersectionObserver, drag scroll, lightbox, filtri progetti, i18n IT/EN
 - **Bootstrap 5.3** — Navbar, griglia, layout responsive
+- **Express** — Server con compressione e caching immutabile degli asset statici
 - **Devicon** — Icone tecnologie
 - **Formspree** — Backend form serverless
 - **Google Fonts** — Plus Jakarta Sans, Space Mono, IBM Plex Mono
 
 ## features
 
-- **Tema scuro** con effetti glassmorphism
+- **Tema scuro** con effetti glassmorphism e bordo accent
+- **i18n** — Italiano/Inglese con salvataggio preferenza in localStorage
 - **Filtri progetti** — All · Client Work · Currently Building · Personal Project · Fashion Customization
-- **Lightbox** per immagini e video con navigazione touch
+- **Lightbox** per immagini e video con navigazione touch, swipe e frecce
 - **Progress bar** di lettura
 - **Scroll infinito** presenza social
-- **Tipografia animata** (typewriter)
+- **Tipografia animata** (typewriter) e contatori
 - **Musica di sottofondo** toggle
-- **SEO** — JSON-LD, Open Graph, Twitter Cards, sitemap
-- **Accessibilità** — Gerarchia heading, aria-label, focus visible
+- **Timeline esperienze** interattiva
+- **SEO** — JSON-LD, Open Graph, Twitter Cards, sitemap.xml, robots.txt
+- **Accessibilità** — Gerarchia heading, aria-label, focus visible, skip navigation
 - **100% mobile responsive**
 
 ## struttura
 
 ```
 ├── index.html
+├── server.js                  # Express server (compressione, caching)
+├── package.json
 ├── css/
-│   └── combined.min.css
-├── script.js
-├── script.min.js
+│   ├── combined.css           # CSS sorgente
+│   └── combined.min.css       # CSS minificato (production)
+├── script.js                  # JS sorgente
+├── script.min.js              # JS minificato (production)
+├── script.min.js.map          # Source map per debug
 ├── assets/
-│   ├── *.jpg / *.png / *.avif    # Immagini portfolio
-│   ├── *.mp4 / *.mov             # Video dimostrativi
-│   └── bg-convergence.mp3        # Musica background
+│   ├── *.jpg / *.png / *.avif # Immagini portfolio
+│   ├── *.mp4 / *.mov          # Video dimostrativi
+│   └── bg-convergence.mp3     # Musica background
 ├── robots.txt
 └── sitemap.xml
 ```
@@ -81,10 +87,23 @@ Portfolio personale di Lorenzo Perassi — content creator, studente di Informat
 ```bash
 git clone https://github.com/perassilorenzo/portfolio.git
 cd portfolio
-open index.html
+bun install
+bun run start     # http://localhost:3000
 ```
 
-Niente build, niente dipendenze — puro HTML/CSS/JS.
+Per sviluppo:
+
+```bash
+bun run build     # minifica CSS + JS
+```
+
+## build
+
+| Comando             | Azione                                              |
+| ------------------- | --------------------------------------------------- |
+| `bun run build:css` | Minifica `css/combined.css` → `combined.min.css`    |
+| `bun run build:js`  | Minifica `script.js` → `script.min.js` + source map |
+| `bun run build`     | Esegue entrambi i comandi                           |
 
 ## contatti
 
