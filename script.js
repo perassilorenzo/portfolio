@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const p = document.querySelector(".lp-typewriter");
   if (p) {
     const z =
-      "Documento la mia vita, le mie passioni, e i miei progetti attraverso contenuti, moda e tecnologia.";
+      "Documento la mia vita, le mie passioni e i miei progetti attraverso comunicazione, moda e tecnologia.";
     let G = 0;
     !(function e() {
       ((p.textContent = z.slice(0, G)),
@@ -437,24 +437,37 @@ document.addEventListener("DOMContentLoaded", function () {
       aboutP1:
         "Sono Lorenzo Perassi, developer, creator e studente di Informatica. Costruisco prodotti digitali dove codice, design e creativit\u00e0 si incontrano. Il mio progetto principale \u00e8 Customly, una piattaforma di personalizzazione abbigliamento che unisce moda e tecnologia.",
       aboutP2:
-        "Utilizzo le piattaforme digitali come uno spazio dove condividere progetti, esperimenti creativi, routine, outfit, lavoro pratico e crescita personale, oltre che per creare connessioni, farmi conoscere e portarmi opportunit\u00e0.<br><br>Collaboro con brand locali, pagine creative e magazine musicali, lavorando su contenuti, comunicazioni online e progetti creativi. Sviluppo anche siti web per locali e piccole imprese.<br><br>Lavoro su Customly come piattaforma principale, dove sviluppo il configuratore digitale e gestisco la piattaforma.",
+        "Utilizzo le piattaforme digitali come uno spazio dove condividere progetti, esperimenti creativi, routine, lavoro pratico e crescita personale, oltre che per creare connessioni, farmi conoscere e portarmi opportunit\u00e0.<br><br>Collaboro con brand locali, pagine creative e magazine musicali, lavorando su contenuti, comunicazioni online e progetti creativi. Sviluppo anche siti web per locali e piccole imprese.<br><br>Lavoro su Customly come piattaforma principale, dove sviluppo il configuratore digitale e gestisco la piattaforma.",
       widSub: "Cosa faccio",
-      wid1Title: "01 \u2014 Content Creation",
+      wid1Title: "01 \u2014 Comunicazione",
       wid1Desc:
-        "Creo contenuti per piattaforme social combinando storytelling, progetti personali, lavoro pratico come il cucito, routine e sperimentazione creativa.",
+        "Racconto progetti, idee e conoscenze attraverso contenuti, storytelling e comunicazione social. Collaboro con brand e pagine creative lavorando su contenuti, edizioni video e comunicazioni online.",
       wid2Title: "02 \u2014 Fashion & Custom Projects",
       wid2Desc:
         "Lavoro su customizzazioni, design e sperimentazione nel mondo fashion, con progetti di sartoria e rielaborazione di capi. Ho collaborato al design, alla prototipazione e alla creazione delle camicie per gli investitori di CRYBU S.R.L.",
-      wid3Title: "03 \u2014 Informatica & Tecnologia",
+      wid3Title: "03 \u2014 IT & Computer Science",
       wid3Desc:
-        "L'informatica \u00e8 una delle mie passioni principali. La studio sia a scuola che da autodidatta, approfondendo sviluppo web, programmazione, AI, cybersecurity e tecnologia in generale.<br><br>Il mio progetto principale \u00e8 Customly \u2014 una piattaforma di custom fashion sviluppata con Cloudflare Pages, D1 e R2, che unisce codice e design in un prodotto reale. Sviluppo inoltre siti web per locali e piccole imprese.",
+        "L'informatica \u00e8 una delle mie passioni principali. La studio sia a scuola che da autodidatta, approfondendo sviluppo web, programmazione, AI, cybersecurity e tecnologia in generale.<br><br>Il mio progetto principale \u00e8 Customly \u2014 una piattaforma di custom fashion sviluppata con Cloudflare Pages, D1 e R2, che unisce codice e design in un prodotto reale.",
+      customlySub: "Il mio progetto principale",
+      customlyDesc:
+        "Customly \u00e8 la piattaforma di custom fashion che unisce moda e tecnologia: un configuratore digitale per personalizzare abbigliamento in modo semplice e intuitivo. Sviluppata con Cloudflare Pages, D1 e R2, \u00e8 il mio progetto principale, dove gestisco catalogo prodotti e configuratore.",
+      customlyCta: "Visita customly.it",
+      servSub: "Cosa posso fare per te",
+      serv1Title: "Web Design & Development",
+      serv1Desc:
+        "Siti web per locali, ristoranti e piccole imprese. Realizzo siti veloci e ottimizzati, con dominio, hosting e manutenzione mensile.",
+      serv2Title: "Custom Fashion",
+      serv2Desc:
+        "Rework e personalizzazione di capi: denim, t-shirt e capi su misura. Trasformo capi esistenti in pezzi unici.",
+      serv3Title: "Comunicazione & Contenuti",
+      serv3Desc:
+        "Editing video, caption e gestione social per brand e attivit\u00e0. Storytelling che racconta il tuo progetto.",
       dpSub: "Presenza Online",
       dpDesc:
         "Utilizzo le piattaforme social come un diario per condividere quello che faccio quotidianamente tra lifestyle, moda, tecnologia, progetti personali e sperimentazione digitale.",
       projSub: "Progetti Selezionati",
       projAll: "All",
       projClient: "Client Work",
-      projBuilding: "Currently Building",
       projPersonal: "Personal Project",
       projFashion: "Fashion Customization",
       timelineSub: "Esperienze",
@@ -464,9 +477,6 @@ document.addEventListener("DOMContentLoaded", function () {
       tl1Title: "Omnia4Web",
       tl1Desc:
         "Supporto alla creazione di contenuti digitali e comunicazione social. Editing video, grafiche e caption.",
-      tl6Title: "Content Creator \u2014 Diario di uno 09",
-      tl6Desc:
-        "Progetto personale di content creation dove documento idee, crescita personale, passioni e sperimentazione digitale su Instagram, TikTok e YouTube.",
       tl8Title: "Bertolotto Porte \u2014 Stage IT",
       tl8Desc:
         "Stage estivo di 2 settimane come IT, con focus su gestione documentale e digitalizzazione archivi.",
@@ -480,9 +490,6 @@ document.addEventListener("DOMContentLoaded", function () {
       collab3Name: "NewGenMusic4",
       collab3Desc:
         "Portiamo avanti una rubrica che mette insieme la musica e l'abbigliamento. Questa pagina \u00e8 un magazine no profit che ha come obiettivo sponsorizzare piccoli artisti della new gen.",
-      collab4Name: "RAFFER RECORDS",
-      collab4Desc:
-        "Collaboro come volto dell'etichetta, occupandomi della comunicazione e della presentazione di nuove collaborazioni e giovani artisti emergenti, contribuendo a dare visibilit\u00e0 ai loro progetti musicali.",
       toolsSub: "Strumenti & Competenze",
       contactSub: "Restiamo in contatto",
       contactDesc: "Scrivimi per collaborazioni, idee o progetti.",
@@ -510,24 +517,37 @@ document.addEventListener("DOMContentLoaded", function () {
       aboutP1:
         "I'm Lorenzo Perassi, developer, creator and Computer Science student. I build digital products where code, design and creativity meet. My main project is Customly, a clothing customization platform combining fashion and technology.",
       aboutP2:
-        "I use digital platforms as a space to share projects, creative experiments, routines, outfits, hands-on work and personal growth, as well as to build connections and create opportunities.<br><br>I collaborate with local brands, creative pages and music magazines, working on content, online communications and creative projects. I also develop websites for local businesses and small companies.<br><br>I work on Customly as my main platform, where I develop the digital configurator and manage the platform.",
+        "I use digital platforms as a space to share projects, creative experiments, routines, hands-on work and personal growth, as well as to build connections and create opportunities.<br><br>I collaborate with local brands, creative pages and music magazines, working on content, online communications and creative projects. I also develop websites for local businesses and small companies.<br><br>I work on Customly as my main platform, where I develop the digital configurator and manage the platform.",
       widSub: "What I do",
-      wid1Title: "01 \u2014 Content Creation",
+      wid1Title: "01 \u2014 Communication",
       wid1Desc:
-        "I create content for social platforms combining storytelling, personal projects, hands-on work like sewing, routines and creative experimentation.",
+        "I share projects, ideas and knowledge through content, storytelling and social communication. I collaborate with brands and creative pages working on content, video editing and online communications.",
       wid2Title: "02 \u2014 Fashion & Custom Projects",
       wid2Desc:
         "I work on customizations, design and experimentation in fashion, with tailoring and garment rework projects. I contributed to the design, prototyping and creation of the shirts for CRYBU S.R.L. investors.",
-      wid3Title: "03 \u2014 IT & Technology",
+      wid3Title: "03 \u2014 IT & Computer Science",
       wid3Desc:
-        "Computer science is one of my main passions. I study it both at school and independently, exploring web development, programming, AI, cybersecurity and technology in general.<br><br>My main project is Customly \u2014 a custom fashion platform built with Cloudflare Pages, D1 and R2, combining code and design into a real product. I also build websites for local businesses and small companies.",
+        "Computer science is one of my main passions. I study it both at school and independently, exploring web development, programming, AI, cybersecurity and technology in general.<br><br>My main project is Customly \u2014 a custom fashion platform built with Cloudflare Pages, D1 and R2, combining code and design into a real product.",
+      customlySub: "My main project",
+      customlyDesc:
+        "Customly is the custom fashion platform that combines fashion and technology: a digital configurator to personalize clothing simply and intuitively. Built with Cloudflare Pages, D1 and R2, it is my main project, where I manage the product catalog and the configurator.",
+      customlyCta: "Visit customly.it",
+      servSub: "What I can do for you",
+      serv1Title: "Web Design & Development",
+      serv1Desc:
+        "Websites for local businesses, restaurants and small companies. I build fast, optimized sites with domain, hosting and monthly maintenance.",
+      serv2Title: "Custom Fashion",
+      serv2Desc:
+        "Garment rework and customization: denim, t-shirts and made-to-order pieces. I turn existing items into unique pieces.",
+      serv3Title: "Communication & Content",
+      serv3Desc:
+        "Video editing, captions and social management for brands and businesses. Storytelling that tells your story.",
       dpSub: "Digital Presence",
       dpDesc:
         "I use social platforms as a diary to share what I do daily across lifestyle, fashion, technology, personal projects and digital experimentation.",
       projSub: "Selected Projects",
       projAll: "All",
       projClient: "Client Work",
-      projBuilding: "Currently Building",
       projPersonal: "Personal Project",
       projFashion: "Fashion Customization",
       timelineSub: "Experience",
@@ -537,9 +557,6 @@ document.addEventListener("DOMContentLoaded", function () {
       tl1Title: "Omnia4Web",
       tl1Desc:
         "Supporting digital content creation and social communication. Video editing, graphics and captions.",
-      tl6Title: "Content Creator \u2014 Diario di uno 09",
-      tl6Desc:
-        "Personal content creation project documenting ideas, personal growth, passions and digital experimentation on Instagram, TikTok and YouTube.",
       tl8Title: "Bertolotto Porte \u2014 IT Internship",
       tl8Desc:
         "2-week summer IT internship focused on document management and archive digitalization.",
@@ -553,9 +570,6 @@ document.addEventListener("DOMContentLoaded", function () {
       collab3Name: "NewGenMusic4",
       collab3Desc:
         "We run a column combining music and fashion. This page is a non-profit magazine aimed at promoting new gen artists.",
-      collab4Name: "RAFFER RECORDS",
-      collab4Desc:
-        "I collaborate as the face of the label, handling communication and presentation of new collaborations and emerging young artists, helping give visibility to their musical projects.",
       toolsSub: "Tools & Skills",
       contactSub: "Stay in touch",
       contactDesc: "Write me for collaborations, ideas or projects.",

@@ -20,21 +20,23 @@
 
 ## about
 
-Portfolio personale di Lorenzo Perassi — developer, founder di Customly, content creator e studente di Informatica. Un diario digitale dove convivono sviluppo web, customizzazione di abbigliamento, content creation, musica e sperimentazione creativa.
+Portfolio personale di Lorenzo Perassi — developer, founder di Customly e studente di Informatica. Un diario digitale dove convivono comunicazione, customizzazione di abbigliamento, sviluppo web e sperimentazione creativa.
 
 ## sezioni
 
-| Sezione          | Descrizione                                                                           |
-| ---------------- | ------------------------------------------------------------------------------------- |
-| Hero             | Branding personale con typewriter, contatori animati e link social                    |
-| About            | Chi sono, background e percorso                                                       |
-| What I Do        | Content creation, fashion & custom, informatica & tech con video dimostrativi         |
-| Digital Presence | Vetrina social scrollabile con drag/touch e auto-scroll infinito                      |
-| Projects         | Customly · Diario di uno 09 · CRYBU · Affitti brevi a Saluzzo · Fashion Customization |
-| Experience       | Customly — Founder · Omnia4Web · Content Creator · Stage IT presso Bertolotto Porte   |
-| Collaborations   | Aleyesure · StageStreetwear · NewGenMusic4 · RAFFER RECORDS                           |
-| Tools & Skills   | Griglia tecnologica con tooltip di livello e contesto                                 |
-| Contact          | Form (Formspree) + WhatsApp                                                           |
+| Sezione          | Descrizione                                                                |
+| ---------------- | -------------------------------------------------------------------------- |
+| Hero             | Branding personale con typewriter, contatori animati e link social         |
+| About            | Chi sono, background e percorso                                            |
+| What I Do        | Comunicazione, fashion & custom, informatica & tech con video dimostrativi |
+| Customly         | Sezione dedicata alla piattaforma Customly con descrizione e CTA al sito   |
+| Servizi          | Web design, custom fashion e comunicazione & contenuti                     |
+| Digital Presence | Vetrina social scrollabile con drag/touch e auto-scroll infinito           |
+| Projects         | Customly · CRYBU · Fashion Customization                                   |
+| Experience       | Customly — Founder · Omnia4Web · Stage IT presso Bertolotto Porte          |
+| Collaborations   | Aleyesure · StageStreetwear · NewGenMusic4                                 |
+| Tools & Skills   | Griglia tecnologica con tooltip di livello e contesto                      |
+| Contact          | Form (Formspree) + WhatsApp                                                |
 
 ## tech stack
 
@@ -51,7 +53,7 @@ Portfolio personale di Lorenzo Perassi — developer, founder di Customly, conte
 
 - **Tema scuro** con effetti glassmorphism e bordo accent
 - **i18n** — Italiano/Inglese con salvataggio preferenza in localStorage
-- **Filtri progetti** — All · Client Work · Currently Building · Personal Project · Fashion Customization
+- **Filtri progetti** — All · Client Work · Personal Project · Fashion Customization
 - **Lightbox** per immagini e video con navigazione touch, swipe e frecce
 - **Progress bar** di lettura
 - **Scroll infinito** presenza social
