@@ -188,9 +188,9 @@
           <li class="nav-item">
             <a
               class="nav-link lp-nav-link"
-              href="#what-i-do"
-              data-lang-key="navWhat"
-              >What I do</a
+              href="#services"
+              data-lang-key="navServ"
+              >Servizi</a
             >
           </li>
           <li class="nav-item">
@@ -239,6 +239,11 @@
     <section class="lp-hero d-flex align-items-center" id="hero">
       <div class="lp-hero-content pe-4">
         <h1 class="lp-hero-title">lorenzo<br />perassi</h1>
+        <div class="mt-2">
+          <span class="lp-badge" data-lang-key="heroAvail"
+            >Disponibile per nuovi progetti</span
+          >
+        </div>
         <div class="marquee">
           <div class="marquee-track">
             content creation • fashion • coding • music • lifestyle • gym •
@@ -289,6 +294,12 @@
               class="lp-social-link"
               target="_blank"
               >Youtube</a
+            >
+            <a
+              href="https://www.linkedin.com/in/perassilorenzo/"
+              class="lp-social-link"
+              target="_blank"
+              >Linkedin</a
             >
             <a
               href="https://linktr.ee/lollo_pera"
@@ -363,156 +374,134 @@
 
     <br /><br /><br />
 
-    <!-- cosa faccio -->
-    <section class="lp-section" id="what-i-do">
-      <div class="ms-4 ps-2 mb-4 lp-reveal">
-        <h2 class="lp-big-title">WHAT I DO</h2>
-        <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="widSub">
-          Cosa faccio
+    <!-- SERVIZI -->
+    <section class="lp-section lp-reveal" id="services">
+      <div class="ms-4 ps-2 mb-4">
+        <h2 class="lp-big-title">SERVIZI</h2>
+        <h3
+          class="lp-text-secondary lp-subtitle-offset"
+          data-lang-key="servSub"
+        >
+          Cosa posso fare per te
         </h3>
       </div>
-      <div class="lp-activities-container lp-stagger">
-        <div class="lp-activity-card lp-reveal">
-          <div class="lp-activity-inner">
-            <div class="lp-activity-left">
-              <div class="lp-activity-info">
-                <h4 data-lang-key="wid1Title">01 — Comunicazione</h4>
-                <p data-lang-key="wid1Desc">
-                  Racconto progetti, idee e conoscenze attraverso contenuti,
-                  storytelling e comunicazione social. Collaboro con brand e
-                  pagine creative lavorando su contenuti, edizioni video e
-                  comunicazioni online.
-                </p>
-              </div>
-              <div class="lp-activity-tags">
-                <div class="marquee">
-                  <div class="marquee-track">
-                    Instagram • TikTok • Youtube • Edits • Capcut • Canva •
-                    Storytelling • Instagram • TikTok • Youtube • Edits • Capcut
-                    • Canva • Storytelling • Instagram • TikTok • Youtube •
-                    Edits • Capcut • Canva • Storytelling •
-                  </div>
-                </div>
-              </div>
-            </div>
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="metadata"
-              class="lp-activity-video"
-            >
-              <source
-                src="assets/activity-content-creation.mp4"
-                type="video/mp4"
-              />
-            </video>
+      <div class="d-flex justify-content-around flex-wrap gap-4 px-4">
+        <div class="lp-card lp-reveal" style="max-width: 340px">
+          <h4 class="fs-5 fw-bold mb-2" data-lang-key="serv1Title">
+            Web Design & Development
+          </h4>
+          <p class="lp-text-secondary small mb-3" data-lang-key="serv1Desc">
+            Siti web veloci e professionali per locali, ristoranti e piccole
+            imprese. Dominio, hosting e manutenzione inclusi, pensati per
+            portarti clienti.
+          </p>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="lp-badge">Web Design</span>
+            <span class="lp-badge">Dominio & Hosting</span>
+            <span class="lp-badge">SEO</span>
           </div>
+          <a
+            href="#contact"
+            class="lp-btn text-decoration-none"
+            data-lang-key="servCta"
+            >Richiedi preventivo</a
+          >
         </div>
-
-        <div class="lp-activity-card lp-reveal">
-          <div class="lp-activity-inner">
-            <div class="lp-activity-left">
-              <div class="lp-activity-info">
-                <h4 data-lang-key="wid2Title">
-                  02 — Fashion & Custom Projects
-                </h4>
-                <p data-lang-key="wid2Desc">
-                  Lavoro su customizzazioni, design e sperimentazione nel mondo
-                  fashion. Ho collaborato al design, alla prototipazione e alla
-                  creazione delle camicie per gli investitori di CRYBU S.R.L.
-                </p>
-                <span
-                  class="lp-sewing-btn"
-                  onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'});setTimeout(()=>{let b=document.querySelector('.lp-filter-btn[data-filter=fashion-customization]');if(b)b.click()},500)"
-                >
-                  <span>📸</span>
-                  Sewing process
-                </span>
-              </div>
-              <div class="lp-activity-tags">
-                <div class="marquee">
-                  <div class="marquee-track">
-                    Fashion • Custom Design • Styling • Sewing • Prototipazione
-                    • Fashion • Custom Design • Styling • Sewing •
-                    Prototipazione • Fashion • Custom Design • Styling • Sewing
-                    • Prototipazione • Fashion • Custom Design • Styling •
-                    Sewing • Prototipazione •
-                  </div>
-                </div>
-              </div>
-            </div>
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="metadata"
-              class="lp-activity-video"
-            >
-              <source src="assets/activity-fashion.mp4" type="video/mp4" />
-            </video>
+        <div class="lp-card lp-reveal" style="max-width: 340px">
+          <h4 class="fs-5 fw-bold mb-2" data-lang-key="serv2Title">
+            Custom Fashion
+          </h4>
+          <p class="lp-text-secondary small mb-3" data-lang-key="serv2Desc">
+            Rework e personalizzazione di capi: denim, t-shirt e capi su misura.
+            Trasformo capi esistenti in pezzi unici che raccontano chi sei.
+          </p>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="lp-badge">Rework Denim</span>
+            <span class="lp-badge">Capi Personalizzati</span>
           </div>
+          <a
+            href="#contact"
+            class="lp-btn text-decoration-none"
+            data-lang-key="servCta"
+            >Richiedi preventivo</a
+          >
         </div>
-
-        <div class="lp-activity-card lp-reveal">
-          <div class="lp-activity-inner">
-            <div class="lp-activity-left">
-              <div class="lp-activity-info">
-                <h4 data-lang-key="wid3Title">03 — IT & Computer Science</h4>
-                <p data-lang-key="wid3Desc">
-                  L'informatica è una delle mie passioni principali. La studio
-                  sia a scuola che da autodidatta, approfondendo sviluppo web,
-                  programmazione, AI, cybersecurity e tecnologia in generale.
-                  <br /><br />Il mio progetto principale è Customly — una
-                  piattaforma di custom fashion sviluppata con Cloudflare Pages,
-                  D1 e R2, che unisce codice e design in un prodotto reale.
-                </p>
-              </div>
-              <div class="lp-activity-tags">
-                <div class="marquee">
-                  <div class="marquee-track">
-                    HTML • CSS • JavaScript • Python • Git • Cybersecurity • n8n
-                    • C • C# • Bash • Web Design • Cloudflare • HTML • CSS •
-                    JavaScript • Python • Git • Cybersecurity • n8n • C • C# •
-                    Bash • Web Design • Cloudflare • HTML • CSS • JavaScript •
-                    Python • Git • Cybersecurity • n8n • C • C# • Bash • Web
-                    Design • Cloudflare • HTML • CSS • JavaScript • Python • Git
-                    • Cybersecurity • n8n • C • C# • Bash • Web Design •
-                    Cloudflare •
-                  </div>
-                </div>
-              </div>
-              <div class="lp-activity-tags">
-                <div class="marquee">
-                  <div class="marquee-track">
-                    HTML • CSS • JavaScript • Python • Git • Cybersecurity • n8n
-                    • C • C# • Bash • Web Design • Cloudflare • HTML • CSS •
-                    JavaScript • Python • Git • Cybersecurity • n8n • C • C# •
-                    Bash • Web Design • Cloudflare • HTML • CSS • JavaScript •
-                    Python • Git • Cybersecurity • n8n • C • C# • Bash • Web
-                    Design • Cloudflare • HTML • CSS • JavaScript • Python • Git
-                    • Cybersecurity • n8n • C • C# • Bash • Web Design •
-                    Cloudflare •
-                  </div>
-                </div>
-              </div>
-            </div>
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="metadata"
-              class="lp-activity-video"
-            >
-              <source src="assets/activity-tech.mp4" type="video/mp4" />
-            </video>
+        <div class="lp-card lp-reveal" style="max-width: 340px">
+          <h4 class="fs-5 fw-bold mb-2" data-lang-key="serv3Title">
+            Comunicazione & Contenuti
+          </h4>
+          <p class="lp-text-secondary small mb-3" data-lang-key="serv3Desc">
+            Video, foto e contenuti per il tuo brand — anche come "face" delle
+            tue campagne. Editing, gestione social e collab per farti conoscere.
+          </p>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="lp-badge">Video Editing</span>
+            <span class="lp-badge">Social Media</span>
+            <span class="lp-badge">Collab & Branding</span>
           </div>
+          <a
+            href="#contact"
+            class="lp-btn text-decoration-none"
+            data-lang-key="servCta"
+            >Richiedi preventivo</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <div class="lp-divider"></div>
+
+    <!-- PROCESSO -->
+    <section class="lp-section lp-reveal" id="process">
+      <div class="ms-4 ps-2 mb-4">
+        <h2 class="lp-big-title">PROCESSO</h2>
+        <h3
+          class="lp-text-secondary lp-subtitle-offset"
+          data-lang-key="procSub"
+        >
+          Come lavoro
+        </h3>
+      </div>
+      <div class="d-flex justify-content-around flex-wrap gap-4 px-4">
+        <div class="lp-card lp-reveal" style="max-width: 260px">
+          <span class="lp-badge">01</span>
+          <h4 class="fs-5 fw-bold mt-2 mb-1" data-lang-key="proc1Title">
+            Scoperta
+          </h4>
+          <p class="lp-text-secondary small mb-0" data-lang-key="proc1Desc">
+            Ascolto le tue esigenze e analizzo il progetto: obiettivi, pubblico
+            e tempi.
+          </p>
+        </div>
+        <div class="lp-card lp-reveal" style="max-width: 260px">
+          <span class="lp-badge">02</span>
+          <h4 class="fs-5 fw-bold mt-2 mb-1" data-lang-key="proc2Title">
+            Proposta
+          </h4>
+          <p class="lp-text-secondary small mb-0" data-lang-key="proc2Desc">
+            Ti presento un piano chiaro: tempi, costi e risultato atteso. Niente
+            sorprese.
+          </p>
+        </div>
+        <div class="lp-card lp-reveal" style="max-width: 260px">
+          <span class="lp-badge">03</span>
+          <h4 class="fs-5 fw-bold mt-2 mb-1" data-lang-key="proc3Title">
+            Realizzazione
+          </h4>
+          <p class="lp-text-secondary small mb-0" data-lang-key="proc3Desc">
+            Sviluppo il progetto con aggiornamenti costanti: design, codice e
+            contenuti.
+          </p>
+        </div>
+        <div class="lp-card lp-reveal" style="max-width: 260px">
+          <span class="lp-badge">04</span>
+          <h4 class="fs-5 fw-bold mt-2 mb-1" data-lang-key="proc4Title">
+            Consegna & Supporto
+          </h4>
+          <p class="lp-text-secondary small mb-0" data-lang-key="proc4Desc">
+            Consegno il lavoro pronto e resto disponibile per modifiche e
+            manutenzione.
+          </p>
         </div>
       </div>
     </section>
@@ -564,79 +553,22 @@
 
     <div class="lp-divider"></div>
 
-    <!-- SERVIZI -->
-    <section class="lp-section lp-reveal" id="services">
-      <div class="ms-4 ps-2 mb-4">
-        <h2 class="lp-big-title">SERVIZI</h2>
-        <h3
-          class="lp-text-secondary lp-subtitle-offset"
-          data-lang-key="servSub"
-        >
-          Cosa posso fare per te
-        </h3>
-      </div>
-      <div class="d-flex justify-content-around flex-wrap gap-4 px-4">
-        <div class="lp-card lp-reveal" style="max-width: 340px">
-          <h4 class="fs-5 fw-bold mb-2" data-lang-key="serv1Title">
-            Web Design & Development
-          </h4>
-          <p class="lp-text-secondary small mb-3" data-lang-key="serv1Desc">
-            Siti web per locali, ristoranti e piccole imprese. Realizzo siti
-            veloci e ottimizzati, con dominio, hosting e manutenzione mensile.
-          </p>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="lp-badge">Web Design</span>
-            <span class="lp-badge">Dominio & Hosting</span>
-            <span class="lp-badge">SEO</span>
-          </div>
-        </div>
-        <div class="lp-card lp-reveal" style="max-width: 340px">
-          <h4 class="fs-5 fw-bold mb-2" data-lang-key="serv2Title">
-            Custom Fashion
-          </h4>
-          <p class="lp-text-secondary small mb-3" data-lang-key="serv2Desc">
-            Rework e personalizzazione di capi: denim, t-shirt e capi su misura.
-            Trasformo capi esistenti in pezzi unici.
-          </p>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="lp-badge">Rework Denim</span>
-            <span class="lp-badge">Capi Personalizzati</span>
-          </div>
-        </div>
-        <div class="lp-card lp-reveal" style="max-width: 340px">
-          <h4 class="fs-5 fw-bold mb-2" data-lang-key="serv3Title">
-            Comunicazione & Contenuti
-          </h4>
-          <p class="lp-text-secondary small mb-3" data-lang-key="serv3Desc">
-            Editing video, caption e gestione social per brand e attività.
-            Storytelling che racconta il tuo progetto.
-          </p>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="lp-badge">Video Editing</span>
-            <span class="lp-badge">Social Media</span>
-            <span class="lp-badge">Branding</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="lp-divider"></div>
-
-    <!-- DIGITAL PRESENCE -->
+    <!-- VIDEO & CONTENUTI -->
     <section class="lp-section lp-reveal">
       <div class="ms-4 ps-2 mb-2 lp-reveal">
-        <h2 class="lp-big-title">DIGITAL PRESENCE</h2>
+        <h2 class="lp-big-title">VIDEO &amp; CONTENUTI</h2>
         <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="dpSub">
-          Presenza Online
+          I miei contenuti
         </h3>
       </div>
       <p
         class="pt-3 lp-text-secondary container d-flex justify-content-center"
         data-lang-key="dpDesc"
       >
-        Utilizzo le piattaforme social come un diario per condividere quello che
-        faccio quotidianamente tra lifestyle, moda, tecnologia, musica, progetti
-        personali e sperimentazione digitale.
+        Produco contenuti video per i miei canali e in collaborazione con i
+        brand: storytelling, ma anche campagne dove sono io la "face" del
+        messaggio — come lo sketch girato in un negozio di abbigliamento per
+        dargli visibilità.
       </p>
 
       <div class="container-extended lp-reveal">
@@ -653,6 +585,45 @@
           ›
         </button>
         <div class="lp-presence-videos">
+          <div class="lp-presence-video">
+            <video
+              src="assets/activity-content-creation.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              webkit-playsinline
+              preload="metadata"
+              class=""
+            ></video>
+            <p>Content Creation</p>
+          </div>
+          <div class="lp-presence-video">
+            <video
+              src="assets/activity-fashion.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              webkit-playsinline
+              preload="metadata"
+              class=""
+            ></video>
+            <p>Fashion Custom</p>
+          </div>
+          <div class="lp-presence-video">
+            <video
+              src="assets/activity-tech.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              webkit-playsinline
+              preload="metadata"
+              class=""
+            ></video>
+            <p>Tech & Coding</p>
+          </div>
           <div class="lp-presence-video">
             <video
               src="assets/presence-music-mood.mp4"
@@ -1059,6 +1030,29 @@
     <br /><br />
     <div class="lp-divider"></div>
 
+    <!-- TESTIMONIANZE -->
+    <section class="lp-section lp-reveal" id="testimonials">
+      <div class="ms-5 ps-3 mb-4">
+        <h2 class="lp-big-title">TESTIMONIANZE</h2>
+        <h3
+          class="lp-text-secondary lp-subtitle-offset"
+          data-lang-key="testiSub"
+        >
+          Cosa dicono di me
+        </h3>
+      </div>
+      <div class="px-4">
+        <div class="lp-card lp-reveal">
+          <p class="lp-text-secondary small mb-0" data-lang-key="testiEmpty">
+            Al momento non sono disponibili — presto pubblicherò le recensioni
+            dei clienti con cui ho lavorato.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="lp-divider"></div>
+
     <!-- EXPERIENCE -->
     <section class="lp-section lp-reveal">
       <div class="ms-5 ps-3 mb-2">
@@ -1441,6 +1435,59 @@
         </div>
       </div>
     </div>
+
+    <div class="lp-divider"></div>
+
+    <!-- FAQ -->
+    <section class="lp-section lp-reveal" id="faq">
+      <div class="ms-5 ps-3 mb-4">
+        <h2 class="lp-big-title">FAQ</h2>
+        <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="faqSub">
+          Domande frequenti
+        </h3>
+      </div>
+      <div class="d-flex flex-column gap-3 px-4">
+        <details class="lp-faq-item lp-reveal">
+          <summary data-lang-key="faq1Q">Quanto costa un sito web?</summary>
+          <p data-lang-key="faq1A">
+            Dipende dal progetto: siti one-page a prezzi accessibili, progetti
+            più complessi su preventivo. Scrivimi e in 24 ore hai una risposta.
+          </p>
+        </details>
+        <details class="lp-faq-item lp-reveal">
+          <summary data-lang-key="faq2Q">Quanto tempo ci vuole?</summary>
+          <p data-lang-key="faq2A">
+            Un sito one-page richiede 1-2 settimane. I progetti più grandi
+            vengono pianificati insieme, con aggiornamenti costanti.
+          </p>
+        </details>
+        <details class="lp-faq-item lp-reveal">
+          <summary data-lang-key="faq3Q">
+            Lavori anche con piccoli locali?
+          </summary>
+          <p data-lang-key="faq3A">
+            Sì, è il mio focus: ristoranti, negozi, artigiani e liberi
+            professionisti. Creo soluzioni pensate per portare clienti reali.
+          </p>
+        </details>
+        <details class="lp-faq-item lp-reveal">
+          <summary data-lang-key="faq4Q">Cosa serve per iniziare?</summary>
+          <p data-lang-key="faq4A">
+            Mi basta un messaggio con le tue idee: da lì ti guido io passo per
+            passo, dalla proposta alla consegna.
+          </p>
+        </details>
+        <details class="lp-faq-item lp-reveal">
+          <summary data-lang-key="faq5Q">
+            Cosa succede dopo la consegna?
+          </summary>
+          <p data-lang-key="faq5A">
+            Il sito è tuo al 100%: dominio, codice e contenuti. Posso anche
+            occuparmi di manutenzione mensile e aggiornamenti.
+          </p>
+        </details>
+      </div>
+    </section>
 
     <div class="lp-divider"></div>
 

@@ -730,6 +730,44 @@ a{
   border-radius:24px
   padding:24px
   flex:1}
+.lp-faq-item{
+  background-color:var(--bg-card)
+  border:1px solid var(--border-color)
+  border-radius:16px
+  overflow:hidden
+  transition:border-color .3s ease}
+.lp-faq-item summary{
+  cursor:pointer
+  list-style:none
+  display:flex
+  justify-content:space-between
+  align-items:center
+  gap:16px
+  padding:18px 24px
+  font-weight:600
+  font-size:1rem
+  color:var(--text-primary)
+  user-select:none}
+.lp-faq-item summary::-webkit-details-marker{
+  display:none}
+.lp-faq-item summary::after{
+  content:"+"
+  font-family:var(--font-mono)
+  font-size:1.1rem
+  color:var(--accent-silver)
+  transition:transform .3s ease}
+.lp-faq-item[open] summary::after{
+  transform:rotate(45deg)}
+.lp-faq-item[open]{
+  border-color:var(--border-hover)}
+.lp-faq-item p{
+  margin:0
+  padding:0 24px 20px
+  color:var(--text-secondary)
+  font-size:.9rem
+  line-height:1.6}
+.lp-faq-item:hover{
+  border-color:var(--border-hover)}
 .lp-collab-card,.lp-tools-card{
   width:100%
   min-width:280px}
@@ -1191,6 +1229,12 @@ body{
   padding:3px 8px}
 .lp-card{
   padding:16px}
+.lp-faq-item summary{
+  padding:14px 16px
+  font-size:.9rem}
+.lp-faq-item p{
+  padding:0 16px 16px
+  font-size:.82rem}
 .lp-collab-card .d-flex{
   gap:10px}
 .lp-collab-img{

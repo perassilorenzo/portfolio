@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const p = document.querySelector(".lp-typewriter");
   if (p) {
     const z =
-      "Documento la mia vita, le mie passioni e i miei progetti attraverso comunicazione, moda e tecnologia.";
+      "Costruisco siti web, custom fashion e contenuti video che portano risultati.";
     let G = 0;
     !(function e() {
       ((p.textContent = z.slice(0, G)),
@@ -427,49 +427,57 @@ document.addEventListener("DOMContentLoaded", function () {
   const LANG = {
     it: {
       navAbout: "About",
-      navWhat: "What I do",
+      navServ: "Servizi",
       navProjects: "Projects",
       navSocials: "Socials",
       navContact: "Contact",
       heroBtn1: "Guarda i progetti",
       heroBtn2: "Contattami",
+      heroAvail: "Disponibile per nuovi progetti",
       aboutSub: "Chi sono",
       aboutP1:
         "Sono Lorenzo Perassi, developer, creator e studente di Informatica. Costruisco prodotti digitali dove codice, design e creativit\u00e0 si incontrano. Il mio progetto principale \u00e8 Customly, una piattaforma di personalizzazione abbigliamento che unisce moda e tecnologia.",
       aboutP2:
         "Utilizzo le piattaforme digitali come uno spazio dove condividere progetti, esperimenti creativi, routine, lavoro pratico e crescita personale, oltre che per creare connessioni, farmi conoscere e portarmi opportunit\u00e0.<br><br>Collaboro con brand locali, pagine creative e magazine musicali, lavorando su contenuti, comunicazioni online e progetti creativi. Sviluppo anche siti web per locali e piccole imprese.<br><br>Lavoro su Customly come piattaforma principale, dove sviluppo il configuratore digitale e gestisco la piattaforma.",
-      widSub: "Cosa faccio",
-      wid1Title: "01 \u2014 Comunicazione",
-      wid1Desc:
-        "Racconto progetti, idee e conoscenze attraverso contenuti, storytelling e comunicazione social. Collaboro con brand e pagine creative lavorando su contenuti, edizioni video e comunicazioni online.",
-      wid2Title: "02 \u2014 Fashion & Custom Projects",
-      wid2Desc:
-        "Lavoro su customizzazioni, design e sperimentazione nel mondo fashion, con progetti di sartoria e rielaborazione di capi. Ho collaborato al design, alla prototipazione e alla creazione delle camicie per gli investitori di CRYBU S.R.L.",
-      wid3Title: "03 \u2014 IT & Computer Science",
-      wid3Desc:
-        "L'informatica \u00e8 una delle mie passioni principali. La studio sia a scuola che da autodidatta, approfondendo sviluppo web, programmazione, AI, cybersecurity e tecnologia in generale.<br><br>Il mio progetto principale \u00e8 Customly \u2014 una piattaforma di custom fashion sviluppata con Cloudflare Pages, D1 e R2, che unisce codice e design in un prodotto reale.",
       customlySub: "Il mio progetto principale",
       customlyDesc:
         "Customly \u00e8 la piattaforma di custom fashion che unisce moda e tecnologia: un configuratore digitale per personalizzare abbigliamento in modo semplice e intuitivo. Sviluppata con Cloudflare Pages, D1 e R2, \u00e8 il mio progetto principale, dove gestisco catalogo prodotti e configuratore.",
       customlyCta: "Visita customly.it",
       servSub: "Cosa posso fare per te",
+      servCta: "Richiedi preventivo",
       serv1Title: "Web Design & Development",
       serv1Desc:
-        "Siti web per locali, ristoranti e piccole imprese. Realizzo siti veloci e ottimizzati, con dominio, hosting e manutenzione mensile.",
+        "Siti web veloci e professionali per locali, ristoranti e piccole imprese. Dominio, hosting e manutenzione inclusi, pensati per portarti clienti.",
       serv2Title: "Custom Fashion",
       serv2Desc:
-        "Rework e personalizzazione di capi: denim, t-shirt e capi su misura. Trasformo capi esistenti in pezzi unici.",
+        "Rework e personalizzazione di capi: denim, t-shirt e capi su misura. Trasformo capi esistenti in pezzi unici che raccontano chi sei.",
       serv3Title: "Comunicazione & Contenuti",
       serv3Desc:
-        "Editing video, caption e gestione social per brand e attivit\u00e0. Storytelling che racconta il tuo progetto.",
-      dpSub: "Presenza Online",
+        'Video, foto e contenuti per il tuo brand \u2014 anche come "face" delle tue campagne. Editing, gestione social e collab per farti conoscere.',
+      procSub: "Come lavoro",
+      proc1Title: "Scoperta",
+      proc1Desc:
+        "Ascolto le tue esigenze e analizzo il progetto: obiettivi, pubblico e tempi.",
+      proc2Title: "Proposta",
+      proc2Desc:
+        "Ti presento un piano chiaro: tempi, costi e risultato atteso. Niente sorprese.",
+      proc3Title: "Realizzazione",
+      proc3Desc:
+        "Sviluppo il progetto con aggiornamenti costanti: design, codice e contenuti.",
+      proc4Title: "Consegna & Supporto",
+      proc4Desc:
+        "Consegno il lavoro pronto e resto disponibile per modifiche e manutenzione.",
+      dpSub: "I miei contenuti",
       dpDesc:
-        "Utilizzo le piattaforme social come un diario per condividere quello che faccio quotidianamente tra lifestyle, moda, tecnologia, progetti personali e sperimentazione digitale.",
+        'Produco contenuti video per i miei canali e in collaborazione con i brand: storytelling, ma anche campagne dove sono io la "face" del messaggio \u2014 come lo sketch girato in un negozio di abbigliamento per dargli visibilit\u00e0.',
       projSub: "Progetti Selezionati",
       projAll: "All",
       projClient: "Client Work",
       projPersonal: "Personal Project",
       projFashion: "Fashion Customization",
+      testiSub: "Cosa dicono di me",
+      testiEmpty:
+        "Al momento non sono disponibili \u2014 presto pubblicher\u00f2 le recensioni dei clienti con cui ho lavorato.",
       timelineSub: "Esperienze",
       tl0Title: "Customly \u2014 Founder",
       tl0Desc:
@@ -491,6 +499,22 @@ document.addEventListener("DOMContentLoaded", function () {
       collab3Desc:
         "Portiamo avanti una rubrica che mette insieme la musica e l'abbigliamento. Questa pagina \u00e8 un magazine no profit che ha come obiettivo sponsorizzare piccoli artisti della new gen.",
       toolsSub: "Strumenti & Competenze",
+      faqSub: "Domande frequenti",
+      faq1Q: "Quanto costa un sito web?",
+      faq1A:
+        "Dipende dal progetto: siti one-page a prezzi accessibili, progetti pi\u00f9 complessi su preventivo. Scrivimi e in 24 ore hai una risposta.",
+      faq2Q: "Quanto tempo ci vuole?",
+      faq2A:
+        "Un sito one-page richiede 1-2 settimane. I progetti pi\u00f9 grandi vengono pianificati insieme, con aggiornamenti costanti.",
+      faq3Q: "Lavori anche con piccoli locali?",
+      faq3A:
+        "S\u00ec, \u00e8 il mio focus: ristoranti, negozi, artigiani e liberi professionisti. Creo soluzioni pensate per portare clienti reali.",
+      faq4Q: "Cosa serve per iniziare?",
+      faq4A:
+        "Mi basta un messaggio con le tue idee: da l\u00ec ti guido io passo per passo, dalla proposta alla consegna.",
+      faq5Q: "Cosa succede dopo la consegna?",
+      faq5A:
+        "Il sito \u00e8 tuo al 100%: dominio, codice e contenuti. Posso anche occuparmi di manutenzione mensile e aggiornamenti.",
       contactSub: "Restiamo in contatto",
       contactDesc: "Scrivimi per collaborazioni, idee o progetti.",
       contactName: "Il tuo nome",
@@ -507,32 +531,24 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     en: {
       navAbout: "About",
-      navWhat: "What I do",
+      navServ: "Services",
       navProjects: "Projects",
       navSocials: "Socials",
       navContact: "Contact",
       heroBtn1: "View Projects",
       heroBtn2: "Contact Me",
+      heroAvail: "Available for new projects",
       aboutSub: "About Me",
       aboutP1:
         "I'm Lorenzo Perassi, developer, creator and Computer Science student. I build digital products where code, design and creativity meet. My main project is Customly, a clothing customization platform combining fashion and technology.",
       aboutP2:
         "I use digital platforms as a space to share projects, creative experiments, routines, hands-on work and personal growth, as well as to build connections and create opportunities.<br><br>I collaborate with local brands, creative pages and music magazines, working on content, online communications and creative projects. I also develop websites for local businesses and small companies.<br><br>I work on Customly as my main platform, where I develop the digital configurator and manage the platform.",
-      widSub: "What I do",
-      wid1Title: "01 \u2014 Communication",
-      wid1Desc:
-        "I share projects, ideas and knowledge through content, storytelling and social communication. I collaborate with brands and creative pages working on content, video editing and online communications.",
-      wid2Title: "02 \u2014 Fashion & Custom Projects",
-      wid2Desc:
-        "I work on customizations, design and experimentation in fashion, with tailoring and garment rework projects. I contributed to the design, prototyping and creation of the shirts for CRYBU S.R.L. investors.",
-      wid3Title: "03 \u2014 IT & Computer Science",
-      wid3Desc:
-        "Computer science is one of my main passions. I study it both at school and independently, exploring web development, programming, AI, cybersecurity and technology in general.<br><br>My main project is Customly \u2014 a custom fashion platform built with Cloudflare Pages, D1 and R2, combining code and design into a real product.",
       customlySub: "My main project",
       customlyDesc:
         "Customly is the custom fashion platform that combines fashion and technology: a digital configurator to personalize clothing simply and intuitively. Built with Cloudflare Pages, D1 and R2, it is my main project, where I manage the product catalog and the configurator.",
       customlyCta: "Visit customly.it",
       servSub: "What I can do for you",
+      servCta: "Get a quote",
       serv1Title: "Web Design & Development",
       serv1Desc:
         "Websites for local businesses, restaurants and small companies. I build fast, optimized sites with domain, hosting and monthly maintenance.",
@@ -542,14 +558,30 @@ document.addEventListener("DOMContentLoaded", function () {
       serv3Title: "Communication & Content",
       serv3Desc:
         "Video editing, captions and social management for brands and businesses. Storytelling that tells your story.",
-      dpSub: "Digital Presence",
+      procSub: "How I work",
+      proc1Title: "Discovery",
+      proc1Desc:
+        "I listen to your needs and analyze the project: goals, audience and timeline.",
+      proc2Title: "Proposal",
+      proc2Desc:
+        "I present a clear plan: timeline, costs and expected outcome. No surprises.",
+      proc3Title: "Execution",
+      proc3Desc:
+        "I build the project with constant updates: design, code and content.",
+      proc4Title: "Delivery & Support",
+      proc4Desc:
+        "I deliver the finished work and stay available for changes and maintenance.",
+      dpSub: "My content",
       dpDesc:
-        "I use social platforms as a diary to share what I do daily across lifestyle, fashion, technology, personal projects and digital experimentation.",
+        'I produce video content for my channels and in collaboration with brands: storytelling, but also campaigns where I\'m the "face" of the message \u2014 like the skit filmed in a clothing store to give it visibility.',
       projSub: "Selected Projects",
       projAll: "All",
       projClient: "Client Work",
       projPersonal: "Personal Project",
       projFashion: "Fashion Customization",
+      testiSub: "What people say about me",
+      testiEmpty:
+        "Not available yet \u2014 I'll soon publish reviews from the clients I've worked with.",
       timelineSub: "Experience",
       tl0Title: "Customly \u2014 Founder",
       tl0Desc:
@@ -571,6 +603,22 @@ document.addEventListener("DOMContentLoaded", function () {
       collab3Desc:
         "We run a column combining music and fashion. This page is a non-profit magazine aimed at promoting new gen artists.",
       toolsSub: "Tools & Skills",
+      faqSub: "Frequently asked questions",
+      faq1Q: "How much does a website cost?",
+      faq1A:
+        "It depends on the project: one-page sites at accessible prices, more complex projects on quote. Write me and you'll have an answer within 24 hours.",
+      faq2Q: "How long does it take?",
+      faq2A:
+        "A one-page site takes 1-2 weeks. Bigger projects are planned together, with constant updates.",
+      faq3Q: "Do you also work with small local businesses?",
+      faq3A:
+        "Yes, that's my focus: restaurants, shops, artisans and freelancers. I build solutions designed to bring real customers.",
+      faq4Q: "What do I need to get started?",
+      faq4A:
+        "Just send me a message with your ideas: from there I'll guide you step by step, from proposal to delivery.",
+      faq5Q: "What happens after delivery?",
+      faq5A:
+        "The site is 100% yours: domain, code and content. I can also handle monthly maintenance and updates.",
       contactSub: "Stay in touch",
       contactDesc: "Write me for collaborations, ideas or projects.",
       contactName: "Your name",

@@ -20,23 +20,25 @@
 
 ## about
 
-Portfolio personale di Lorenzo Perassi — developer, founder di Customly e studente di Informatica. Un diario digitale dove convivono comunicazione, customizzazione di abbigliamento, sviluppo web e sperimentazione creativa.
+Portfolio personale di Lorenzo Perassi — developer, founder di Customly e studente di Informatica. Un portfolio orientato alla vendita: siti web, custom fashion e contenuti video per brand, locali e piccole imprese, con un percorso in 4 step, testimonianze e FAQ.
 
 ## sezioni
 
-| Sezione          | Descrizione                                                                |
-| ---------------- | -------------------------------------------------------------------------- |
-| Hero             | Branding personale con typewriter, contatori animati e link social         |
-| About            | Chi sono, background e percorso                                            |
-| What I Do        | Comunicazione, fashion & custom, informatica & tech con video dimostrativi |
-| Customly         | Sezione dedicata alla piattaforma Customly con descrizione e CTA al sito   |
-| Servizi          | Web design, custom fashion e comunicazione & contenuti                     |
-| Digital Presence | Vetrina social scrollabile con drag/touch e auto-scroll infinito           |
-| Projects         | Customly · CRYBU · Fashion Customization                                   |
-| Experience       | Customly — Founder · Omnia4Web · Stage IT presso Bertolotto Porte          |
-| Collaborations   | Aleyesure · StageStreetwear · NewGenMusic4                                 |
-| Tools & Skills   | Griglia tecnologica con tooltip di livello e contesto                      |
-| Contact          | Form (Formspree) + WhatsApp                                                |
+| Sezione           | Descrizione                                                                     |
+| ----------------- | ------------------------------------------------------------------------------- |
+| Hero              | Branding personale con badge disponibilità, typewriter, contatori e link social |
+| About             | Chi sono, background e percorso                                                 |
+| Servizi           | Web design, custom fashion e comunicazione & contenuti con CTA preventivo       |
+| Processo          | Percorso in 4 step: scoperta, proposta, realizzazione, consegna & supporto      |
+| Customly          | Sezione dedicata alla piattaforma Customly con descrizione e CTA al sito        |
+| Video & Contenuti | Vetrina video scrollabile con drag/touch e auto-scroll infinito                 |
+| Projects          | Customly · CRYBU · Fashion Customization                                        |
+| Testimonianze     | Recensioni clienti (placeholder in attesa delle prime)                          |
+| Experience        | Customly — Founder · Omnia4Web · Stage IT presso Bertolotto Porte               |
+| Collaborations    | Aleyesure · StageStreetwear · NewGenMusic4                                      |
+| Tools & Skills    | Griglia tecnologica con tooltip di livello e contesto                           |
+| FAQ               | Accordion con domande frequenti su prezzi, tempi e consegna                     |
+| Contact           | Form (Formspree) + WhatsApp                                                     |
 
 ## tech stack
 
@@ -56,7 +58,8 @@ Portfolio personale di Lorenzo Perassi — developer, founder di Customly e stud
 - **Filtri progetti** — All · Client Work · Personal Project · Fashion Customization
 - **Lightbox** per immagini e video con navigazione touch, swipe e frecce
 - **Progress bar** di lettura
-- **Scroll infinito** presenza social
+- **Vetrina video contenuti** con auto-scroll infinito e drag/touch
+- **FAQ accordion** nativa (`<details>`)
 - **Tipografia animata** (typewriter) e contatori
 - **Musica di sottofondo** toggle
 - **Timeline esperienze** interattiva
@@ -113,6 +116,7 @@ bun run build     # minifica CSS + JS
 - **Instagram:** [@diario_di_uno_09](https://www.instagram.com/diario_di_uno_09)
 - **TikTok:** [@diario_di_uno_09](https://www.tiktok.com/@diario_di_uno_09)
 - **YouTube:** [@diario_di_uno_09](https://www.youtube.com/@diario_di_uno_09)
+- **LinkedIn:** [perassilorenzo](https://www.linkedin.com/in/perassilorenzo/)
 - **Linktree:** [linktr.ee/lollo_pera](https://linktr.ee/lollo_pera)
 
 ---
