@@ -435,19 +435,19 @@ document.addEventListener("DOMContentLoaded", function () {
       heroBtn2: "Contattami",
       aboutSub: "Chi sono",
       aboutP1:
-        "Sono Lorenzo Perassi, creator digitale e studente di Informatica. Negli ultimi anni ho iniziato a costruire il mio percorso online sperimentando tra content creation, fashion, videomaking, coding e altri macro argomenti, scegliendo di raccontare sui social diversi aspetti della mia vita e delle mie passioni.",
+        "Sono Lorenzo Perassi, developer, creator e studente di Informatica. Costruisco prodotti digitali dove codice, design e creativit\u00e0 si incontrano. Il mio progetto principale \u00e8 Customly, una piattaforma di personalizzazione abbigliamento che unisce moda e tecnologia.",
       aboutP2:
-        "Utilizzo le piattaforme digitali come uno spazio dove condividere progetti, esperimenti creativi, routine, outfit, lavoro pratico e crescita personale, oltre che per creare connessioni, farmi conoscere e portarmi opportunit\u00e0.<br><br>Collaboro con brand locali e progetti digitali, lavorando su contenuti, comunicazioni online e soluzioni creative.<br><br>Attualmente sono in stage come IT presso Bertolotto Porte e collaboro con l'agenzia Omnia4Web.",
+        "Utilizzo le piattaforme digitali come uno spazio dove condividere progetti, esperimenti creativi, routine, outfit, lavoro pratico e crescita personale, oltre che per creare connessioni, farmi conoscere e portarmi opportunit\u00e0.<br><br>Collaboro con brand locali, pagine creative e magazine musicali, lavorando su contenuti, comunicazioni online e progetti creativi. Sviluppo anche siti web per locali e piccole imprese.<br><br>Lavoro su Customly come piattaforma principale, dove sviluppo il configuratore digitale e gestisco la piattaforma.",
       widSub: "Cosa faccio",
       wid1Title: "01 \u2014 Content Creation",
       wid1Desc:
         "Creo contenuti per piattaforme social combinando storytelling, progetti personali, lavoro pratico come il cucito, routine e sperimentazione creativa.",
       wid2Title: "02 \u2014 Fashion & Custom Projects",
       wid2Desc:
-        "Lavoro su customizzazioni, design e sperimentazione nel mondo fashion, con progetti di sartoria e rielaborazione di capi.",
+        "Lavoro su customizzazioni, design e sperimentazione nel mondo fashion, con progetti di sartoria e rielaborazione di capi. Ho collaborato al design, alla prototipazione e alla creazione delle camicie per gli investitori di CRYBU S.R.L.",
       wid3Title: "03 \u2014 Informatica & Tecnologia",
       wid3Desc:
-        "L'informatica \u00e8 una delle mie passioni principali. La studio sia a scuola che da autodidatta, approfondendo sviluppo web, programmazione, AI, cybersecurity e tecnologia in generale.<br><br>Nel tempo libero porto avanti progetti personali, sperimento nuove tecnologie e continuo a formarmi online anche attraverso percorsi come OliCyber.",
+        "L'informatica \u00e8 una delle mie passioni principali. La studio sia a scuola che da autodidatta, approfondendo sviluppo web, programmazione, AI, cybersecurity e tecnologia in generale.<br><br>Il mio progetto principale \u00e8 Customly \u2014 una piattaforma di custom fashion sviluppata con Cloudflare Pages, D1 e R2, che unisce codice e design in un prodotto reale. Sviluppo inoltre siti web per locali e piccole imprese.",
       dpSub: "Presenza Online",
       dpDesc:
         "Utilizzo le piattaforme social come un diario per condividere quello che faccio quotidianamente tra lifestyle, moda, tecnologia, progetti personali e sperimentazione digitale.",
@@ -458,6 +458,9 @@ document.addEventListener("DOMContentLoaded", function () {
       projPersonal: "Personal Project",
       projFashion: "Fashion Customization",
       timelineSub: "Esperienze",
+      tl0Title: "Customly \u2014 Founder",
+      tl0Desc:
+        "Piattaforma di custom fashion \u2014 unisco moda e tecnologia con un configuratore digitale per personalizzare abbigliamento in modo semplice e intuitivo.",
       tl1Title: "Omnia4Web",
       tl1Desc:
         "Supporto alla creazione di contenuti digitali e comunicazione social. Editing video, grafiche e caption.",
@@ -488,7 +491,7 @@ document.addEventListener("DOMContentLoaded", function () {
       contactSubject: "Oggetto",
       contactMsg: "Il tuo messaggio...",
       contactBtn: "Invia messaggio",
-      footerTag: "Content creator, fashion, tech & self-growth",
+      footerTag: "Developer, fashion, tech & Customly founder",
       footerPages: "Pages",
       footerSocial: "Social",
       footerContact: "Contact",
@@ -505,19 +508,19 @@ document.addEventListener("DOMContentLoaded", function () {
       heroBtn2: "Contact Me",
       aboutSub: "About Me",
       aboutP1:
-        "I'm Lorenzo Perassi, digital creator and Computer Science student. Over the past few years I've built my online presence experimenting across content creation, fashion, videomaking, coding and more, choosing to share different aspects of my life and passions on social media.",
+        "I'm Lorenzo Perassi, developer, creator and Computer Science student. I build digital products where code, design and creativity meet. My main project is Customly, a clothing customization platform combining fashion and technology.",
       aboutP2:
-        "I use digital platforms as a space to share projects, creative experiments, routines, outfits, hands-on work and personal growth, as well as to build connections and create opportunities.<br><br>I collaborate with local brands and digital projects, working on content, online communications and creative solutions.<br><br>I'm currently an IT intern at Bertolotto Porte and working with the Omnia4Web agency.",
+        "I use digital platforms as a space to share projects, creative experiments, routines, outfits, hands-on work and personal growth, as well as to build connections and create opportunities.<br><br>I collaborate with local brands, creative pages and music magazines, working on content, online communications and creative projects. I also develop websites for local businesses and small companies.<br><br>I work on Customly as my main platform, where I develop the digital configurator and manage the platform.",
       widSub: "What I do",
       wid1Title: "01 \u2014 Content Creation",
       wid1Desc:
         "I create content for social platforms combining storytelling, personal projects, hands-on work like sewing, routines and creative experimentation.",
       wid2Title: "02 \u2014 Fashion & Custom Projects",
       wid2Desc:
-        "I work on customizations, design and experimentation in fashion, with tailoring and garment rework projects.",
+        "I work on customizations, design and experimentation in fashion, with tailoring and garment rework projects. I contributed to the design, prototyping and creation of the shirts for CRYBU S.R.L. investors.",
       wid3Title: "03 \u2014 IT & Technology",
       wid3Desc:
-        "Computer science is one of my main passions. I study it both at school and independently, exploring web development, programming, AI, cybersecurity and technology in general.",
+        "Computer science is one of my main passions. I study it both at school and independently, exploring web development, programming, AI, cybersecurity and technology in general.<br><br>My main project is Customly \u2014 a custom fashion platform built with Cloudflare Pages, D1 and R2, combining code and design into a real product. I also build websites for local businesses and small companies.",
       dpSub: "Digital Presence",
       dpDesc:
         "I use social platforms as a diary to share what I do daily across lifestyle, fashion, technology, personal projects and digital experimentation.",
@@ -528,6 +531,9 @@ document.addEventListener("DOMContentLoaded", function () {
       projPersonal: "Personal Project",
       projFashion: "Fashion Customization",
       timelineSub: "Experience",
+      tl0Title: "Customly \u2014 Founder",
+      tl0Desc:
+        "Custom fashion platform \u2014 I combine fashion and technology with a digital configurator to personalize clothing simply and intuitively.",
       tl1Title: "Omnia4Web",
       tl1Desc:
         "Supporting digital content creation and social communication. Video editing, graphics and captions.",
@@ -558,7 +564,7 @@ document.addEventListener("DOMContentLoaded", function () {
       contactSubject: "Subject",
       contactMsg: "Your message...",
       contactBtn: "Send message",
-      footerTag: "Content creator, fashion, tech & self-growth",
+      footerTag: "Developer, fashion, tech & Customly founder",
       footerPages: "Pages",
       footerSocial: "Social",
       footerContact: "Contact",

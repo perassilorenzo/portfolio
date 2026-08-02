@@ -20,21 +20,21 @@
 
 ## about
 
-Portfolio personale di Lorenzo Perassi — content creator, studente di Informatica e appassionato di fashion & tech. Un diario digitale dove convivono content creation, customizzazione di abbigliamento, sviluppo web, musica e sperimentazione creativa.
+Portfolio personale di Lorenzo Perassi — developer, founder di Customly, content creator e studente di Informatica. Un diario digitale dove convivono sviluppo web, customizzazione di abbigliamento, content creation, musica e sperimentazione creativa.
 
 ## sezioni
 
-| Sezione          | Descrizione                                                                   |
-| ---------------- | ----------------------------------------------------------------------------- |
-| Hero             | Branding personale con typewriter, contatori animati e link social            |
-| About            | Chi sono, background e percorso                                               |
-| What I Do        | Content creation, fashion & custom, informatica & tech con video dimostrativi |
-| Digital Presence | Vetrina social scrollabile con drag/touch e auto-scroll infinito              |
-| Projects         | Diario di uno 09 · CRYBU · Affitti brevi a Saluzzo · Fashion Customization    |
-| Experience       | Omnia4Web · Content Creator · Stage IT presso Bertolotto Porte                |
-| Collaborations   | Aleyesure · StageStreetwear · NewGenMusic4 · RAFFER RECORDS                   |
-| Tools & Skills   | Griglia tecnologica con tooltip di livello e contesto                         |
-| Contact          | Form (Formspree) + WhatsApp                                                   |
+| Sezione          | Descrizione                                                                           |
+| ---------------- | ------------------------------------------------------------------------------------- |
+| Hero             | Branding personale con typewriter, contatori animati e link social                    |
+| About            | Chi sono, background e percorso                                                       |
+| What I Do        | Content creation, fashion & custom, informatica & tech con video dimostrativi         |
+| Digital Presence | Vetrina social scrollabile con drag/touch e auto-scroll infinito                      |
+| Projects         | Customly · Diario di uno 09 · CRYBU · Affitti brevi a Saluzzo · Fashion Customization |
+| Experience       | Customly — Founder · Omnia4Web · Content Creator · Stage IT presso Bertolotto Porte   |
+| Collaborations   | Aleyesure · StageStreetwear · NewGenMusic4 · RAFFER RECORDS                           |
+| Tools & Skills   | Griglia tecnologica con tooltip di livello e contesto                                 |
+| Contact          | Form (Formspree) + WhatsApp                                                           |
 
 ## tech stack
 
