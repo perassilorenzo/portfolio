@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-cover.png">
-  <img src="assets/hero-cover.png" alt="Lorenzo Perassi — Portfolio" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-cover.webp">
+  <img src="assets/hero-cover.webp" alt="Lorenzo Perassi — Portfolio" width="100%">
 </picture>
 
 <p align="center">
