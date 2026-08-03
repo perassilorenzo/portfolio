@@ -24,21 +24,19 @@ Portfolio personale di Lorenzo Perassi — developer, founder di Customly e stud
 
 ## sezioni
 
-| Sezione           | Descrizione                                                                     |
-| ----------------- | ------------------------------------------------------------------------------- |
-| Hero              | Branding personale con badge disponibilità, typewriter, contatori e link social |
-| About             | Chi sono, background e percorso                                                 |
-| Servizi           | Web design, custom fashion e comunicazione & contenuti con CTA preventivo       |
-| Processo          | Percorso in 4 step: scoperta, proposta, realizzazione, consegna & supporto      |
-| Customly          | Sezione dedicata alla piattaforma Customly con descrizione e CTA al sito        |
-| Video & Contenuti | Vetrina video scrollabile con drag/touch e auto-scroll infinito                 |
-| Projects          | Customly · CRYBU · Fashion Customization                                        |
-| Testimonianze     | Recensioni clienti (placeholder in attesa delle prime)                          |
-| Experience        | Customly — Founder · Omnia4Web · Stage IT presso Bertolotto Porte               |
-| Collaborations    | Aleyesure · StageStreetwear · NewGenMusic4                                      |
-| Tools & Skills    | Griglia tecnologica con tooltip di livello e contesto                           |
-| FAQ               | Accordion con domande frequenti su prezzi, tempi e consegna                     |
-| Contact           | Form (Formspree) + WhatsApp                                                     |
+| Sezione        | Descrizione                                                                     |
+| -------------- | ------------------------------------------------------------------------------- |
+| Hero           | Branding personale con badge disponibilità, typewriter, contatori e link social |
+| About          | Chi sono, background e percorso con terminale animato                           |
+| Servizi        | Web design, custom fashion e comunicazione & contenuti con CTA preventivo       |
+| Processo       | Percorso in 4 step: scoperta, proposta, realizzazione, consegna & supporto      |
+| Customly       | Sezione dedicata alla piattaforma Customly con descrizione e CTA al sito        |
+| Projects       | Customly · CRYBU · Fashion Customization                                        |
+| Testimonianze  | Recensioni clienti (placeholder in attesa delle prime)                          |
+| Experience     | Customly — Founder · Omnia4Web · Stage IT presso Bertolotto Porte               |
+| Tools & Skills | Griglia 2x2 di competenze con tooltip di livello e contesto                     |
+| FAQ            | Accordion con domande frequenti su prezzi, tempi e consegna                     |
+| Contact        | Form (Formspree) + WhatsApp                                                     |
 
 ## tech stack
 
@@ -49,7 +47,7 @@ Portfolio personale di Lorenzo Perassi — developer, founder di Customly e stud
 - **Express** — Server con compressione e caching immutabile degli asset statici
 - **Devicon** — Icone tecnologie
 - **Formspree** — Backend form serverless
-- **Google Fonts** — Plus Jakarta Sans, Space Mono, IBM Plex Mono
+- **Google Fonts** — JetBrains Mono, IBM Plex Mono, Fraunces
 
 ## features
 
@@ -58,10 +56,8 @@ Portfolio personale di Lorenzo Perassi — developer, founder di Customly e stud
 - **Filtri progetti** — All · Client Work · Personal Project · Fashion Customization
 - **Lightbox** per immagini e video con navigazione touch, swipe e frecce
 - **Progress bar** di lettura
-- **Vetrina video contenuti** con auto-scroll infinito e drag/touch
 - **FAQ accordion** nativa (`<details>`)
 - **Tipografia animata** (typewriter) e contatori
-- **Musica di sottofondo** toggle
 - **Timeline esperienze** interattiva
 - **SEO** — JSON-LD, Open Graph, Twitter Cards, sitemap.xml, robots.txt
 - **Accessibilità** — Gerarchia heading, aria-label, focus visible, skip navigation
@@ -81,8 +77,7 @@ Portfolio personale di Lorenzo Perassi — developer, founder di Customly e stud
 ├── script.min.js.map          # Source map per debug
 ├── assets/
 │   ├── *.jpg / *.png / *.avif # Immagini portfolio
-│   ├── *.mp4 / *.mov          # Video dimostrativi
-│   └── bg-convergence.mp3     # Musica background
+│   └── *.mp4 / *.mov          # Video dimostrativi
 ├── robots.txt
 └── sitemap.xml
 ```

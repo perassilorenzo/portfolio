@@ -1,21 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const e = document.getElementById("bgMusic"),
-    t = document.getElementById("musicToggle");
-  if (e && t) {
-    let T = !1;
-    t.addEventListener("click", () => {
-      T
-        ? (e.pause(), (t.textContent = "▶"), (T = !1))
-        : e
-            .play()
-            .then(() => {
-              ((t.textContent = "⏸"), (T = !0));
-            })
-            .catch((e) => {
-              console.error("Audio playback failed:", e);
-            });
-    });
-  }
   const o = document.getElementById("navLinks"),
     n = document.querySelector(".navbar-toggler");
   if (o && n && window.bootstrap) {
@@ -25,86 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "none" !== window.getComputedStyle(n).display && M.hide();
       });
     });
-  }
-  const s = document.querySelector(".lp-presence-videos");
-  if (s) {
-    Array.from(s.children).forEach((e) => s.appendChild(e.cloneNode(!0)));
-    const N = s.scrollWidth / 2;
-    let P,
-      j,
-      H,
-      D = !1,
-      O = !1,
-      X = null;
-    (s.addEventListener("mousedown", (e) => {
-      ((D = !0),
-        (O = !0),
-        s.classList.add("active-drag"),
-        (j = e.pageX - s.offsetLeft),
-        (H = s.scrollLeft));
-    }),
-      document.addEventListener("mousemove", (e) => {
-        D && (s.scrollLeft = H - 1.5 * (e.pageX - s.offsetLeft - j));
-      }),
-      document.addEventListener("mouseup", () => {
-        D &&
-          ((D = !1),
-          (O = !1),
-          s.classList.remove("active-drag"),
-          (s.scrollLeft >= N || s.scrollLeft < 0) && (s.scrollLeft = 0));
-      }),
-      s.addEventListener(
-        "touchstart",
-        (e) => {
-          ((O = !0),
-            (j = e.touches[0].pageX - s.offsetLeft),
-            (H = s.scrollLeft));
-        },
-        { passive: !0 },
-      ),
-      s.addEventListener(
-        "touchmove",
-        (e) => {
-          s.scrollLeft = H - 1.5 * (e.touches[0].pageX - s.offsetLeft - j);
-        },
-        { passive: !0 },
-      ),
-      s.addEventListener(
-        "touchend",
-        () => {
-          (clearTimeout(P),
-            (P = setTimeout(() => {
-              O = !1;
-            }, 4e3)),
-            (s.scrollLeft >= N || s.scrollLeft < 0) && (s.scrollLeft = 0));
-        },
-        { passive: !0 },
-      ),
-      (X = requestAnimationFrame(function e() {
-        (O || ((s.scrollLeft += 0.6), s.scrollLeft >= N && (s.scrollLeft -= N)),
-          (X = requestAnimationFrame(e)));
-      })));
-    const F = s.querySelector(".lp-presence-video")?.offsetWidth + 16 || 176,
-      Y = document.querySelector(".scroll-btn--left"),
-      $ = document.querySelector(".scroll-btn--right");
-    (Y &&
-      Y.addEventListener("click", () => {
-        ((O = !0),
-          s.scrollBy({ left: -F, behavior: "smooth" }),
-          clearTimeout(P),
-          (P = setTimeout(() => {
-            O = !1;
-          }, 3e3)));
-      }),
-      $ &&
-        $.addEventListener("click", () => {
-          ((O = !0),
-            s.scrollBy({ left: F, behavior: "smooth" }),
-            clearTimeout(P),
-            (P = setTimeout(() => {
-              O = !1;
-            }, 3e3)));
-        }));
   }
   const c = new IntersectionObserver(
     (e) => {

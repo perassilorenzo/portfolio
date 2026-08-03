@@ -56,7 +56,7 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/combined.min.css" />
@@ -145,22 +145,6 @@
       role="progressbar"
       aria-label="Progresso lettura"
     ></div>
-    <div class="lp-music-sticky">
-      <button
-        id="musicToggle"
-        class="lp-music-btn"
-        aria-label="Toggle Background Music"
-      >
-        ▶
-      </button>
-      <div class="lp-music-label">
-        <p>Convergence</p>
-      </div>
-      <audio id="bgMusic" loop preload="metadata">
-        <source src="assets/bg-convergence.mp3" type="audio/mp3" />
-      </audio>
-    </div>
-
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg fixed-top lp-navbar px-4">
       <a class="navbar-brand lp-brand" href="#hero">lorenzo perassi</a>
@@ -339,7 +323,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="about d-flex align-items-center mt-5 pt-5" id="about">
+    <section class="about d-flex mt-5 pt-5" id="about">
       <div class="about-inner lp-reveal">
         <div class="about-img-wrap">
           <img
@@ -386,19 +370,19 @@
             Lavoro su Customly come piattaforma principale, dove sviluppo il
             configuratore digitale e gestisco la piattaforma.
           </p>
-          <div class="lp-terminal lp-reveal" aria-label="Terminale">
-            <div class="lp-terminal-bar">
-              <span class="lp-terminal-dot r"></span>
-              <span class="lp-terminal-dot y"></span>
-              <span class="lp-terminal-dot g"></span>
-              <span class="lp-terminal-title">lorenzo@perassi:~</span>
-            </div>
-            <div class="lp-terminal-body">
-              <div class="lp-term-line lp-term-out">
-                <span class="lp-term-prompt">$ </span
-                ><span class="lp-term-cursor"></span>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="lp-terminal lp-reveal" aria-label="Terminale">
+        <div class="lp-terminal-bar">
+          <span class="lp-terminal-dot r"></span>
+          <span class="lp-terminal-dot y"></span>
+          <span class="lp-terminal-dot g"></span>
+          <span class="lp-terminal-title">lorenzo@perassi:~</span>
+        </div>
+        <div class="lp-terminal-body">
+          <div class="lp-term-line lp-term-out">
+            <span class="lp-term-prompt">$ </span
+            ><span class="lp-term-cursor"></span>
           </div>
         </div>
       </div>
@@ -657,208 +641,6 @@
 
     <div class="lp-divider"></div>
 
-    <!-- COLLAB & CONTENUTI -->
-    <section class="lp-section lp-reveal">
-      <div class="ms-4 ps-2 mb-2 lp-reveal">
-        <h2 class="lp-big-title">Collab &amp; contenuti</h2>
-        <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="dpSub">
-          Collab & contenuti
-        </h3>
-      </div>
-      <p
-        class="pt-3 lp-text-secondary container d-flex justify-content-center"
-        data-lang-key="dpDesc"
-      >
-        Mi occupo di collab e contenuti condivisi: ideo, edito e pubblico
-        contenuti che finiscono sia sul mio profilo IG che sul tuo. Non è il mio
-        focus principale, ma un extra da gestire in modo semplice e diretto.
-      </p>
-
-      <div class="container-extended lp-reveal">
-        <button
-          class="scroll-btn scroll-btn--left"
-          aria-label="Scorri a sinistra"
-        >
-          ‹
-        </button>
-        <button
-          class="scroll-btn scroll-btn--right"
-          aria-label="Scorri a destra"
-        >
-          ›
-        </button>
-        <div class="lp-presence-videos">
-          <div class="lp-presence-video">
-            <video
-              src="assets/activity-content-creation.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="metadata"
-              class=""
-            ></video>
-            <p>Content Creation</p>
-          </div>
-          <div class="lp-presence-video">
-            <video
-              src="assets/activity-fashion.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="metadata"
-              class=""
-            ></video>
-            <p>Fashion Custom</p>
-          </div>
-          <div class="lp-presence-video">
-            <video
-              src="assets/activity-tech.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="metadata"
-              class=""
-            ></video>
-            <p>Tech & Coding</p>
-          </div>
-          <div class="lp-presence-video">
-            <video
-              src="assets/presence-music-mood.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="metadata"
-              class=""
-            ></video>
-            <p>Rubrica Music Mood</p>
-          </div>
-          <div class="lp-presence-video">
-            <video
-              src="assets/presence-routine.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="metadata"
-              class=""
-            ></video>
-            <p>Routine</p>
-          </div>
-          <div class="lp-presence-video">
-            <video
-              src="assets/presence-short-films.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="metadata"
-              class="lp-horizontal-video"
-            ></video>
-            <p>Aesthetic Short Films</p>
-          </div>
-          <div class="lp-presence-video">
-            <video
-              src="assets/presence-sewing.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="metadata"
-              class=""
-            ></video>
-            <p>Sewing</p>
-          </div>
-          <div class="lp-presence-video">
-            <video
-              src="assets/presence-reflections.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="metadata"
-              class="lp-horizontal-video"
-            ></video>
-            <p>Personal Reflections</p>
-          </div>
-          <div class="lp-presence-video">
-            <video
-              src="assets/presence-drum-music.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="metadata"
-              class=""
-            ></video>
-            <p>Drum & Music</p>
-          </div>
-          <div class="lp-presence-video">
-            <video
-              src="assets/presence-fashion-collabs.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="metadata"
-              class=""
-            ></video>
-            <p>Fashion Brand Collabs</p>
-          </div>
-          <div class="lp-presence-video">
-            <video
-              src="assets/presence-sports.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="metadata"
-              class=""
-            ></video>
-            <p>Sports</p>
-          </div>
-          <div class="lp-presence-video">
-            <video
-              src="assets/presence-study-tech.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="metadata"
-              class=""
-            ></video>
-            <p>Study & Tech</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="d-flex justify-content-between px-5 mt-3 flex-wrap gap-3">
-        <p class="lp-text-secondary small">
-          Instagram<br />220+ contenuti pubblicati
-        </p>
-        <p class="lp-text-secondary small">
-          TikTok<br />14k+ visualizzazioni negli ultimi 30 giorni
-        </p>
-      </div>
-    </section>
-
-    <div class="lp-divider"></div>
-
     <!-- PROJECTS -->
     <section class="lp-section" id="projects">
       <div class="ms-5 ps-3 mb-2">
@@ -1069,71 +851,6 @@
     <div class="lp-divider"></div>
 
     <div class="lp-section px-4">
-      <!-- COLLABORATIONS -->
-      <section class="lp-collab-section lp-reveal">
-        <div class="ms-5 ps-3 mb-4">
-          <h2 class="lp-big-title">Collaborations</h2>
-          <h3
-            class="lp-text-secondary lp-subtitle-offset"
-            data-lang-key="collabSub"
-          >
-            Collaborazioni
-          </h3>
-        </div>
-        <div class="lp-collab-list">
-          <div class="lp-collab-row lp-reveal">
-            <span class="lp-collab-num">01</span>
-            <img
-              src="assets/collab-aleyesure.webp"
-              alt="Logo Aleyesure"
-              class="lp-collab-img rounded-circle"
-              loading="lazy"
-            />
-            <div class="lp-collab-info">
-              <h3 data-lang-key="collab1Name">Aleyesure</h3>
-              <p class="lp-text-secondary small" data-lang-key="collab1Desc">
-                All'interno dei miei video sponsorizzo capi di abbigliamento di
-                Aleyesure, brand locale che porta avanti lo slogan "Support
-                local business".
-              </p>
-            </div>
-          </div>
-          <div class="lp-collab-row lp-reveal">
-            <span class="lp-collab-num">02</span>
-            <img
-              src="assets/collab-stagestreetwear.webp"
-              alt="Logo StageStreetwear"
-              class="lp-collab-img rounded-circle"
-              loading="lazy"
-            />
-            <div class="lp-collab-info">
-              <h3 data-lang-key="collab2Name">StageStreetwear</h3>
-              <p class="lp-text-secondary small" data-lang-key="collab2Desc">
-                Progetto creativo che unisce video, streetwear e custom
-                cappellini.
-              </p>
-            </div>
-          </div>
-          <div class="lp-collab-row lp-reveal">
-            <span class="lp-collab-num">03</span>
-            <img
-              src="assets/collab-newgenmusic.webp"
-              alt="Logo NewGenMusic4"
-              class="lp-collab-img rounded-circle"
-              loading="lazy"
-            />
-            <div class="lp-collab-info">
-              <h3 data-lang-key="collab3Name">NewGenMusic4</h3>
-              <p class="lp-text-secondary small" data-lang-key="collab3Desc">
-                Portiamo avanti una rubrica che mette insieme la musica e
-                l'abbigliamento. Questa pagina è un magazine no profit che ha
-                come obiettivo sponsorizzare piccoli artisti della new gen.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <br /><br />
       <div class="lp-divider"></div>
 
@@ -1150,8 +867,9 @@
         </div>
         <div class="lp-tools-groups">
           <div class="lp-tool-group lp-reveal">
-            <h4 class="lp-tool-group-title" data-lang-key="toolGroupLangs">
-              Linguaggi
+            <h4 class="lp-tool-group-title">
+              <span data-lang-key="toolGroupLangs">Linguaggi</span>
+              <span class="lp-tool-count">07</span>
             </h4>
             <div class="lp-tech-grid">
               <div
@@ -1213,8 +931,9 @@
             </div>
           </div>
           <div class="lp-tool-group lp-reveal">
-            <h4 class="lp-tool-group-title" data-lang-key="toolGroupWeb">
-              Web & Cloud
+            <h4 class="lp-tool-group-title">
+              <span data-lang-key="toolGroupWeb">Web & Cloud</span>
+              <span class="lp-tool-count">04</span>
             </h4>
             <div class="lp-tech-grid">
               <div
@@ -1267,8 +986,9 @@
             </div>
           </div>
           <div class="lp-tool-group lp-reveal">
-            <h4 class="lp-tool-group-title" data-lang-key="toolGroupDesign">
-              Design & Editing
+            <h4 class="lp-tool-group-title">
+              <span data-lang-key="toolGroupDesign">Design & Editing</span>
+              <span class="lp-tool-count">04</span>
             </h4>
             <div class="lp-tech-grid">
               <div
@@ -1336,8 +1056,9 @@
             </div>
           </div>
           <div class="lp-tool-group lp-reveal">
-            <h4 class="lp-tool-group-title" data-lang-key="toolGroupTools">
-              Strumenti & Office
+            <h4 class="lp-tool-group-title">
+              <span data-lang-key="toolGroupTools">Strumenti & Office</span>
+              <span class="lp-tool-count">04</span>
             </h4>
             <div class="lp-tech-grid">
               <div
