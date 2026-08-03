@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const o = t.classList.contains("lp-project-card--empty"),
         n = t.dataset.category;
       "all" === e
-        ? t.classList.toggle("hide", o || "fashion-customization" === n)
+        ? t.classList.toggle("hide", o)
         : t.classList.toggle("hide", n !== e);
     });
   }
@@ -438,7 +438,7 @@ document.addEventListener("DOMContentLoaded", function () {
       aboutP1:
         "Sono Lorenzo Perassi, developer, creator e studente di Informatica. Costruisco prodotti digitali dove codice, design e creativit\u00e0 si incontrano. Il mio progetto principale \u00e8 Customly, una piattaforma di personalizzazione abbigliamento che unisce moda e tecnologia.",
       aboutP2:
-        "Utilizzo le piattaforme digitali come uno spazio dove condividere progetti, esperimenti creativi, routine, lavoro pratico e crescita personale, oltre che per creare connessioni, farmi conoscere e portarmi opportunit\u00e0.<br><br>Collaboro con brand locali, pagine creative e magazine musicali, lavorando su contenuti, comunicazioni online e progetti creativi. Sviluppo anche siti web per locali e piccole imprese.<br><br>Lavoro su Customly come piattaforma principale, dove sviluppo il configuratore digitale e gestisco la piattaforma.",
+        "Utilizzo le piattaforme digitali come uno spazio dove condividere progetti, esperimenti creativi, routine, lavoro pratico e crescita personale, oltre che per creare connessioni, farmi conoscere e portarmi opportunit\u00e0.<br><br>Collaboro con brand locali e pagine creative, lavorando su contenuti, comunicazioni online e progetti creativi. Sviluppo anche siti web per locali e piccole imprese.<br><br>Lavoro su Customly come piattaforma principale, dove sviluppo il configuratore digitale e gestisco la piattaforma.",
       customlySub: "Il mio progetto principale",
       customlyDesc:
         "Customly \u00e8 la piattaforma di custom fashion che unisce moda e tecnologia: un configuratore digitale per personalizzare abbigliamento in modo semplice e intuitivo. Sviluppata con Cloudflare Pages, D1 e R2, \u00e8 il mio progetto principale, dove gestisco catalogo prodotti e configuratore.",
@@ -453,7 +453,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Rework e personalizzazione di capi: denim, t-shirt e capi su misura. Trasformo capi esistenti in pezzi unici che raccontano chi sei.",
       serv3Title: "Comunicazione & Contenuti",
       serv3Desc:
-        'Video, foto e contenuti per il tuo brand \u2014 anche come "face" delle tue campagne. Editing, gestione social e collab per farti conoscere.',
+        "Collab e contenuti per il tuo brand: ideo, edito e pubblico contenuti condivisi sul mio e sul tuo profilo. Un plus semplice per farti conoscere.",
       procSub: "Come lavoro",
       proc1Title: "Scoperta",
       proc1Desc:
@@ -467,14 +467,13 @@ document.addEventListener("DOMContentLoaded", function () {
       proc4Title: "Consegna & Supporto",
       proc4Desc:
         "Consegno il lavoro pronto e resto disponibile per modifiche e manutenzione.",
-      dpSub: "I miei contenuti",
+      dpSub: "Collab & contenuti",
       dpDesc:
-        'Produco contenuti video per i miei canali e in collaborazione con i brand: storytelling, ma anche campagne dove sono io la "face" del messaggio \u2014 come lo sketch girato in un negozio di abbigliamento per dargli visibilit\u00e0.',
+        "Mi occupo di collab e contenuti condivisi: ideo, edito e pubblico contenuti che finiscono sia sul mio profilo IG che sul tuo. Non \u00e8 il mio focus principale, ma un extra da gestire in modo semplice e diretto.",
       projSub: "Progetti Selezionati",
       projAll: "All",
       projClient: "Client Work",
       projPersonal: "Personal Project",
-      projFashion: "Fashion Customization",
       testiSub: "Cosa dicono di me",
       testiEmpty:
         "Al momento non sono disponibili \u2014 presto pubblicher\u00f2 le recensioni dei clienti con cui ho lavorato.",
@@ -499,6 +498,10 @@ document.addEventListener("DOMContentLoaded", function () {
       collab3Desc:
         "Portiamo avanti una rubrica che mette insieme la musica e l'abbigliamento. Questa pagina \u00e8 un magazine no profit che ha come obiettivo sponsorizzare piccoli artisti della new gen.",
       toolsSub: "Strumenti & Competenze",
+      toolGroupLangs: "Linguaggi",
+      toolGroupWeb: "Web & Cloud",
+      toolGroupDesign: "Design & Editing",
+      toolGroupTools: "Strumenti & Office",
       faqSub: "Domande frequenti",
       faq1Q: "Quanto costa un sito web?",
       faq1A:
@@ -542,7 +545,7 @@ document.addEventListener("DOMContentLoaded", function () {
       aboutP1:
         "I'm Lorenzo Perassi, developer, creator and Computer Science student. I build digital products where code, design and creativity meet. My main project is Customly, a clothing customization platform combining fashion and technology.",
       aboutP2:
-        "I use digital platforms as a space to share projects, creative experiments, routines, hands-on work and personal growth, as well as to build connections and create opportunities.<br><br>I collaborate with local brands, creative pages and music magazines, working on content, online communications and creative projects. I also develop websites for local businesses and small companies.<br><br>I work on Customly as my main platform, where I develop the digital configurator and manage the platform.",
+        "I use digital platforms as a space to share projects, creative experiments, routines, hands-on work and personal growth, as well as to build connections and create opportunities.<br><br>I collaborate with local brands and creative pages, working on content, online communications and creative projects. I also develop websites for local businesses and small companies.<br><br>I work on Customly as my main platform, where I develop the digital configurator and manage the platform.",
       customlySub: "My main project",
       customlyDesc:
         "Customly is the custom fashion platform that combines fashion and technology: a digital configurator to personalize clothing simply and intuitively. Built with Cloudflare Pages, D1 and R2, it is my main project, where I manage the product catalog and the configurator.",
@@ -557,7 +560,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Garment rework and customization: denim, t-shirts and made-to-order pieces. I turn existing items into unique pieces.",
       serv3Title: "Communication & Content",
       serv3Desc:
-        "Video editing, captions and social management for brands and businesses. Storytelling that tells your story.",
+        "Collabs and content for your brand: I create, edit and publish shared content on my profile and yours. An easy plus to get you known.",
       procSub: "How I work",
       proc1Title: "Discovery",
       proc1Desc:
@@ -571,14 +574,13 @@ document.addEventListener("DOMContentLoaded", function () {
       proc4Title: "Delivery & Support",
       proc4Desc:
         "I deliver the finished work and stay available for changes and maintenance.",
-      dpSub: "My content",
+      dpSub: "Collabs & content",
       dpDesc:
-        'I produce video content for my channels and in collaboration with brands: storytelling, but also campaigns where I\'m the "face" of the message \u2014 like the skit filmed in a clothing store to give it visibility.',
+        "I handle collabs and shared content: I come up with, edit and publish content that goes on both my IG profile and yours. It's not my main focus, just a simple, low-pressure extra.",
       projSub: "Selected Projects",
       projAll: "All",
       projClient: "Client Work",
       projPersonal: "Personal Project",
-      projFashion: "Fashion Customization",
       testiSub: "What people say about me",
       testiEmpty:
         "Not available yet \u2014 I'll soon publish reviews from the clients I've worked with.",
@@ -603,6 +605,10 @@ document.addEventListener("DOMContentLoaded", function () {
       collab3Desc:
         "We run a column combining music and fashion. This page is a non-profit magazine aimed at promoting new gen artists.",
       toolsSub: "Tools & Skills",
+      toolGroupLangs: "Languages",
+      toolGroupWeb: "Web & Cloud",
+      toolGroupDesign: "Design & Editing",
+      toolGroupTools: "Tools & Office",
       faqSub: "Frequently asked questions",
       faq1Q: "How much does a website cost?",
       faq1A:
