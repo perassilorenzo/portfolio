@@ -209,6 +209,71 @@ document.addEventListener("DOMContentLoaded", function () {
         G <= z.length && setTimeout(e, 30));
     })();
   }
+  const term = document.querySelector(".lp-terminal");
+  if (term) {
+    const body = term.querySelector(".lp-terminal-body"),
+      lines = [
+        { c: "whoami" },
+        { t: "lorenzo perassi — developer · creator · founder" },
+        { c: "cat stack.txt" },
+        { t: "lang:    html · css · js · ts · python · sql" },
+        { t: "web:     cloudflare pages · d1 · r2 · workers" },
+        { t: "fashion: rework · upcycling · custom garments" },
+        { t: "media:   content strategy · editing · social" },
+        { c: "echo $MAIN_PROJECT" },
+        { t: "customly.it — custom fashion platform" },
+        { c: "ls ./goals" },
+        { t: "build   ship   grow" },
+      ];
+    let done = !1;
+    const obs = new IntersectionObserver(
+      (es) => {
+        es.forEach((en) => {
+          if (!en.isIntersecting || done) return;
+          ((done = !0),
+            obs.unobserve(term),
+            (body.innerHTML = ""),
+            (function step(i, j) {
+              if (i >= lines.length) {
+                const row = document.createElement("div");
+                ((row.className = "lp-term-line"),
+                  (row.innerHTML =
+                    '<span class="lp-term-prompt">$ </span><span class="lp-term-cursor"></span>'),
+                  body.appendChild(row));
+                return;
+              }
+              const cur = lines[i],
+                row = document.createElement("div");
+              row.className = "lp-term-line";
+              if (cur.c) {
+                const cmd = document.createElement("span");
+                ((cmd.className = "lp-term-cmd"),
+                  row.appendChild(cmd),
+                  row.insertAdjacentHTML(
+                    "afterbegin",
+                    '<span class="lp-term-prompt">$ </span>',
+                  ),
+                  body.appendChild(row));
+                !(function tick() {
+                  ((cmd.textContent = cur.c.slice(0, j)),
+                    j++,
+                    j <= cur.c.length
+                      ? setTimeout(tick, 26)
+                      : setTimeout(() => step(i + 1, 0), 180));
+                })();
+              } else {
+                (row.classList.add("lp-term-out"),
+                  (row.textContent = cur.t),
+                  body.appendChild(row),
+                  setTimeout(() => step(i + 1, 0), 110));
+              }
+            })(0, 0));
+        });
+      },
+      { threshold: 0.4 },
+    );
+    obs.observe(term);
+  }
   const v = new IntersectionObserver(
     (e) => {
       e.forEach((e) => {

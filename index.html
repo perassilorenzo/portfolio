@@ -56,7 +56,7 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/combined.min.css" />
@@ -271,14 +271,30 @@
           >
         </div>
         <div class="lp-divider mt-4"></div>
-        <div class="lp-text-secondary lp-hero-footer">
-          <p class="small">
-            <span class="lp-counter" data-target="220">0</span>+ contenuti
-            pubblicati <br /><span class="lp-counter" data-target="100">0</span
-            >k+ visualizzazioni negli ultimi 30 giorni <br />Collaborazioni con
-            brand locali, magazine musicali e progetti digitali.
-          </p>
-          <div class="d-flex justify-content-between flex-wrap gap-2 mt-2">
+        <div class="lp-hero-footer">
+          <div class="lp-kpi-board">
+            <div class="lp-kpi">
+              <span class="lp-kpi-value"
+                ><span class="lp-counter" data-target="220">0</span>+</span
+              >
+              <span class="lp-kpi-label">contenuti pubblicati</span>
+            </div>
+            <div class="lp-kpi">
+              <span class="lp-kpi-value"
+                ><span class="lp-counter" data-target="100">0</span>k+</span
+              >
+              <span class="lp-kpi-label">visualizzazioni / 30 gg</span>
+            </div>
+            <div class="lp-kpi">
+              <span class="lp-kpi-value">5+</span>
+              <span class="lp-kpi-label">brand &amp; collab</span>
+            </div>
+            <div class="lp-kpi">
+              <span class="lp-kpi-value">1</span>
+              <span class="lp-kpi-label">progetto main · customly</span>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between flex-wrap gap-2 mt-3">
             <a
               href="https://www.instagram.com/diario_di_uno_09"
               class="lp-social-link"
@@ -370,6 +386,20 @@
             Lavoro su Customly come piattaforma principale, dove sviluppo il
             configuratore digitale e gestisco la piattaforma.
           </p>
+          <div class="lp-terminal lp-reveal" aria-label="Terminale">
+            <div class="lp-terminal-bar">
+              <span class="lp-terminal-dot r"></span>
+              <span class="lp-terminal-dot y"></span>
+              <span class="lp-terminal-dot g"></span>
+              <span class="lp-terminal-title">lorenzo@perassi:~</span>
+            </div>
+            <div class="lp-terminal-body">
+              <div class="lp-term-line lp-term-out">
+                <span class="lp-term-prompt">$ </span
+                ><span class="lp-term-cursor"></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -379,7 +409,7 @@
     <!-- SERVIZI -->
     <section class="lp-section lp-reveal" id="services">
       <div class="ms-4 ps-2 mb-4">
-        <h2 class="lp-big-title">SERVIZI</h2>
+        <h2 class="lp-big-title">Servizi</h2>
         <h3
           class="lp-text-secondary lp-subtitle-offset"
           data-lang-key="servSub"
@@ -416,13 +446,13 @@
             portarti clienti.
           </p>
           <div class="d-flex flex-wrap gap-2 mb-3">
-            <span class="lp-badge">HTML</span>
-            <span class="lp-badge">CSS</span>
-            <span class="lp-badge">JavaScript</span>
-            <span class="lp-badge">SEO</span>
-            <span class="lp-badge">Geo</span>
-            <span class="lp-badge">Cloudflare</span>
-            <span class="lp-badge">Aruba</span>
+            <span class="lp-tag">HTML</span>
+            <span class="lp-tag">CSS</span>
+            <span class="lp-tag">JavaScript</span>
+            <span class="lp-tag">SEO</span>
+            <span class="lp-tag">Geo</span>
+            <span class="lp-tag">Cloudflare</span>
+            <span class="lp-tag">Aruba</span>
           </div>
           <a
             href="#contact"
@@ -461,9 +491,9 @@
             Trasformo capi esistenti in pezzi unici che raccontano chi sei.
           </p>
           <div class="d-flex flex-wrap gap-2 mb-3">
-            <span class="lp-badge">Rework Denim</span>
-            <span class="lp-badge">Capi Personalizzati</span>
-            <span class="lp-badge">Upcycling</span>
+            <span class="lp-tag">Rework Denim</span>
+            <span class="lp-tag">Capi Personalizzati</span>
+            <span class="lp-tag">Upcycling</span>
           </div>
           <a
             href="#contact"
@@ -503,9 +533,9 @@
             farti conoscere.
           </p>
           <div class="d-flex flex-wrap gap-2 mb-3">
-            <span class="lp-badge">Contenuti IG</span>
-            <span class="lp-badge">Video Editing</span>
-            <span class="lp-badge">Collab</span>
+            <span class="lp-tag">Contenuti IG</span>
+            <span class="lp-tag">Video Editing</span>
+            <span class="lp-tag">Collab</span>
           </div>
           <a
             href="#contact"
@@ -522,7 +552,7 @@
     <!-- PROCESSO -->
     <section class="lp-section lp-reveal" id="process">
       <div class="ms-4 ps-2 mb-4">
-        <h2 class="lp-big-title">PROCESSO</h2>
+        <h2 class="lp-big-title">Processo</h2>
         <h3
           class="lp-text-secondary lp-subtitle-offset"
           data-lang-key="procSub"
@@ -579,7 +609,7 @@
     <!-- CUSTOMLY -->
     <section class="lp-section lp-reveal" id="customly">
       <div class="ms-4 ps-2 mb-4">
-        <h2 class="lp-big-title">CUSTOMLY</h2>
+        <h2 class="lp-big-title">Customly</h2>
         <h3
           class="lp-text-secondary lp-subtitle-offset"
           data-lang-key="customlySub"
@@ -607,11 +637,11 @@
             gestisco catalogo prodotti e configuratore.
           </p>
           <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
-            <span class="lp-badge">HTML</span>
-            <span class="lp-badge">CSS</span>
-            <span class="lp-badge">JavaScript</span>
-            <span class="lp-badge">Cloudflare</span>
-            <span class="lp-badge">Aruba</span>
+            <span class="lp-tag">HTML</span>
+            <span class="lp-tag">CSS</span>
+            <span class="lp-tag">JavaScript</span>
+            <span class="lp-tag">Cloudflare</span>
+            <span class="lp-tag">Aruba</span>
           </div>
           <a
             href="https://customly.it"
@@ -630,7 +660,7 @@
     <!-- COLLAB & CONTENUTI -->
     <section class="lp-section lp-reveal">
       <div class="ms-4 ps-2 mb-2 lp-reveal">
-        <h2 class="lp-big-title">COLLAB &amp; CONTENUTI</h2>
+        <h2 class="lp-big-title">Collab &amp; contenuti</h2>
         <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="dpSub">
           Collab & contenuti
         </h3>
@@ -832,7 +862,7 @@
     <!-- PROJECTS -->
     <section class="lp-section" id="projects">
       <div class="ms-5 ps-3 mb-2">
-        <h2 class="lp-big-title">PROJECTS</h2>
+        <h2 class="lp-big-title">Projects</h2>
         <h3
           class="lp-text-secondary lp-subtitle-offset"
           data-lang-key="projSub"
@@ -924,7 +954,7 @@
     <!-- TESTIMONIANZE -->
     <section class="lp-section lp-reveal" id="testimonials">
       <div class="ms-5 ps-3 mb-4">
-        <h2 class="lp-big-title">TESTIMONIANZE</h2>
+        <h2 class="lp-big-title">Testimonianze</h2>
         <h3
           class="lp-text-secondary lp-subtitle-offset"
           data-lang-key="testiSub"
@@ -947,7 +977,7 @@
     <!-- EXPERIENCE -->
     <section class="lp-section lp-reveal">
       <div class="ms-5 ps-3 mb-2">
-        <h2 class="lp-big-title">EXPERIENCE</h2>
+        <h2 class="lp-big-title">Experience</h2>
         <h3
           class="lp-text-secondary lp-subtitle-offset"
           data-lang-key="timelineSub"
@@ -1038,325 +1068,347 @@
     <br /><br />
     <div class="lp-divider"></div>
 
-<div class="lp-section px-4">
-  <!-- COLLABORATIONS -->
-  <section class="lp-collab-section lp-reveal">
-    <div class="ms-5 ps-3 mb-4">
-      <h2 class="lp-big-title">COLLABORATIONS</h2>
-      <h3
-        class="lp-text-secondary lp-subtitle-offset"
-        data-lang-key="collabSub"
-      >
-        Collaborazioni
-      </h3>
-    </div>
-    <div class="lp-collab-list">
-      <div class="lp-collab-row lp-reveal">
-        <span class="lp-collab-num">01</span>
-        <img
-          src="assets/collab-aleyesure.webp"
-          alt="Logo Aleyesure"
-          class="lp-collab-img rounded-circle"
-          loading="lazy"
-        />
-        <div class="lp-collab-info">
-          <h3 data-lang-key="collab1Name">Aleyesure</h3>
-          <p class="lp-text-secondary small" data-lang-key="collab1Desc">
-            All'interno dei miei video sponsorizzo capi di abbigliamento di
-            Aleyesure, brand locale che porta avanti lo slogan "Support local
-            business".
-          </p>
+    <div class="lp-section px-4">
+      <!-- COLLABORATIONS -->
+      <section class="lp-collab-section lp-reveal">
+        <div class="ms-5 ps-3 mb-4">
+          <h2 class="lp-big-title">Collaborations</h2>
+          <h3
+            class="lp-text-secondary lp-subtitle-offset"
+            data-lang-key="collabSub"
+          >
+            Collaborazioni
+          </h3>
         </div>
-      </div>
-      <div class="lp-collab-row lp-reveal">
-        <span class="lp-collab-num">02</span>
-        <img
-          src="assets/collab-stagestreetwear.webp"
-          alt="Logo StageStreetwear"
-          class="lp-collab-img rounded-circle"
-          loading="lazy"
-        />
-        <div class="lp-collab-info">
-          <h3 data-lang-key="collab2Name">StageStreetwear</h3>
-          <p class="lp-text-secondary small" data-lang-key="collab2Desc">
-            Progetto creativo che unisce video, streetwear e custom cappellini.
-          </p>
+        <div class="lp-collab-list">
+          <div class="lp-collab-row lp-reveal">
+            <span class="lp-collab-num">01</span>
+            <img
+              src="assets/collab-aleyesure.webp"
+              alt="Logo Aleyesure"
+              class="lp-collab-img rounded-circle"
+              loading="lazy"
+            />
+            <div class="lp-collab-info">
+              <h3 data-lang-key="collab1Name">Aleyesure</h3>
+              <p class="lp-text-secondary small" data-lang-key="collab1Desc">
+                All'interno dei miei video sponsorizzo capi di abbigliamento di
+                Aleyesure, brand locale che porta avanti lo slogan "Support
+                local business".
+              </p>
+            </div>
+          </div>
+          <div class="lp-collab-row lp-reveal">
+            <span class="lp-collab-num">02</span>
+            <img
+              src="assets/collab-stagestreetwear.webp"
+              alt="Logo StageStreetwear"
+              class="lp-collab-img rounded-circle"
+              loading="lazy"
+            />
+            <div class="lp-collab-info">
+              <h3 data-lang-key="collab2Name">StageStreetwear</h3>
+              <p class="lp-text-secondary small" data-lang-key="collab2Desc">
+                Progetto creativo che unisce video, streetwear e custom
+                cappellini.
+              </p>
+            </div>
+          </div>
+          <div class="lp-collab-row lp-reveal">
+            <span class="lp-collab-num">03</span>
+            <img
+              src="assets/collab-newgenmusic.webp"
+              alt="Logo NewGenMusic4"
+              class="lp-collab-img rounded-circle"
+              loading="lazy"
+            />
+            <div class="lp-collab-info">
+              <h3 data-lang-key="collab3Name">NewGenMusic4</h3>
+              <p class="lp-text-secondary small" data-lang-key="collab3Desc">
+                Portiamo avanti una rubrica che mette insieme la musica e
+                l'abbigliamento. Questa pagina è un magazine no profit che ha
+                come obiettivo sponsorizzare piccoli artisti della new gen.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="lp-collab-row lp-reveal">
-        <span class="lp-collab-num">03</span>
-        <img
-          src="assets/collab-newgenmusic.webp"
-          alt="Logo NewGenMusic4"
-          class="lp-collab-img rounded-circle"
-          loading="lazy"
-        />
-        <div class="lp-collab-info">
-          <h3 data-lang-key="collab3Name">NewGenMusic4</h3>
-          <p class="lp-text-secondary small" data-lang-key="collab3Desc">
-            Portiamo avanti una rubrica che mette insieme la musica e
-            l'abbigliamento. Questa pagina è un magazine no profit che ha come
-            obiettivo sponsorizzare piccoli artisti della new gen.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <br /><br />
-  <div class="lp-divider"></div>
+      <br /><br />
+      <div class="lp-divider"></div>
 
-  <!-- TOOLS -->
-  <section class="lp-tools-section lp-reveal">
-    <div class="ms-5 ps-3 mb-4">
-      <h2 class="lp-big-title">TOOLS</h2>
-      <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="toolsSub">
-        Strumenti & Competenze
-      </h3>
+      <!-- TOOLS -->
+      <section class="lp-tools-section lp-reveal">
+        <div class="ms-5 ps-3 mb-4">
+          <h2 class="lp-big-title">Tools</h2>
+          <h3
+            class="lp-text-secondary lp-subtitle-offset"
+            data-lang-key="toolsSub"
+          >
+            Strumenti & Competenze
+          </h3>
+        </div>
+        <div class="lp-tools-groups">
+          <div class="lp-tool-group lp-reveal">
+            <h4 class="lp-tool-group-title" data-lang-key="toolGroupLangs">
+              Linguaggi
+            </h4>
+            <div class="lp-tech-grid">
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <i class="devicon-html5-plain colored"></i>
+                <span>HTML</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <i class="devicon-css3-plain colored"></i>
+                <span>CSS</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <i class="devicon-javascript-plain colored"></i>
+                <span>JS</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Beginner"
+                data-context="School"
+              >
+                <i class="devicon-c-plain colored"></i>
+                <span>C</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Beginner"
+                data-context="School"
+              >
+                <i class="devicon-csharp-plain colored"></i>
+                <span>C#</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Beginner"
+                data-context="Self-taught"
+              >
+                <i class="devicon-python-plain colored"></i>
+                <span>Python</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <i class="devicon-bash-plain colored"></i>
+                <span>Bash</span>
+              </div>
+            </div>
+          </div>
+          <div class="lp-tool-group lp-reveal">
+            <h4 class="lp-tool-group-title" data-lang-key="toolGroupWeb">
+              Web & Cloud
+            </h4>
+            <div class="lp-tech-grid">
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <i class="devicon-git-plain colored"></i>
+                <span>Git</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <i class="devicon-github-original colored"></i>
+                <span>GitHub</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="Self-taught"
+              >
+                <i class="devicon-cloudflare-plain colored"></i>
+                <span>Cloudflare</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Beginner"
+                data-context="Self-taught"
+              >
+                <i>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    height="1em"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="6" cy="6" r="3" />
+                    <circle cx="18" cy="18" r="3" />
+                    <line x1="9" y1="6" x2="15" y2="18" />
+                  </svg>
+                </i>
+                <span>n8n</span>
+              </div>
+            </div>
+          </div>
+          <div class="lp-tool-group lp-reveal">
+            <h4 class="lp-tool-group-title" data-lang-key="toolGroupDesign">
+              Design & Editing
+            </h4>
+            <div class="lp-tech-grid">
+              <div
+                class="lp-tech-item"
+                data-level="Advanced"
+                data-context="Work & Self-taught"
+              >
+                <i class="devicon-canva-original colored"></i>
+                <span>Canva</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Beginner"
+                data-context="Work"
+              >
+                <i class="devicon-photoshop-plain colored"></i>
+                <span>Lightroom</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Beginner"
+                data-context="Self-taught"
+              >
+                <i>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    height="1em"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="3" y="5" width="18" height="14" rx="3" />
+                    <polygon points="10,8 16,12 10,16" />
+                  </svg>
+                </i>
+                <span>CapCut</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="Work & Self-taught"
+              >
+                <i>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    height="1em"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"
+                    />
+                    <path d="m15 5 4 4" />
+                  </svg>
+                </i>
+                <span>Edits</span>
+              </div>
+            </div>
+          </div>
+          <div class="lp-tool-group lp-reveal">
+            <h4 class="lp-tool-group-title" data-lang-key="toolGroupTools">
+              Strumenti & Office
+            </h4>
+            <div class="lp-tech-grid">
+              <div
+                class="lp-tech-item"
+                data-level="Advanced"
+                data-context="School & Self-taught"
+              >
+                <i class="devicon-vscode-plain colored"></i>
+                <span>VSCode</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Beginner"
+                data-context="School"
+              >
+                <i class="devicon-visualstudio-plain colored"></i>
+                <span>VS</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <i>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    height="1em"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="12" y1="3" x2="12" y2="21" />
+                  </svg>
+                </i>
+                <span>Excel</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <i>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    height="1em"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                    />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="9" y1="13" x2="15" y2="13" />
+                  </svg>
+                </i>
+                <span>Word</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-    <div class="lp-tools-groups">
-      <div class="lp-tool-group lp-reveal">
-        <h4 class="lp-tool-group-title" data-lang-key="toolGroupLangs">
-          Linguaggi
-        </h4>
-        <div class="lp-tech-grid">
-          <div
-            class="lp-tech-item"
-            data-level="Intermediate"
-            data-context="School & Self-taught"
-          >
-            <i class="devicon-html5-plain colored"></i>
-            <span>HTML</span>
-          </div>
-          <div
-            class="lp-tech-item"
-            data-level="Intermediate"
-            data-context="School & Self-taught"
-          >
-            <i class="devicon-css3-plain colored"></i>
-            <span>CSS</span>
-          </div>
-          <div
-            class="lp-tech-item"
-            data-level="Intermediate"
-            data-context="School & Self-taught"
-          >
-            <i class="devicon-javascript-plain colored"></i>
-            <span>JS</span>
-          </div>
-          <div class="lp-tech-item" data-level="Beginner" data-context="School">
-            <i class="devicon-c-plain colored"></i>
-            <span>C</span>
-          </div>
-          <div class="lp-tech-item" data-level="Beginner" data-context="School">
-            <i class="devicon-csharp-plain colored"></i>
-            <span>C#</span>
-          </div>
-          <div
-            class="lp-tech-item"
-            data-level="Beginner"
-            data-context="Self-taught"
-          >
-            <i class="devicon-python-plain colored"></i>
-            <span>Python</span>
-          </div>
-          <div
-            class="lp-tech-item"
-            data-level="Intermediate"
-            data-context="School & Self-taught"
-          >
-            <i class="devicon-bash-plain colored"></i>
-            <span>Bash</span>
-          </div>
-        </div>
-      </div>
-      <div class="lp-tool-group lp-reveal">
-        <h4 class="lp-tool-group-title" data-lang-key="toolGroupWeb">
-          Web & Cloud
-        </h4>
-        <div class="lp-tech-grid">
-          <div
-            class="lp-tech-item"
-            data-level="Intermediate"
-            data-context="School & Self-taught"
-          >
-            <i class="devicon-git-plain colored"></i>
-            <span>Git</span>
-          </div>
-          <div
-            class="lp-tech-item"
-            data-level="Intermediate"
-            data-context="School & Self-taught"
-          >
-            <i class="devicon-github-original colored"></i>
-            <span>GitHub</span>
-          </div>
-          <div
-            class="lp-tech-item"
-            data-level="Intermediate"
-            data-context="Self-taught"
-          >
-            <i class="devicon-cloudflare-plain colored"></i>
-            <span>Cloudflare</span>
-          </div>
-          <div
-            class="lp-tech-item"
-            data-level="Beginner"
-            data-context="Self-taught"
-          >
-            <i>
-              <svg
-                viewBox="0 0 24 24"
-                width="1em"
-                height="1em"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="6" cy="6" r="3" />
-                <circle cx="18" cy="18" r="3" />
-                <line x1="9" y1="6" x2="15" y2="18" />
-              </svg>
-            </i>
-            <span>n8n</span>
-          </div>
-        </div>
-      </div>
-      <div class="lp-tool-group lp-reveal">
-        <h4 class="lp-tool-group-title" data-lang-key="toolGroupDesign">
-          Design & Editing
-        </h4>
-        <div class="lp-tech-grid">
-          <div
-            class="lp-tech-item"
-            data-level="Advanced"
-            data-context="Work & Self-taught"
-          >
-            <i class="devicon-canva-original colored"></i>
-            <span>Canva</span>
-          </div>
-          <div class="lp-tech-item" data-level="Beginner" data-context="Work">
-            <i class="devicon-photoshop-plain colored"></i>
-            <span>Lightroom</span>
-          </div>
-          <div
-            class="lp-tech-item"
-            data-level="Beginner"
-            data-context="Self-taught"
-          >
-            <i>
-              <svg
-                viewBox="0 0 24 24"
-                width="1em"
-                height="1em"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <rect x="3" y="5" width="18" height="14" rx="3" />
-                <polygon points="10,8 16,12 10,16" />
-              </svg>
-            </i>
-            <span>CapCut</span>
-          </div>
-          <div
-            class="lp-tech-item"
-            data-level="Intermediate"
-            data-context="Work & Self-taught"
-          >
-            <i>
-              <svg
-                viewBox="0 0 24 24"
-                width="1em"
-                height="1em"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
-                <path d="m15 5 4 4" />
-              </svg>
-            </i>
-            <span>Edits</span>
-          </div>
-        </div>
-      </div>
-      <div class="lp-tool-group lp-reveal">
-        <h4 class="lp-tool-group-title" data-lang-key="toolGroupTools">
-          Strumenti & Office
-        </h4>
-        <div class="lp-tech-grid">
-          <div
-            class="lp-tech-item"
-            data-level="Advanced"
-            data-context="School & Self-taught"
-          >
-            <i class="devicon-vscode-plain colored"></i>
-            <span>VSCode</span>
-          </div>
-          <div class="lp-tech-item" data-level="Beginner" data-context="School">
-            <i class="devicon-visualstudio-plain colored"></i>
-            <span>VS</span>
-          </div>
-          <div
-            class="lp-tech-item"
-            data-level="Intermediate"
-            data-context="School & Self-taught"
-          >
-            <i>
-              <svg
-                viewBox="0 0 24 24"
-                width="1em"
-                height="1em"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="12" y1="3" x2="12" y2="21" />
-              </svg>
-            </i>
-            <span>Excel</span>
-          </div>
-          <div
-            class="lp-tech-item"
-            data-level="Intermediate"
-            data-context="School & Self-taught"
-          >
-            <i>
-              <svg
-                viewBox="0 0 24 24"
-                width="1em"
-                height="1em"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                />
-                <polyline points="14 2 14 8 20 8" />
-                <line x1="9" y1="13" x2="15" y2="13" />
-              </svg>
-            </i>
-            <span>Word</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
 
     <div class="lp-divider"></div>
 
@@ -1416,7 +1468,7 @@
     <!-- CONTACT -->
     <section class="lp-contact-section lp-reveal" id="contact">
       <div class="contact-form-wrapper">
-        <h2 class="lp-big-title">CONTACT</h2>
+        <h2 class="lp-big-title">Contact</h2>
         <h3
           class="lp-text-secondary lp-subtitle-offset"
           data-lang-key="contactSub"
