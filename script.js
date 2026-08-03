@@ -644,7 +644,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("[data-lang-key]").forEach(function (e) {
       var o = e.dataset.langKey;
       if (LANG[$][o]) {
-        if (e.dataset.langHtml) e.innerHTML = LANG[$][o];
+        if (e.hasAttribute("data-lang-html")) e.innerHTML = LANG[$][o];
         else if (e.tagName === "INPUT" || e.tagName === "TEXTAREA")
           e.placeholder = LANG[$][o];
         else e.textContent = LANG[$][o];
