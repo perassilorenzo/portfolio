@@ -117,16 +117,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const body = term.querySelector(".lp-terminal-body"),
       lines = [
         { c: "whoami" },
-        { t: "lorenzo perassi — developer · creator · founder" },
+        { t: "lorenzo perassi — tech · fashion · communication" },
         { c: "cat stack.txt" },
-        { t: "lang:    html · css · js · ts · python · sql" },
-        { t: "web:     cloudflare pages · d1 · r2 · workers" },
-        { t: "fashion: rework · upcycling · custom garments" },
-        { t: "media:   content strategy · editing · social" },
+        { t: "html css js c# c" },
+        { t: "cloudflare github d1 r2" },
+        { t: "custom" },
         { c: "echo $MAIN_PROJECT" },
         { t: "customly.it — custom fashion platform" },
         { c: "ls ./goals" },
-        { t: "build   ship   grow" },
+        { t: "build grow network" },
       ];
     let done = !1;
     const obs = new IntersectionObserver(
@@ -249,8 +248,10 @@ document.addEventListener("DOMContentLoaded", function () {
             const m = document.getElementById(g);
             if (m) return void m.scrollIntoView({ behavior: "smooth" });
           }
-          const t = e.querySelector("img");
-          ((document.getElementById("modalImg").src = t ? t.src : ""),
+          const media = e.dataset.media;
+          const img = e.querySelector("img");
+          ((document.getElementById("modalImg").src =
+            media || (img ? img.src : "")),
             (document.getElementById("modalTitle").textContent =
               e.querySelector("h4").textContent),
             (document.getElementById("modalDesc").textContent =
@@ -409,39 +410,21 @@ document.addEventListener("DOMContentLoaded", function () {
       servCta: "Richiedi preventivo",
       servCustomCta: "Scopri il mio profilo",
       servIncludes: "Cosa include",
-      servCatTech: "Tech",
-      servCatFashion: "Fashion",
-      servCatComm: "Communication",
-      servWebTitle: "Web Development",
+      servWebTitle: "Web Development & Management",
       servWebDesc:
-        "Creo siti web moderni e funzionali per attivit\u00e0 locali, brand e progetti personali. Mi occupo dello sviluppo completo del sito: dalla progettazione dell'interfaccia alla realizzazione, fino alla pubblicazione online e alla configurazione dei servizi necessari.",
+        "Realizzo e gestisco siti statici vetrina per attivit\u00e0 locali e brand: dallo sviluppo frontend fino a dominio, build e hosting. Mi occupo anche del mantenimento tecnico dopo la pubblicazione.",
       servWebList:
-        "<li>Siti web responsive</li><li>Landing page</li><li>Portfolio digitali</li><li>Siti vetrina per attivit\u00e0 e brand</li><li>UI e sviluppo frontend</li><li>Deploy e configurazione online</li>",
-      servMgmtTitle: "Website Management",
-      servMgmtDesc:
-        "Gestisco la parte tecnica del tuo sito dopo la pubblicazione, mantenendolo sicuro, aggiornato e correttamente funzionante. Mi occupo della configurazione e gestione dei servizi collegati al sito, permettendo al cliente di concentrarsi sulla propria attivit\u00e0 senza preoccuparsi degli aspetti tecnici.",
-      servMgmtList:
-        "<li>Gestione dominio e DNS</li><li>Configurazione Cloudflare</li><li>SSL e sicurezza base</li><li>Monitoraggio del sito</li><li>Supporto tecnico e piccoli aggiornamenti</li>",
-      servCustomTitle: "Customization",
+        "<li>Realizzazione siti statici vetrina (UI frontend)</li><li>Deploy, build e hosting</li><li>Acquisto dominio</li><li>Account Cloudflare per R2 e servizi online</li><li>Gestione modifiche da fare</li><li>Gestione errori e controllo che sia tutto a posto</li><li>Gestione dominio</li><li>Supporto tecnico e piccoli aggiornamenti</li>",
+      servCustomTitle: "Custom & Design",
       servCustomDesc:
-        "Trasformo capi esistenti in pezzi unici attraverso modifiche handmade e dettagli personalizzati. Ogni progetto nasce da un'idea e viene sviluppato attraverso ricerca, progettazione e lavorazione artigianale.",
+        "Trasformo capi esistenti in pezzi unici e creo concept e design visivi per l'abbigliamento. Ogni progetto nasce da un'idea e viene sviluppato attraverso ricerca, materiali e lavorazione artigianale.",
       servCustomList:
-        "<li>Customizzazione di capi</li><li>Modifiche estetiche</li><li>Applicazioni e dettagli handmade</li><li>Scelta di materiali e tessuti</li><li>Concept personalizzati</li>",
-      servGarmentTitle: "Garment Design",
-      servGarmentDesc:
-        "Creo concept e design visivi per capi d'abbigliamento, definendo estetica, materiali e dettagli. Dallo sketch iniziale alla direzione creativa del prodotto, sviluppo idee pensate per brand, collezioni o progetti personali.",
-      servGarmentList:
-        "<li>Sketch e design del capo</li><li>Concept visivo</li><li>Ricerca di reference</li><li>Scelta tessuti e materiali</li><li>Studio colori e dettagli grafici</li>",
-      servCollabTitle: "Creative Collaborations",
+        "<li>Sketch e design del capo</li><li>Scelta di materiali e tessuti</li><li>Studio colori e dettagli grafici</li><li>Concept personalizzati</li>",
+      servCollabTitle: "Collab & Sponsor",
       servCollabDesc:
-        "Collaboro con brand e realt\u00e0 creative per sviluppare idee e contenuti autentici capaci di raccontare una storia. Attraverso format creativi e collaborazioni costruisco connessioni tra persone, prodotti e community.",
+        "Collaboro con brand e realt\u00e0 creative: insieme pensiamo a un'idea su cosa fare e la trasformiamo in contenuti autentici, collaborazioni e sponsorizzazioni.",
       servCollabList:
-        "<li>Collaborazioni con brand</li><li>Ideazione di concept creativi</li><li>Storytelling</li><li>Contenuti lifestyle</li><li>Progetti condivisi</li>",
-      servPartnersTitle: "Brand Partnerships",
-      servPartnersDesc:
-        "Creo collaborazioni con brand affini ai miei valori e interessi, trasformando prodotti e idee in contenuti capaci di coinvolgere il pubblico. L'obiettivo \u00e8 creare partnership autentiche dove il prodotto entra naturalmente nella narrazione.",
-      servPartnersList:
-        "<li>Collaborazioni commerciali</li><li>Contenuti dedicati</li><li>Product integration</li><li>Partnership creative</li><li>Progetti con brand</li>",
+        "<li>Collaborazioni con brand</li><li>Ideazione di un'idea su cosa fare</li><li>Progetti condivisi</li><li>Collaborazioni commerciali</li>",
       procSub: "Come lavoro",
       proc1Title: "Scoperta",
       proc1Desc:
@@ -480,8 +463,7 @@ document.addEventListener("DOMContentLoaded", function () {
       collab1Desc:
         'All\'interno dei miei video sponsorizzo capi di abbigliamento di Aleyesure, brand locale che porta avanti lo slogan "Support local business".',
       collab2Name: "StageStreetwear",
-      collab2Desc:
-        "Progetto creativo che unisce video, streetwear e custom cappellini.",
+      collab2Desc: "Ho fatto un video insieme e ci sentiamo.",
       collab3Name: "NewGenMusic4",
       collab3Desc:
         "Portiamo avanti una rubrica che mette insieme la musica e l'abbigliamento. Questa pagina \u00e8 un magazine no profit che ha come obiettivo sponsorizzare piccoli artisti della new gen.",
@@ -534,12 +516,9 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
       contactService: "Servizio",
       contactServiceOpts: [
-        "Web Development",
-        "Website Management",
-        "Customization",
-        "Garment Design",
-        "Creative Collaborations",
-        "Brand Partnerships",
+        "Web Development & Management",
+        "Custom & Design",
+        "Collab & Sponsor",
       ],
       contactSubject: "Oggetto",
       contactMsg: "Il tuo messaggio...",
@@ -574,39 +553,21 @@ document.addEventListener("DOMContentLoaded", function () {
       servCta: "Get a quote",
       servCustomCta: "Discover my profile",
       servIncludes: "What's included",
-      servCatTech: "Tech",
-      servCatFashion: "Fashion",
-      servCatComm: "Communication",
-      servWebTitle: "Web Development",
+      servWebTitle: "Web Development & Management",
       servWebDesc:
-        "I build modern, functional websites for local businesses, brands and personal projects. I handle the full build: from interface design to development, up to going live and setting up all the services you need.",
+        "I build and manage static showcase websites for local businesses and brands: from frontend development to domain, build and hosting. I also handle post-launch technical maintenance.",
       servWebList:
-        "<li>Responsive websites</li><li>Landing pages</li><li>Digital portfolios</li><li>Showcase sites for businesses and brands</li><li>UI and frontend development</li><li>Deploy and online setup</li>",
-      servMgmtTitle: "Website Management",
-      servMgmtDesc:
-        "I take care of the technical side of your site after launch, keeping it secure, up to date and working properly. I handle the setup and management of the services connected to the site, so you can focus on your business without worrying about the technical details.",
-      servMgmtList:
-        "<li>Domain and DNS management</li><li>Cloudflare setup</li><li>SSL and basic security</li><li>Website monitoring</li><li>Technical support and small updates</li>",
-      servCustomTitle: "Customization",
+        "<li>Static showcase websites (frontend UI)</li><li>Deploy, build and hosting</li><li>Domain purchase</li><li>Cloudflare account for R2 and online services</li><li>Content change management</li><li>Error handling and health checks</li><li>Domain management</li><li>Technical support and small updates</li>",
+      servCustomTitle: "Custom & Design",
       servCustomDesc:
-        "I turn existing garments into one-of-a-kind pieces through handmade modifications and custom details. Every project starts from an idea and is developed through research, planning and artisanal work.",
+        "I turn existing garments into unique pieces and create concepts and visual designs for clothing. Every project starts from an idea and is developed through research, materials and artisanal work.",
       servCustomList:
-        "<li>Garment customization</li><li>Aesthetic modifications</li><li>Handmade applications and details</li><li>Fabric and material selection</li><li>Custom concepts</li>",
-      servGarmentTitle: "Garment Design",
-      servGarmentDesc:
-        "I create concepts and visual designs for clothing, defining the look, materials and details. From the initial sketch to the creative direction of the product, I develop ideas made for brands, collections or personal projects.",
-      servGarmentList:
-        "<li>Garment sketching and design</li><li>Visual concept</li><li>Reference research</li><li>Fabric and material selection</li><li>Color and graphic detail studies</li>",
-      servCollabTitle: "Creative Collaborations",
+        "<li>Garment sketching and design</li><li>Fabric and material selection</li><li>Color and graphic detail studies</li><li>Custom concepts</li>",
+      servCollabTitle: "Collab & Sponsor",
       servCollabDesc:
-        "I work with brands and creative realities to develop authentic ideas and content that tell a story. Through creative formats and collaborations I build connections between people, products and communities.",
+        "I collaborate with brands and creative realities: together we come up with an idea of what to do and turn it into authentic content, collaborations and sponsorships.",
       servCollabList:
-        "<li>Brand collaborations</li><li>Creative concept ideation</li><li>Storytelling</li><li>Lifestyle content</li><li>Shared projects</li>",
-      servPartnersTitle: "Brand Partnerships",
-      servPartnersDesc:
-        "I create collaborations with brands aligned with my values and interests, turning products and ideas into content that engages an audience. The goal is to build authentic partnerships where the product naturally fits into the narrative.",
-      servPartnersList:
-        "<li>Commercial collaborations</li><li>Dedicated content</li><li>Product integration</li><li>Creative partnerships</li><li>Projects with brands</li>",
+        "<li>Brand collaborations</li><li>Ideating what we can do together</li><li>Shared projects</li><li>Commercial collaborations</li>",
       procSub: "How I work",
       proc1Title: "Discovery",
       proc1Desc:
@@ -645,8 +606,7 @@ document.addEventListener("DOMContentLoaded", function () {
       collab1Desc:
         'In my videos I sponsor clothing items from Aleyesure, a local brand carrying the slogan "Support local business".',
       collab2Name: "StageStreetwear",
-      collab2Desc:
-        "Creative project merging video, streetwear and custom caps.",
+      collab2Desc: "Made a video together and we stay in touch.",
       collab3Name: "NewGenMusic4",
       collab3Desc:
         "We run a column combining music and fashion. This page is a non-profit magazine aimed at promoting new gen artists.",
@@ -694,12 +654,9 @@ document.addEventListener("DOMContentLoaded", function () {
       contactReasonOpts: ["Quote", "Collaboration", "Just an idea", "Other"],
       contactService: "Service",
       contactServiceOpts: [
-        "Web Development",
-        "Website Management",
-        "Customization",
-        "Garment Design",
-        "Creative Collaborations",
-        "Brand Partnerships",
+        "Web Development & Management",
+        "Custom & Design",
+        "Collab & Sponsor",
       ],
       contactSubject: "Subject",
       contactMsg: "Your message...",
