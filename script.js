@@ -606,7 +606,7 @@ document.addEventListener("DOMContentLoaded", function () {
       collab1Desc:
         'In my videos I sponsor clothing items from Aleyesure, a local brand carrying the slogan "Support local business".',
       collab2Name: "StageStreetwear",
-      collab2Desc: "Made a video together and we stay in touch.",
+      collab2Desc: "Video sponsorship and ongoing collaboration.",
       collab3Name: "NewGenMusic4",
       collab3Desc:
         "We run a column combining music and fashion. This page is a non-profit magazine aimed at promoting new gen artists.",
