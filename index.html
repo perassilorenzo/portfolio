@@ -213,12 +213,6 @@
 
     <!-- HERO -->
 
-    <img
-      src="assets/hero-cover.webp"
-      alt="Lorenzo Perassi — copertina portfolio"
-      class="img-portfolio"
-    />
-
     <section class="lp-hero d-flex align-items-center" id="hero">
       <div class="lp-hero-content pe-4">
         <h1 class="lp-hero-title">lorenzo<br />perassi</h1>
@@ -227,12 +221,11 @@
             >Disponibile per nuovi progetti</span
           >
         </div>
-<div class="marquee">
+        <div class="marquee">
           <div class="marquee-track">
             fashion • it • cs • coding • custom • content creation • tech •
             fashion • it • cs • coding • custom • content creation • tech •
           </div>
-        </div>
         </div>
         <p class="mt-3 lp-text-secondary">
           <span class="lp-typewriter"></span>
@@ -263,30 +256,27 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="about d-flex mt-5 pt-5" id="about">
-      <div class="about-inner lp-reveal">
-        <div class="lp-about-content">
-          <div class="about-text-top">
-            <h2 class="lp-big-title">about</h2>
-            <h3
-              class="lp-text-secondary lp-subtitle-offset"
-              data-lang-key="aboutSub"
-            >
-              Chi sono
-            </h3>
-            <p
-              class="lp-text-secondary lp-content-about about-intro"
-              data-lang-key="aboutP1"
-              data-lang-html
-            >
-              Sono Lorenzo Perassi, developer, creator e studente di
-              Informatica.
-              <br /><br />Costruisco prodotti digitali dove codice, design e
-              creatività si incontrano. Il mio progetto principale è Customly,
-              una piattaforma di personalizzazione abbigliamento che unisce moda
-              e tecnologia.
-            </p>
-          </div>
+    <section class="lp-section lp-reveal" id="about">
+      <div class="lp-about-wrapper d-flex align-items-start gap-5 flex-wrap">
+        <div class="lp-about-content flex-1 min-w-300">
+          <h2 class="lp-big-title">about</h2>
+          <h3
+            class="lp-text-secondary lp-subtitle-offset"
+            data-lang-key="aboutSub"
+          >
+            Chi sono
+          </h3>
+          <p
+            class="lp-text-secondary lp-content-about about-intro"
+            data-lang-key="aboutP1"
+            data-lang-html
+          >
+            Sono Lorenzo Perassi, developer, creator e studente di Informatica.
+            <br /><br />Costruisco prodotti digitali dove codice, design e
+            creatività si incontrano. Il mio progetto principale è Customly, una
+            piattaforma di personalizzazione abbigliamento che unisce moda e
+            tecnologia.
+          </p>
           <p
             class="lp-text-secondary lp-content-about about-rest"
             data-lang-key="aboutP2"
@@ -303,18 +293,22 @@
             configuratore digitale e gestisco la piattaforma.
           </p>
         </div>
-      </div>
-      <div class="lp-terminal lp-reveal" aria-label="Terminale">
-        <div class="lp-terminal-bar">
-          <span class="lp-terminal-dot r"></span>
-          <span class="lp-terminal-dot y"></span>
-          <span class="lp-terminal-dot g"></span>
-          <span class="lp-terminal-title">lorenzo@perassi:~</span>
-        </div>
-        <div class="lp-terminal-body">
-          <div class="lp-term-line lp-term-out">
-            <span class="lp-term-prompt">$ </span
-            ><span class="lp-term-cursor"></span>
+        <div
+          class="lp-terminal lp-reveal flex-shrink-0"
+          aria-label="Terminale"
+          style="min-width: 380px; max-width: 100%"
+        >
+          <div class="lp-terminal-bar">
+            <span class="lp-terminal-dot r"></span>
+            <span class="lp-terminal-dot y"></span>
+            <span class="lp-terminal-dot g"></span>
+            <span class="lp-terminal-title">lorenzo@perassi:~</span>
+          </div>
+          <div class="lp-terminal-body">
+            <div class="lp-term-line lp-term-out">
+              <span class="lp-term-prompt">$ </span
+              ><span class="lp-term-cursor"></span>
+            </div>
           </div>
         </div>
       </div>
@@ -454,10 +448,13 @@
           <h4 class="lp-service-title mb-2" data-lang-key="servCollabTitle">
             Collab & Sponsor
           </h4>
-          <p class="lp-text-secondary small mb-3" data-lang-key="servCollabDesc">
+          <p
+            class="lp-text-secondary small mb-3"
+            data-lang-key="servCollabDesc"
+          >
             Collaboro con brand e realtà creative: insieme pensiamo a un'idea su
-            cosa fare e la trasformiamo in contenuti autentici, collaborazioni
-            e sponsorizzazioni.
+            cosa fare e la trasformiamo in contenuti autentici, collaborazioni e
+            sponsorizzazioni.
           </p>
           <span class="lp-service-inc" data-lang-key="servIncludes"
             >Cosa include</span
@@ -528,10 +525,20 @@
           <div class="ps-2">
             <h4 class="fs-5 fw-bold mb-1">Customly</h4>
             <p class="lp-text-secondary small mb-2">
-              Piattaforma di custom fashion: unisco moda e tecnologia con un configuratore digitale per personalizzare abbigliamento. Ho progettato l'intera UX/UI — palette, tipografia, layout, micro-interazioni — e sviluppato la piattaforma su Cloudflare Pages, D1 e R2. MVP live su customly.it.
+              Piattaforma di custom fashion: unisco moda e tecnologia con un
+              configuratore digitale per personalizzare abbigliamento. Ho
+              progettato l'intera UX/UI — palette, tipografia, layout,
+              micro-interazioni — e sviluppato la piattaforma su Cloudflare
+              Pages, D1 e R2. MVP live su customly.it.
             </p>
             <div class="d-flex flex-wrap gap-2">
-              <span class="lp-badge">html css js seo/geo cloudflare (d1 r2)</span>
+              <span class="lp-badge">html</span>
+              <span class="lp-badge">css</span>
+              <span class="lp-badge">js</span>
+              <span class="lp-badge">seo/geo</span>
+              <span class="lp-badge">cloudflare</span>
+              <span class="lp-badge">d1</span>
+              <span class="lp-badge">r2</span>
             </div>
           </div>
         </div>
@@ -549,7 +556,10 @@
           <div class="ps-2">
             <h4 class="fs-5 fw-bold mb-1">CRYBU</h4>
             <p class="lp-text-secondary small mb-2">
-              Collaborazione creativa di fashion design & sartoria: ideazione e sviluppo di capi custom attraverso ricerca materiali, prototipazione e produzione sartoriale. Un progetto che unisce design visivo e lavorazione artigianale per creare pezzi unici.
+              Collaborazione creativa di fashion design & sartoria: ideazione e
+              sviluppo di capi custom attraverso ricerca materiali,
+              prototipazione e produzione sartoriale. Un progetto che unisce
+              design visivo e lavorazione artigianale per creare pezzi unici.
             </p>
             <div class="d-flex flex-wrap gap-2">
               <span class="lp-badge">Fashion Design</span>
@@ -574,7 +584,7 @@
           Il mio progetto principale
         </h3>
       </div>
-<div class="lp-customly mx-4 lp-reveal">
+      <div class="lp-customly mx-4 lp-reveal">
         <div class="lp-customly-inner">
           <img
             src="assets/customly-logo.webp"
@@ -583,7 +593,12 @@
             loading="lazy"
           />
           <h4 class="lp-customly-title mt-4 mb-2">Customly</h4>
-          <p class="lp-text-secondary mb-1 text-center" style="font-style:italic">make it yours</p>
+          <p
+            class="lp-text-secondary mb-1 text-center"
+            style="font-style: italic"
+          >
+            make it yours
+          </p>
           <p
             class="lp-text-secondary mb-3 text-center"
             data-lang-key="customlyDesc"
@@ -600,9 +615,20 @@
           </p>
           <p class="lp-text-secondary small text-center mb-4">
             Ho progettato tutto il frontend io; per il backend il mio amico
-            <strong>Federico Bosio</strong> (<a href="https://bosio.me" target="_blank" rel="noopener" class="lp-link-accent">bosio.me</a>);
-            per il design <strong>Nicolò Robusti</strong> (ig:
-            <a href="https://instagram.com/robu.nico" target="_blank" rel="noopener" class="lp-link-accent">@robu.nico</a>).
+            <strong>Federico Bosio</strong> (<a
+              href="https://bosio.me"
+              target="_blank"
+              rel="noopener"
+              class="lp-link-accent"
+              >bosio.me</a
+            >); per il design <strong>Nicolò Robusti</strong> (ig:
+            <a
+              href="https://instagram.com/robu.nico"
+              target="_blank"
+              rel="noopener"
+              class="lp-link-accent"
+              >@robu.nico</a
+            >).
           </p>
           <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
             <span class="lp-tag">UX / UI Design</span>
@@ -622,51 +648,6 @@
             >Visita customly.it <span class="lp-cta-arrow">→</span></a
           >
           <p class="lp-text-secondary small mt-4 mb-0 text-center">
-            <span data-lang-key="customlyNote"
-              >Vuoi vedere i progetti da vicino? Il mio profilo Customly:</span
-            >
-            <a
-              href="https://customly.it/perassilorenzo"
-              target="_blank"
-              rel="noopener"
-              class="lp-link-accent"
-              >customly.it/perassilorenzo</a
-            >
-          </p>
-        </div>
-      </div>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a
-              href="https://customly.it"
-              target="_blank"
-              rel="noopener"
-              class="lp-btn lp-btn-solid text-decoration-none"
-              data-lang-key="customlyCta"
-              >Visita customly.it <span class="lp-cta-arrow">→</span></a
-            >
-            <a
-              href="assets/customly-prototype-1.webp"
-              target="_blank"
-              rel="noopener"
-              class="lp-btn text-decoration-none"
-              >Prototipo 1 <span class="lp-cta-arrow">→</span></a
-            >
-            <a
-              href="assets/customly-prototype-2.webp"
-              target="_blank"
-              rel="noopener"
-              class="lp-btn text-decoration-none"
-              >Prototipo 2 <span class="lp-cta-arrow">→</span></a
-            >
-            <a
-              href="assets/customly-style-guide.pdf"
-              target="_blank"
-              rel="noopener"
-              class="lp-btn text-decoration-none"
-              >Palette &amp; Materiali <span class="lp-cta-arrow">→</span></a
-            >
-          </div>
-          <p class="lp-text-secondary small mt-4 mb-0">
             <span data-lang-key="customlyNote"
               >Vuoi vedere i progetti da vicino? Il mio profilo Customly:</span
             >
@@ -740,7 +721,13 @@
               semplice e intuitivo.
             </p>
             <div class="d-flex flex-wrap gap-2">
-              <span class="lp-badge">html css js seo/geo cloudflare (d1 r2)</span>
+              <span class="lp-badge">html</span>
+              <span class="lp-badge">css</span>
+              <span class="lp-badge">js</span>
+              <span class="lp-badge">seo/geo</span>
+              <span class="lp-badge">cloudflare</span>
+              <span class="lp-badge">d1</span>
+              <span class="lp-badge">r2</span>
             </div>
           </div>
         </div>
@@ -763,7 +750,10 @@
               social. Editing video, grafiche e caption.
             </p>
             <div class="d-flex flex-wrap gap-2">
-              <span class="lp-badge">lightroom capcut canva caption</span>
+              <span class="lp-badge">lightroom</span>
+              <span class="lp-badge">capcut</span>
+              <span class="lp-badge">canva</span>
+              <span class="lp-badge">caption</span>
             </div>
           </div>
         </div>
@@ -786,7 +776,10 @@
               documentale e digitalizzazione archivi.
             </p>
             <div class="d-flex flex-wrap gap-2">
-              <span class="lp-badge">sql c# gestionale vs</span>
+              <span class="lp-badge">sql</span>
+              <span class="lp-badge">c#</span>
+              <span class="lp-badge">gestionale</span>
+              <span class="lp-badge">vs</span>
             </div>
           </div>
         </div>
@@ -865,7 +858,9 @@
               obiettivo sponsorizzare piccoli artisti della new gen.
             </p>
             <div class="d-flex flex-wrap gap-2 mt-2">
-              <span class="lp-tag">magazine collab video</span>
+              <span class="lp-tag">magazine</span>
+              <span class="lp-tag">collab</span>
+              <span class="lp-tag">video</span>
             </div>
           </div>
           <span class="lp-collab-arrow" aria-hidden="true">↗</span>
