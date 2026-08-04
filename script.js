@@ -244,6 +244,11 @@ document.addEventListener("DOMContentLoaded", function () {
       .querySelectorAll(".lp-project-card:not(.lp-project-card--empty)")
       .forEach((e) => {
         (e.addEventListener("click", () => {
+          const g = e.dataset.scroll;
+          if (g) {
+            const m = document.getElementById(g);
+            if (m) return void m.scrollIntoView({ behavior: "smooth" });
+          }
           const t = e.querySelector("img");
           ((document.getElementById("modalImg").src = t ? t.src : ""),
             (document.getElementById("modalTitle").textContent =
@@ -341,26 +346,13 @@ document.addEventListener("DOMContentLoaded", function () {
     function B(e, t) {
       ((k = e), (S = t), E.classList.add("open"), C());
     }
-    (document
-      .querySelectorAll(".lp-project-img, .lp-collab-img")
-      .forEach((e) => {
-        (e.addEventListener("click", (t) => {
-          t.stopPropagation();
-          const o = e.closest("[data-media]");
-          if (o) {
-            const e = o.dataset.media;
-            if (e) {
-              const t = e
-                .split("|")
-                .map((e) => e.trim())
-                .filter(Boolean);
-              if (t.length) return void B(t, 0);
-            }
-          }
-          B([e.src], 0);
-        }),
-          (e.style.cursor = "pointer"));
+    (document.querySelectorAll(".lp-collab-img").forEach((e) => {
+      (e.addEventListener("click", (t) => {
+        t.stopPropagation();
+        B([e.src], 0);
       }),
+        (e.style.cursor = "pointer"));
+    }),
       w.addEventListener("click", (e) => {
         (e.stopPropagation(), A(-1));
       }),
@@ -409,19 +401,47 @@ document.addEventListener("DOMContentLoaded", function () {
         "Utilizzo le piattaforme digitali come uno spazio dove condividere progetti, esperimenti creativi, routine, lavoro pratico e crescita personale, oltre che per creare connessioni, farmi conoscere e portarmi opportunit\u00e0.<br><br>Collaboro con brand locali e pagine creative, lavorando su contenuti, comunicazioni online e progetti creativi. Sviluppo anche siti web per locali e piccole imprese.<br><br>Lavoro su Customly come piattaforma principale, dove sviluppo il configuratore digitale e gestisco la piattaforma.",
       customlySub: "Il mio progetto principale",
       customlyDesc:
-        "Customly \u00e8 la piattaforma di custom fashion che unisce moda e tecnologia: un configuratore digitale per personalizzare abbigliamento in modo semplice e intuitivo. Sviluppata con Cloudflare Pages, D1 e R2, \u00e8 il mio progetto principale, dove gestisco catalogo prodotti e configuratore.",
+        "Customly \u00e8 la piattaforma di custom fashion che unisce moda e tecnologia. Ho progettato l'intera esperienza: dal configuratore digitale \u2014 dove scegli colori, materiali e dettagli del capo in modo semplice e immediato \u2014 alla scelta di palette, tipografia e layout che rendono ogni passaggio chiaro e senza attriti. Ogni schermata, dal catalogo al riepilogo dell'ordine, nasce dal problema reale di chi vuole un capo unico: penso prima al design, poi al codice. Su Cloudflare Pages, D1 e R2 gestisco catalogo, configuratore e tutto il design end-to-end.",
       customlyCta: "Visita customly.it",
+      customlyNote:
+        "Vuoi vedere i progetti da vicino? Il mio profilo Customly:",
       servSub: "Cosa posso fare per te",
       servCta: "Richiedi preventivo",
-      serv1Title: "Web Design & Development",
-      serv1Desc:
-        "Siti web veloci e professionali per locali, ristoranti e piccole imprese. Dominio, hosting e manutenzione inclusi, pensati per portarti clienti.",
-      serv2Title: "Custom Fashion",
-      serv2Desc:
-        "Rework e personalizzazione di capi: denim, t-shirt e capi su misura. Trasformo capi esistenti in pezzi unici che raccontano chi sei.",
-      serv3Title: "Comunicazione & Contenuti",
-      serv3Desc:
-        "Collab e contenuti per il tuo brand: ideo, edito e pubblico contenuti condivisi sul mio e sul tuo profilo. Un plus semplice per farti conoscere.",
+      servCustomCta: "Scopri il mio profilo",
+      servIncludes: "Cosa include",
+      servCatTech: "Tech",
+      servCatFashion: "Fashion",
+      servCatComm: "Communication",
+      servWebTitle: "Web Development",
+      servWebDesc:
+        "Creo siti web moderni e funzionali per attivit\u00e0 locali, brand e progetti personali. Mi occupo dello sviluppo completo del sito: dalla progettazione dell'interfaccia alla realizzazione, fino alla pubblicazione online e alla configurazione dei servizi necessari.",
+      servWebList:
+        "<li>Siti web responsive</li><li>Landing page</li><li>Portfolio digitali</li><li>Siti vetrina per attivit\u00e0 e brand</li><li>UI e sviluppo frontend</li><li>Deploy e configurazione online</li>",
+      servMgmtTitle: "Website Management",
+      servMgmtDesc:
+        "Gestisco la parte tecnica del tuo sito dopo la pubblicazione, mantenendolo sicuro, aggiornato e correttamente funzionante. Mi occupo della configurazione e gestione dei servizi collegati al sito, permettendo al cliente di concentrarsi sulla propria attivit\u00e0 senza preoccuparsi degli aspetti tecnici.",
+      servMgmtList:
+        "<li>Gestione dominio e DNS</li><li>Configurazione Cloudflare</li><li>SSL e sicurezza base</li><li>Monitoraggio del sito</li><li>Supporto tecnico e piccoli aggiornamenti</li>",
+      servCustomTitle: "Customization",
+      servCustomDesc:
+        "Trasformo capi esistenti in pezzi unici attraverso modifiche handmade e dettagli personalizzati. Ogni progetto nasce da un'idea e viene sviluppato attraverso ricerca, progettazione e lavorazione artigianale.",
+      servCustomList:
+        "<li>Customizzazione di capi</li><li>Modifiche estetiche</li><li>Applicazioni e dettagli handmade</li><li>Scelta di materiali e tessuti</li><li>Concept personalizzati</li>",
+      servGarmentTitle: "Garment Design",
+      servGarmentDesc:
+        "Creo concept e design visivi per capi d'abbigliamento, definendo estetica, materiali e dettagli. Dallo sketch iniziale alla direzione creativa del prodotto, sviluppo idee pensate per brand, collezioni o progetti personali.",
+      servGarmentList:
+        "<li>Sketch e design del capo</li><li>Concept visivo</li><li>Ricerca di reference</li><li>Scelta tessuti e materiali</li><li>Studio colori e dettagli grafici</li>",
+      servCollabTitle: "Creative Collaborations",
+      servCollabDesc:
+        "Collaboro con brand e realt\u00e0 creative per sviluppare idee e contenuti autentici capaci di raccontare una storia. Attraverso format creativi e collaborazioni costruisco connessioni tra persone, prodotti e community.",
+      servCollabList:
+        "<li>Collaborazioni con brand</li><li>Ideazione di concept creativi</li><li>Storytelling</li><li>Contenuti lifestyle</li><li>Progetti condivisi</li>",
+      servPartnersTitle: "Brand Partnerships",
+      servPartnersDesc:
+        "Creo collaborazioni con brand affini ai miei valori e interessi, trasformando prodotti e idee in contenuti capaci di coinvolgere il pubblico. L'obiettivo \u00e8 creare partnership autentiche dove il prodotto entra naturalmente nella narrazione.",
+      servPartnersList:
+        "<li>Collaborazioni commerciali</li><li>Contenuti dedicati</li><li>Product integration</li><li>Partnership creative</li><li>Progetti con brand</li>",
       procSub: "Come lavoro",
       proc1Title: "Scoperta",
       proc1Desc:
@@ -471,25 +491,56 @@ document.addEventListener("DOMContentLoaded", function () {
       toolGroupDesign: "Design & Editing",
       toolGroupTools: "Strumenti & Office",
       faqSub: "Domande frequenti",
-      faq1Q: "Quanto costa un sito web?",
+      faq1Q: "Che tipo di progetti accetti?",
       faq1A:
-        "Dipende dal progetto: siti one-page a prezzi accessibili, progetti pi\u00f9 complessi su preventivo. Scrivimi e in 24 ore hai una risposta.",
-      faq2Q: "Quanto tempo ci vuole?",
+        "Accetto collaborazioni con piccole imprese, brand, creator e realt\u00e0 creative interessate a sviluppare progetti digitali, fashion o contenuti.",
+      faq2Q: "Realizzi siti web per qualsiasi attivit\u00e0?",
       faq2A:
-        "Un sito one-page richiede 1-2 settimane. I progetti pi\u00f9 grandi vengono pianificati insieme, con aggiornamenti costanti.",
-      faq3Q: "Lavori anche con piccoli locali?",
+        "S\u00ec, sviluppo principalmente siti per locali, piccole imprese, professionisti e brand che vogliono migliorare la propria presenza online.",
+      faq3Q: "Cosa comprende la realizzazione di un sito?",
       faq3A:
-        "S\u00ec, \u00e8 il mio focus: ristoranti, negozi, artigiani e liberi professionisti. Creo soluzioni pensate per portare clienti reali.",
-      faq4Q: "Cosa serve per iniziare?",
+        "Il servizio pu\u00f2 includere progettazione, sviluppo, versione mobile, pubblicazione online, configurazione dominio e supporto tecnico dopo la consegna.",
+      faq4Q: "Chi gestisce dominio e hosting del sito?",
       faq4A:
-        "Mi basta un messaggio con le tue idee: da l\u00ec ti guido io passo per passo, dalla proposta alla consegna.",
-      faq5Q: "Cosa succede dopo la consegna?",
+        "Il dominio e i servizi collegati possono essere acquistati direttamente dal cliente oppure gestiti insieme. In caso di manutenzione continuativa posso occuparmi della parte tecnica.",
+      faq5Q: "Posso richiedere un capo personalizzato?",
       faq5A:
-        "Il sito \u00e8 tuo al 100%: dominio, codice e contenuti. Posso anche occuparmi di manutenzione mensile e aggiornamenti.",
+        "S\u00ec, realizzo custom fashion partendo da capi esistenti, lavorando su modifiche, dettagli, materiali e concept personalizzati.",
+      faq6Q: "Realizzi solo custom o anche design di capi?",
+      faq6A:
+        "Mi occupo anche di design di capi: creo concept visivi, sketch, scelte estetiche, materiali e dettagli grafici senza occuparmi della produzione industriale.",
+      faq7Q: "Come funzionano le collaborazioni con brand?",
+      faq7A:
+        "Le collaborazioni vengono sviluppate in base al progetto: possono essere contenuti creativi, integrazioni prodotto o idee condivise per raccontare un brand in modo autentico.",
+      faq8Q: "Quanto costa un progetto?",
+      faq8A:
+        "Ogni progetto viene valutato singolarmente in base a complessit\u00e0, tempi e obiettivi. Dopo una prima analisi preparo una proposta personalizzata.",
+      faq9Q: "Quanto tempo serve per completare un progetto?",
+      faq9A:
+        "Dipende dal tipo di lavoro. Un sito semplice pu\u00f2 richiedere alcune settimane, mentre progetti pi\u00f9 creativi o personalizzati possono richiedere pi\u00f9 tempo.",
+      faq10Q: "Posso contattarti anche solo per un'idea?",
+      faq10A:
+        "S\u00ec, puoi scrivermi anche nelle fasi iniziali. Possiamo valutare insieme se l'idea pu\u00f2 trasformarsi in un progetto concreto.",
       contactSub: "Restiamo in contatto",
       contactDesc: "Scrivimi per collaborazioni, idee o progetti.",
       contactName: "Il tuo nome",
       contactEmail: "La tua email",
+      contactReason: "Motivo",
+      contactReasonOpts: [
+        "Preventivo",
+        "Collaborazione",
+        "Solo un'idea",
+        "Altro",
+      ],
+      contactService: "Servizio",
+      contactServiceOpts: [
+        "Web Development",
+        "Website Management",
+        "Customization",
+        "Garment Design",
+        "Creative Collaborations",
+        "Brand Partnerships",
+      ],
       contactSubject: "Oggetto",
       contactMsg: "Il tuo messaggio...",
       contactBtn: "Invia messaggio",
@@ -516,19 +567,46 @@ document.addEventListener("DOMContentLoaded", function () {
         "I use digital platforms as a space to share projects, creative experiments, routines, hands-on work and personal growth, as well as to build connections and create opportunities.<br><br>I collaborate with local brands and creative pages, working on content, online communications and creative projects. I also develop websites for local businesses and small companies.<br><br>I work on Customly as my main platform, where I develop the digital configurator and manage the platform.",
       customlySub: "My main project",
       customlyDesc:
-        "Customly is the custom fashion platform that combines fashion and technology: a digital configurator to personalize clothing simply and intuitively. Built with Cloudflare Pages, D1 and R2, it is my main project, where I manage the product catalog and the configurator.",
+        "Customly is the custom fashion platform that combines fashion and technology. I designed the whole experience: from the digital configurator \u2014 where you pick colors, materials and garment details simply and instantly \u2014 to the palette, typography and layout choices that make every step clear and frictionless. Every screen, from the catalog to the order summary, starts from the real problem of someone who wants a unique garment: I think about design first, then code. On Cloudflare Pages, D1 and R2 I manage the catalog, configurator and all the end-to-end design.",
       customlyCta: "Visit customly.it",
+      customlyNote: "Want to see the projects up close? My Customly profile:",
       servSub: "What I can do for you",
       servCta: "Get a quote",
-      serv1Title: "Web Design & Development",
-      serv1Desc:
-        "Websites for local businesses, restaurants and small companies. I build fast, optimized sites with domain, hosting and monthly maintenance.",
-      serv2Title: "Custom Fashion",
-      serv2Desc:
-        "Garment rework and customization: denim, t-shirts and made-to-order pieces. I turn existing items into unique pieces.",
-      serv3Title: "Communication & Content",
-      serv3Desc:
-        "Collabs and content for your brand: I create, edit and publish shared content on my profile and yours. An easy plus to get you known.",
+      servCustomCta: "Discover my profile",
+      servIncludes: "What's included",
+      servCatTech: "Tech",
+      servCatFashion: "Fashion",
+      servCatComm: "Communication",
+      servWebTitle: "Web Development",
+      servWebDesc:
+        "I build modern, functional websites for local businesses, brands and personal projects. I handle the full build: from interface design to development, up to going live and setting up all the services you need.",
+      servWebList:
+        "<li>Responsive websites</li><li>Landing pages</li><li>Digital portfolios</li><li>Showcase sites for businesses and brands</li><li>UI and frontend development</li><li>Deploy and online setup</li>",
+      servMgmtTitle: "Website Management",
+      servMgmtDesc:
+        "I take care of the technical side of your site after launch, keeping it secure, up to date and working properly. I handle the setup and management of the services connected to the site, so you can focus on your business without worrying about the technical details.",
+      servMgmtList:
+        "<li>Domain and DNS management</li><li>Cloudflare setup</li><li>SSL and basic security</li><li>Website monitoring</li><li>Technical support and small updates</li>",
+      servCustomTitle: "Customization",
+      servCustomDesc:
+        "I turn existing garments into one-of-a-kind pieces through handmade modifications and custom details. Every project starts from an idea and is developed through research, planning and artisanal work.",
+      servCustomList:
+        "<li>Garment customization</li><li>Aesthetic modifications</li><li>Handmade applications and details</li><li>Fabric and material selection</li><li>Custom concepts</li>",
+      servGarmentTitle: "Garment Design",
+      servGarmentDesc:
+        "I create concepts and visual designs for clothing, defining the look, materials and details. From the initial sketch to the creative direction of the product, I develop ideas made for brands, collections or personal projects.",
+      servGarmentList:
+        "<li>Garment sketching and design</li><li>Visual concept</li><li>Reference research</li><li>Fabric and material selection</li><li>Color and graphic detail studies</li>",
+      servCollabTitle: "Creative Collaborations",
+      servCollabDesc:
+        "I work with brands and creative realities to develop authentic ideas and content that tell a story. Through creative formats and collaborations I build connections between people, products and communities.",
+      servCollabList:
+        "<li>Brand collaborations</li><li>Creative concept ideation</li><li>Storytelling</li><li>Lifestyle content</li><li>Shared projects</li>",
+      servPartnersTitle: "Brand Partnerships",
+      servPartnersDesc:
+        "I create collaborations with brands aligned with my values and interests, turning products and ideas into content that engages an audience. The goal is to build authentic partnerships where the product naturally fits into the narrative.",
+      servPartnersList:
+        "<li>Commercial collaborations</li><li>Dedicated content</li><li>Product integration</li><li>Creative partnerships</li><li>Projects with brands</li>",
       procSub: "How I work",
       proc1Title: "Discovery",
       proc1Desc:
@@ -578,25 +656,51 @@ document.addEventListener("DOMContentLoaded", function () {
       toolGroupDesign: "Design & Editing",
       toolGroupTools: "Tools & Office",
       faqSub: "Frequently asked questions",
-      faq1Q: "How much does a website cost?",
+      faq1Q: "What kind of projects do you take on?",
       faq1A:
-        "It depends on the project: one-page sites at accessible prices, more complex projects on quote. Write me and you'll have an answer within 24 hours.",
-      faq2Q: "How long does it take?",
+        "I work with small businesses, brands, creators and creative realities interested in developing digital, fashion or content projects.",
+      faq2Q: "Do you build websites for any business?",
       faq2A:
-        "A one-page site takes 1-2 weeks. Bigger projects are planned together, with constant updates.",
-      faq3Q: "Do you also work with small local businesses?",
+        "Yes, I mainly build sites for local shops, small businesses, professionals and brands that want to improve their online presence.",
+      faq3Q: "What does building a website include?",
       faq3A:
-        "Yes, that's my focus: restaurants, shops, artisans and freelancers. I build solutions designed to bring real customers.",
-      faq4Q: "What do I need to get started?",
+        "The service can include design, development, mobile version, going live online, domain setup and technical support after delivery.",
+      faq4Q: "Who manages the domain and hosting of the site?",
       faq4A:
-        "Just send me a message with your ideas: from there I'll guide you step by step, from proposal to delivery.",
-      faq5Q: "What happens after delivery?",
+        "The domain and related services can be bought directly by the client or managed together. For ongoing maintenance I can take care of the technical side.",
+      faq5Q: "Can I request a custom garment?",
       faq5A:
-        "The site is 100% yours: domain, code and content. I can also handle monthly maintenance and updates.",
+        "Yes, I make custom fashion starting from existing garments, working on modifications, details, materials and custom concepts.",
+      faq6Q: "Do you only do custom work or also garment design?",
+      faq6A:
+        "I also do garment design: I create visual concepts, sketches, aesthetic choices, materials and graphic details, without handling industrial production.",
+      faq7Q: "How do brand collaborations work?",
+      faq7A:
+        "Collaborations are developed according to the project: they can be creative content, product integrations or shared ideas to tell a brand authentically.",
+      faq8Q: "How much does a project cost?",
+      faq8A:
+        "Each project is evaluated individually based on complexity, timeline and goals. After an initial analysis I prepare a custom proposal.",
+      faq9Q: "How long does it take to complete a project?",
+      faq9A:
+        "It depends on the kind of work. A simple site can take a few weeks, while more creative or custom projects can take longer.",
+      faq10Q: "Can I contact you just for an idea?",
+      faq10A:
+        "Yes, you can write to me even in the early stages. We can figure out together whether the idea can become a real project.",
       contactSub: "Stay in touch",
       contactDesc: "Write me for collaborations, ideas or projects.",
       contactName: "Your name",
       contactEmail: "Your email",
+      contactReason: "Reason",
+      contactReasonOpts: ["Quote", "Collaboration", "Just an idea", "Other"],
+      contactService: "Service",
+      contactServiceOpts: [
+        "Web Development",
+        "Website Management",
+        "Customization",
+        "Garment Design",
+        "Creative Collaborations",
+        "Brand Partnerships",
+      ],
       contactSubject: "Subject",
       contactMsg: "Your message...",
       contactBtn: "Send message",
@@ -619,12 +723,23 @@ document.addEventListener("DOMContentLoaded", function () {
       var o = e.dataset.langKey;
       if (LANG[$][o]) {
         if (e.hasAttribute("data-lang-html")) e.innerHTML = LANG[$][o];
-        else if (e.tagName === "INPUT" || e.tagName === "TEXTAREA")
+        else if (e.tagName === "SELECT") {
+          e.options[0].textContent = LANG[$][o];
+          var opts = LANG[$][o + "Opts"] || [];
+          for (var i = 0; i < opts.length && i + 1 < e.options.length; i++)
+            e.options[i + 1].textContent = opts[i];
+        } else if (e.tagName === "INPUT" || e.tagName === "TEXTAREA")
           e.placeholder = LANG[$][o];
         else e.textContent = LANG[$][o];
       }
     });
   }
+  var _rs = document.getElementById("contactReason"),
+    _sv = document.getElementById("contactService");
+  if (_rs && _sv)
+    _rs.addEventListener("change", function () {
+      _sv.hidden = _rs.value !== "preventivo";
+    });
   document.querySelectorAll(".lp-lang-btn").forEach(function (e) {
     e.addEventListener("click", function () {
       setLang(e.dataset.langBtn);

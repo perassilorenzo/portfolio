@@ -372,7 +372,8 @@ a {
 }
 .lp-badge,
 .lp-input,
-.lp-textarea {
+.lp-textarea,
+.lp-select {
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
@@ -393,7 +394,8 @@ a {
   background: var(--accent-soft);
 }
 .lp-input,
-.lp-textarea {
+.lp-textarea,
+.lp-select {
   background: var(--bg-secondary);
   color: var(--text-primary);
   padding: 14px 18px;
@@ -403,7 +405,8 @@ a {
   font-family: var(--font-sans);
 }
 .lp-input:focus,
-.lp-textarea:focus {
+.lp-textarea:focus,
+.lp-select:focus {
   border-color: var(--accent-silver);
   background-color: var(--bg-card);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.01);
@@ -511,18 +514,6 @@ a {
   border: 1px solid var(--border-color);
   border-radius: 24px;
   padding: 20px;
-}
-.about-img-wrap {
-  flex: 0 0 40%;
-  max-width: 170px;
-}
-.lp-about-img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .lp-about-content {
   display: contents;
@@ -945,7 +936,7 @@ a {
   width: 60px;
   height: 60px;
   min-width: 60px;
-  border-radius: 50%;
+  border-radius: 14px;
   border: 1px solid var(--border-color);
   object-fit: cover;
   margin: 0;
@@ -978,17 +969,6 @@ a {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-.contact-image {
-  width: 100%;
-  max-width: 240px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 24px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-  margin: 0 auto;
-  order: -1;
 }
 .lp-footer {
   background: var(--bg-secondary);
@@ -1054,8 +1034,8 @@ a {
 }
 .lp-tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(62px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: 12px;
 }
 .lp-tech-item,
 .lp-tooltip {
@@ -1108,6 +1088,12 @@ a {
 .lp-tech-item i {
   font-size: 1.7rem;
   line-height: 1;
+}
+.lp-tool-logo {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 .lp-tech-item span {
   font-size: 0.68rem;
@@ -1316,6 +1302,64 @@ a {
   font-size: 1.15rem;
   font-weight: 700;
 }
+.lp-service-cat {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 12px 0 0;
+  padding-top: 18px;
+  border-top: 1px dashed var(--border-color);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.lp-service-cat:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+.lp-service-cat-bar {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border-color), transparent);
+}
+.lp-service-inc {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+.lp-service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+}
+.lp-service-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+.lp-service-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
 
 /* ---- process ---- */
 .lp-process-steps {
@@ -1414,29 +1458,52 @@ a {
 .lp-collab-row {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 24px 0;
+  gap: 24px;
+  padding: 28px 16px;
   border-bottom: 1px solid var(--border-color);
+  border-left: 3px solid transparent;
+  border-radius: 6px;
   transition: all 0.3s ease;
 }
 .lp-collab-row:last-child {
   border-bottom: 0;
 }
 .lp-collab-row:hover {
+  background: var(--bg-card);
+  border-left-color: var(--accent);
   transform: translateX(8px);
 }
 .lp-collab-num {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  letter-spacing: 2px;
+  font-family: var(--font-brand);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -2px;
   color: var(--accent);
-  min-width: 34px;
+  opacity: 0.55;
+  min-width: 64px;
+  transition: opacity 0.3s ease;
+}
+.lp-collab-row:hover .lp-collab-num {
+  opacity: 1;
+}
+.lp-collab-arrow {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+.lp-collab-row:hover .lp-collab-arrow {
+  opacity: 1;
+  transform: translateX(0);
 }
 .lp-collab-info {
   flex: 1;
 }
 .lp-collab-info h3 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin: 0 0 4px;
 }
@@ -1449,13 +1516,13 @@ a {
 .lp-tools-groups {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 28px;
 }
 .lp-tool-group {
   border: 1px solid var(--border-color);
   border-radius: 14px;
   background: var(--bg-card);
-  padding: 20px 18px 18px;
+  padding: 24px 22px 20px;
   transition: border-color 0.3s ease;
 }
 .lp-tool-group:hover {
@@ -1471,8 +1538,8 @@ a {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--text-secondary);
-  margin: 0 0 16px;
-  padding-bottom: 12px;
+  margin: 0 0 18px;
+  padding-bottom: 14px;
   border-bottom: 1px dashed var(--border-color);
 }
 .lp-tool-count {
@@ -1692,20 +1759,17 @@ a {
     border: 1px solid var(--border-color);
     border-radius: 20px;
   }
-  .about-img-wrap {
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin-bottom: 4px;
+  .lp-about-content {
+    display: contents;
   }
-  .lp-about-img {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-    border-radius: 14px;
-    display: block;
-    margin: 0 auto;
+  .about-text-top {
+    flex: 1;
+    min-width: 55%;
+  }
+  .about-text-top .lp-big-title {
+    font-size: clamp(1.6rem, 8vw, 2.8rem);
+    letter-spacing: -1px;
+    text-transform: uppercase;
   }
   .lp-about-content {
     display: block;
@@ -1842,9 +1906,6 @@ a {
     padding: 0 16px;
     margin-top: 32px;
   }
-  .contact-image {
-    display: none;
-  }
   .contact-form-wrapper,
   button[type="submit"] {
     width: 100%;
@@ -1925,21 +1986,6 @@ a {
     padding: 20px;
     gap: 24px;
   }
-  .about-img-wrap {
-    flex: 0 0 35%;
-    max-width: 200px;
-  }
-  .contact-image {
-    display: block;
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-    border-radius: 16px;
-    margin: 0 auto;
-    border: 1px solid var(--border-color);
-  }
   .lp-contact-section {
     flex-direction: column;
     gap: 20px;
@@ -1997,13 +2043,6 @@ a {
     border-radius: 0;
     padding: 0;
     align-items: center;
-  }
-  .about-img-wrap {
-    flex: 0 0 auto;
-    max-width: 320px;
-  }
-  .lp-about-img {
-    max-width: 320px;
   }
   .lp-about-content {
     display: flex;
@@ -2067,11 +2106,6 @@ a {
     flex: 1 1 120px;
     max-width: 120px;
     padding: 8px 16px;
-  }
-  .contact-image {
-    order: 0;
-    max-width: 300px;
-    height: 340px;
   }
   .lp-contact-section {
     padding: 0 24px;
@@ -2154,12 +2188,6 @@ a {
   .about {
     margin-top: 100px;
   }
-  .about-img-wrap {
-    max-width: 400px;
-  }
-  .lp-about-img {
-    max-width: 100%;
-  }
   .lp-activities-container {
     gap: 24px;
   }
@@ -2219,19 +2247,10 @@ a {
     gap: 60px;
     margin-top: 100px;
   }
-  .contact-image {
-    order: 0;
-    max-width: 500px;
-    height: 550px;
-    margin: 0;
-  }
 }
 @media (min-width: 1280px) {
   .lp-hero-img {
     max-width: 700px;
-  }
-  .contact-image {
-    max-width: 500px;
   }
   .lp-footer {
     padding: 80px 24px 30px;
@@ -2415,6 +2434,7 @@ a {
 @media (max-width: 767px) {
   .lp-tools-groups {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
   .lp-timeline-item {
     gap: 14px;
@@ -2507,7 +2527,6 @@ a {
 }
 .lp-hero-img,
 .about-inner,
-.lp-about-img,
 .lp-activity-card,
 .lp-activity-video,
 .lp-activity-tags,
@@ -2527,8 +2546,7 @@ a {
 .lp-timeline-logo,
 .lp-lightbox-media img,
 .lp-lightbox-media video,
-.lp-lightbox-nav,
-.contact-image {
+.lp-lightbox-nav {
   border-radius: 14px;
 }
 .lp-timeline-date {
