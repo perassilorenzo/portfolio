@@ -868,9 +868,9 @@ a {
   white-space: nowrap;
 }
 .lp-badge:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-  background: var(--accent-soft);
+  color: var(--accent-crimson);
+  border-color: var(--accent-crimson);
+  background: rgba(230, 0, 0, 0.1);
 }
 .lp-input,
 .lp-textarea,
@@ -886,9 +886,11 @@ a {
 .lp-input:focus,
 .lp-textarea:focus,
 .lp-select:focus {
-  border-color: var(--accent-silver);
+  border-color: var(--accent-crimson);
   background-color: var(--bg-card);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.01);
+  box-shadow:
+    0 0 0 1px var(--accent-crimson),
+    0 0 24px var(--accent-glow-crimson);
 }
 .lp-textarea {
   resize: vertical;
@@ -1359,7 +1361,9 @@ a {
   border: 1px solid var(--border-color);
   border-radius: 16px;
   overflow: hidden;
-  transition: border-color 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .lp-faq-item summary {
   cursor: pointer;
@@ -1368,7 +1372,8 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  padding: 18px 24px;
+  padding: 20px 24px;
+  font-family: var(--font-sans);
   font-weight: 600;
   font-size: 1rem;
   color: var(--text-primary);
@@ -1381,7 +1386,7 @@ a {
   content: "+";
   font-family: var(--font-mono);
   font-size: 1.1rem;
-  color: var(--accent-silver);
+  color: var(--accent-crimson);
   transition: transform 0.3s ease;
 }
 .lp-faq-item[open] summary::after {
@@ -1389,13 +1394,17 @@ a {
 }
 .lp-faq-item[open] {
   border-color: var(--border-hover);
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px var(--accent-glow-crimson);
 }
 .lp-faq-item p {
   margin: 0;
   padding: 0 24px 20px;
   color: var(--text-secondary);
+  font-family: var(--font-sans);
   font-size: 0.9rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 .lp-faq-item:hover {
   border-color: var(--border-hover);
@@ -1465,6 +1474,9 @@ a {
 .lp-select {
   padding: 14px 16px;
   font-size: 0.95rem;
+}
+.lp-contact-form .lp-btn {
+  width: 100%;
 }
 .lp-btn {
   padding: 14px 28px;
