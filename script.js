@@ -209,11 +209,47 @@ document.addEventListener("DOMContentLoaded", function () {
   const f = document.querySelector(".lp-hero-img");
   if (f) {
     const J = parseFloat(f.dataset.speed) || 0.95;
+    const heroImage = document.getElementById("heroImage");
+    const glow = heroImage ? heroImage.querySelector(".lp-hero-glow") : null;
+    let tiltX = 0,
+      tiltY = 0;
+    if (heroImage) {
+      heroImage.addEventListener("mousemove", (e) => {
+        const o = heroImage.getBoundingClientRect();
+        const px = (e.clientX - o.left) / o.width - 0.5;
+        const py = (e.clientY - o.top) / o.height - 0.5;
+        tiltY = px * 14;
+        tiltX = py * -14;
+        if (glow) {
+          glow.style.left = e.clientX - o.left + "px";
+          glow.style.top = e.clientY - o.top + "px";
+        }
+        f.style.transform = `translateY(${0.3 * (scrollY * (1 - J))}px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+      });
+      heroImage.addEventListener("mouseleave", () => {
+        tiltX = 0;
+        tiltY = 0;
+        f.style.transform = `translateY(${0.3 * (scrollY * (1 - J))}px)`;
+      });
+    }
     addEventListener(
       "scroll",
       () => {
         const e = scrollY * (1 - J);
-        f.style.transform = `translateY(${0.3 * e}px)`;
+        f.style.transform = `translateY(${0.3 * e}px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+      },
+      { passive: !0 },
+    );
+  }
+  const heroLines = document.querySelectorAll(".lp-hero-line");
+  if (heroLines.length) {
+    addEventListener(
+      "scroll",
+      () => {
+        heroLines.forEach((e) => {
+          const o = parseFloat(e.dataset.speed) || 1;
+          e.style.transform = `translateY(${scrollY * (1 - o) * -0.15}px)`;
+        });
       },
       { passive: !0 },
     );
@@ -354,6 +390,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }),
         (e.style.cursor = "pointer"));
     }),
+      document.querySelectorAll(".lp-project-media").forEach((e) => {
+        e.addEventListener("click", (t) => {
+          if (trackDragged) return;
+          t.stopPropagation();
+          const o = e.closest(".lp-project-card");
+          if (!o) return;
+          const n = o.dataset.video;
+          B(n ? [n] : [o.dataset.media], 0);
+        });
+      }),
       w.addEventListener("click", (e) => {
         (e.stopPropagation(), A(-1));
       }),
@@ -384,6 +430,56 @@ document.addEventListener("DOMContentLoaded", function () {
       (window.closeLightbox = function () {
         (E.classList.remove("open"), (b.innerHTML = ""), (k = []));
       }));
+  }
+  const track = document.getElementById("projectsTrack"),
+    prevBtn = document.getElementById("projectsPrev"),
+    nextBtn = document.getElementById("projectsNext");
+  let trackDragged = false;
+  if (track) {
+    const step = () => {
+      const o = track.querySelector(".lp-project-card");
+      return o ? o.getBoundingClientRect().width + 20 : 300;
+    };
+    prevBtn &&
+      prevBtn.addEventListener("click", () =>
+        track.scrollBy({ left: -step(), behavior: "smooth" }),
+      );
+    nextBtn &&
+      nextBtn.addEventListener("click", () =>
+        track.scrollBy({ left: step(), behavior: "smooth" }),
+      );
+    let isDown = false,
+      startX = 0,
+      scrolled = 0,
+      moved = 0;
+    track.addEventListener("mousedown", (e) => {
+      isDown = true;
+      moved = 0;
+      startX = e.pageX - track.offsetLeft;
+      scrolled = track.scrollLeft;
+    });
+    document.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const dx = e.pageX - track.offsetLeft - startX;
+      moved = Math.max(moved, Math.abs(dx));
+      track.scrollLeft = scrolled - dx;
+    });
+    document.addEventListener("mouseup", () => {
+      trackDragged = moved > 5;
+      isDown = false;
+      setTimeout(() => (trackDragged = false), 50);
+    });
+  }
+  const ctaCard = document.querySelector(".lp-cta-card");
+  if (ctaCard) {
+    ctaCard.addEventListener("mousemove", (e) => {
+      const o = ctaCard.getBoundingClientRect();
+      const x = (e.clientX - o.left) / o.width - 0.5;
+      const y = (e.clientY - o.top) / o.height - 0.5;
+      ctaCard.style.setProperty("--cx", x.toFixed(3));
+      ctaCard.style.setProperty("--cy", y.toFixed(3));
+    });
   }
   const LANG = {
     it: {
@@ -473,38 +569,28 @@ document.addEventListener("DOMContentLoaded", function () {
       toolGroupDesign: "Design & Editing",
       toolGroupTools: "Strumenti & Office",
       faqSub: "Domande frequenti",
-      faq1Q: "Che tipo di progetti accetti?",
+      faq1Q: "Chi gestisce dominio e hosting?",
       faq1A:
-        "Accetto collaborazioni con piccole imprese, brand, creator e realt\u00e0 creative interessate a sviluppare progetti digitali, fashion o contenuti.",
-      faq2Q: "Realizzi siti web per qualsiasi attivit\u00e0?",
-      faq2A:
-        "S\u00ec, sviluppo principalmente siti per locali, piccole imprese, professionisti e brand che vogliono migliorare la propria presenza online.",
-      faq3Q: "Cosa comprende la realizzazione di un sito?",
-      faq3A:
-        "Il servizio pu\u00f2 includere progettazione, sviluppo, versione mobile, pubblicazione online, configurazione dominio e supporto tecnico dopo la consegna.",
-      faq4Q: "Chi gestisce dominio e hosting del sito?",
-      faq4A:
         "Il dominio e i servizi collegati possono essere acquistati direttamente dal cliente oppure gestiti insieme. In caso di manutenzione continuativa posso occuparmi della parte tecnica.",
-      faq5Q: "Posso richiedere un capo personalizzato?",
-      faq5A:
+      faq2Q: "Posso richiedere un capo personalizzato?",
+      faq2A:
         "S\u00ec, realizzo custom fashion partendo da capi esistenti, lavorando su modifiche, dettagli, materiali e concept personalizzati.",
-      faq6Q: "Realizzi solo custom o anche design di capi?",
-      faq6A:
-        "Mi occupo anche di design di capi: creo concept visivi, sketch, scelte estetiche, materiali e dettagli grafici senza occuparmi della produzione industriale.",
-      faq7Q: "Come funzionano le collaborazioni con brand?",
-      faq7A:
-        "Le collaborazioni vengono sviluppate in base al progetto: possono essere contenuti creativi, integrazioni prodotto o idee condivise per raccontare un brand in modo autentico.",
-      faq8Q: "Quanto costa un progetto?",
-      faq8A:
+      faq3Q: "Quanto costa un progetto?",
+      faq3A:
         "Ogni progetto viene valutato singolarmente in base a complessit\u00e0, tempi e obiettivi. Dopo una prima analisi preparo una proposta personalizzata.",
-      faq9Q: "Quanto tempo serve per completare un progetto?",
-      faq9A:
+      faq4Q: "Quanto tempo serve per completare un progetto?",
+      faq4A:
         "Dipende dal tipo di lavoro. Un sito semplice pu\u00f2 richiedere alcune settimane, mentre progetti pi\u00f9 creativi o personalizzati possono richiedere pi\u00f9 tempo.",
-      faq10Q: "Posso contattarti anche solo per un'idea?",
-      faq10A:
+      faq5Q: "Posso contattarti anche solo per un'idea?",
+      faq5A:
         "S\u00ec, puoi scrivermi anche nelle fasi iniziali. Possiamo valutare insieme se l'idea pu\u00f2 trasformarsi in un progetto concreto.",
       contactSub: "Restiamo in contatto",
       contactDesc: "Scrivimi per collaborazioni, idee o progetti.",
+      ctaLabel: "Hai un'idea o un progetto?",
+      ctaTitle: 'Facciamolo <span class="lp-cta-accent">su misura.</span>',
+      ctaText:
+        "Sito web, capo personalizzato o contenuti: raccontami la tua idea e la trasformiamo in qualcosa di concreto.",
+      ctaBtn: "Parliamone",
       contactName: "Il tuo nome",
       contactEmail: "La tua email",
       contactReason: "Motivo",
@@ -616,38 +702,29 @@ document.addEventListener("DOMContentLoaded", function () {
       toolGroupDesign: "Design & Editing",
       toolGroupTools: "Tools & Office",
       faqSub: "Frequently asked questions",
-      faq1Q: "What kind of projects do you take on?",
+      faq1Q: "Who manages the domain and hosting?",
       faq1A:
-        "I work with small businesses, brands, creators and creative realities interested in developing digital, fashion or content projects.",
-      faq2Q: "Do you build websites for any business?",
-      faq2A:
-        "Yes, I mainly build sites for local shops, small businesses, professionals and brands that want to improve their online presence.",
-      faq3Q: "What does building a website include?",
-      faq3A:
-        "The service can include design, development, mobile version, going live online, domain setup and technical support after delivery.",
-      faq4Q: "Who manages the domain and hosting of the site?",
-      faq4A:
         "The domain and related services can be bought directly by the client or managed together. For ongoing maintenance I can take care of the technical side.",
-      faq5Q: "Can I request a custom garment?",
-      faq5A:
+      faq2Q: "Can I request a custom garment?",
+      faq2A:
         "Yes, I make custom fashion starting from existing garments, working on modifications, details, materials and custom concepts.",
-      faq6Q: "Do you only do custom work or also garment design?",
-      faq6A:
-        "I also do garment design: I create visual concepts, sketches, aesthetic choices, materials and graphic details, without handling industrial production.",
-      faq7Q: "How do brand collaborations work?",
-      faq7A:
-        "Collaborations are developed according to the project: they can be creative content, product integrations or shared ideas to tell a brand authentically.",
-      faq8Q: "How much does a project cost?",
-      faq8A:
+      faq3Q: "How much does a project cost?",
+      faq3A:
         "Each project is evaluated individually based on complexity, timeline and goals. After an initial analysis I prepare a custom proposal.",
-      faq9Q: "How long does it take to complete a project?",
-      faq9A:
+      faq4Q: "How long does it take to complete a project?",
+      faq4A:
         "It depends on the kind of work. A simple site can take a few weeks, while more creative or custom projects can take longer.",
-      faq10Q: "Can I contact you just for an idea?",
-      faq10A:
+      faq5Q: "Can I contact you just for an idea?",
+      faq5A:
         "Yes, you can write to me even in the early stages. We can figure out together whether the idea can become a real project.",
       contactSub: "Stay in touch",
       contactDesc: "Write me for collaborations, ideas or projects.",
+      ctaLabel: "Have an idea or a project?",
+      ctaTitle:
+        'Let\'s make it <span class="lp-cta-accent">custom-made.</span>',
+      ctaText:
+        "Website, custom garment or content: tell me your idea and we'll turn it into something real.",
+      ctaBtn: "Let's talk",
       contactName: "Your name",
       contactEmail: "Your email",
       contactReason: "Reason",
@@ -702,5 +779,13 @@ document.addEventListener("DOMContentLoaded", function () {
       setLang(e.dataset.langBtn);
     });
   });
+  var navbarEl = document.querySelector(".lp-navbar");
+  if (navbarEl) {
+    function onScroll() {
+      navbarEl.classList.toggle("is-scrolled", window.scrollY > 40);
+    }
+    onScroll();
+    addEventListener("scroll", onScroll, { passive: true });
+  }
   setLang(_lang);
 });

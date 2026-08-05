@@ -222,7 +222,10 @@
 
     <section class="lp-hero d-flex align-items-center" id="hero">
       <div class="lp-hero-content pe-4">
-        <h1 class="lp-hero-title">lorenzo<br />perassi</h1>
+        <h1 class="lp-hero-title">
+          <span class="lp-hero-line" data-speed="1.08">lorenzo</span>
+          <span class="lp-hero-line" data-speed="0.85">perassi</span>
+        </h1>
         <div class="mt-2">
           <span class="lp-badge" data-lang-key="heroAvail"
             >Disponibile per nuovi progetti</span
@@ -252,7 +255,8 @@
           >
         </div>
       </div>
-      <div class="lp-hero-image ms-auto">
+      <div class="lp-hero-image ms-auto" id="heroImage">
+        <div class="lp-hero-glow" aria-hidden="true"></div>
         <img
           src="assets/hero-intro.webp"
           alt="Lorenzo Perassi"
@@ -264,8 +268,16 @@
 
     <!-- ABOUT -->
     <section class="about d-flex mt-5 pt-5" id="about">
-      <div class="about-inner lp-reveal">
-        <div class="lp-about-content">
+      <div class="lp-about-grid lp-reveal">
+        <div class="lp-about-media">
+          <img
+            src="assets/about-portrait.webp"
+            alt="Lorenzo Perassi"
+            class="lp-about-img"
+            loading="lazy"
+          />
+        </div>
+        <div class="lp-about-text">
           <div class="about-text-top">
             <h2 class="lp-big-title">about</h2>
             <h3
@@ -274,39 +286,27 @@
             >
               Chi sono
             </h3>
-            <p
-              class="lp-text-secondary lp-content-about about-intro"
-              data-lang-key="aboutP1"
-              data-lang-html
-            >
-              Sono Lorenzo Perassi, developer, creator e studente di
-              Informatica.
-              <br /><br />Costruisco prodotti digitali dove codice, design e
-              creatività si incontrano. Il mio progetto principale è Customly,
-              una piattaforma di personalizzazione abbigliamento che unisce moda
-              e tecnologia.
-            </p>
           </div>
           <p
-            class="lp-text-secondary lp-content-about about-rest"
-            data-lang-key="aboutP2"
+            class="lp-text-secondary lp-content-about about-intro"
+            data-lang-key="aboutP1"
             data-lang-html
           >
-            Utilizzo le piattaforme digitali come uno spazio dove condividere
-            progetti, esperimenti creativi, routine, lavoro pratico e crescita
-            personale, oltre che per creare connessioni, farmi conoscere e
-            portarmi opportunità. <br /><br />Collaboro con brand locali e
-            pagine creative, lavorando su contenuti, comunicazioni online e
-            progetti creativi. Sviluppo anche siti web per locali e piccole
-            imprese. <br /><br />
-            Lavoro su Customly come piattaforma principale, dove sviluppo il
-            configuratore digitale e gestisco la piattaforma.
+            Sono Lorenzo Perassi, developer, creator e studente di Informatica.
+            <br /><br />Costruisco prodotti digitali dove codice, design e
+            creatività si incontrano. Il mio progetto principale è Customly, una
+            piattaforma di personalizzazione abbigliamento che unisce moda e
+            tecnologia.
           </p>
+          <a
+            href="#contact"
+            class="lp-btn lp-btn-solid text-decoration-none mt-3"
+            data-lang-key="aboutCta"
+            >Parliamo del tuo progetto <span class="lp-cta-arrow">→</span></a
+          >
         </div>
       </div>
     </section>
-
-    <br /><br /><br />
 
     <!-- SERVIZI -->
     <section class="lp-section lp-reveal" id="services">
@@ -454,19 +454,23 @@
         </button>
       </div>
 
-      <div class="lp-projects-grid px-3 lp-reveal">
+      <div class="lp-projects-track lp-reveal" id="projectsTrack">
         <div
-          class="lp-project-card d-flex align-items-center"
+          class="lp-project-card"
           data-category="personal-project"
           data-scroll="customly"
+          data-media="assets/customly-logo.webp"
         >
-          <img
-            src="assets/customly-logo.webp"
-            alt="Customly"
-            class="lp-project-img rounded-circle bg-white"
-            loading="lazy"
-          />
-          <div class="ps-2">
+          <div class="lp-project-media" data-lightbox-media>
+            <img
+              src="assets/customly-logo.webp"
+              alt="Customly"
+              class="lp-project-img"
+              loading="lazy"
+            />
+            <span class="lp-project-overlay">▶</span>
+          </div>
+          <div class="lp-project-body">
             <h4 class="fs-5 fw-bold mb-1">Customly</h4>
             <p class="lp-text-secondary small mb-2">
               Piattaforma di custom fashion: unisco moda e tecnologia con un
@@ -487,17 +491,20 @@
           </div>
         </div>
         <div
-          class="lp-project-card d-flex align-items-center"
+          class="lp-project-card"
           data-category="client-work"
           data-media="assets/project-crybu-banner.webp"
         >
-          <img
-            src="assets/project-crybu-logo.webp"
-            alt="CRYBU"
-            class="lp-project-img rounded-circle bg-white"
-            loading="lazy"
-          />
-          <div class="ps-2">
+          <div class="lp-project-media" data-lightbox-media>
+            <img
+              src="assets/project-crybu-banner.webp"
+              alt="CRYBU"
+              class="lp-project-img"
+              loading="lazy"
+            />
+            <span class="lp-project-overlay">▶</span>
+          </div>
+          <div class="lp-project-body">
             <h4 class="fs-5 fw-bold mb-1">CRYBU</h4>
             <p class="lp-text-secondary small mb-2">
               Collaborazione creativa di fashion design & sartoria: ideazione e
@@ -513,6 +520,20 @@
           </div>
         </div>
       </div>
+      <button
+        class="lp-projects-prev"
+        id="projectsPrev"
+        aria-label="Precedenti"
+      >
+        ‹
+      </button>
+      <button
+        class="lp-projects-next"
+        id="projectsNext"
+        aria-label="Successivi"
+      >
+        ›
+      </button>
     </section>
 
     <div class="lp-divider"></div>
@@ -706,11 +727,9 @@
       </div>
     </section>
 
-    <br /><br />
     <div class="lp-divider"></div>
 
     <div class="lp-section px-4">
-      <br /><br />
       <div class="lp-divider"></div>
 
       <!-- TOOLS -->
@@ -955,95 +974,47 @@
       </div>
       <div class="d-flex flex-column gap-3 px-4">
         <details class="lp-faq-item lp-reveal">
-          <summary data-lang-key="faq1Q">Che tipo di progetti accetti?</summary>
+          <summary data-lang-key="faq1Q">
+            Chi gestisce dominio e hosting?
+          </summary>
           <p data-lang-key="faq1A">
-            Accetto collaborazioni con piccole imprese, brand, creator e realtà
-            creative interessate a sviluppare progetti digitali, fashion o
-            contenuti.
-          </p>
-        </details>
-        <details class="lp-faq-item lp-reveal">
-          <summary data-lang-key="faq2Q">
-            Realizzi siti web per qualsiasi attività?
-          </summary>
-          <p data-lang-key="faq2A">
-            Sì, sviluppo principalmente siti per locali, piccole imprese,
-            professionisti e brand che vogliono migliorare la propria presenza
-            online.
-          </p>
-        </details>
-        <details class="lp-faq-item lp-reveal">
-          <summary data-lang-key="faq3Q">
-            Cosa comprende la realizzazione di un sito?
-          </summary>
-          <p data-lang-key="faq3A">
-            Il servizio può includere progettazione, sviluppo, versione mobile,
-            pubblicazione online, configurazione dominio e supporto tecnico dopo
-            la consegna.
-          </p>
-        </details>
-        <details class="lp-faq-item lp-reveal">
-          <summary data-lang-key="faq4Q">
-            Chi gestisce dominio e hosting del sito?
-          </summary>
-          <p data-lang-key="faq4A">
             Il dominio e i servizi collegati possono essere acquistati
             direttamente dal cliente oppure gestiti insieme. In caso di
             manutenzione continuativa posso occuparmi della parte tecnica.
           </p>
         </details>
         <details class="lp-faq-item lp-reveal">
-          <summary data-lang-key="faq5Q">
+          <summary data-lang-key="faq2Q">
             Posso richiedere un capo personalizzato?
           </summary>
-          <p data-lang-key="faq5A">
+          <p data-lang-key="faq2A">
             Sì, realizzo custom fashion partendo da capi esistenti, lavorando su
             modifiche, dettagli, materiali e concept personalizzati.
           </p>
         </details>
         <details class="lp-faq-item lp-reveal">
-          <summary data-lang-key="faq6Q">
-            Realizzi solo custom o anche design di capi?
-          </summary>
-          <p data-lang-key="faq6A">
-            Mi occupo anche di design di capi: creo concept visivi, sketch,
-            scelte estetiche, materiali e dettagli grafici senza occuparmi della
-            produzione industriale.
-          </p>
-        </details>
-        <details class="lp-faq-item lp-reveal">
-          <summary data-lang-key="faq7Q">
-            Come funzionano le collaborazioni con brand?
-          </summary>
-          <p data-lang-key="faq7A">
-            Le collaborazioni vengono sviluppate in base al progetto: possono
-            essere contenuti creativi, integrazioni prodotto o idee condivise
-            per raccontare un brand in modo autentico.
-          </p>
-        </details>
-        <details class="lp-faq-item lp-reveal">
-          <summary data-lang-key="faq8Q">Quanto costa un progetto?</summary>
-          <p data-lang-key="faq8A">
+          <summary data-lang-key="faq3Q">Quanto costa un progetto?</summary>
+          <p data-lang-key="faq3A">
             Ogni progetto viene valutato singolarmente in base a complessità,
             tempi e obiettivi. Dopo una prima analisi preparo una proposta
             personalizzata.
           </p>
         </details>
         <details class="lp-faq-item lp-reveal">
-          <summary data-lang-key="faq9Q">
+          <summary data-lang-key="faq4Q">
             Quanto tempo serve per completare un progetto?
           </summary>
-          <p data-lang-key="faq9A">
+          <p data-lang-key="faq4A">
             Dipende dal tipo di lavoro. Un sito semplice può richiedere alcune
             settimane, mentre progetti più creativi o personalizzati possono
             richiedere più tempo.
           </p>
         </details>
         <details class="lp-faq-item lp-reveal">
-          <summary data-lang-key="faq10Q">
+          <summary data-lang-key="faq5Q">
             Posso contattarti anche solo per un'idea?
           </summary>
-          <p data-lang-key="faq10A">
+          <p data-lang-key="faq5A">
             Sì, puoi scrivermi anche nelle fasi iniziali. Possiamo valutare
             insieme se l'idea può trasformarsi in un progetto concreto.
           </p>
@@ -1164,6 +1135,28 @@
           </svg>
           Scrivimi su WhatsApp
         </a>
+      </div>
+    </section>
+
+    <!-- BIG CTA -->
+    <section class="lp-section lp-reveal" id="cta">
+      <div class="lp-cta-card">
+        <p class="lp-cta-label" data-lang-key="ctaLabel">
+          Hai un'idea o un progetto?
+        </p>
+        <h2 class="lp-cta-title" data-lang-key="ctaTitle" data-lang-html>
+          Facciamolo <span class="lp-cta-accent">su misura.</span>
+        </h2>
+        <p class="lp-cta-text lp-text-secondary" data-lang-key="ctaText">
+          Sito web, capo personalizzato o contenuti: raccontami la tua idea e la
+          trasformiamo in qualcosa di concreto.
+        </p>
+        <a
+          href="#contact"
+          class="lp-btn lp-btn-solid lp-cta-btn text-decoration-none mt-3"
+          data-lang-key="ctaBtn"
+          >Parliamone <span class="lp-cta-arrow">→</span></a
+        >
       </div>
     </section>
     <!-- project detail modal -->
