@@ -208,11 +208,8 @@
 
     <!-- HERO -->
     <section class="lp-hero" id="hero" aria-labelledby="hero-title">
-      <div
-        class="lp-container lp-flex lp-flex-col lp-items-start lp-justify-center lp-gap-4"
-        style="min-height: 90vh; position: relative; z-index: 1"
-      >
-        <!-- Silhouette Layer (behind text) -->
+      <div class="lp-container" style="position: relative; min-height: 92vh">
+        <!-- Silhouette (behind text) -->
         <div class="lp-hero-silhouette" aria-hidden="true">
           <img
             src="assets/hero-intro.webp"
@@ -220,73 +217,61 @@
             loading="eager"
             style="
               width: 100%;
-              max-width: 700px;
+              max-width: 620px;
               height: auto;
-              filter: drop-shadow(0 40px 80px rgba(230, 0, 0, 0.4));
+              filter: drop-shadow(0 40px 80px rgba(230, 0, 0, 0.35));
               animation: float-slow 6s ease-in-out infinite;
             "
           />
         </div>
 
-        <!-- Text Layer (on top) -->
+        <!-- Text on top -->
         <div
-          class="lp-hero-content lp-flex lp-flex-col lp-items-start lp-gap-4"
-          style="position: relative; z-index: 2; max-width: 900px"
+          class="lp-hero-content"
+          style="position: relative; z-index: 2; max-width: 640px"
         >
+          <p
+            class="lp-mono lp-text-muted"
+            style="
+              font-size: 0.78rem;
+              letter-spacing: 3px;
+              text-transform: uppercase;
+              margin: 0 0 16px;
+            "
+          >
+            developer · creator · saluzzo, IT
+          </p>
           <h1
             id="hero-title"
-            class="lp-display lp-display-hero lp-gradient-accent"
-            style="line-height: 0.95; white-space: nowrap"
+            class="lp-display lp-display-hero lp-text-primary"
+            style="margin: 0"
           >
             lorenzo<br />perassi
           </h1>
-
-          <div
-            class="lp-flex lp-items-center lp-gap-3 lp-marquee"
-            style="
-              width: 100%;
-              max-width: 100%;
-              border-top: 1px solid var(--border-color);
-              border-bottom: 1px solid var(--border-color);
-              padding: 16px 0;
-              margin-top: 8px;
-            "
-          >
-            <div
-              class="lp-marquee-track lp-flex lp-items-center lp-gap-6"
-              style="
-                font-family: var(--font-mono);
-                font-size: 0.85rem;
-                font-weight: 600;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                color: var(--text-muted);
-              "
-            >
-              <span>fashion</span><span>•</span><span>it</span><span>•</span
-              ><span>cs</span><span>•</span><span>coding</span><span>•</span
-              ><span>custom</span><span>•</span><span>content creation</span
-              ><span>•</span><span>tech</span> <span>fashion</span><span>•</span
-              ><span>it</span><span>•</span><span>cs</span><span>•</span
-              ><span>coding</span><span>•</span><span>custom</span><span>•</span
-              ><span>content creation</span><span>•</span><span>tech</span>
-            </div>
-          </div>
-
           <p
-            class="lp-serif lp-text-secondary"
+            class="lp-serif lp-accent-orange"
             style="
-              font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-              line-height: 1.6;
-              max-width: 60ch;
-              margin: 8px 0 16px;
+              font-size: clamp(1.3rem, 3vw, 1.9rem);
+              font-style: italic;
+              margin: 16px 0 24px;
             "
           >
-            Costruisco siti web, custom fashion e contenuti video che portano
-            risultati.
+            Code. Fabric. Culture.
           </p>
-
-          <div class="lp-flex lp-items-center lp-gap-4" style="margin-top: 8px">
+          <p
+            class="lp-sans lp-text-secondary"
+            style="
+              font-size: 1.05rem;
+              line-height: 1.75;
+              max-width: 50ch;
+              margin: 0 0 32px;
+            "
+            data-lang-key="heroTagline"
+          >
+            Costruisco siti web e capi unici: unisco sviluppo e fashion design
+            in progetti fatti bene, dall'idea alla consegna.
+          </p>
+          <div class="lp-flex lp-items-center lp-gap-4 lp-flex-wrap">
             <a
               href="#projects"
               class="lp-btn lp-btn-primary"
@@ -300,18 +285,13 @@
               >Contattami</a
             >
           </div>
-
           <div
             class="lp-flex lp-items-center lp-gap-3 lp-text-muted lp-mono"
             style="
               font-size: 0.75rem;
               letter-spacing: 1px;
               text-transform: uppercase;
-              margin-top: 24px;
-              padding-top: 16px;
-              border-top: 1px solid var(--border-color);
-              width: 100%;
-              max-width: 400px;
+              margin-top: 40px;
             "
           >
             <span class="lp-led lp-led--live" aria-label="Disponibile"></span>
@@ -322,23 +302,23 @@
         </div>
       </div>
 
-      <!-- Ambient glow behind silhouette -->
+      <!-- Ambient glow -->
       <div
         class="lp-hero-glow"
         aria-hidden="true"
         style="
           position: absolute;
           top: 50%;
-          right: 10%;
-          width: 500px;
-          height: 500px;
+          right: 5%;
+          width: 600px;
+          height: 600px;
           background: radial-gradient(
             ellipse at center,
             var(--accent-glow-crimson) 0%,
             transparent 70%
           );
           filter: blur(80px);
-          opacity: 0.6;
+          opacity: 0.5;
           pointer-events: none;
           z-index: 0;
           transform: translateY(-50%);
@@ -352,93 +332,67 @@
       id="about"
       style="margin-top: var(--section-gap)"
     >
-      <div
-        class="lp-container lp-flex lp-flex-col lg:lp-flex-row lp-items-start lp-gap-6"
-      >
-        <!-- Bio Left -->
-        <div class="lp-flex-1 lp-min-w-320 lp-reveal">
-          <h2 class="lp-display lp-display-md lp-text-primary">about</h2>
+      <div class="lp-container">
+        <div class="lp-flex lp-flex-col lp-items-start lp-gap-2 lp-reveal">
+          <h2 class="lp-display lp-display-lg lp-text-primary">about</h2>
           <h3
             class="lp-serif lp-text-secondary"
-            style="
-              font-size: clamp(1.1rem, 2vw, 1.35rem);
-              margin: 8px 0 24px;
-              max-width: 50ch;
-            "
+            style="font-size: clamp(1.1rem, 2vw, 1.35rem)"
+            data-lang-key="aboutSub"
           >
             Chi sono
           </h3>
+        </div>
+        <div
+          class="lp-flex lp-flex-col lg:lp-flex-row lp-items-start lp-gap-6"
+          style="margin-top: 40px"
+        >
+          <!-- Portrait -->
+          <div
+            class="lp-reveal lp-reveal-delay-1"
+            style="flex-shrink: 0; width: 100%; max-width: 360px"
+          >
+            <img
+              src="assets/about-portrait.webp"
+              alt="Lorenzo Perassi"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 20px;
+                border: 1px solid var(--border-color);
+                box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+              "
+            />
+          </div>
+
+          <!-- Bio -->
           <div
             class="lp-sans lp-text-secondary"
-            style="font-size: 1.05rem; line-height: 1.8"
+            style="font-size: 1.05rem; line-height: 1.8; max-width: 60ch"
           >
-            <p data-lang-key="aboutP1" data-lang-html>
-              Sono Lorenzo Perassi, developer, creator e studente di
-              Informatica.<br /><br />Costruisco prodotti digitali dove codice,
-              design e creatività si incontrano. Il mio progetto principale è
-              Customly, una piattaforma di personalizzazione abbigliamento che
-              unisce moda e tecnologia.
+            <p data-lang-key="aboutP1" data-lang-html style="margin: 0">
+              Sono Lorenzo Perassi, developer e studente di Informatica. Unisco
+              codice e fashion: costruisco siti web e capi unici con la stessa
+              cura per i dettagli.
             </p>
             <p data-lang-key="aboutP2" data-lang-html style="margin-top: 24px">
-              Utilizzo le piattaforme digitali come uno spazio dove condividere
-              progetti, esperimenti creativi, routine, lavoro pratico e crescita
-              personale, oltre che per creare connessioni, farmi conoscere e
-              portarmi opportunità.<br /><br />Collaboro con brand locali e
-              pagine creative, lavorando su contenuti, comunicazioni online e
-              progetti creativi. Sviluppo anche siti web per locali e piccole
-              imprese.<br /><br />Lavoro su Customly come piattaforma
-              principale, dove sviluppo il configuratore digitale e gestisco la
-              piattaforma.
+              Il mio progetto principale è Customly, una piattaforma di custom
+              fashion che unisce moda e tecnologia.<br /><br />Lavoro con
+              attività locali e piccole imprese per costruire la loro presenza
+              online, e con brand per progetti creativi e collaborazioni.
             </p>
-          </div>
-        </div>
-
-        <!-- Terminal Right -->
-        <div
-          class="lp-flex-shrink-0 lp-w-full lg:lp-w-[480px] lp-reveal lp-reveal-delay-1"
-        >
-          <div class="lp-terminal" aria-label="Terminale">
-            <div class="lp-terminal-bar">
-              <span class="lp-terminal-dot r"></span>
-              <span class="lp-terminal-dot y"></span>
-              <span class="lp-terminal-dot g"></span>
-              <span class="lp-terminal-title">lorenzo@perassi:~</span>
-            </div>
-            <div class="lp-terminal-body" id="terminal-body">
-              <div class="lp-term-line">
-                <span class="lp-term-prompt">$ </span
-                ><span class="lp-term-cmd">whoami</span>
-              </div>
-              <div class="lp-term-line lp-term-out">
-                lorenzo perassi — tech · fashion · communication
-              </div>
-              <div class="lp-term-line">
-                <span class="lp-term-prompt">$ </span
-                ><span class="lp-term-cmd">cat stack.txt</span>
-              </div>
-              <div class="lp-term-line lp-term-out">
-                lang: html css js seo/geo
-              </div>
-              <div class="lp-term-line lp-term-out">
-                web: cloudflare github d1 r2
-              </div>
-              <div class="lp-term-line lp-term-out">fashion: custom</div>
-              <div class="lp-term-line">
-                <span class="lp-term-prompt">$ </span
-                ><span class="lp-term-cmd">echo $MAIN_PROJECT</span>
-              </div>
-              <div class="lp-term-line lp-term-out">
-                customly.it — custom fashion platform
-              </div>
-              <div class="lp-term-line">
-                <span class="lp-term-prompt">$ </span
-                ><span class="lp-term-cmd">ls ./goals</span>
-              </div>
-              <div class="lp-term-line lp-term-out">build grow network</div>
-              <div class="lp-term-line">
-                <span class="lp-term-prompt">$ </span
-                ><span class="lp-term-cursor"></span>
-              </div>
+            <div
+              class="lp-flex lp-items-center lp-gap-3"
+              style="margin-top: 32px"
+            >
+              <a
+                href="#contact"
+                class="lp-btn lp-btn-primary"
+                data-lang-key="aboutCta"
+                >Parliamo del tuo progetto
+                <span class="lp-cta-arrow">→</span></a
+              >
             </div>
           </div>
         </div>
@@ -457,6 +411,7 @@
           <h3
             class="lp-serif lp-text-secondary"
             style="font-size: clamp(1.1rem, 2vw, 1.35rem)"
+            data-lang-key="servSub"
           >
             Cosa posso fare per te
           </h3>
@@ -464,29 +419,29 @@
         <div
           class="lp-grid lp-gap-4"
           style="
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             margin-top: 32px;
           "
         >
-          <!-- Service 01 -->
+          <!-- Service 01: Web Dev -->
           <article
             class="lp-card lp-glow-card lp-reveal"
-            style="padding: 40px; position: relative; overflow: visible"
+            style="padding: 32px; position: relative; overflow: visible"
           >
             <div class="lp-card-number" aria-hidden="true">01</div>
             <div style="position: relative; z-index: 1">
               <h3
                 class="lp-display lp-display-md lp-text-primary"
-                style="margin: 0 0 16px; font-size: clamp(1.5rem, 3vw, 2rem)"
+                style="margin: 0 0 16px"
               >
-                Web Development &<br />Management
+                Web Development & Management
               </h3>
               <p
                 class="lp-sans lp-text-secondary"
                 style="
-                  font-size: 1rem;
+                  font-size: 0.98rem;
                   line-height: 1.7;
-                  margin-bottom: 24px;
+                  margin-bottom: 20px;
                   max-width: 45ch;
                 "
                 data-lang-key="servWebDesc"
@@ -498,11 +453,11 @@
               <p
                 class="lp-mono lp-text-muted"
                 style="
-                  font-size: 0.7rem;
+                  font-size: 0.72rem;
                   font-weight: 600;
                   letter-spacing: 1px;
                   text-transform: uppercase;
-                  margin-bottom: 16px;
+                  margin-bottom: 14px;
                 "
                 data-lang-key="servIncludes"
               >
@@ -511,11 +466,11 @@
               <ul
                 class="lp-sans lp-text-secondary"
                 style="
-                  font-size: 0.95rem;
-                  line-height: 2;
+                  font-size: 0.9rem;
+                  line-height: 1.9;
                   list-style: none;
                   padding: 0;
-                  margin: 0 0 32px;
+                  margin: 0 0 28px;
                 "
                 data-lang-html="servWebList"
               >
@@ -535,42 +490,27 @@
                 >Richiedi preventivo <span class="lp-cta-arrow">→</span></a
               >
             </div>
-            <div
-              class="lp-glow-crimson"
-              style="
-                position: absolute;
-                top: -20px;
-                right: -20px;
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-                filter: blur(60px);
-                opacity: 0.15;
-                pointer-events: none;
-                z-index: 0;
-              "
-            ></div>
           </article>
 
-          <!-- Service 02 -->
+          <!-- Service 02: Custom & Design -->
           <article
             class="lp-card lp-glow-card lp-reveal lp-reveal-delay-1"
-            style="padding: 40px; position: relative; overflow: visible"
+            style="padding: 32px; position: relative; overflow: visible"
           >
             <div class="lp-card-number" aria-hidden="true">02</div>
             <div style="position: relative; z-index: 1">
               <h3
                 class="lp-display lp-display-md lp-text-primary"
-                style="margin: 0 0 16px; font-size: clamp(1.5rem, 3vw, 2rem)"
+                style="margin: 0 0 16px"
               >
-                Custom &<br />Design
+                Custom & Design
               </h3>
               <p
                 class="lp-sans lp-text-secondary"
                 style="
-                  font-size: 1rem;
+                  font-size: 0.98rem;
                   line-height: 1.7;
-                  margin-bottom: 24px;
+                  margin-bottom: 20px;
                   max-width: 45ch;
                 "
                 data-lang-key="servCustomDesc"
@@ -583,11 +523,11 @@
               <p
                 class="lp-mono lp-text-muted"
                 style="
-                  font-size: 0.7rem;
+                  font-size: 0.72rem;
                   font-weight: 600;
                   letter-spacing: 1px;
                   text-transform: uppercase;
-                  margin-bottom: 16px;
+                  margin-bottom: 14px;
                 "
                 data-lang-key="servIncludes"
               >
@@ -596,11 +536,11 @@
               <ul
                 class="lp-sans lp-text-secondary"
                 style="
-                  font-size: 0.95rem;
-                  line-height: 2;
+                  font-size: 0.9rem;
+                  line-height: 1.9;
                   list-style: none;
                   padding: 0;
-                  margin: 0 0 32px;
+                  margin: 0 0 28px;
                 "
                 data-lang-html="servCustomList"
               >
@@ -618,101 +558,6 @@
                 >Scopri il mio profilo <span class="lp-cta-arrow">→</span></a
               >
             </div>
-            <div
-              class="lp-glow-crimson"
-              style="
-                position: absolute;
-                top: -20px;
-                right: -20px;
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-                filter: blur(60px);
-                opacity: 0.15;
-                pointer-events: none;
-                z-index: 0;
-              "
-            ></div>
-          </article>
-
-          <!-- Service 03 -->
-          <article
-            class="lp-card lp-glow-card lp-reveal lp-reveal-delay-2"
-            style="padding: 40px; position: relative; overflow: visible"
-          >
-            <div class="lp-card-number" aria-hidden="true">03</div>
-            <div style="position: relative; z-index: 1">
-              <h3
-                class="lp-display lp-display-md lp-text-primary"
-                style="margin: 0 0 16px; font-size: clamp(1.5rem, 3vw, 2rem)"
-              >
-                Collab &<br />Sponsor
-              </h3>
-              <p
-                class="lp-sans lp-text-secondary"
-                style="
-                  font-size: 1rem;
-                  line-height: 1.7;
-                  margin-bottom: 24px;
-                  max-width: 45ch;
-                "
-                data-lang-key="servCollabDesc"
-              >
-                Collaboro con brand e realtà creative: insieme pensiamo a
-                un'idea su cosa fare e la trasformiamo in contenuti autentici,
-                collaborazioni e sponsorizzazioni.
-              </p>
-              <p
-                class="lp-mono lp-text-muted"
-                style="
-                  font-size: 0.7rem;
-                  font-weight: 600;
-                  letter-spacing: 1px;
-                  text-transform: uppercase;
-                  margin-bottom: 16px;
-                "
-                data-lang-key="servIncludes"
-              >
-                Cosa include
-              </p>
-              <ul
-                class="lp-sans lp-text-secondary"
-                style="
-                  font-size: 0.95rem;
-                  line-height: 2;
-                  list-style: none;
-                  padding: 0;
-                  margin: 0 0 32px;
-                "
-                data-lang-html="servCollabList"
-              >
-                <li>Collaborazioni con brand</li>
-                <li>Ideazione di un'idea su cosa fare</li>
-                <li>Progetti condivisi</li>
-                <li>Collaborazioni commerciali</li>
-              </ul>
-              <a
-                href="#contact"
-                class="lp-btn lp-btn-primary"
-                data-lang-key="servCta"
-                >Richiedi preventivo <span class="lp-cta-arrow">→</span></a
-              >
-            </div>
-            <div
-              class="lp-glow-crimson"
-              style="
-                position: absolute;
-                top: -20px;
-                right: -20px;
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-                filter: blur(60px);
-                opacity: 0.15;
-                pointer-events: none;
-                z-index: 0;
-              "
-            ></div>
           </article>
         </div>
       </div>
@@ -735,47 +580,10 @@
             Progetti Selezionati
           </h3>
         </div>
-        <div
-          class="lp-flex lp-flex-wrap lp-gap-3 lp-mono"
-          style="
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin: 24px 0;
-            color: var(--text-muted);
-          "
-        >
-          <button
-            class="lp-filter-btn lp-btn-ghost"
-            data-filter="all"
-            data-lang-key="projAll"
-            style="padding: 8px 16px"
-          >
-            All
-          </button>
-          <button
-            class="lp-filter-btn lp-btn-ghost"
-            data-filter="client-work"
-            data-lang-key="projClient"
-            style="padding: 8px 16px"
-          >
-            Client Work
-          </button>
-          <button
-            class="lp-filter-btn lp-btn-ghost"
-            data-filter="personal-project"
-            data-lang-key="projPersonal"
-            style="padding: 8px 16px"
-          >
-            Personal Project
-          </button>
-        </div>
-
         <!-- Featured Customly Card -->
         <article
-          class="lp-card lp-glow-card lp-reveal lp-reveal-delay-1"
-          style="position: relative; overflow: visible; margin-top: 16px"
+          class="lp-card lp-glow-card lp-reveal"
+          style="position: relative; overflow: visible; margin-top: 32px"
         >
           <div
             class="lp-glow-crimson"
@@ -796,11 +604,11 @@
             style="
               position: relative;
               z-index: 1;
-              padding: 48px;
+              padding: 32px;
               display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: 48px;
-              align-items: start;
+              grid-template-columns: 1.2fr 0.8fr;
+              gap: 40px;
+              align-items: center;
             "
           >
             <div>
@@ -996,1182 +804,6 @@
             />
           </div>
         </article>
-      </div>
-    </section>
-
-    <div class="lp-divider"></div>
-
-    <!-- EXPERIENCE -->
-    <section class="lp-section" style="margin-top: var(--section-gap)">
-      <div class="lp-container">
-        <div class="lp-flex lp-flex-col lp-items-start lp-gap-2 lp-reveal">
-          <h2 class="lp-display lp-display-lg lp-text-primary">Experience</h2>
-          <h3
-            class="lp-serif lp-text-secondary"
-            style="font-size: clamp(1.1rem, 2vw, 1.35rem)"
-            data-lang-key="timelineSub"
-          >
-            Esperienze
-          </h3>
-        </div>
-        <div
-          class="lp-timeline lp-reveal lp-reveal-delay-1"
-          style="margin-top: 40px"
-        >
-          <article
-            class="lp-timeline-item lp-card lp-glow-card"
-            style="
-              padding: 32px;
-              margin-bottom: 24px;
-              display: grid;
-              grid-template-columns: 80px 1fr;
-              gap: 32px;
-              align-items: start;
-            "
-          >
-            <div
-              class="lp-timeline-side"
-              style="
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 16px;
-              "
-            >
-              <div
-                class="lp-timeline-dot"
-                style="
-                  width: 16px;
-                  height: 16px;
-                  border-radius: 50%;
-                  background: var(--accent-gradient);
-                  box-shadow: 0 0 20px var(--accent-glow-crimson);
-                "
-              ></div>
-              <img
-                src="assets/customly-logo.webp"
-                alt="Customly"
-                style="
-                  width: 60px;
-                  height: 60px;
-                  object-fit: contain;
-                  border-radius: 12px;
-                  border: 1px solid var(--border-color);
-                  background: var(--bg-card);
-                "
-              />
-            </div>
-            <div class="lp-timeline-content">
-              <p
-                class="lp-mono lp-text-muted"
-                style="
-                  font-size: 0.75rem;
-                  font-weight: 600;
-                  letter-spacing: 1px;
-                  text-transform: uppercase;
-                  margin: 0 0 8px;
-                "
-              >
-                Lug 2026 — Presente
-              </p>
-              <h3
-                class="lp-display lp-display-md lp-text-primary"
-                style="margin: 0 0 12px; font-size: clamp(1.5rem, 3vw, 2rem)"
-                data-lang-key="tl0Title"
-              >
-                Customly — Founder
-              </h3>
-              <p
-                class="lp-sans lp-text-secondary"
-                style="font-size: 1rem; line-height: 1.7; margin-bottom: 16px"
-                data-lang-key="tl0Desc"
-              >
-                Piattaforma di custom fashion — unisco moda e tecnologia con un
-                configuratore digitale per personalizzare abbigliamento in modo
-                semplice e intuitivo.
-              </p>
-              <div class="lp-flex lp-flex-wrap lp-gap-2">
-                <span class="lp-badge">HTML</span>
-                <span class="lp-badge">CSS</span>
-                <span class="lp-badge">JS</span>
-                <span class="lp-badge">SEO/GEO</span>
-                <span class="lp-badge">Cloudflare</span>
-                <span class="lp-badge">D1</span>
-                <span class="lp-badge">R2</span>
-              </div>
-            </div>
-          </article>
-          <article
-            class="lp-timeline-item lp-card lp-glow-card"
-            style="
-              padding: 32px;
-              margin-bottom: 24px;
-              display: grid;
-              grid-template-columns: 80px 1fr;
-              gap: 32px;
-              align-items: start;
-            "
-          >
-            <div
-              class="lp-timeline-side"
-              style="
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 16px;
-              "
-            >
-              <div
-                class="lp-timeline-dot"
-                style="
-                  width: 16px;
-                  height: 16px;
-                  border-radius: 50%;
-                  background: var(--accent-gradient);
-                  box-shadow: 0 0 20px var(--accent-glow-crimson);
-                "
-              ></div>
-              <img
-                src="assets/project-agency.webp"
-                alt="Omnia4Web"
-                style="
-                  width: 60px;
-                  height: 60px;
-                  object-fit: contain;
-                  border-radius: 12px;
-                  border: 1px solid var(--border-color);
-                  background: var(--bg-card);
-                "
-              />
-            </div>
-            <div class="lp-timeline-content">
-              <p
-                class="lp-mono lp-text-muted"
-                style="
-                  font-size: 0.75rem;
-                  font-weight: 600;
-                  letter-spacing: 1px;
-                  text-transform: uppercase;
-                  margin: 0 0 8px;
-                "
-              >
-                Mag 2026 — Lug 2026
-              </p>
-              <h3
-                class="lp-display lp-display-md lp-text-primary"
-                style="margin: 0 0 12px; font-size: clamp(1.5rem, 3vw, 2rem)"
-                data-lang-key="tl1Title"
-              >
-                Omnia4Web
-              </h3>
-              <p
-                class="lp-sans lp-text-secondary"
-                style="font-size: 1rem; line-height: 1.7; margin-bottom: 16px"
-                data-lang-key="tl1Desc"
-              >
-                Supporto alla creazione di contenuti digitali e comunicazione
-                social. Editing video, grafiche e caption.
-              </p>
-              <div class="lp-flex lp-flex-wrap lp-gap-2">
-                <span class="lp-badge">Lightroom</span>
-                <span class="lp-badge">CapCut</span>
-                <span class="lp-badge">Canva</span>
-                <span class="lp-badge">Caption</span>
-              </div>
-            </div>
-          </article>
-          <article
-            class="lp-timeline-item lp-card lp-glow-card"
-            style="
-              padding: 32px;
-              display: grid;
-              grid-template-columns: 80px 1fr;
-              gap: 32px;
-              align-items: start;
-            "
-          >
-            <div
-              class="lp-timeline-side"
-              style="
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 16px;
-              "
-            >
-              <div
-                class="lp-timeline-dot"
-                style="
-                  width: 16px;
-                  height: 16px;
-                  border-radius: 50%;
-                  background: var(--accent-gradient);
-                  box-shadow: 0 0 20px var(--accent-glow-crimson);
-                "
-              ></div>
-              <img
-                src="assets/experience-bertolotto.png"
-                alt="Bertolotto Porte"
-                style="
-                  width: 60px;
-                  height: 60px;
-                  object-fit: contain;
-                  border-radius: 12px;
-                  border: 1px solid var(--border-color);
-                  background: var(--bg-card);
-                "
-              />
-            </div>
-            <div class="lp-timeline-content">
-              <p
-                class="lp-mono lp-text-muted"
-                style="
-                  font-size: 0.75rem;
-                  font-weight: 600;
-                  letter-spacing: 1px;
-                  text-transform: uppercase;
-                  margin: 0 0 8px;
-                "
-              >
-                6–18 Lug 2026
-              </p>
-              <h3
-                class="lp-display lp-display-md lp-text-primary"
-                style="margin: 0 0 12px; font-size: clamp(1.5rem, 3vw, 2rem)"
-                data-lang-key="tl8Title"
-              >
-                Bertolotto Porte — Stage IT
-              </h3>
-              <p
-                class="lp-sans lp-text-secondary"
-                style="font-size: 1rem; line-height: 1.7; margin-bottom: 16px"
-                data-lang-key="tl8Desc"
-              >
-                Stage estivo di 2 settimane come IT, con focus su gestione
-                documentale e digitalizzazione archivi.
-              </p>
-              <div class="lp-flex lp-flex-wrap lp-gap-2">
-                <span class="lp-badge">SQL</span>
-                <span class="lp-badge">C#</span>
-                <span class="lp-badge">Gestionale</span>
-                <span class="lp-badge">VS</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <div class="lp-divider"></div>
-
-    <!-- COLLABORATIONS -->
-    <section class="lp-section" style="margin-top: var(--section-gap)">
-      <div class="lp-container">
-        <div class="lp-flex lp-flex-col lp-items-start lp-gap-2 lp-reveal">
-          <h2 class="lp-display lp-display-lg lp-text-primary">
-            Collaborations
-          </h2>
-          <h3
-            class="lp-serif lp-text-secondary"
-            style="font-size: clamp(1.1rem, 2vw, 1.35rem)"
-            data-lang-key="collabSub"
-          >
-            Collaborazioni
-          </h3>
-        </div>
-        <div class="lp-flex lp-flex-col lp-gap-4" style="margin-top: 32px">
-          <article
-            class="lp-card lp-glow-card lp-reveal"
-            style="
-              padding: 32px;
-              display: grid;
-              grid-template-columns: 80px 1fr auto;
-              gap: 24px;
-              align-items: center;
-            "
-          >
-            <img
-              src="assets/collab-aleyesure.webp"
-              alt="Aleyesure"
-              style="
-                width: 80px;
-                height: 80px;
-                object-fit: contain;
-                border-radius: 12px;
-                border: 1px solid var(--border-color);
-                background: var(--bg-card);
-              "
-            />
-            <div>
-              <p
-                class="lp-mono lp-text-muted"
-                style="
-                  font-size: 0.7rem;
-                  font-weight: 600;
-                  letter-spacing: 1px;
-                  text-transform: uppercase;
-                  margin: 0 0 8px;
-                "
-                data-lang-key="collab1Name"
-              >
-                Aleyesure
-              </p>
-              <p
-                class="lp-sans lp-text-secondary"
-                style="font-size: 0.95rem; line-height: 1.6; margin: 0 0 16px"
-                data-lang-key="collab1Desc"
-              >
-                All'interno dei miei video sponsorizzo capi di abbigliamento di
-                Aleyesure, brand locale che porta avanti lo slogan "Support
-                local business".
-              </p>
-              <div class="lp-flex lp-flex-wrap lp-gap-2">
-                <span class="lp-tag">Sponsorizzazioni video</span>
-                <span class="lp-tag">Support local business</span>
-              </div>
-            </div>
-            <span
-              class="lp-text-muted"
-              style="
-                font-size: 2rem;
-                transition: transform var(--transition-base);
-              "
-              >↗</span
-            >
-          </article>
-          <article
-            class="lp-card lp-glow-card lp-reveal lp-reveal-delay-1"
-            style="
-              padding: 32px;
-              display: grid;
-              grid-template-columns: 80px 1fr auto;
-              gap: 24px;
-              align-items: center;
-            "
-          >
-            <img
-              src="assets/collab-stagestreetwear.webp"
-              alt="StageStreetwear"
-              style="
-                width: 80px;
-                height: 80px;
-                object-fit: contain;
-                border-radius: 12px;
-                border: 1px solid var(--border-color);
-                background: var(--bg-card);
-              "
-            />
-            <div>
-              <p
-                class="lp-mono lp-text-muted"
-                style="
-                  font-size: 0.7rem;
-                  font-weight: 600;
-                  letter-spacing: 1px;
-                  text-transform: uppercase;
-                  margin: 0 0 8px;
-                "
-                data-lang-key="collab2Name"
-              >
-                StageStreetwear
-              </p>
-              <p
-                class="lp-sans lp-text-secondary"
-                style="font-size: 0.95rem; line-height: 1.6; margin: 0 0 16px"
-                data-lang-key="collab2Desc"
-              >
-                Video sponsorship e collaborazione continuativa.
-              </p>
-              <div class="lp-flex lp-flex-wrap lp-gap-2">
-                <span class="lp-tag">sponsorizzazioni video</span>
-              </div>
-            </div>
-            <span
-              class="lp-text-muted"
-              style="
-                font-size: 2rem;
-                transition: transform var(--transition-base);
-              "
-              >↗</span
-            >
-          </article>
-          <article
-            class="lp-card lp-glow-card lp-reveal lp-reveal-delay-2"
-            style="
-              padding: 32px;
-              display: grid;
-              grid-template-columns: 80px 1fr auto;
-              gap: 24px;
-              align-items: center;
-            "
-          >
-            <img
-              src="assets/collab-newgenmusic.webp"
-              alt="NewGenMusic4"
-              style="
-                width: 80px;
-                height: 80px;
-                object-fit: contain;
-                border-radius: 12px;
-                border: 1px solid var(--border-color);
-                background: var(--bg-card);
-              "
-            />
-            <div>
-              <p
-                class="lp-mono lp-text-muted"
-                style="
-                  font-size: 0.7rem;
-                  font-weight: 600;
-                  letter-spacing: 1px;
-                  text-transform: uppercase;
-                  margin: 0 0 8px;
-                "
-                data-lang-key="collab3Name"
-              >
-                NewGenMusic4
-              </p>
-              <p
-                class="lp-sans lp-text-secondary"
-                style="font-size: 0.95rem; line-height: 1.6; margin: 0 0 16px"
-                data-lang-key="collab3Desc"
-              >
-                Portiamo avanti una rubrica che mette insieme la musica e
-                l'abbigliamento. Questa pagina è un magazine no profit che ha
-                come obiettivo sponsorizzare piccoli artisti della new gen.
-              </p>
-              <div class="lp-flex lp-flex-wrap lp-gap-2">
-                <span class="lp-tag">magazine</span>
-                <span class="lp-tag">collab</span>
-                <span class="lp-tag">video</span>
-              </div>
-            </div>
-            <span
-              class="lp-text-muted"
-              style="
-                font-size: 2rem;
-                transition: transform var(--transition-base);
-              "
-              >↗</span
-            >
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <div class="lp-divider"></div>
-
-    <!-- TOOLS (BENTO GRID) -->
-    <section class="lp-section" style="margin-top: var(--section-gap)">
-      <div class="lp-container">
-        <div class="lp-flex lp-flex-col lp-items-start lp-gap-2 lp-reveal">
-          <h2 class="lp-display lp-display-lg lp-text-primary">Tools</h2>
-          <h3
-            class="lp-serif lp-text-secondary"
-            style="font-size: clamp(1.1rem, 2vw, 1.35rem)"
-            data-lang-key="toolsSub"
-          >
-            Strumenti & Competenze
-          </h3>
-        </div>
-        <div class="lp-bento" style="margin-top: 32px; gap: 24px">
-          <!-- Bento Item 1: Linguaggi -->
-          <article
-            class="lp-bento-item lp-card lp-glow-card lp-reveal"
-            style="
-              grid-column: 1 / 2;
-              grid-row: 1 / 3;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-              min-height: 480px;
-            "
-          >
-            <div>
-              <div
-                class="lp-flex lp-items-center lp-justify-between lp-gap-4"
-                style="margin-bottom: 24px"
-              >
-                <p
-                  class="lp-mono lp-accent-crimson"
-                  style="
-                    font-size: 0.7rem;
-                    font-weight: 600;
-                    letter-spacing: 2px;
-                    text-transform: uppercase;
-                    margin: 0;
-                  "
-                >
-                  Linguaggi
-                </p>
-                <span class="lp-badge">07</span>
-              </div>
-              <ul
-                class="lp-flex lp-flex-col lp-gap-3"
-                style="list-style: none; padding: 0; margin: 0"
-              >
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                    transition: all var(--transition-fast);
-                  "
-                >
-                  <span
-                    ><i
-                      class="devicon-html5-plain colored"
-                      style="margin-right: 10px"
-                    ></i
-                    >HTML</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Intermediate</span
-                  >
-                </li>
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                    transition: all var(--transition-fast);
-                  "
-                >
-                  <span
-                    ><i
-                      class="devicon-css3-plain colored"
-                      style="margin-right: 10px"
-                    ></i
-                    >CSS</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Intermediate</span
-                  >
-                </li>
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                    transition: all var(--transition-fast);
-                  "
-                >
-                  <span
-                    ><i
-                      class="devicon-javascript-plain colored"
-                      style="margin-right: 10px"
-                    ></i
-                    >JS</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Intermediate</span
-                  >
-                </li>
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                    transition: all var(--transition-fast);
-                  "
-                >
-                  <span
-                    ><i
-                      class="devicon-c-plain colored"
-                      style="margin-right: 10px"
-                    ></i
-                    >C</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Beginner</span
-                  >
-                </li>
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                    transition: all var(--transition-fast);
-                  "
-                >
-                  <span
-                    ><i
-                      class="devicon-csharp-plain colored"
-                      style="margin-right: 10px"
-                    ></i
-                    >C#</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Beginner</span
-                  >
-                </li>
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                    transition: all var(--transition-fast);
-                  "
-                >
-                  <span
-                    ><i
-                      class="devicon-python-plain colored"
-                      style="margin-right: 10px"
-                    ></i
-                    >Python</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Beginner</span
-                  >
-                </li>
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                    transition: all var(--transition-fast);
-                  "
-                >
-                  <span
-                    ><i
-                      class="devicon-bash-plain colored"
-                      style="margin-right: 10px"
-                    ></i
-                    >Bash</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Intermediate</span
-                  >
-                </li>
-              </ul>
-            </div>
-            <p
-              class="lp-mono lp-text-muted"
-              style="
-                font-size: 0.65rem;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                margin: 0;
-              "
-            >
-              School & Self-taught
-            </p>
-          </article>
-
-          <!-- Bento Item 2: Web & Cloud -->
-          <article
-            class="lp-bento-item lp-card lp-glow-card lp-reveal lp-reveal-delay-1"
-            style="
-              padding: 32px;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-            "
-          >
-            <div>
-              <div
-                class="lp-flex lp-items-center lp-justify-between lp-gap-4"
-                style="margin-bottom: 24px"
-              >
-                <p
-                  class="lp-mono lp-accent-crimson"
-                  style="
-                    font-size: 0.7rem;
-                    font-weight: 600;
-                    letter-spacing: 2px;
-                    text-transform: uppercase;
-                    margin: 0;
-                  "
-                >
-                  Web & Cloud
-                </p>
-                <span class="lp-badge">04</span>
-              </div>
-              <ul
-                class="lp-flex lp-flex-col lp-gap-3"
-                style="list-style: none; padding: 0; margin: 0"
-              >
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                  "
-                >
-                  <span
-                    ><i
-                      class="devicon-git-plain colored"
-                      style="margin-right: 10px"
-                    ></i
-                    >Git</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Intermediate</span
-                  >
-                </li>
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                  "
-                >
-                  <span
-                    ><i
-                      class="devicon-github-original colored"
-                      style="margin-right: 10px"
-                    ></i
-                    >GitHub</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Intermediate</span
-                  >
-                </li>
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                  "
-                >
-                  <span
-                    ><i
-                      class="devicon-cloudflare-plain colored"
-                      style="margin-right: 10px"
-                    ></i
-                    >Cloudflare</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Intermediate</span
-                  >
-                </li>
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                  "
-                >
-                  <span
-                    ><img
-                      src="assets/tools/n8n.svg"
-                      alt="n8n"
-                      style="width: 20px; height: 20px; margin-right: 10px"
-                    />n8n</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Beginner</span
-                  >
-                </li>
-              </ul>
-            </div>
-            <p
-              class="lp-mono lp-text-muted"
-              style="
-                font-size: 0.65rem;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                margin: 0;
-              "
-            >
-              Self-taught
-            </p>
-          </article>
-
-          <!-- Bento Item 3: Design & Editing -->
-          <article
-            class="lp-bento-item lp-card lp-glow-card lp-reveal lp-reveal-delay-2"
-            style="
-              padding: 32px;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-            "
-          >
-            <div>
-              <div
-                class="lp-flex lp-items-center lp-justify-between lp-gap-4"
-                style="margin-bottom: 24px"
-              >
-                <p
-                  class="lp-mono lp-accent-crimson"
-                  style="
-                    font-size: 0.7rem;
-                    font-weight: 600;
-                    letter-spacing: 2px;
-                    text-transform: uppercase;
-                    margin: 0;
-                  "
-                >
-                  Design & Editing
-                </p>
-                <span class="lp-badge">04</span>
-              </div>
-              <ul
-                class="lp-flex lp-flex-col lp-gap-3"
-                style="list-style: none; padding: 0; margin: 0"
-              >
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                  "
-                >
-                  <span
-                    ><i
-                      class="devicon-canva-original colored"
-                      style="margin-right: 10px"
-                    ></i
-                    >Canva</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Advanced</span
-                  >
-                </li>
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                  "
-                >
-                  <span
-                    ><img
-                      src="assets/tools/lightroom.svg"
-                      alt="Lightroom"
-                      style="width: 20px; height: 20px; margin-right: 10px"
-                    />Lightroom</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Beginner</span
-                  >
-                </li>
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                  "
-                >
-                  <span
-                    ><img
-                      src="assets/tools/capcut.svg"
-                      alt="CapCut"
-                      style="width: 20px; height: 20px; margin-right: 10px"
-                    />CapCut</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Beginner</span
-                  >
-                </li>
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                  "
-                >
-                  <span
-                    ><img
-                      src="assets/tools/edits.svg"
-                      alt="Edits"
-                      style="width: 20px; height: 20px; margin-right: 10px"
-                    />Edits</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Intermediate</span
-                  >
-                </li>
-              </ul>
-            </div>
-            <p
-              class="lp-mono lp-text-muted"
-              style="
-                font-size: 0.65rem;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                margin: 0;
-              "
-            >
-              Work & Self-taught
-            </p>
-          </article>
-
-          <!-- Bento Item 4: Strumenti & Office -->
-          <article
-            class="lp-bento-item lp-card lp-glow-card lp-reveal lp-reveal-delay-3"
-            style="
-              padding: 32px;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-            "
-          >
-            <div>
-              <div
-                class="lp-flex lp-items-center lp-justify-between lp-gap-4"
-                style="margin-bottom: 24px"
-              >
-                <p
-                  class="lp-mono lp-accent-crimson"
-                  style="
-                    font-size: 0.7rem;
-                    font-weight: 600;
-                    letter-spacing: 2px;
-                    text-transform: uppercase;
-                    margin: 0;
-                  "
-                >
-                  Strumenti & Office
-                </p>
-                <span class="lp-badge">04</span>
-              </div>
-              <ul
-                class="lp-flex lp-flex-col lp-gap-3"
-                style="list-style: none; padding: 0; margin: 0"
-              >
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                  "
-                >
-                  <span
-                    ><i
-                      class="devicon-vscode-plain colored"
-                      style="margin-right: 10px"
-                    ></i
-                    >VSCode</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Advanced</span
-                  >
-                </li>
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                  "
-                >
-                  <span
-                    ><i
-                      class="devicon-visualstudio-plain colored"
-                      style="margin-right: 10px"
-                    ></i
-                    >VS</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Beginner</span
-                  >
-                </li>
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                  "
-                >
-                  <span
-                    ><img
-                      src="assets/tools/excel.svg"
-                      alt="Excel"
-                      style="width: 20px; height: 20px; margin-right: 10px"
-                    />Excel</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Intermediate</span
-                  >
-                </li>
-                <li
-                  class="lp-flex lp-items-center lp-justify-between lp-gap-4 lp-sans lp-text-secondary"
-                  style="
-                    font-size: 0.95rem;
-                    padding: 12px 16px;
-                    background: var(--bg-secondary);
-                    border: 1px solid var(--border-color);
-                    border-radius: 8px;
-                  "
-                >
-                  <span
-                    ><img
-                      src="assets/tools/word.svg"
-                      alt="Word"
-                      style="width: 20px; height: 20px; margin-right: 10px"
-                    />Word</span
-                  ><span class="lp-mono lp-text-muted" style="font-size: 0.7rem"
-                    >Intermediate</span
-                  >
-                </li>
-              </ul>
-            </div>
-            <p
-              class="lp-mono lp-text-muted"
-              style="
-                font-size: 0.65rem;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                margin: 0;
-              "
-            >
-              School & Self-taught
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <div class="lp-divider"></div>
-
-    <!-- FAQ -->
-    <section class="lp-section" id="faq" style="margin-top: var(--section-gap)">
-      <div class="lp-container">
-        <div class="lp-flex lp-flex-col lp-items-start lp-gap-2 lp-reveal">
-          <h2 class="lp-display lp-display-lg lp-text-primary">FAQ</h2>
-          <h3
-            class="lp-serif lp-text-secondary"
-            style="font-size: clamp(1.1rem, 2vw, 1.35rem)"
-            data-lang-key="faqSub"
-          >
-            Domande frequenti
-          </h3>
-        </div>
-        <div class="lp-flex lp-flex-col lp-gap-3" style="margin-top: 32px">
-          <details class="lp-faq-item lp-card lp-glow-card lp-reveal">
-            <summary data-lang-key="faq1Q">
-              Che tipo di progetti accetti?
-            </summary>
-            <p data-lang-key="faq1A">
-              Accetto collaborazioni con piccole imprese, brand, creator e
-              realtà creative interessate a sviluppare progetti digitali,
-              fashion o contenuti.
-            </p>
-          </details>
-          <details class="lp-faq-item lp-reveal">
-            <summary data-lang-key="faq2Q">
-              Realizzi siti web per qualsiasi attività?
-            </summary>
-            <p data-lang-key="faq2A">
-              Sì, sviluppo principalmente siti per locali, piccole imprese,
-              professionisti e brand che vogliono migliorare la propria presenza
-              online.
-            </p>
-          </details>
-          <details class="lp-faq-item lp-reveal">
-            <summary data-lang-key="faq3Q">
-              Cosa comprende la realizzazione di un sito?
-            </summary>
-            <p data-lang-key="faq3A">
-              Il servizio può includere progettazione, sviluppo, versione
-              mobile, pubblicazione online, configurazione dominio e supporto
-              tecnico dopo la consegna.
-            </p>
-          </details>
-          <details class="lp-faq-item lp-reveal">
-            <summary data-lang-key="faq4Q">
-              Chi gestisce dominio e hosting del sito?
-            </summary>
-            <p data-lang-key="faq4A">
-              Il dominio e i servizi collegati possono essere acquistati
-              direttamente dal cliente oppure gestiti insieme. In caso di
-              manutenzione continuativa posso occuparmi della parte tecnica.
-            </p>
-          </details>
-          <details class="lp-faq-item lp-reveal">
-            <summary data-lang-key="faq5Q">
-              Posso richiedere un capo personalizzato?
-            </summary>
-            <p data-lang-key="faq5A">
-              Sì, realizzo custom fashion partendo da capi esistenti, lavorando
-              su modifiche, dettagli, materiali e concept personalizzati.
-            </p>
-          </details>
-          <details class="lp-faq-item lp-reveal">
-            <summary data-lang-key="faq6Q">
-              Realizzi solo custom o anche design di capi?
-            </summary>
-            <p data-lang-key="faq6A">
-              Mi occupo anche di design di capi: creo concept visivi, sketch,
-              scelte estetiche, materiali e dettagli grafici senza occuparmi
-              della produzione industriale.
-            </p>
-          </details>
-          <details class="lp-faq-item lp-reveal">
-            <summary data-lang-key="faq7Q">
-              Come funzionano le collaborazioni con brand?
-            </summary>
-            <p data-lang-key="faq7A">
-              Le collaborazioni vengono sviluppate in base al progetto: possono
-              essere contenuti creativi, integrazioni prodotto o idee condivise
-              per raccontare un brand in modo autentico.
-            </p>
-          </details>
-          <details class="lp-faq-item lp-reveal">
-            <summary data-lang-key="faq8Q">Quanto costa un progetto?</summary>
-            <p data-lang-key="faq8A">
-              Ogni progetto viene valutato singolarmente in base a complessità,
-              tempi e obiettivi. Dopo una prima analisi preparo una proposta
-              personalizzata.
-            </p>
-          </details>
-          <details class="lp-faq-item lp-reveal">
-            <summary data-lang-key="faq9Q">
-              Quanto tempo serve per completare un progetto?
-            </summary>
-            <p data-lang-key="faq9A">
-              Dipende dal tipo di lavoro. Un sito semplice può richiedere alcune
-              settimane, mentre progetti più creativi o personalizzati possono
-              richiedere più tempo.
-            </p>
-          </details>
-          <details class="lp-faq-item lp-reveal">
-            <summary data-lang-key="faq10Q">
-              Posso contattarti anche solo per un'idea?
-            </summary>
-            <p data-lang-key="faq10A">
-              Sì, puoi scrivermi anche nelle fasi iniziali. Possiamo valutare
-              insieme se l'idea può trasformarsi in un progetto concreto.
-            </p>
-          </details>
-        </div>
       </div>
     </section>
 

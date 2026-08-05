@@ -395,11 +395,14 @@ document.addEventListener("DOMContentLoaded", function () {
       heroBtn1: "Guarda i progetti",
       heroBtn2: "Contattami",
       heroAvail: "Disponibile per nuovi progetti",
+      heroTagline:
+        "Costruisco siti web e capi unici: unisco sviluppo e fashion design in progetti fatti bene, dall'idea alla consegna.",
+      aboutCta: "Parliamo del tuo progetto",
       aboutSub: "Chi sono",
       aboutP1:
-        "Sono Lorenzo Perassi, developer, creator e studente di Informatica. Costruisco prodotti digitali dove codice, design e creativit\u00e0 si incontrano. Il mio progetto principale \u00e8 Customly, una piattaforma di personalizzazione abbigliamento che unisce moda e tecnologia.",
+        "Sono Lorenzo Perassi, developer e studente di Informatica. Unisco codice e fashion: costruisco siti web e capi unici con la stessa cura per i dettagli.",
       aboutP2:
-        "Utilizzo le piattaforme digitali come uno spazio dove condividere progetti, esperimenti creativi, routine, lavoro pratico e crescita personale, oltre che per creare connessioni, farmi conoscere e portarmi opportunit\u00e0.<br><br>Collaboro con brand locali e pagine creative, lavorando su contenuti, comunicazioni online e progetti creativi. Sviluppo anche siti web per locali e piccole imprese.<br><br>Lavoro su Customly come piattaforma principale, dove sviluppo il configuratore digitale e gestisco la piattaforma.",
+        "Il mio progetto principale \u00e8 Customly, una piattaforma di custom fashion che unisce moda e tecnologia.<br><br>Lavoro con attivit\u00e0 locali e piccole imprese per costruire la loro presenza online, e con brand per progetti creativi e collaborazioni.",
       customlySub: "Il mio progetto principale",
       customlyDesc:
         "Customly \u00e8 la piattaforma di custom fashion che unisce moda e tecnologia. Ho progettato l'intera esperienza: dal configuratore digitale \u2014 dove scegli colori, materiali e dettagli del capo in modo semplice e immediato \u2014 alla scelta di palette, tipografia e layout che rendono ogni passaggio chiaro e senza attriti. Ogni schermata, dal catalogo al riepilogo dell'ordine, nasce dal problema reale di chi vuole un capo unico: penso prima al design, poi al codice. Su Cloudflare Pages, D1 e R2 gestisco catalogo, configuratore e tutto il design end-to-end.",
@@ -539,11 +542,14 @@ document.addEventListener("DOMContentLoaded", function () {
       heroBtn1: "View Projects",
       heroBtn2: "Contact Me",
       heroAvail: "Available for new projects",
+      heroTagline:
+        "I build websites and unique garments: I combine development and fashion design into well-made projects, from idea to delivery.",
+      aboutCta: "Let's talk about your project",
       aboutSub: "About Me",
       aboutP1:
-        "I'm Lorenzo Perassi, developer, creator and Computer Science student. I build digital products where code, design and creativity meet. My main project is Customly, a clothing customization platform combining fashion and technology.",
+        "I'm Lorenzo Perassi, developer and Computer Science student. I combine code and fashion: I build websites and unique garments with the same attention to detail.",
       aboutP2:
-        "I use digital platforms as a space to share projects, creative experiments, routines, hands-on work and personal growth, as well as to build connections and create opportunities.<br><br>I collaborate with local brands and creative pages, working on content, online communications and creative projects. I also develop websites for local businesses and small companies.<br><br>I work on Customly as my main platform, where I develop the digital configurator and manage the platform.",
+        "My main project is Customly, a custom fashion platform that combines fashion and technology.<br><br>I work with local businesses and small companies to build their online presence, and with brands on creative projects and collaborations.",
       customlySub: "My main project",
       customlyDesc:
         "Customly is the custom fashion platform that combines fashion and technology. I designed the whole experience: from the digital configurator \u2014 where you pick colors, materials and garment details simply and instantly \u2014 to the palette, typography and layout choices that make every step clear and frictionless. Every screen, from the catalog to the order summary, starts from the real problem of someone who wants a unique garment: I think about design first, then code. On Cloudflare Pages, D1 and R2 I manage the catalog, configurator and all the end-to-end design.",
