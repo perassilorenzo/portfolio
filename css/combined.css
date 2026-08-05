@@ -483,13 +483,13 @@ a {
 .lp-hero-image {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   margin: 16px 0;
   order: -1;
 }
 .lp-hero-img {
   width: 100%;
-  max-width: 340px;
+  max-width: 520px;
   height: auto;
   display: block;
 }
@@ -515,16 +515,18 @@ a {
 .lp-about-wrapper {
   display: flex;
   align-items: flex-start;
-  gap: 48px;
+  gap: 64px;
   flex-wrap: wrap;
+  width: 100%;
 }
 .lp-about-wrapper .lp-about-content {
   flex: 1;
-  min-width: 320px;
+  min-width: 340px;
+  padding-right: 24px;
 }
 .lp-about-wrapper .lp-terminal {
   flex-shrink: 0;
-  width: 380px;
+  width: 420px;
   max-width: 100%;
 }
 .about-text-top {
