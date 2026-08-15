@@ -3222,3 +3222,175 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---- ORANGE :HOVER ON EVERYTHING ---- */
+a:hover,
+.btn:hover,
+.btn-primary:hover,
+.btn-ghost:hover,
+.nav-link:hover,
+.lp-nav-link:hover,
+.lp-social-link:hover,
+.lp-project-card:hover,
+.lp-service-card:hover,
+.lp-process-step:hover .lp-process-circle,
+.lp-process-step:hover,
+.lp-tech-item:hover,
+.lp-tech-item:hover .lp-tooltip,
+.lp-badge:hover,
+.lp-filter-btn:hover,
+.lp-lang-btn:hover,
+.lp-lang-btn.active,
+.lp-icon-btn:hover,
+.lp-project-media:hover,
+.lp-project-card:hover .lp-project-img,
+.lp-back-to-top:hover,
+.lp-footer a:hover,
+.lp-footer-bottom:hover,
+.showcase-card:hover,
+.project-card:hover,
+.testimonial-card:hover,
+.skill-card:hover,
+.cert-card:hover,
+.lp-contact-form .field input:focus,
+.lp-contact-form .field textarea:focus,
+.lp-customly:hover,
+.lp-about:hover,
+.lp-services-grid > *:hover,
+.lp-account-item:hover,
+.lp-process-steps::before:hover {
+
+  /* Orange accent hover - primary color */
+  color: #ff6b1a !important;
+  border-color: #ff6b1a !important;
+  background: rgba(255, 107, 26, 0.1) !important;
+  box-shadow: 0 0 0 1px #ff6b1a !important;
+}
+
+/* Specific hover states */
+.lp-process-step:hover .lp-process-circle {
+  background: #ff6b1a;
+  border-color: #ff6b1a;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(255, 107, 26, 0.35);
+}
+
+.lp-process-step:hover {
+  border-color: #ff6b1a;
+}
+
+/* Button hover animations */
+.lp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 107, 26, 0.35);
+}
+
+.lp-btn-solid:hover {
+  background: #ff6b1a;
+  border-color: #ff6b1a;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(255, 107, 26, 0.35);
+}
+
+/* Nav link hover */
+.lp-nav-link:hover {
+  color: #ff6b1a;
+  transform: translateY(-1px);
+}
+
+/* Card hover */
+.lp-card:hover,
+.lp-service-card:hover,
+.lp-tech-item:hover {
+  border-color: #ff6b1a;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 107, 26, 0.15);
+}
+
+/* Hover states for specific elements */
+.lp-process-circle:hover {
+  background: #ff6b1a;
+  border-color: #ff6b1a;
+}
+
+.lp-service-list li:hover {
+  color: #ff6b1a;
+}
+
+/* Focus states with orange */
+.lp-input:focus,
+.lp-textarea:focus,
+.lp-select:focus {
+  border-color: #ff6b1a;
+  box-shadow: 0 0 0 3px rgba(255, 107, 26, 0.15);
+}
+
+/* Progress bar accent */
+.lp-progress-bar {
+  background: #ff6b1a;
+}
+
+/* Typewriter cursor */
+.lp-typewriter::after {
+  animation: lpBlink 0.8s step-end infinite;
+  color: #ff6b1a;
+}
+
+/* Marquee text */
+.marquee-track {
+  color: #ff6b1a;
+}
+
+/* Divider with accent */
+.lp-divider {
+  background: linear-gradient(to right, transparent, #ff6b1a, transparent);
+  opacity: 0.6;
+}
+
+/* Selection background */
+::selection {
+  background: #ff6b1a;
+  color: #fff;
+}
+
+/* Focus-visible outline */
+:focus-visible {
+  outline: 2px solid #ff6b1a;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Hamburger outline */
+.hamburger span {
+  background: #ff6b1a;
+}
+
+/* Timeline dot active */
+.lp-timeline-dot {
+  background: #ff6b1a;
+  border: 3px solid #0a0a0a;
+  box-shadow: 0 0 0 2px #ff6b1a;
+}
+
+/* Badge active/hover */
+.lp-badge:hover {
+  color: #ff6b1a;
+  border-color: #ff6b1a;
+  background: rgba(255, 107, 26, 0.12);
+}
+
+/* Service icon */
+.lp-service-icon {
+  border-color: #ff6b1a;
+  color: #ff6b1a;
+  background: rgba(255, 107, 26, 0.1);
+}
+
+.lp-service-icon svg {
+  filter: invert(1);
+}
+
+/* Logo-surname hidden on mobile */
+@media (max-width: 420px) {
+  .logo-surname { display: none; }
+}
