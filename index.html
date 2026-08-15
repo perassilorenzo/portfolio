@@ -266,48 +266,6 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="about d-flex mt-5 pt-5" id="about">
-      <div class="lp-about-grid lp-reveal">
-        <div class="lp-about-media">
-          <img
-            src="assets/about-portrait.webp"
-            alt="Lorenzo Perassi"
-            class="lp-about-img"
-            loading="lazy"
-          />
-        </div>
-        <div class="lp-about-text">
-          <div class="about-text-top">
-            <h2 class="lp-big-title">about</h2>
-            <h3
-              class="lp-text-secondary lp-subtitle-offset"
-              data-lang-key="aboutSub"
-            >
-              Chi sono
-            </h3>
-          </div>
-          <p
-            class="lp-text-secondary lp-content-about about-intro"
-            data-lang-key="aboutP1"
-            data-lang-html
-          >
-            Sono Lorenzo Perassi, developer, creator e studente di Informatica.
-            <br /><br />Costruisco prodotti digitali dove codice, design e
-            creatività si incontrano. Il mio progetto principale è Customly, una
-            piattaforma di personalizzazione abbigliamento che unisce moda e
-            tecnologia.
-          </p>
-          <a
-            href="#contact"
-            class="lp-btn lp-btn-solid text-decoration-none mt-3"
-            data-lang-key="aboutCta"
-            >Parliamo del tuo progetto <span class="lp-cta-arrow">→</span></a
-          >
-        </div>
-      </div>
-    </section>
-
     <!-- SERVIZI -->
     <section class="lp-section lp-reveal" id="services">
       <div class="ms-4 ps-2 mb-4">
@@ -365,55 +323,6 @@
             class="lp-btn text-decoration-none"
             data-lang-key="servCta"
             >Richiedi preventivo <span class="lp-cta-arrow">→</span></a
-          >
-        </div>
-        <div class="lp-card lp-service-card lp-reveal">
-          <div class="lp-service-top">
-            <span class="lp-service-num">02</span>
-            <i class="lp-service-icon">
-              <svg
-                viewBox="0 0 24 24"
-                width="1em"
-                height="1em"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"
-                />
-              </svg>
-            </i>
-          </div>
-          <h4 class="lp-service-title mb-2" data-lang-key="servCustomTitle">
-            Custom & Design
-          </h4>
-          <p
-            class="lp-text-secondary small mb-3"
-            data-lang-key="servCustomDesc"
-          >
-            Trasformo capi esistenti in pezzi unici e creo concept e design
-            visivi per l'abbigliamento. Ogni progetto nasce da un'idea e viene
-            sviluppato attraverso ricerca, materiali e lavorazione artigianale.
-          </p>
-          <span class="lp-service-inc" data-lang-key="servIncludes"
-            >Cosa include</span
-          >
-          <ul class="lp-service-list" data-lang-html="servCustomList">
-            <li>Sketch e design del capo</li>
-            <li>Scelta di materiali e tessuti</li>
-            <li>Studio colori e dettagli grafici</li>
-            <li>Concept personalizzati</li>
-          </ul>
-          <a
-            href="https://customly.it/perassilorenzo"
-            target="_blank"
-            rel="noopener"
-            class="lp-btn text-decoration-none"
-            data-lang-key="servCustomCta"
-            >Scopri il mio profilo <span class="lp-cta-arrow">→</span></a
           >
         </div>
       </div>
@@ -477,10 +386,7 @@
                 preload="metadata"
                 poster="assets/customly-thumb.webp"
               >
-                <source
-                  src="assets/customly-preview.mp4"
-                  type="video/mp4"
-                />
+                <source src="assets/customly-preview.mp4" type="video/mp4" />
                 Il tuo browser non supporta il tag video.
               </video>
             </div>
@@ -564,81 +470,73 @@
           Il mio progetto principale
         </h3>
       </div>
-      <div class="lp-customly mx-4 lp-reveal">
+      <div class="lp-customly mx-4">
         <div class="lp-customly-inner">
           <img
             src="assets/customly-logo.webp"
             alt="Customly"
-            class="lp-customly-logo rounded-circle bg-white"
+            class="lp-customly-logo me-3"
             loading="lazy"
+            style="
+              width: 80px;
+              height: 80px;
+              flex-shrink: 0;
+              border-radius: 50%;
+              object-fit: cover;
+              border: 2px solid var(--border);
+            "
           />
-          <h4 class="lp-customly-title mt-4 mb-2">Customly</h4>
-          <p
-            class="lp-text-secondary mb-1 text-center"
-            style="font-style: italic"
-          >
-            make it yours
-          </p>
-          <p
-            class="lp-text-secondary mb-3 text-center"
-            data-lang-key="customlyDesc"
-          >
-            Customly è la piattaforma di custom fashion che unisce moda e
-            tecnologia. Ho progettato l'intera esperienza: dal configuratore
-            digitale — dove scegli colori, materiali e dettagli del capo in modo
-            semplice e immediato — alla scelta di palette, tipografia e layout
-            che rendono ogni passaggio chiaro e senza attriti. Ogni schermata,
-            dal catalogo al riepilogo dell'ordine, nasce dal problema reale di
-            chi vuole un capo unico: penso prima al design, poi al codice. Su
-            Cloudflare Pages, D1 e R2 gestisco catalogo, configuratore e tutto
-            il design end-to-end.
-          </p>
-          <p class="lp-text-secondary small text-center mb-4">
-            Ho progettato tutto il frontend io; per il backend il mio amico
-            <strong>Federico Bosio</strong> (<a
-              href="https://bosio.me"
-              target="_blank"
-              rel="noopener"
-              class="lp-link-accent"
-              >bosio.me</a
-            >); per il design <strong>Nicolò Robusti</strong> (ig:
+          <div>
+            <h4 class="lp-customly-title mt-0 mb-1">Customly</h4>
+            <p class="lp-text-secondary mb-1" style="font-style: italic">
+              make it yours
+            </p>
+            <p class="lp-text-secondary mb-2" data-lang-key="customlyDesc">
+              Piattaforma di custom fashion che unisce moda e tecnologia. Dal
+              configuratore digitale — dove scegli colori, materiali e dettagli
+              — alla scelta di palette e layout chiari e senza attriti. Ogni
+              schermata, dal catalogo al riepilogo ordine, nasce dal problema
+              reale di chi vuole un capo unico: design prima, poi codice. Su
+              Cloudflare Pages, D1 e R2 gestisco catalogo, configuratore e
+              design end-to-end.
+            </p>
+            <p class="lp-text-secondary small text-center mb-3">
+              <strong>Agosto 2026</strong> — MVP live su customly.it.
+            </p>
+            <div class="d-flex justify-content-center gap-2 mb-3">
+              <span class="lp-tag">UX / UI Design</span>
+              <span class="lp-tag">Design System</span>
+              <span class="lp-tag">Configuratore</span>
+              <span class="lp-tag">HTML</span>
+              <span class="lp-tag">CSS</span>
+              <span class="lp-tag">JavaScript</span>
+              <span class="lp-tag">Cloudflare</span>
+            </div>
             <a
-              href="https://instagram.com/robu.nico"
+              href="https://customly.it"
               target="_blank"
               rel="noopener"
-              class="lp-link-accent"
-              >@robu.nico</a
-            >).
-          </p>
-          <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
-            <span class="lp-tag">UX / UI Design</span>
-            <span class="lp-tag">Design System</span>
-            <span class="lp-tag">Configuratore</span>
-            <span class="lp-tag">HTML</span>
-            <span class="lp-tag">CSS</span>
-            <span class="lp-tag">JavaScript</span>
-            <span class="lp-tag">Cloudflare</span>
+              class="lp-btn lp-btn-solid w-100 text-decoration-none"
+              >Visita customly.it <span class="lp-cta-arrow">→</span></a
+            >
           </div>
-          <a
-            href="https://customly.it"
-            target="_blank"
-            rel="noopener"
-            class="lp-btn lp-btn-solid text-decoration-none"
-            data-lang-key="customlyCta"
-            >Visita customly.it <span class="lp-cta-arrow">→</span></a
+        </div>
+        <div class="lp-customly-video-side">
+          <video
+            playsinline
+            muted
+            loop
+            preload="metadata"
+            style="
+              width: 100%;
+              max-width: 240px;
+              border-radius: 12px;
+              background: var(--bg-card);
+            "
           >
-          <p class="lp-text-secondary small mt-4 mb-0 text-center">
-            <span data-lang-key="customlyNote"
-              >Vuoi vedere i progetti da vicino? Il mio profilo Customly:</span
-            >
-            <a
-              href="https://customly.it/perassilorenzo"
-              target="_blank"
-              rel="noopener"
-              class="lp-link-accent"
-              >customly.it/perassilorenzo</a
-            >
-          </p>
+            <source src="assets/customly-preview.mp4" type="video/mp4" />
+            Il tuo browser non supporta il tag video.
+          </video>
         </div>
       </div>
     </section>
@@ -657,6 +555,34 @@
         </h3>
       </div>
       <div class="lp-timeline px-3">
+        <!-- School -->
+        <div class="lp-timeline-item lp-reveal">
+          <div class="lp-timeline-side">
+            <div class="lp-timeline-dot"></div>
+            <div class="lp-timeline-logo">
+              <img
+                src="assets/vallauri.webp"
+                alt="ITIS Vallauri"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="lp-timeline-content">
+            <div class="lp-timeline-date">2018 — 2022</div>
+            <h4 data-lang-key="tlSchoolTitle">ITIS Vallauri — Diploma</h4>
+            <p data-lang-key="tlSchoolDesc">
+              Informatica e Telecomunicazioni. Fondamenti di programmazione,
+              rete, sistemi. Progetto finale: sviluppo applicativo full-stack.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="lp-badge">C</span>
+              <span class="lp-badge">C#</span>
+              <span class="lp-badge">SQL</span>
+              <span class="lp-badge">VS Code</span>
+            </div>
+          </div>
+        </div>
+        <!-- Customly -->
         <div class="lp-timeline-item lp-reveal">
           <div class="lp-timeline-side">
             <div class="lp-timeline-dot"></div>
@@ -685,32 +611,61 @@
               <span class="lp-badge">d1</span>
               <span class="lp-badge">r2</span>
             </div>
-</div>
-    </div>
-
-    <div class="lp-divider"></div>
-
-    <!-- CERTIFICATIONS -->
-    <section class="lp-section lp-reveal" id="certifications">
-      <div class="ms-5 ps-3 mb-4">
-        <h2 class="lp-big-title">Certificazioni</h2>
-        <h3 class="lp-text-secondary lp-subtitle-offset">Competenze riconosciute</h3>
-      </div>
-      <div class="lp-cert-list">
-        <div class="lp-cert-card">
-          <div class="cert-body">
-            <div class="cert-info">
-              <h3>CS50's Introduction to Computer Science</h3>
-              <span class="cert-sub">Harvard University</span>
-            </div>
-            <span class="cert-status">In progress</span>
           </div>
-          <img
-            class="cert-logo"
-            src="assets/harvard.webp"
-            alt="Harvard University"
-            loading="lazy"
-          />
+        </div>
+        <!-- Omnia4Web -->
+        <div class="lp-timeline-item lp-reveal">
+          <div class="lp-timeline-side">
+            <div class="lp-timeline-dot"></div>
+            <div class="lp-timeline-logo">
+              <img
+                src="assets/project-agency.webp"
+                alt="Omnia4Web"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="lp-timeline-content">
+            <div class="lp-timeline-date">Mag 2026 — Lug 2026</div>
+            <h4 data-lang-key="tl1Title">Omnia4Web</h4>
+            <p data-lang-key="tl1Desc">
+              Supporto alla creazione di contenuti digitali e comunicazione
+              social. Editing video, grafiche e caption.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="lp-badge">lightroom</span>
+              <span class="lp-badge">capcut</span>
+              <span class="lp-badge">canva</span>
+              <span class="lp-badge">caption</span>
+            </div>
+          </div>
+        </div>
+        <!-- Bertolotto -->
+        <div class="lp-timeline-item lp-reveal">
+          <div class="lp-timeline-side">
+            <div class="lp-timeline-dot"></div>
+            <div class="lp-timeline-logo">
+              <img
+                src="assets/experience-bertolotto.png"
+                alt="Bertolotto Porte"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="lp-timeline-content">
+            <div class="lp-timeline-date">6–18 Lug 2026</div>
+            <h4 data-lang-key="tl8Title">Bertolotto Porte — Stage IT</h4>
+            <p data-lang-key="tl8Desc">
+              Stage estivo di 2 settimane come IT, con focus su gestione
+              documentale e digitalizzazione archivi.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="lp-badge">SQL</span>
+              <span class="lp-badge">C#</span>
+              <span class="lp-badge">Gestionale</span>
+              <span class="lp-badge">VS</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -772,6 +727,41 @@
             insieme se l'idea può trasformarsi in un progetto concreto.
           </p>
         </details>
+      </div>
+    </section>
+
+    <div class="lp-divider"></div>
+
+    <!-- CERTIFICATIONS -->
+    <section class="lp-section lp-reveal" id="certifications">
+      <div class="container-extended">
+        <div class="lp-cert-grid">
+          <div class="lp-cert-card lp-cert-card--cs50">
+            <div class="cert-card-body">
+              <div class="cert-card-header">
+                <span class="cert-card-status">In progress</span>
+                <h3 class="cert-card-title">
+                  CS50's Introduction to Computer Science
+                </h3>
+              </div>
+              <p class="cert-card-description">
+                Harvard University • Introduzione alla scienza dell'informatica
+                • Algoritmi, strutture dati, programmazione •
+                <a
+                  href="https://github.com/perassilorenzo/cs50-notes"
+                  target="_blank"
+                  rel="noopener"
+                  class="cert-card-repo"
+                  >Repo GitHub</a
+                >
+              </p>
+            </div>
+            <div class="cert-card-footer">
+              <span class="cert-card-university">Harvard University</span>
+            </div>
+          </div>
+          <!-- Altri certificazioni verranno aggiunte qui -->
+        </div>
       </div>
     </section>
 
