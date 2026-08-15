@@ -320,6 +320,7 @@
         </h3>
       </div>
       <div class="lp-services-grid px-4">
+        <!-- 01: SITO WEB -->
         <div class="lp-card lp-service-card lp-reveal">
           <div class="lp-service-top">
             <span class="lp-service-num">01</span>
@@ -334,39 +335,44 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <polyline points="16 18 22 12 16 6" />
-                <polyline points="8 6 2 12 8 18" />
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8" />
+                <path d="M12 17v4" />
               </svg>
             </i>
           </div>
           <h4 class="lp-service-title mb-2" data-lang-key="servWebTitle">
-            Web Development & Management
+            Sito web
           </h4>
           <p class="lp-text-secondary small mb-3" data-lang-key="servWebDesc">
-            Realizzo e gestisco siti statici vetrina per attività locali e
-            brand: dallo sviluppo frontend fino a dominio, build e hosting. Mi
-            occupo anche del mantenimento tecnico dopo la pubblicazione.
+            Realizzo siti statici vetrina per attività locali e brand: UI
+            pulita, performance, SEO tecnico. Dallo sviluppo al deploy — tu
+            fornisci i contenuti, io creo il prodotto finito.
           </p>
           <span class="lp-service-inc" data-lang-key="servIncludes"
             >Cosa include</span
           >
           <ul class="lp-service-list" data-lang-html="servWebList">
-            <li>Realizzazione siti statici vetrina (UI frontend)</li>
-            <li>Deploy, build e hosting</li>
-            <li>Acquisto dominio</li>
-            <li>Account Cloudflare per R2 e servizi online</li>
-            <li>Gestione modifiche da fare</li>
-            <li>Gestione errori e controllo che sia tutto a posto</li>
-            <li>Gestione dominio</li>
-            <li>Supporto tecnico e piccoli aggiornamenti</li>
+            <li>Sviluppo frontend (HTML, CSS, JS vanilla — niente builder)</li>
+            <li>Design responsive, accessibile, ottimizzato Core Web Vitals</li>
+            <li>Setup dominio + DNS + SSL (Cloudflare)</li>
+            <li>Deploy su Cloudflare Pages / GitHub Pages / Vercel</li>
+            <li>
+              Configurazione base analytics (plausible/umami, no GA4 se non
+              serve)
+            </li>
+            <li>Consegna repo GitHub + istruzioni per autonomia</li>
           </ul>
           <a
             href="#contact"
             class="lp-btn text-decoration-none"
             data-lang-key="servCta"
-            >Richiedi preventivo <span class="lp-cta-arrow">→</span></a
           >
+            Richiedi preventivo <span class="lp-cta-arrow">→</span>
+          </a>
         </div>
+
+        <!-- 02: MANTENIMENTO -->
         <div class="lp-card lp-service-card lp-reveal">
           <div class="lp-service-top">
             <span class="lp-service-num">02</span>
@@ -381,40 +387,251 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
+                <circle cx="12" cy="12" r="3" />
                 <path
-                  d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"
+                  d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
                 />
               </svg>
             </i>
           </div>
-          <h4 class="lp-service-title mb-2" data-lang-key="servCustomTitle">
-            Custom & Design
+          <h4 class="lp-service-title mb-2" data-lang-key="servMaintTitle">
+            Mantenimento
           </h4>
-          <p
-            class="lp-text-secondary small mb-3"
-            data-lang-key="servCustomDesc"
-          >
-            Trasformo capi esistenti in pezzi unici e creo concept e design
-            visivi per l'abbigliamento. Ogni progetto nasce da un'idea e viene
-            sviluppato attraverso ricerca, materiali e lavorazione artigianale.
+          <p class="lp-text-secondary small mb-3" data-lang-key="servMaintDesc">
+            Il sito non finisce al lancio. Mi occupo della gestione tecnica
+            continua: aggiornamenti, sicurezza, modifiche contenuti,
+            monitoraggio. Tu fai il tuo lavoro, io tengo in piedi
+            l'infrastruttura.
           </p>
           <span class="lp-service-inc" data-lang-key="servIncludes"
             >Cosa include</span
           >
-          <ul class="lp-service-list" data-lang-html="servCustomList">
-            <li>Sketch e design del capo</li>
-            <li>Scelta di materiali e tessuti</li>
-            <li>Studio colori e dettagli grafici</li>
-            <li>Concept personalizzati</li>
+          <ul class="lp-service-list" data-lang-html="servMaintList">
+            <li>Aggiornamenti dipendenze / build / deploy periodici</li>
+            <li>
+              Modifiche contenuti (testi, immagini, pagine nuove) su richiesta
+            </li>
+            <li>Gestione dominio: rinnovi, DNS, record, subdomini</li>
+            <li>
+              Account Cloudflare: R2, Workers, D1, Turnstile, WAF, Analytics
+            </li>
+            <li>
+              Monitoring uptime + alert errori (via Cloudflare / UptimeRobot)
+            </li>
+            <li>Backup automatici (Git + R2) + piano disaster recovery base</li>
+            <li>Supporto prioritario email/WhatsApp — SLA informale 24-48h</li>
           </ul>
           <a
-            href="https://customly.it/perassilorenzo"
-            target="_blank"
-            rel="noopener"
+            href="#contact"
             class="lp-btn text-decoration-none"
-            data-lang-key="servCustomCta"
-            >Scopri il mio profilo <span class="lp-cta-arrow">→</span></a
+            data-lang-key="servCta"
           >
+            Richiedi preventivo <span class="lp-cta-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COME LAVORO -->
+    <section class="lp-section lp-reveal" id="process">
+      <div class="ms-4 ps-2 mb-4">
+        <h2 class="lp-big-title">Come lavoro</h2>
+        <h3
+          class="lp-text-secondary lp-subtitle-offset"
+          data-lang-key="procSub"
+        >
+          Processo, stack e scelte tecniche
+        </h3>
+      </div>
+
+      <!-- 4 STEP PROCESS -->
+      <div class="lp-process px-4">
+        <div class="lp-process-steps">
+          <div class="lp-process-step lp-reveal">
+            <div class="lp-process-circle">01</div>
+            <h4 class="lp-process-title mt-3" data-lang-key="proc1Title">
+              Scoperta
+            </h4>
+            <p class="lp-text-secondary small" data-lang-key="proc1Desc">
+              Call/brief: obiettivi, contenuti, timeline, budget. Nessun
+              impegno.
+            </p>
+          </div>
+          <div class="lp-process-step lp-reveal">
+            <div class="lp-process-circle">02</div>
+            <h4 class="lp-process-title mt-3" data-lang-key="proc2Title">
+              Proposta
+            </h4>
+            <p class="lp-text-secondary small" data-lang-key="proc2Desc">
+              Preventivo fisso, scope chiaro, stack definito, date di consegna.
+            </p>
+          </div>
+          <div class="lp-process-step lp-reveal">
+            <div class="lp-process-circle">03</div>
+            <h4 class="lp-process-title mt-3" data-lang-key="proc3Title">
+              Realizzazione
+            </h4>
+            <p class="lp-text-secondary small" data-lang-key="proc3Desc">
+              Sviluppo in repo privato, deploy preview ad ogni commit, feedback
+              asincrono.
+            </p>
+          </div>
+          <div class="lp-process-step lp-reveal">
+            <div class="lp-process-circle">04</div>
+            <h4 class="lp-process-title mt-3" data-lang-key="proc4Title">
+              Consegna & supporto
+            </h4>
+            <p class="lp-text-secondary small" data-lang-key="proc4Desc">
+              Repo tuo, dominio tuo, account tuoi. Documentazione + 30gg
+              supporto incluso.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- STACK RATIONALE -->
+      <div class="lp-divider"></div>
+      <div class="lp-stack-rationale px-4 lp-reveal">
+        <h4 class="lp-service-inc mb-3">Perché questo stack</h4>
+        <div class="lp-stack-grid">
+          <div class="lp-stack-item">
+            <strong>Static sites (HTML/CSS/JS)</strong>
+            <p class="lp-text-secondary small">
+              Nessun CMS, DB, PHP. Zero manutenzione server, sicurezza per
+              default, costi ~0.
+            </p>
+          </div>
+          <div class="lp-stack-item">
+            <strong>Cloudflare Pages + Workers</strong>
+            <p class="lp-text-secondary small">
+              Edge globale gratis, Functions per form/API, D1/R2 per dati,
+              analytics nativo.
+            </p>
+          </div>
+          <div class="lp-stack-item">
+            <strong>GitHub (repo + Actions)</strong>
+            <p class="lp-text-secondary small">
+              Version control, CI/CD automatico, preview deploy, collaborazione
+              trasparente.
+            </p>
+          </div>
+          <div class="lp-stack-item">
+            <strong>Vanilla first</strong>
+            <p class="lp-text-secondary small">
+              Niente React/Next se non serve. Meno bundle, più velocità, più
+              controllo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOSTING GUIDANCE -->
+      <div class="lp-divider"></div>
+      <div class="lp-hosting-guide px-4 lp-reveal">
+        <h4 class="lp-service-inc mb-3">
+          Dove hostare: Vercel vs GitHub Pages vs Cloudflare Pages
+        </h4>
+        <div class="lp-comparison-table">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th scope="col">Cloudflare Pages</th>
+                <th scope="col">Vercel</th>
+                <th scope="col">GitHub Pages</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Costo</th>
+                <td><strong>Gratis</strong> (illimitato)</td>
+                <td>Gratis (limiti build/banda)</td>
+                <td><strong>Gratis</strong></td>
+              </tr>
+              <tr>
+                <th scope="row">Edge / CDN</th>
+                <td><strong>300+ PoP</strong></td>
+                <td>Edge network</td>
+                <td>Fastly CDN</td>
+              </tr>
+              <tr>
+                <th scope="row">Funzioni serverless</th>
+                <td><strong>Workers</strong> (100k/giorno free)</td>
+                <td>Serverless Functions</td>
+                <td>No (solo statico)</td>
+              </tr>
+              <tr>
+                <th scope="row">Database / Storage</th>
+                <td><strong>D1 (SQL) + R2 (S3)</strong></td>
+                <td>KV, Postgres (a pagamento)</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <th scope="row">Analytics privacy-first</th>
+                <td><strong>Web Analytics nativo</strong></td>
+                <td>Vercel Analytics (a pagamento)</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <th scope="row">Gestione dominio/DNS</th>
+                <td><strong>Registrar + DNS nativi</strong></td>
+                <td>Solo DNS</td>
+                <td>Solo DNS (esterno)</td>
+              </tr>
+              <tr>
+                <th scope="row">Lock-in</th>
+                <td>Basso (standard Workers)</td>
+                <td>Medio (config Vercel-specific)</td>
+                <td><strong>Nessuno</strong></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="lp-text-secondary small mt-3">
+            <strong>La mia raccomandazione:</strong> Cloudflare Pages per tutto
+            (hosting, funzioni, DB, DNS, analytics). Vercel solo se serve
+            Next.js con ISR/SSR. GitHub Pages solo per progetti puramente
+            statici senza backend.
+          </p>
+        </div>
+      </div>
+
+      <!-- DOMAIN & ACCOUNT MANAGEMENT -->
+      <div class="lp-divider"></div>
+      <div class="lp-account-mgmt px-4 lp-reveal">
+        <h4 class="lp-service-inc mb-3">Account, domini, proprietà</h4>
+        <div class="lp-account-grid">
+          <div class="lp-account-item">
+            <strong>Dominio</strong>
+            <p class="lp-text-secondary small">
+              Lo compri tu (o ti guido io). Resta <strong>tuo al 100%</strong>.
+              Io configuro solo DNS su Cloudflare.
+            </p>
+          </div>
+          <div class="lp-account-item">
+            <strong>Account Cloudflare</strong>
+            <p class="lp-text-secondary small">
+              Due opzioni: <strong>(A)</strong> creo account dedicato al
+              progetto, ti do accesso admin; <strong>(B)</strong> usi il tuo, io
+              ho accesso "Technician" (solo zona specifica). Consiglio A per
+              chiarezza.
+            </p>
+          </div>
+          <div class="lp-account-item">
+            <strong>Repo GitHub</strong>
+            <p class="lp-text-secondary small">
+              Repo <strong>tuo</strong> (private o public). Io push come
+              collaboratore. A fine progetto: rimuovo accesso, repo resta tuo.
+            </p>
+          </div>
+          <div class="lp-account-item">
+            <strong>Fatturazione</strong>
+            <p class="lp-text-secondary small">
+              Servizi Cloudflare (Pages, Workers, R2, D1) restano
+              <strong>sul mio account</strong> se incluso nel mantenimento. Se
+              vuoi autonomia totale: migro tutto sul tuo account (costo una
+              tantum).
+            </p>
+          </div>
         </div>
       </div>
     </section>
