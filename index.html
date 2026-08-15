@@ -107,7 +107,6 @@
             "knowsAbout": [
               { "@type": "Thing", "name": "Web Development & Management" },
               { "@type": "Thing", "name": "Custom & Design" },
-              { "@type": "Thing", "name": "Collab & Sponsor" },
               { "@type": "Thing", "name": "Content Creation" },
               { "@type": "Thing", "name": "Fashion Design" },
               { "@type": "Thing", "name": "Video Editing" },
@@ -163,14 +162,6 @@
           <li class="nav-item">
             <a
               class="nav-link lp-nav-link"
-              href="#about"
-              data-lang-key="navAbout"
-              >About</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link lp-nav-link"
               href="#services"
               data-lang-key="navServ"
               >Servizi</a
@@ -187,11 +178,9 @@
           <li class="nav-item">
             <a
               class="nav-link lp-nav-link"
-              href="https://linktr.ee/lollo_pera"
-              target="_blank"
-              rel="noopener"
-              data-lang-key="navSocials"
-              >Socials</a
+              href="#customly"
+              data-lang-key="navCustomly"
+              >Customly</a
             >
           </li>
           <li class="nav-item d-none d-lg-block lp-nav-divider">│</li>
@@ -278,6 +267,7 @@
         </h3>
       </div>
       <div class="lp-services-grid px-4">
+        <!-- Sito web -->
         <div class="lp-card lp-service-card lp-reveal">
           <div class="lp-service-top">
             <span class="lp-service-num">01</span>
@@ -292,38 +282,72 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <polyline points="16 18 22 12 16 6" />
-                <polyline points="8 6 2 12 8 18" />
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8" />
+                <path d="M12 17v4" />
               </svg>
             </i>
           </div>
-          <h4 class="lp-service-title mb-2" data-lang-key="servWebTitle">
-            Web Development & Management
-          </h4>
-          <p class="lp-text-secondary small mb-3" data-lang-key="servWebDesc">
-            Realizzo e gestisco siti statici vetrina per attività locali e
-            brand: dallo sviluppo frontend fino a dominio, build e hosting. Mi
-            occupo anche del mantenimento tecnico dopo la pubblicazione.
+          <h4 class="lp-service-title mb-2">Sito web</h4>
+          <p class="lp-text-secondary small mb-3">
+            Realizzo siti statici vetrina: UI pulita, performance, SEO tecnica.
+            Dallo sviluppo al deploy — tu fornisci i contenuti, io creo il
+            prodotto finito.
           </p>
-          <span class="lp-service-inc" data-lang-key="servIncludes"
-            >Cosa include</span
-          >
-          <ul class="lp-service-list" data-lang-html="servWebList">
-            <li>Realizzazione siti statici vetrina (UI frontend)</li>
-            <li>Deploy, build e hosting</li>
-            <li>Acquisto dominio</li>
-            <li>Account Cloudflare per R2 e servizi online</li>
-            <li>Gestione modifiche da fare</li>
-            <li>Gestione errori e controllo che sia tutto a posto</li>
-            <li>Gestione dominio</li>
-            <li>Supporto tecnico e piccoli aggiornamenti</li>
+          <span class="lp-service-inc">Cosa include</span>
+          <ul class="lp-service-list">
+            <li>Sviluppo frontend (HTML, CSS, JS vanilla)</li>
+            <li>Design responsive, accessibile, Core Web Vitals</li>
+            <li>Setup dominio (Aruba) + Cloudflare DNS</li>
+            <li>Deploy su Cloudflare Pages</li>
+            <li>Consegna repo GitHub + istruzioni autonomia</li>
           </ul>
           <a
             href="#contact"
             class="lp-btn text-decoration-none"
-            data-lang-key="servCta"
             >Richiedi preventivo <span class="lp-cta-arrow">→</span></a
           >
+        </div>
+
+        <!-- Mantenimento -->
+        <div class="lp-card lp-service-card lp-reveal">
+          <div class="lp-service-top">
+            <span class="lp-service-num">02</span>
+            <i class="lp-service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="1em"
+                height="1em"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="3" />
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+              </svg>
+            </i>
+          </div>
+          <h4 class="lp-service-title mb-2">Mantenimento</h4>
+          <p class="lp-text-secondary small mb-3">
+            Il sito non finisce al lancio. Mi occupo della gestione tecnica continua:
+            aggiornamenti, sicurezza, modifiche contenuti, monitoraggio. Tu fai il
+            tuo lavoro, io tengo in piedi l'infrastruttura.
+          </p>
+          <span class="lp-service-inc">Cosa include</span>
+          <ul class="lp-service-list">
+            <li>Aggiornamenti dipendenze / build / deploy periodici</li>
+            <li>Modifiche contenuti (testi, immagini, pagine nuove)</li>
+            <li>Gestione dominio: rinnovi, DNS, record, subdomini</li>
+            <li>Account Cloudflare: R2, Workers, D1, Turnstile, WAF, Analytics</li>
+            <li>Monitoring uptime + alert errori</li>
+            <li>Backup automatici (Git + R2) + piano disaster recovery</li>
+            <li>Supporto prioritario email/WhatsApp — 24-48h</li>
+          </ul>
+          <p class="lp-text-secondary small mt-2">
+            <strong>Sito: 400€</strong> — <strong>Mantenimento: 25€/mese</strong>
+          </p>
         </div>
       </div>
     </section>
@@ -370,7 +394,7 @@
           data-scroll="customly"
           data-media="assets/customly-logo.webp"
         >
-          <div class="lp-project-media" data-lightbox-media>
+          <div class="lp-project-media">
             <img
               src="assets/customly-logo.webp"
               alt="Customly"
@@ -378,13 +402,30 @@
               loading="lazy"
             />
             <span class="lp-project-overlay">▶</span>
-            <div class="lp-project-video-preview">
+          </div>
+          <div class="lp-project-info">
+            <div class="lp-project-tags">
+              <span class="lp-badge">html</span>
+              <span class="lp-badge">css</span>
+              <span class="lp-badge">js</span>
+              <span class="lp-badge">seo/geo</span>
+              <span class="lp-badge">cloudflare</span>
+              <span class="lp-badge">d1</span>
+              <span class="lp-badge">r2</span>
+            </div>
+            <div class="lp-project-video-side">
               <video
                 playsinline
                 muted
+                autoplay
                 loop
                 preload="metadata"
-                poster="assets/customly-thumb.webp"
+                style="
+                  width: 100%;
+                  max-width: 200px;
+                  border-radius: 8px;
+                  background: var(--bg-card);
+                "
               >
                 <source src="assets/customly-preview.mp4" type="video/mp4" />
                 Il tuo browser non supporta il tag video.
@@ -395,20 +436,8 @@
             <h4 class="fs-5 fw-bold mb-1">Customly</h4>
             <p class="lp-text-secondary small mb-2">
               Piattaforma di custom fashion: unisco moda e tecnologia con un
-              configuratore digitale per personalizzare abbigliamento. Ho
-              progettato l'intera UX/UI — palette, tipografia, layout,
-              micro-interazioni — e sviluppato la piattaforma su Cloudflare
-              Pages, D1 e R2. MVP live su customly.it.
+              configuratore digitale per personalizzare abbigliamento.
             </p>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="lp-badge">html</span>
-              <span class="lp-badge">css</span>
-              <span class="lp-badge">js</span>
-              <span class="lp-badge">seo/geo</span>
-              <span class="lp-badge">cloudflare</span>
-              <span class="lp-badge">d1</span>
-              <span class="lp-badge">r2</span>
-            </div>
           </div>
         </div>
         <div
@@ -470,21 +499,14 @@
           Il mio progetto principale
         </h3>
       </div>
-      <div class="lp-customly mx-4">
+      <div class="lp-customly">
         <div class="lp-customly-inner">
           <img
             src="assets/customly-logo.webp"
             alt="Customly"
             class="lp-customly-logo me-3"
             loading="lazy"
-            style="
-              width: 80px;
-              height: 80px;
-              flex-shrink: 0;
-              border-radius: 50%;
-              object-fit: cover;
-              border: 2px solid var(--border);
-            "
+            style="width: 60px; height: 60px; flex-shrink: 0; border-radius: 8px; object-fit: cover; border: 2px solid var(--border);"
           />
           <div>
             <h4 class="lp-customly-title mt-0 mb-1">Customly</h4>
@@ -493,12 +515,11 @@
             </p>
             <p class="lp-text-secondary mb-2" data-lang-key="customlyDesc">
               Piattaforma di custom fashion che unisce moda e tecnologia. Dal
-              configuratore digitale — dove scegli colori, materiali e dettagli
-              — alla scelta di palette e layout chiari e senza attriti. Ogni
-              schermata, dal catalogo al riepilogo ordine, nasce dal problema
-              reale di chi vuole un capo unico: design prima, poi codice. Su
-              Cloudflare Pages, D1 e R2 gestisco catalogo, configuratore e
-              design end-to-end.
+              configuratore digitale — dove scegli colori, materiali e dettagli —
+              alla scelta di palette e layout chiari e senza attriti. Ogni schermata,
+              dal catalogo al riepilogo ordine, nasce dal problema reale di chi vuole
+              un capo unico: design prima, poi codice. Su Cloudflare Pages, D1 e
+              R2 gestisco catalogo, configuratore e design end-to-end.
             </p>
             <p class="lp-text-secondary small text-center mb-3">
               <strong>Agosto 2026</strong> — MVP live su customly.it.
@@ -525,6 +546,7 @@
           <video
             playsinline
             muted
+            autoplay
             loop
             preload="metadata"
             style="
@@ -555,34 +577,7 @@
         </h3>
       </div>
       <div class="lp-timeline px-3">
-        <!-- School -->
-        <div class="lp-timeline-item lp-reveal">
-          <div class="lp-timeline-side">
-            <div class="lp-timeline-dot"></div>
-            <div class="lp-timeline-logo">
-              <img
-                src="assets/vallauri.webp"
-                alt="ITIS Vallauri"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div class="lp-timeline-content">
-            <div class="lp-timeline-date">2018 — 2022</div>
-            <h4 data-lang-key="tlSchoolTitle">ITIS Vallauri — Diploma</h4>
-            <p data-lang-key="tlSchoolDesc">
-              Informatica e Telecomunicazioni. Fondamenti di programmazione,
-              rete, sistemi. Progetto finale: sviluppo applicativo full-stack.
-            </p>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="lp-badge">C</span>
-              <span class="lp-badge">C#</span>
-              <span class="lp-badge">SQL</span>
-              <span class="lp-badge">VS Code</span>
-            </div>
-          </div>
-        </div>
-        <!-- Customly -->
+        <!-- Customly (higher - most recent) -->
         <div class="lp-timeline-item lp-reveal">
           <div class="lp-timeline-side">
             <div class="lp-timeline-dot"></div>
@@ -667,66 +662,33 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <div class="lp-divider"></div>
-
-    <!-- FAQ -->
-    <section class="lp-section lp-reveal" id="faq">
-      <div class="ms-5 ps-3 mb-4">
-        <h2 class="lp-big-title">FAQ</h2>
-        <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="faqSub">
-          Domande frequenti
-        </h3>
-      </div>
-      <div class="d-flex flex-column gap-3 px-4">
-        <details class="lp-faq-item lp-reveal">
-          <summary data-lang-key="faq1Q">
-            Chi gestisce dominio e hosting?
-          </summary>
-          <p data-lang-key="faq1A">
-            Il dominio e i servizi collegati possono essere acquistati
-            direttamente dal cliente oppure gestiti insieme. In caso di
-            manutenzione continuativa posso occuparmi della parte tecnica.
-          </p>
-        </details>
-        <details class="lp-faq-item lp-reveal">
-          <summary data-lang-key="faq2Q">
-            Posso richiedere un capo personalizzato?
-          </summary>
-          <p data-lang-key="faq2A">
-            Sì, realizzo custom fashion partendo da capi esistenti, lavorando su
-            modifiche, dettagli, materiali e concept personalizzati.
-          </p>
-        </details>
-        <details class="lp-faq-item lp-reveal">
-          <summary data-lang-key="faq3Q">Quanto costa un progetto?</summary>
-          <p data-lang-key="faq3A">
-            Ogni progetto viene valutato singolarmente in base a complessità,
-            tempi e obiettivi. Dopo una prima analisi preparo una proposta
-            personalizzata.
-          </p>
-        </details>
-        <details class="lp-faq-item lp-reveal">
-          <summary data-lang-key="faq4Q">
-            Quanto tempo serve per completare un progetto?
-          </summary>
-          <p data-lang-key="faq4A">
-            Dipende dal tipo di lavoro. Un sito semplice può richiedere alcune
-            settimane, mentre progetti più creativi o personalizzati possono
-            richiedere più tempo.
-          </p>
-        </details>
-        <details class="lp-faq-item lp-reveal">
-          <summary data-lang-key="faq5Q">
-            Posso contattarti anche solo per un'idea?
-          </summary>
-          <p data-lang-key="faq5A">
-            Sì, puoi scrivermi anche nelle fasi iniziali. Possiamo valutare
-            insieme se l'idea può trasformarsi in un progetto concreto.
-          </p>
-        </details>
+        <!-- School (lowest - 2018-2022) -->
+        <div class="lp-timeline-item lp-reveal">
+          <div class="lp-timeline-side">
+            <div class="lp-timeline-dot"></div>
+            <div class="lp-timeline-logo">
+              <img
+                src="assets/vallauri.webp"
+                alt="ITIS Vallauri"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="lp-timeline-content">
+            <div class="lp-timeline-date">2018 — 2022</div>
+            <h4 data-lang-key="tlSchoolTitle">ITIS Vallauri — Diploma</h4>
+            <p data-lang-key="tlSchoolDesc">
+              Informatica e Telecomunicazioni. Fondamenti di programmazione,
+              rete, sistemi. Progetto finale: sviluppo applicativo full-stack.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="lp-badge">C</span>
+              <span class="lp-badge">C#</span>
+              <span class="lp-badge">SQL</span>
+              <span class="lp-badge">VS Code</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -767,6 +729,236 @@
 
     <div class="lp-divider"></div>
 
+    <!-- TOOLS -->
+    <div class="lp-section px-4">
+      <div class="lp-divider"></div>
+
+      <section class="lp-tools-section lp-reveal">
+        <div class="ms-5 ps-3 mb-4">
+          <h2 class="lp-big-title">Tools</h2>
+          <h3
+            class="lp-text-secondary lp-subtitle-offset"
+            data-lang-key="toolsSub"
+          >
+            Strumenti & Competenze
+          </h3>
+        </div>
+        <div class="lp-tools-groups">
+          <div class="lp-tool-group lp-reveal">
+            <h4 class="lp-tool-group-title">
+              <span data-lang-key="toolGroupLangs">Linguaggi</span>
+              <span class="lp-tool-count">07</span>
+            </h4>
+            <div class="lp-tech-grid">
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <i class="devicon-html5-plain colored"></i>
+                <span>HTML</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <i class="devicon-css3-plain colored"></i>
+                <span>CSS</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <i class="devicon-javascript-plain colored"></i>
+                <span>JS</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Beginner"
+                data-context="School"
+              >
+                <i class="devicon-c-plain colored"></i>
+                <span>C</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Beginner"
+                data-context="School"
+              >
+                <i class="devicon-csharp-plain colored"></i>
+                <span>C#</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Beginner"
+                data-context="Self-taught"
+              >
+                <i class="devicon-python-plain colored"></i>
+                <span>Python</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <i class="devicon-bash-plain colored"></i>
+                <span>Bash</span>
+              </div>
+            </div>
+          </div>
+          <div class="lp-tool-group lp-reveal">
+            <h4 class="lp-tool-group-title">
+              <span data-lang-key="toolGroupWeb">Web & Cloud</span>
+              <span class="lp-tool-count">04</span>
+            </h4>
+            <div class="lp-tech-grid">
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <i class="devicon-git-plain colored"></i>
+                <span>Git</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <i class="devicon-github-original colored"></i>
+                <span>GitHub</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="Self-taught"
+              >
+                <i class="devicon-cloudflare-plain colored"></i>
+                <span>Cloudflare</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Beginner"
+                data-context="Self-taught"
+              >
+                <img
+                  src="assets/tools/n8n.svg"
+                  alt="n8n"
+                  class="lp-tool-logo"
+                  loading="lazy"
+                />
+                <span>n8n</span>
+              </div>
+            </div>
+          </div>
+          <div class="lp-tool-group lp-reveal">
+            <h4 class="lp-tool-group-title">
+              <span data-lang-key="toolGroupDesign">Design & Editing</span>
+              <span class="lp-tool-count">04</span>
+            </h4>
+            <div class="lp-tech-grid">
+              <div
+                class="lp-tech-item"
+                data-level="Advanced"
+                data-context="Work & Self-taught"
+              >
+                <i class="devicon-canva-original colored"></i>
+                <span>Canva</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Beginner"
+                data-context="Work"
+              >
+                <img
+                  src="assets/tools/lightroom.svg"
+                  alt="Lightroom"
+                  class="lp-tool-logo"
+                  loading="lazy"
+                />
+                <span>Lightroom</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Beginner"
+                data-context="Self-taught"
+              >
+                <img
+                  src="assets/tools/capcut.svg"
+                  alt="CapCut"
+                  class="lp-tool-logo"
+                  loading="lazy"
+                />
+                <span>CapCut</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="Work & Self-taught"
+              >
+                <i class="devicon-edits-original colored"></i>
+                <span>Edits</span>
+              </div>
+            </div>
+          </div>
+          <div class="lp-tool-group lp-reveal">
+            <h4 class="lp-tool-group-title">
+              <span data-lang-key="toolGroupTools">Strumenti & Office</span>
+              <span class="lp-tool-count">04</span>
+            </h4>
+            <div class="lp-tech-grid">
+              <div
+                class="lp-tech-item"
+                data-level="Advanced"
+                data-context="School & Self-taught"
+              >
+                <i class="devicon-vscode-plain colored"></i>
+                <span>VSCode</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Beginner"
+                data-context="School"
+              >
+                <i class="devicon-visualstudio-plain colored"></i>
+                <span>VS</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <img
+                  src="assets/tools/excel.svg"
+                  alt="Excel"
+                  class="lp-tool-logo"
+                  loading="lazy"
+                />
+                <span>Excel</span>
+              </div>
+              <div
+                class="lp-tech-item"
+                data-level="Intermediate"
+                data-context="School & Self-taught"
+              >
+                <img
+                  src="assets/tools/word.svg"
+                  alt="Word"
+                  class="lp-tool-logo"
+                  loading="lazy"
+                />
+                <span>Word</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="lp-divider"></div>
+
     <!-- CONTACT -->
     <section class="lp-contact-section lp-reveal" id="contact">
       <div class="contact-form-wrapper">
@@ -777,107 +969,45 @@
         >
           Restiamo in contatto
         </h3>
-        <p class="lp-text-secondary mt-3 mb-4" data-lang-key="contactDesc">
+        <p class="lp-text-secondary mt-3 mb-4">
           Scrivimi per collaborazioni, idee o progetti.
         </p>
-
-        <form
-          class="lp-contact-form"
-          action="https://formspree.io/f/mvznrbeq"
-          method="post"
-        >
-          <div class="contact-top-fields">
-            <input
-              type="text"
-              name="nome"
-              class="lp-input"
-              placeholder="Il tuo nome"
-              required
-              data-lang-key="contactName"
-            />
-            <input
-              type="email"
-              name="email"
-              class="lp-input"
-              placeholder="La tua email"
-              required
-              data-lang-key="contactEmail"
-            />
-            <select
-              name="motivo"
-              class="lp-input lp-select"
-              id="contactReason"
-              data-lang-key="contactReason"
-            >
-              <option value="" disabled selected>Motivo</option>
-              <option value="preventivo">Preventivo</option>
-              <option value="collaborazione">Collaborazione</option>
-              <option value="idea">Solo un'idea</option>
-              <option value="altro">Altro</option>
-            </select>
-            <select
-              name="servizio"
-              class="lp-input lp-select"
-              id="contactService"
-              hidden
-              data-lang-key="contactService"
-            >
-              <option value="" disabled selected>Servizio</option>
-              <option value="web">Web Development & Management</option>
-              <option value="custom">Custom & Design</option>
-              <option value="collab">Collab & Sponsor</option>
-            </select>
-            <input
-              type="text"
-              name="oggetto"
-              class="lp-input"
-              placeholder="Oggetto"
-              data-lang-key="contactSubject"
-            />
-          </div>
-          <textarea
-            name="messaggio"
-            class="lp-textarea"
-            placeholder="Il tuo messaggio..."
-            rows="6"
-            required
-            data-lang-key="contactMsg"
-          ></textarea>
-          <button type="submit" class="lp-btn mt-3" data-lang-key="contactBtn">
-            Invia messaggio
-          </button>
-        </form>
-        <p class="lp-text-secondary mt-4 small">
-          Oppure
-          <button
-            class="lp-copy-btn"
-            onclick="navigator.clipboard.writeText('perassi.lorenzo1804@gmail.com').then(() => this.textContent='Copiata!').catch(() => {})"
-          >
-            copiami l'email
-          </button>
+        <p class="lp-text-secondary mb-4">
+          <strong>Email:</strong> perassi.lorenzo1804@gmail.com
         </p>
-        <p class="lp-text-secondary mt-3">
-          Sarò più veloce a rispondere su WhatsApp
+        <p class="lp-text-secondary">
+          <strong>WhatsApp:</strong> <a href="https://wa.me/393293360374"
+            >393293360374</a
+          >
+        </p>
+        <p class="lp-text-secondary mt-4 small">
+          Oppure scrivimi sui social:
         </p>
         <a
-          href="https://wa.me/393293360374"
+          href="https://www.instagram.com/diario_di_uno_09"
           target="_blank"
           rel="noopener"
-          class="lp-btn lp-btn-wa"
+          class="lp-link-accent"
+          >Instagram</a
         >
-          <svg
-            viewBox="0 0 24 24"
-            width="18"
-            height="18"
-            fill="currentColor"
-            style="vertical-align: middle; margin-right: 6px"
-          >
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-            />
-          </svg>
-          Scrivimi su WhatsApp
-        </a>
+        <a
+          href="https://www.tiktok.com/@diario_di_uno_09"
+          target="_blank"
+          rel="noopener"
+          >TikTok</a
+        >
+        <a
+          href="https://www.youtube.com/@diario_di_uno_09"
+          target="_blank"
+          rel="noopener"
+          >YouTube</a
+        >
+        <a
+          href="https://linktr.ee/lollo_pera"
+          target="_blank"
+          rel="noopener"
+          >Linktree</a
+        >
       </div>
     </section>
 
@@ -902,26 +1032,7 @@
         >
       </div>
     </section>
-    <!-- project detail modal -->
-    <div
-      id="projectModal"
-      class="lp-modal"
-      role="dialog"
-      aria-label="Dettaglio progetto"
-    >
-      <div class="lp-modal-backdrop" onclick="closeProjectModal()"></div>
-      <div class="lp-modal-content">
-        <button class="lp-modal-close" onclick="closeProjectModal()">
-          &times;
-        </button>
-        <img class="lp-modal-img" id="modalImg" alt="" />
-        <div class="lp-modal-body">
-          <h2 class="lp-modal-title" id="modalTitle"></h2>
-          <p class="lp-modal-desc" id="modalDesc"></p>
-          <div class="d-flex flex-wrap gap-2" id="modalBadges"></div>
-        </div>
-      </div>
-    </div>
+    <!-- project detail modal removed - no popup -->
 
     <button id="backToTop" class="lp-back-to-top" aria-label="Torna su">
       ↑
@@ -953,7 +1064,7 @@
         <div class="lp-footer-col">
           <h3 class="lp-footer-subtitle" data-lang-key="footerPages">Pages</h3>
           <a href="#hero">Home</a>
-          <a href="#about">About</a>
+          <a href="#services">Services</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>
