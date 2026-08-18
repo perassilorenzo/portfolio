@@ -3474,3 +3474,217 @@ a:hover,
     transition-duration: 0s !important;
   }
 }
+
+/* ===== Configuratore Sito ===== */
+.lp-configuratore-sito {
+  margin-top: 4px;
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.lp-config-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 4px;
+}
+.lp-config-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lp-config-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.lp-config-radio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.lp-config-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--bg-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lp-config-option:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.lp-config-option:has(input:checked),
+.lp-config-option--active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.lp-config-option input[type="radio"],
+.lp-config-option input[type="checkbox"] {
+  flex-shrink: 0;
+  accent-color: var(--accent);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+.lp-config-opt-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.lp-config-opt-text strong {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+.lp-config-opt-text small {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+.lp-config-option--checkbox {
+  align-items: flex-start;
+}
+.lp-config-checkbox {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--bg-primary);
+  position: relative;
+}
+.lp-config-option--checkbox input:checked + .lp-config-checkbox {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.lp-config-option--checkbox input:checked + .lp-config-checkbox::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.lp-config-stepper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+.lp-config-stepper > span {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.lp-config-number-btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lp-config-number-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.lp-config-hint {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+.lp-config-lingue {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.lp-config-lingue-input {
+  width: 80px;
+  text-align: center;
+}
+.lp-config-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.lp-config-feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lp-config-feature:hover {
+  border-color: var(--accent);
+}
+.lp-config-feature:has(input:checked),
+.lp-config-feature--selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.lp-config-feature input {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.lp-config-feature span {
+  color: var(--text-primary);
+  font-size: 0.85rem;
+}
+.lp-config-prezzo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 18px;
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  background: var(--accent-soft);
+  text-align: center;
+}
+.lp-config-prezzo-label {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.lp-config-prezzo-sub {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+.lp-config-prezzo-totale {
+  color: var(--accent);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 6px;
+}
+@media (max-width: 768px) {
+  .lp-config-radio-grid,
+  .lp-config-features-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -722,187 +722,148 @@
             data-lang-key="contactSubject"
           />
         </div>
+        <!-- Configuratore Sito -->
+        <div id="configuratore-sito" class="lp-configuratore-sito" style="display: none;">
+          <h4 class="lp-config-title">Configura il tuo sito</h4>
+
+          <div class="lp-config-block">
+            <label class="lp-config-label">Tipo di Sito</label>
+            <div class="lp-config-radio-grid">
+              <label class="lp-config-option lp-config-option--active">
+                <input type="radio" name="config-tipo-sito" value="landing" checked required>
+                <span class="lp-config-opt-text">
+                  <strong>Landing Page (1 pagina)</strong>
+                  <small>Ideale per presentare la tua attività.</small>
+                </span>
+              </label>
+              <label class="lp-config-option">
+                <input type="radio" name="config-tipo-sito" value="multipage" required>
+                <span class="lp-config-opt-text">
+                  <strong>Multi-pagina</strong>
+                  <small>Sito con più pagine (home, about, servizi, contatti).</small>
+                </span>
+              </label>
+            </div>
+            <input type="hidden" name="config-tipo" value="landing">
+          </div>
+
+          <div class="lp-config-block">
+            <label class="lp-config-label">Pagine extra oltre la prima</label>
+            <div class="lp-config-stepper">
+              <button type="button" class="lp-config-number-btn" data-step="-1" aria-label="Riduci">−</button>
+              <span id="config-extra-pages-display">0</span>
+              <button type="button" class="lp-config-number-btn" data-step="+1" aria-label="Aumenta">+</button>
+            </div>
+            <small class="lp-config-hint">+50 € a pagina</small>
+            <input type="hidden" name="config-extra-pages" value="0">
+          </div>
+
+          <div class="lp-config-block">
+            <label class="lp-config-option lp-config-option--checkbox">
+              <input type="checkbox" id="config-img-pro" required>
+              <span class="lp-config-checkbox"></span>
+              <span class="lp-config-opt-text">
+                <strong>Immagini professionali</strong>
+                <small>Ricerca e ottimizzazione di immagini di alta qualità. +20 €</small>
+              </span>
+            </label>
+            <input type="hidden" name="config-img" value="1">
+          </div>
+
+          <div class="lp-config-block">
+            <label class="lp-config-option lp-config-option--checkbox">
+              <input type="checkbox" id="config-copywriting" required>
+              <span class="lp-config-checkbox"></span>
+              <span class="lp-config-opt-text">
+                <strong>Copywriting / Testi inclusi</strong>
+                <small>Creazione / revisione testi inclusa. Gratis (0 €)</small>
+              </span>
+            </label>
+            <input type="hidden" name="config-copywriting" value="1">
+          </div>
+
+          <div class="lp-config-block">
+            <label class="lp-config-label" for="config-lingue">Lingue aggiuntive</label>
+            <div class="lp-config-lingue">
+              <input type="number" name="config-lingue" id="config-lingue" value="0" min="0" class="lp-input lp-config-lingue-input" required>
+              <span class="lp-config-hint">+50 € a lingua</span>
+            </div>
+          </div>
+
+          <div class="lp-config-block">
+            <label class="lp-config-label">Funzionalità (+10 € cadauna)</label>
+            <div class="lp-config-features-grid" id="config-features-grid">
+              <label class="lp-config-feature lp-config-feature--selected">
+                <input type="checkbox" data-feature="dark-light-mode" checked>
+                <span>🌙 Dark / Light Mode</span>
+              </label>
+              <label class="lp-config-feature lp-config-feature--selected">
+                <input type="checkbox" data-feature="scroll-reveal" checked>
+                <span>📜 Scroll Reveal</span>
+              </label>
+              <label class="lp-config-feature lp-config-feature--selected">
+                <input type="checkbox" data-feature="back-to-top" checked>
+                <span>⬆️ Back to Top Button</span>
+              </label>
+              <label class="lp-config-feature lp-config-feature--selected">
+                <input type="checkbox" data-feature="image-lightbox" checked>
+                <span>🖼️ Image Lightbox</span>
+              </label>
+              <label class="lp-config-feature lp-config-feature--selected">
+                <input type="checkbox" data-feature="image-slider" checked>
+                <span>🎞️ Image Slider / Carousel</span>
+              </label>
+              <label class="lp-config-feature lp-config-feature--selected">
+                <input type="checkbox" data-feature="hover-effects" checked>
+                <span>🖱️ Hover Effects avanzati</span>
+              </label>
+              <label class="lp-config-feature lp-config-feature--selected">
+                <input type="checkbox" data-feature="animated-counters" checked>
+                <span>🔢 Animated Counters</span>
+              </label>
+              <label class="lp-config-feature lp-config-feature--selected">
+                <input type="checkbox" data-feature="search-interna" checked>
+                <span>🔍 Ricerca interna</span>
+              </label>
+              <label class="lp-config-feature lp-config-feature--selected">
+                <input type="checkbox" data-feature="filtro-categorie" checked>
+                <span>🏷️ Filtro Categorie</span>
+              </label>
+              <label class="lp-config-feature lp-config-feature--selected">
+                <input type="checkbox" data-feature="faq-accordion" checked>
+                <span>❓ FAQ Accordion</span>
+              </label>
+              <label class="lp-config-feature lp-config-feature--selected">
+                <input type="checkbox" data-feature="whatsapp-chat" checked>
+                <span>💬 WhatsApp Chat Button</span>
+              </label>
+              <label class="lp-config-feature lp-config-feature--selected">
+                <input type="checkbox" data-feature="mappa-interattiva" checked>
+                <span>📍 Mappa Interattiva</span>
+              </label>
+              <label class="lp-config-feature lp-config-feature--selected">
+                <input type="checkbox" data-feature="before-after-slider" checked>
+                <span>↔️ Before / After Image Slider</span>
+              </label>
+              <label class="lp-config-feature lp-config-feature--selected">
+                <input type="checkbox" data-feature="marquee-text" checked>
+                <span>➡️ Marquee Text</span>
+              </label>
+              <label class="lp-config-feature lp-config-feature--selected">
+                <input type="checkbox" data-feature="animated-progress" checked>
+                <span>📊 Animated Progress Bar</span>
+              </label>
+            </div>
+            <input type="hidden" name="config-selected-features" value="">
+          </div>
+
+          <div class="lp-config-prezzo">
+            <span class="lp-config-prezzo-label">Richiedi preventivo</span>
+            <span class="lp-config-prezzo-sub">Potrebbe cambiare in base alle tue scelte</span>
+            <span id="config-prezzo-totale" class="lp-config-prezzo-totale">250 €</span>
+          </div>
+        </div>
         <textarea
-<!-- Configuratore Sito -->
-<div id="configuratore-sito" class="lp-configuratore-sito" style="display: none; margin-top: 20px;">
-  <h4 class="text-xl font-bold text-white mb-3">Tipo di Sito</h4>
-  <div class="grid grid-cols-2 gap-4">
-    <label class="lp-config-option lp-config-option--active">
-      <span id="config-prezzo-totale" class="text-[var(--accent)] font-bold text-lg">250 €</span>
-      <input type="radio" name="config-tipo-sito" value="landing" checked required>
-      <div>
-        <h5 class="font-bold text-white">Landing Page (1 pagina)</h5>
-        <p class="text-neutral-400 text-sm">Ideale per presentare la tua attività, contatto e informazioni essenziali.</p>
-        <input type="hidden" name="config-tipo" value="landing">
-      </div>
-    </label>
-    <label class="lp-config-option">
-      <input type="radio" name="config-tipo-sito" value="multipage" required>
-      <div>
-        <h5 class="font-bold text-white">Multi-pagina</h5>
-        <p class="text-neutral-400 text-sm">Sito con più pagine (home, about, servizi, contatti).</p>
-        <input type="hidden" name="config-tipo" value="multipage">
-      </div>
-    </label>
-  </div>
-  <div class="mt-4">
-    <label class="text-neutral-400 text-sm">Pagine extra oltre la prima:</label>
-    <div class="grid grid-cols-3 gap-2">
-      <button class="lp-config-number-btn" data-step="-1">−</button>
-      <span id="config-extra-pages-display">0</span>
-      <button class="lp-config-number-btn" data-step="+1">+</button>
-    </div>
-    <p class="text-neutral-400 text-xs mt-2">+50 € a pagina</p>
-    <input type="hidden" name="config-extra-pages" value="0">
-  </div>
-
-  <!-- Immagini -->
-  <div>
-
-    <label class="lp-config-option">
-
-      <input type="checkbox" id="config-img-pro" required>
-
-      <span class="checkmark"></span>
-
-      <div>
-
-        <h5 class="font-bold text-white">Immagini professionali</h5>
-
-        <p class="text-neutral-400 text-sm">Ricerca e ottimizzazione di immagini di alta qualità.</p>
-
-        <input type="hidden" name="config-img" value="1">
-
-      </div>
-
-    </label>
-
-    <p class="text-neutral-400 text-sm mt-1">+20 €</p>
-
-  </div>
-
-  <!-- Copywriting -->
-
-  <div>
-
-    <label class="lp-config-option">
-
-      <input type="checkbox" id="config-copywriting" required>
-
-      <span class="checkmark"></span>
-
-      <div>
-
-        <h5 class="font-bold text-white">Copywriting / Testi inclusi</h5>
-
-        <p class="text-neutral-400 text-sm">Creazione/revisione testi inclusa</p>
-
-        <input type="hidden" name="config-copywriting" value="1">
-
-      </div>
-
-    </label>
-
-    <p class="text-neutral-600 text-sm mt-1">Gratis (0 €)</p>
-
-  </div>
-
-  <!-- Lingue -->
-
-  <div>
-
-    <label class="text-neutral-400 text-sm mb-2">Lingue aggiuntive:</label>
-
-    <div class="space-y-2">
-
-      <div>
-
-        <input type="number" name="config-lingue" value="0" min="0" class="w-20 text-center lp-input" required>
-
-        <span class="text-neutral-400 text-sm">+50 € a lingua</span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- Funzionalità -->
-
-  <div>
-
-    <h5 class="text-semibold text-white mb-3">Funzionalità (+10 € cadauna)</h5>
-
-    <div class="grid grid-cols-2 gap-3" id="config-features-grid">
-
-      <label class="lp-config-feature lp-config-feature--selected">
-        <input type="checkbox" data-feature="dark-light-mode" checked>
-        <span>🌙 Dark / Light Mode</span>
-      </label>
-      <label class="lp-config-feature lp-config-feature--selected">
-        <input type="checkbox" data-feature="scroll-reveal" checked>
-        <span>📜 Scroll Reveal</span>
-      </label>
-      <label class="lp-config-feature lp-config-feature--selected">
-        <input type="checkbox" data-feature="back-to-top" checked>
-        <span>⬆️ Back to Top Button</span>
-      </label>
-      <label class="lp-config-feature lp-config-feature--selected">
-        <input type="checkbox" data-feature="image-lightbox" checked>
-        <span>🖼️ Image Lightbox</span>
-      </label>
-      <label class="lp-config-feature lp-config-feature--selected">
-        <input type="checkbox" data-feature="image-slider" checked>
-        <span>🎞️ Image Slider / Carousel</span>
-      </label>
-      <label class="lp-config-feature lp-config-feature--selected">
-        <input type="checkbox" data-feature="hover-effects" checked>
-        <span>🖱️ Hover Effects avanzati</span>
-      </label>
-      <label class="lp-config-feature lp-config-feature--selected">
-        <input type="checkbox" data-feature="animated-counters" checked>
-        <span>🔢 Animated Counters</span>
-      </label>
-      <label class="lp-config-feature lp-config-feature--selected">
-        <input type="checkbox" data-feature="search-interna" checked>
-        <span>🔍 Ricerca interna</span>
-      </label>
-      <label class="lp-config-feature lp-config-feature--selected">
-        <input type="checkbox" data-feature="filtro-categorie" checked>
-        <span>🏷️ Filtro Categorie</span>
-      </label>
-      <label class="lp-config-feature lp-config-feature--selected">
-        <input type="checkbox" data-feature="faq-accordion" checked>
-        <span>❓ FAQ Accordion</span>
-      </label>
-      <label class="lp-config-feature lp-config-feature--selected">
-        <input type="checkbox" data-feature="whatsapp-chat" checked>
-        <span>💬 WhatsApp Chat Button</span>
-      </label>
-      <label class="lp-config-feature lp-config-feature--selected">
-        <input type="checkbox" data-feature="mappa-interattiva" checked>
-        <span>📍 Mappa Interattiva</span>
-      </label>
-      <label class="lp-config-feature lp-config-feature--selected">
-        <input type="checkbox" data-feature="before-after-slider" checked>
-        <span>↔️ Before / After Image Slider</span>
-      </label>
-      <label class="lp-config-feature lp-config-feature--selected">
-        <input type="checkbox" data-feature="marquee-text" checked>
-        <span>➡️ Marquee Text</span>
-      </label>
-      <label class="lp-config-feature lp-config-feature--selected">
-        <input type="checkbox" data-feature="animated-progress" checked>
-        <span>📊 Animated Progress Bar</span>
-      </label>
-
-    </div>
-
-    <input type="hidden" name="config-selected-features" value="">
-
-  </div>
-
-</div>
           name="messaggio"
           class="lp-textarea"
           placeholder="Il tuo messaggio..."
@@ -910,6 +871,7 @@
           required
           data-lang-key="contactMsg"
         ></textarea>
+
         <button type="submit" class="lp-btn mt-3" data-lang-key="contactBtn">
           Richiedi preventivo
         </button>
@@ -944,12 +906,9 @@
           </svg>
           Scrivimi su WhatsApp
         </a>
+      </form>
       </div>
     </section>
-
-  <!-- BIG CTA -->
-  </div>
-  </section>
   <!-- project detail modal removed - no popup -->
 
   <button id="backToTop" class="lp-back-to-top" aria-label="Torna su">
@@ -1007,182 +966,6 @@
       </p>
     </div>
   </footer>
-    <div class="lp-config-card" onclick="event.stopPropagation()">
-      background: #f8f9fa;
-      border-radius: 8px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-    
-    .lp-cert-card--cs50 {
-      flex: 1;
-    }
-    
-    .lp-cert-card--cs50 .cert-card-body {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 20px;
-    }
-    
-    .lp-cert-card--cs50 .cert-card-header {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      margin-bottom: 12px;
-    }
-    
-    .lp-cert-card--cs50 .cert-card-status {
-      font-size: 0.65rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    
-    .lp-cert-card--cs50 .cert-card-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin: 0;
-    }
-    
-    .lp-cert-card--cs50 .cert-card-subtitle {
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      margin: 0;
-    }
-    
-    .lp-cert-card--cs50 .cert-card-footer {
-      margin-top: 12px;
-      font-size: 0.75rem;
-      color: var(--text-secondary);
-    }
-    
-    .lp-cert-card--cs50 .view-cert-btn {
-      margin-top: 8px;
-      width: 100%;
-      text-align: left;
-      font-size: 0.75rem;
-    }
-    
-    .lp-cert-card--cs50 img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      border-radius: 8px;
-      margin-top: 12px;
-    }
-    
-    .lp-cert-card--empty {
-      flex: 1;
-      background: #f8f9fa;
-    }
-    
-    .lp-cert-card--empty .certcard-body {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 20px;
-    }
-    
-    .lp-cert-card--empty .certard-header,
-    .lp-cert-card--empty .certard-description {
-      margin: 0;
-      padding: 0;
-    }
-    
-    .lp-cert-card--empty img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      border-radius: 8px;
-      margin-top: 12px;
-    }
-    
-    @media (max-width: 992px) {
-      .lp-cert-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  
-</script>
-
-      <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        const motivoSelect = document.getElementById("contactReason");
-        const configuratoreSito = document.getElementById("configuratore-sito");
-        
-        
-        // Show/hide configuratore when "configura-sito" is selected\n        motivoSelect.addEventListener("change", function() {
-          if (this.value === "configura-sito") {
-            configuratoreSito.style.display = "block";
-            this.style.height = "250px";\n          } else {
-            configuratoreSito.style.display = "none";\n            this.style.height = "";\n          }
-        });
-        
-        // Format configuration data for the message\n        const form = document.querySelector(".lp-contact-form");\n        if (form) {
-\n      // Function to update price in real-time\n      function aggiornaPrezzo() {\n          let prezzo = 250; // Base Landing Page\n          \n          // Pagine extra\n            const pagineExtra = parseInt(document.getElementById("config-extra-pages-display").textContent) || 0;
-            prezzo += pagineExtra * 50;
-          
-          // Immagini\n            const imgPro = document.getElementById("config-img-pro");\n            if (imgPro && imgPro.checked) prezzo += 20;
-          
-          // Copywriting (già incluso nel prezzo base)\n            // Non aggiunge nulla in più\n          \n          // Lingue\n            const lingue = parseInt(document.getElementById("config-lingue").value) || 0;
-            prezzo += lingue * 50;
-          
-          // Funzionalità\n            let funzionalitaSelezionate = 0;
-            document.querySelectorAll("#config-features-grid input[data-feature]:checked").forEach(cb => {
-              funzionalitaSelezionate++;
-            });
-            prezzo += funzionalitaSelezionate * 10;
-          
-          // Display\n            const prezzoDisplay = document.getElementById("config-prezzo-totale");\n            if (prezzoDisplay) {
-              prezzoDisplay.textContent = prezzo + " €";
-            }\n        }\n\n        // Initial call\n        aggiornaPrezzo();\n\n        // Update price when features change\n        document.querySelectorAll("#config-features-grid input[data-feature]").forEach(cb => {
-          cb.addEventListener("change", aggiornaPrezzo);
-        });
-          form.addEventListener("submit", function(e) {
-            e.preventDefault();
-            
-            // Validate required configurator fields\n            const motivo = document.querySelector('select[name="motivo"]');\            if (motivo && motivo.value === "configura-sito") {\n              const configTipo = document.querySelector("input[name="config-tipo-sito"]:checked")?.value || "landing";\n              if (!configTipo) {\n                alert("Per favore seleziona il tipo di sito.");\n                return;\n              }\n              const configImg = document.getElementById("config-img-pro");\n              if (configImg && !configImg.checked) {\n                alert("Per favore seleziona se includere immagini professionali.");\n                return;\n              }\n              const configCopy = document.getElementById("config-copywriting");\n              if (configCopy && !configCopy.checked) {\n                alert("Per favore accetta il copywriting / testi.");\n                return;\n              }\n              const configLingue = document.getElementById("config-lingue");\n              if (configLingue && configLingue.value === "") {\n                alert("Per favore inserisci il numero di lingue aggiuntive.");\n                return;\n              }\n              const featuredCount = document.querySelectorAll('#config-features-grid input[data-feature]:checked').length;\n              if (featuredCount === 0) {\n                alert("Per favore seleziona almeno una funzionalità.");\n                return;\n              }\n            }\n            
-            // Collect configuration data\n            const configTipo = document.querySelector("input[name="config-tipo-sito"]:checked")?.value || "landing";
-            const configExtraPages = document.getElementById("config-extra-pages-display")?.textContent || "0";
-            const configExtraPagesVal = document.getElementById("config-extra-pages")?.value || "0";
-            const configImg = document.getElementById("config-img-pro")?.checked || false;
-            const configCopywriting = document.getElementById("config-copywriting")?.checked || false;
-            const configLingue = document.getElementById("config-lingue")?.value || "0";
-            const configFeatures = [];
-            document.querySelectorAll("#config-features-grid input[data-feature]:checked").forEach(cb => {
-              configFeatures.push(cb.dataset.feature);
-            });
-            
-            // Build configuration summary\n            let configSummary = "";
-            configSummary += "<strong>Tipo di Sito:</strong> " + (configTipo === "landing" ? "Landing Page (1 pagina)" : "Multi-pagina") + "<br>\n`;
-            configSummary += "<strong>Pagine extra:</strong> " + configExtraPages + " pagine (+50 € cadauna)<br>\n`;
-            if (configImg) configSummary += "<strong>Immagini professionali:</strong> Sì (+20 €)<br>\n`;
-            else configSummary += "<strong>Immagini professionali:</strong> No<br>\n`;
-            configSummary += "<strong>Copywriting:</strong> " + (configCopywriting ? "Incluso" : "No") + "<br>\n`;
-            configSummary += "<strong>Lingue aggiuntive:</strong> " + configLingue + " lingue (+50 € cadauna)<br>\n`;
-            if (configFeatures.length > 0) {
-              configSummary += "<strong>Funzionalità selezionate:</strong> " + configFeatures.join(", ") + "<br>\n`;
-            }
-            
-            // Add configuration summary to the message field\n            const msgField = form.messaggio;
-            if (msgField) {
-              msgField.value += "\n---\n<strong>Dettagli configurazione sito:</strong>\n" + configSummary + "\n---\n<strong>Richiedi contatto per progetto web.</strong>";
-            }
-            
-            // Submit the form\n            form.submit();
-          });
-        }
-      });
-    <style>
-        transform: scale(1) !important;
-      }
-    </style>
 </body>
 
 </html>

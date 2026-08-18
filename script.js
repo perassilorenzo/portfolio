@@ -788,4 +788,137 @@ document.addEventListener("DOMContentLoaded", function () {
     addEventListener("scroll", onScroll, { passive: true });
   }
   setLang(_lang);
+
+  /* ===== Configuratore Sito ===== */
+  var configuratore = document.getElementById("configuratore-sito");
+  var reasonSelect = document.getElementById("contactReason");
+  var prezzoTotale = document.getElementById("config-prezzo-totale");
+  var extraPagesDisplay = document.getElementById("config-extra-pages-display");
+  var extraPagesHidden = document.querySelector(
+    'input[name="config-extra-pages"]',
+  );
+
+  function aggiornaPrezzo() {
+    var prezzo = 250;
+    var pagineExtra = parseInt(extraPagesDisplay.textContent) || 0;
+    prezzo += pagineExtra * 50;
+    var imgPro = document.getElementById("config-img-pro");
+    if (imgPro && imgPro.checked) prezzo += 20;
+    var lingue = parseInt(document.getElementById("config-lingue").value) || 0;
+    prezzo += lingue * 50;
+    var funzionalita = 0;
+    document
+      .querySelectorAll("#config-features-grid input[data-feature]:checked")
+      .forEach(function () {
+        funzionalita++;
+      });
+    prezzo += funzionalita * 10;
+    if (prezzoTotale) prezzoTotale.textContent = prezzo + " €";
+  }
+
+  if (reasonSelect && configuratore) {
+    reasonSelect.addEventListener("change", function () {
+      configuratore.style.display =
+        this.value === "configura-sito" ? "block" : "none";
+    });
+  }
+
+  var numBtns = document.querySelectorAll(".lp-config-number-btn");
+  numBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var cur = parseInt(extraPagesDisplay.textContent) || 0;
+      var step = parseInt(this.dataset.step);
+      var next = cur + step;
+      if (next < 0) next = 0;
+      extraPagesDisplay.textContent = next;
+      if (extraPagesHidden) extraPagesHidden.value = next;
+      aggiornaPrezzo();
+    });
+  });
+
+  var lingueInput = document.getElementById("config-lingue");
+  var recalcFields = [
+    "config-img-pro",
+    "config-copywriting",
+    "config-lingue",
+  ];
+  recalcFields.forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el)
+      el.addEventListener("change", function () {
+        aggiornaPrezzo();
+      });
+  });
+  if (lingueInput) lingueInput.addEventListener("input", aggiornaPrezzo);
+  document
+    .querySelectorAll("#config-features-grid input[data-feature]")
+    .forEach(function (cb) {
+      cb.addEventListener("change", aggiornaPrezzo);
+    });
+
+  aggiornaPrezzo();
+
+  var contactForm = document.querySelector(".lp-contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      var isConfig =
+        reasonSelect && reasonSelect.value === "configura-sito";
+      if (!isConfig) return;
+
+      var configTipo = document.querySelector(
+        'input[name="config-tipo-sito"]:checked',
+      );
+      if (!configTipo) {
+        e.preventDefault();
+        alert("Per favore seleziona il tipo di sito.");
+        return;
+      }
+
+      var pagineExtra = parseInt(extraPagesDisplay.textContent) || 0;
+      var imgPro = document.getElementById("config-img-pro");
+      var copywriting = document.getElementById("config-copywriting");
+      var lingue = parseInt(document.getElementById("config-lingue").value) || 0;
+      var features = [];
+      document
+        .querySelectorAll("#config-features-grid input[data-feature]:checked")
+        .forEach(function (cb) {
+          features.push(cb.textContent.trim());
+        });
+      var prezzo = 250;
+      prezzo += pagineExtra * 50;
+      if (imgPro && imgPro.checked) prezzo += 20;
+      prezzo += lingue * 50;
+      prezzo += features.length * 10;
+
+      var summary =
+        "Tipo di Sito: " +
+        (configTipo.value === "landing" ? "Landing Page (1 pagina)" : "Multi-pagina") +
+        "\nPagine extra: " +
+        pagineExtra +
+        "\nImmagini professionali: " +
+        (imgPro && imgPro.checked ? "Sì (+20 €)" : "No") +
+        "\nCopywriting: " +
+        (copywriting && copywriting.checked ? "Incluso" : "No") +
+        "\nLingue aggiuntive: " +
+        lingue +
+        "\nFunzionalità (" +
+        features.length +
+        "): " +
+        (features.length ? features.join(", ") : "nessuna") +
+        "\nPrezzo stimato: " +
+        prezzo +
+        " €\n\nIl preventivo finale potrebbe variare in base alle tue scelte.";
+
+      var configHidden = document.createElement("input");
+      configHidden.type = "hidden";
+      configHidden.name = "config-riepilogo";
+      configHidden.value = summary;
+      contactForm.appendChild(configHidden);
+
+      var selFeatures = document.querySelector(
+        'input[name="config-selected-features"]',
+      );
+      if (selFeatures) selFeatures.value = features.join(", ");
+    });
+  }
 });
