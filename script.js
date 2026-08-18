@@ -852,10 +852,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (reasonSelect && configuratore) {
     var contactFormEl = document.querySelector(".lp-contact-form");
+    var wrapperEl = document.querySelector(".contact-form-wrapper");
     reasonSelect.addEventListener("change", function () {
       var isConfig = this.value === "configura-sito";
       configuratore.style.display = isConfig ? "block" : "none";
       if (contactFormEl) contactFormEl.classList.toggle("lp-contact-form--config", isConfig);
+      if (wrapperEl) wrapperEl.classList.toggle("lp-contact-form--config", isConfig);
     });
   }
 

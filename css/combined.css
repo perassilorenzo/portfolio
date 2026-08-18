@@ -3645,13 +3645,16 @@ a:hover,
 }
 
 /* Configuratore a lato del form */
+.contact-form-wrapper.lp-contact-form--config {
+  max-width: 1200px;
+}
 .lp-contact-form--config {
-  max-width: 1000px;
+  max-width: 1200px;
 }
 .lp-contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 36px;
+  gap: 48px;
   align-items: start;
 }
 .lp-contact-col-main {
