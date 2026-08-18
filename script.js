@@ -595,9 +595,9 @@ document.addEventListener("DOMContentLoaded", function () {
       contactEmail: "La tua email",
       contactReason: "Motivo",
       contactReasonOpts: [
-        "Preventivo",
-        "Collaborazione",
+        "Configura il mio sito",
         "Solo un'idea",
+        "Collaborazione",
         "Altro",
       ],
       contactService: "Servizio",
@@ -729,7 +729,7 @@ document.addEventListener("DOMContentLoaded", function () {
       contactName: "Your name",
       contactEmail: "Your email",
       contactReason: "Reason",
-      contactReasonOpts: ["Quote", "Collaboration", "Just an idea", "Other"],
+      contactReasonOpts: ["Configure my website", "Just an idea", "Collaboration", "Other"],
       contactService: "Service",
       contactServiceOpts: [
         "Web Development & Management",
