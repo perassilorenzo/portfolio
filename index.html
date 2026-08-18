@@ -835,7 +835,66 @@
 
     <div class="grid grid-cols-2 gap-3" id="config-features-grid">
 
-      <!-- Funzionalità saranno inserite da JS -->
+      <label class="lp-config-feature lp-config-feature--selected">
+        <input type="checkbox" data-feature="dark-light-mode" checked>
+        <span>🌙 Dark / Light Mode</span>
+      </label>
+      <label class="lp-config-feature lp-config-feature--selected">
+        <input type="checkbox" data-feature="scroll-reveal" checked>
+        <span>📜 Scroll Reveal</span>
+      </label>
+      <label class="lp-config-feature lp-config-feature--selected">
+        <input type="checkbox" data-feature="back-to-top" checked>
+        <span>⬆️ Back to Top Button</span>
+      </label>
+      <label class="lp-config-feature lp-config-feature--selected">
+        <input type="checkbox" data-feature="image-lightbox" checked>
+        <span>🖼️ Image Lightbox</span>
+      </label>
+      <label class="lp-config-feature lp-config-feature--selected">
+        <input type="checkbox" data-feature="image-slider" checked>
+        <span>🎞️ Image Slider / Carousel</span>
+      </label>
+      <label class="lp-config-feature lp-config-feature--selected">
+        <input type="checkbox" data-feature="hover-effects" checked>
+        <span>🖱️ Hover Effects avanzati</span>
+      </label>
+      <label class="lp-config-feature lp-config-feature--selected">
+        <input type="checkbox" data-feature="animated-counters" checked>
+        <span>🔢 Animated Counters</span>
+      </label>
+      <label class="lp-config-feature lp-config-feature--selected">
+        <input type="checkbox" data-feature="search-interna" checked>
+        <span>🔍 Ricerca interna</span>
+      </label>
+      <label class="lp-config-feature lp-config-feature--selected">
+        <input type="checkbox" data-feature="filtro-categorie" checked>
+        <span>🏷️ Filtro Categorie</span>
+      </label>
+      <label class="lp-config-feature lp-config-feature--selected">
+        <input type="checkbox" data-feature="faq-accordion" checked>
+        <span>❓ FAQ Accordion</span>
+      </label>
+      <label class="lp-config-feature lp-config-feature--selected">
+        <input type="checkbox" data-feature="whatsapp-chat" checked>
+        <span>💬 WhatsApp Chat Button</span>
+      </label>
+      <label class="lp-config-feature lp-config-feature--selected">
+        <input type="checkbox" data-feature="mappa-interattiva" checked>
+        <span>📍 Mappa Interattiva</span>
+      </label>
+      <label class="lp-config-feature lp-config-feature--selected">
+        <input type="checkbox" data-feature="before-after-slider" checked>
+        <span>↔️ Before / After Image Slider</span>
+      </label>
+      <label class="lp-config-feature lp-config-feature--selected">
+        <input type="checkbox" data-feature="marquee-text" checked>
+        <span>➡️ Marquee Text</span>
+      </label>
+      <label class="lp-config-feature lp-config-feature--selected">
+        <input type="checkbox" data-feature="animated-progress" checked>
+        <span>📊 Animated Progress Bar</span>
+      </label>
 
     </div>
 
@@ -1088,6 +1147,7 @@
           form.addEventListener("submit", function(e) {
             e.preventDefault();
             
+            // Validate required configurator fields\n            const motivo = document.querySelector('select[name="motivo"]');\            if (motivo && motivo.value === "configura-sito") {\n              const configTipo = document.querySelector("input[name="config-tipo-sito"]:checked")?.value || "landing";\n              if (!configTipo) {\n                alert("Per favore seleziona il tipo di sito.");\n                return;\n              }\n              const configImg = document.getElementById("config-img-pro");\n              if (configImg && !configImg.checked) {\n                alert("Per favore seleziona se includere immagini professionali.");\n                return;\n              }\n              const configCopy = document.getElementById("config-copywriting");\n              if (configCopy && !configCopy.checked) {\n                alert("Per favore accetta il copywriting / testi.");\n                return;\n              }\n              const configLingue = document.getElementById("config-lingue");\n              if (configLingue && configLingue.value === "") {\n                alert("Per favore inserisci il numero di lingue aggiuntive.");\n                return;\n              }\n              const featuredCount = document.querySelectorAll('#config-features-grid input[data-feature]:checked').length;\n              if (featuredCount === 0) {\n                alert("Per favore seleziona almeno una funzionalità.");\n                return;\n              }\n            }\n            
             // Collect configuration data\n            const configTipo = document.querySelector("input[name="config-tipo-sito"]:checked")?.value || "landing";
             const configExtraPages = document.getElementById("config-extra-pages-display")?.textContent || "0";
             const configExtraPagesVal = document.getElementById("config-extra-pages")?.value || "0";
