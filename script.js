@@ -626,7 +626,7 @@ document.addEventListener("DOMContentLoaded", function () {
       configImgProText:
         "<strong>Immagini professionali</strong><small>Ricerca e ottimizzazione di immagini. +20 €</small>",
       configLangLabel: "Lingue aggiuntive",
-      configLangHint: "+50 € a lingua",
+      configLangHint: "Prima lingua inclusa, +50 € dalla seconda",
       configFeaturesLabel: "Funzionalità <small>(+10 € l'una)</small>",
       configPriceLabel: "Preventivo stimato",
       configPriceSub: "Potrebbe cambiare in base alle tue scelte",
@@ -806,7 +806,7 @@ document.addEventListener("DOMContentLoaded", function () {
       configImgProText:
         "<strong>Professional images</strong><small>Image research and optimization. +€20</small>",
       configLangLabel: "Additional languages",
-      configLangHint: "+€50 per language",
+      configLangHint: "First language included, +€50 from the second",
       configFeaturesLabel: "Features <small>(+€10 each)</small>",
       configPriceLabel: "Estimated quote",
       configPriceSub: "May change based on your choices",
@@ -929,7 +929,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function setLingue(n) {
-    if (n < 0) n = 0;
+    if (n < 1) n = 1;
     if (lingueDisplay) lingueDisplay.textContent = n;
     if (lingueHidden) lingueHidden.value = n;
   }
@@ -955,7 +955,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var imgPro = document.getElementById("config-img-pro");
     if (imgPro && imgPro.checked) prezzo += 20;
     var lingue = getLingue();
-    prezzo += lingue * 50;
+    if (lingue > 1) prezzo += (lingue - 1) * 50;
     var funzionalita = 0;
     document
       .querySelectorAll("#config-features-grid input[data-feature]:checked")
@@ -1055,7 +1055,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var prezzo = 250;
       if (tipo === "multipage") prezzo += (pagine - 1) * 50;
       if (imgPro && imgPro.checked) prezzo += 20;
-      prezzo += lingue * 50;
+      if (lingue > 1) prezzo += (lingue - 1) * 50;
       prezzo += features.length * 10;
 
       var summary =
