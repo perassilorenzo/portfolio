@@ -27,3 +27,4 @@
 .lp-config-prezzo{margin-top:8px;padding:22px 0 4px;gap:4px}
 .lp-config-prezzo-totale{margin-top:8px}
 @media (max-width:900px){.lp-configuratore-sito{border-left:none;border-top:1px solid var(--border-color);padding-left:0;padding-top:24px;margin-top:24px}}
+.lp-contact-form .lp-text-secondary{margin:0}.lp-contact-form .lp-text-secondary+.lp-text-secondary{margin-top:10px}.lp-contact-form .lp-btn-wa{margin-top:14px}
