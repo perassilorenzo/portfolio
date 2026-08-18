@@ -67,7 +67,7 @@ body {
   width: 100%;
   min-height: 100%;
   background-color: var(--bg-primary);
-  color: var(--text-primary); border-color: var(--accent); background: var(--accent-soft); transform: translateY(-2px); box-shadow: 0 8px 24px var(--accent-glow);
+  color: var(--text-primary);
   font-family: var(--font-sans);
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
