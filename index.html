@@ -728,7 +728,8 @@
   <h4 class="text-xl font-bold text-white mb-3">Tipo di Sito</h4>
   <div class="grid grid-cols-2 gap-4">
     <label class="lp-config-option lp-config-option--active">
-      <input type="radio" name="config-tipo-sito" value="landing" checked>
+      <span id="config-prezzo-totale" class="text-[var(--accent)] font-bold text-lg">250 €</span>
+      <input type="radio" name="config-tipo-sito" value="landing" checked required>
       <div>
         <h5 class="font-bold text-white">Landing Page (1 pagina)</h5>
         <p class="text-neutral-400 text-sm">Ideale per presentare la tua attività, contatto e informazioni essenziali.</p>
@@ -736,7 +737,7 @@
       </div>
     </label>
     <label class="lp-config-option">
-      <input type="radio" name="config-tipo-sito" value="multipage">
+      <input type="radio" name="config-tipo-sito" value="multipage" required>
       <div>
         <h5 class="font-bold text-white">Multi-pagina</h5>
         <p class="text-neutral-400 text-sm">Sito con più pagine (home, about, servizi, contatti).</p>
@@ -760,7 +761,7 @@
 
     <label class="lp-config-option">
 
-      <input type="checkbox" id="config-img-pro">
+      <input type="checkbox" id="config-img-pro" required>
 
       <span class="checkmark"></span>
 
@@ -786,7 +787,7 @@
 
     <label class="lp-config-option">
 
-      <input type="checkbox" id="config-copywriting">
+      <input type="checkbox" id="config-copywriting" required>
 
       <span class="checkmark"></span>
 
@@ -816,7 +817,7 @@
 
       <div>
 
-        <input type="number" name="config-lingue" value="0" min="0" class="w-20 text-center lp-input">
+        <input type="number" name="config-lingue" value="0" min="0" class="w-20 text-center lp-input" required>
 
         <span class="text-neutral-400 text-sm">+50 € a lingua</span>
 
@@ -851,7 +852,7 @@
           data-lang-key="contactMsg"
         ></textarea>
         <button type="submit" class="lp-btn mt-3" data-lang-key="contactBtn">
-          Invia messaggio
+          Richiedi preventivo
         </button>
         <p class="lp-text-secondary mt-4 small">
           Oppure
@@ -1065,6 +1066,25 @@
         });
         
         // Format configuration data for the message\n        const form = document.querySelector(".lp-contact-form");\n        if (form) {
+\n      // Function to update price in real-time\n      function aggiornaPrezzo() {\n          let prezzo = 250; // Base Landing Page\n          \n          // Pagine extra\n            const pagineExtra = parseInt(document.getElementById("config-extra-pages-display").textContent) || 0;
+            prezzo += pagineExtra * 50;
+          
+          // Immagini\n            const imgPro = document.getElementById("config-img-pro");\n            if (imgPro && imgPro.checked) prezzo += 20;
+          
+          // Copywriting (già incluso nel prezzo base)\n            // Non aggiunge nulla in più\n          \n          // Lingue\n            const lingue = parseInt(document.getElementById("config-lingue").value) || 0;
+            prezzo += lingue * 50;
+          
+          // Funzionalità\n            let funzionalitaSelezionate = 0;
+            document.querySelectorAll("#config-features-grid input[data-feature]:checked").forEach(cb => {
+              funzionalitaSelezionate++;
+            });
+            prezzo += funzionalitaSelezionate * 10;
+          
+          // Display\n            const prezzoDisplay = document.getElementById("config-prezzo-totale");\n            if (prezzoDisplay) {
+              prezzoDisplay.textContent = prezzo + " €";
+            }\n        }\n\n        // Initial call\n        aggiornaPrezzo();\n\n        // Update price when features change\n        document.querySelectorAll("#config-features-grid input[data-feature]").forEach(cb => {
+          cb.addEventListener("change", aggiornaPrezzo);
+        });
           form.addEventListener("submit", function(e) {
             e.preventDefault();
             
