@@ -672,6 +672,8 @@
         action="https://formspree.io/f/mvznrbeq"
         method="post"
       >
+        <div class="lp-contact-grid">
+          <div class="lp-contact-col lp-contact-col-main">
         <div class="contact-top-fields">
           <input
             type="text"
@@ -698,8 +700,8 @@
             <option value="" disabled selected>Motivo</option>
             <option value="preventivo">Preventivo</option>
             <option value="configura-sito">Configura il mio sito</option>
-            <option value="collaborazione">Collaborazione</option>
             <option value="idea">Solo un'idea</option>
+            <option value="collaborazione">Collaborazione</option>
             <option value="altro">Altro</option>
           </select>
           <select
@@ -721,145 +723,6 @@
             placeholder="Oggetto"
             data-lang-key="contactSubject"
           />
-        </div>
-        <!-- Configuratore Sito -->
-        <div id="configuratore-sito" class="lp-configuratore-sito" style="display: none;">
-          <h4 class="lp-config-title">Configura il tuo sito</h4>
-
-          <div class="lp-config-block">
-            <label class="lp-config-label">Tipo di Sito</label>
-            <div class="lp-config-radio-grid">
-              <label class="lp-config-option lp-config-option--active">
-                <input type="radio" name="config-tipo-sito" value="landing" checked required>
-                <span class="lp-config-opt-text">
-                  <strong>Landing Page (1 pagina)</strong>
-                  <small>Ideale per presentare la tua attività. 250 €</small>
-                </span>
-              </label>
-              <label class="lp-config-option">
-                <input type="radio" name="config-tipo-sito" value="multipage" required>
-                <span class="lp-config-opt-text">
-                  <strong>Sito Vetrina (Multi-pagina)</strong>
-                  <small>Sito con più pagine (home, about, servizi, contatti). 350 €</small>
-                </span>
-              </label>
-            </div>
-            <input type="hidden" name="config-tipo" value="landing">
-          </div>
-
-          <div class="lp-config-block">
-            <label class="lp-config-label">Pagine extra oltre la prima</label>
-            <div class="lp-config-stepper">
-              <button type="button" class="lp-config-number-btn" data-step="-1" aria-label="Riduci">−</button>
-              <span id="config-extra-pages-display">0</span>
-              <button type="button" class="lp-config-number-btn" data-step="+1" aria-label="Aumenta">+</button>
-            </div>
-            <small class="lp-config-hint">+50 € a pagina</small>
-            <input type="hidden" name="config-extra-pages" value="0">
-          </div>
-
-          <div class="lp-config-block">
-            <label class="lp-config-option lp-config-option--checkbox">
-              <input type="checkbox" id="config-img-pro" required>
-              <span class="lp-config-opt-text">
-                <strong>Immagini professionali</strong>
-                <small>Ricerca e ottimizzazione di immagini di alta qualità. +20 €</small>
-              </span>
-            </label>
-            <input type="hidden" name="config-img" value="1">
-          </div>
-
-          <div class="lp-config-block">
-            <label class="lp-config-option lp-config-option--checkbox">
-              <input type="checkbox" id="config-copywriting" required>
-              <span class="lp-config-opt-text">
-                <strong>Copywriting / Testi inclusi</strong>
-                <small>Creazione / revisione testi inclusa. Gratis (0 €)</small>
-              </span>
-            </label>
-            <input type="hidden" name="config-copywriting" value="1">
-          </div>
-
-          <div class="lp-config-block">
-            <label class="lp-config-label" for="config-lingue">Lingue aggiuntive</label>
-            <div class="lp-config-lingue">
-              <input type="number" name="config-lingue" id="config-lingue" value="0" min="0" class="lp-input lp-config-lingue-input" required>
-              <span class="lp-config-hint">+50 € a lingua</span>
-            </div>
-          </div>
-
-          <div class="lp-config-block">
-            <label class="lp-config-label">Funzionalità (+10 € cadauna)</label>
-            <div class="lp-config-features-grid" id="config-features-grid">
-              <label class="lp-config-feature lp-config-feature--selected">
-                <input type="checkbox" data-feature="dark-light-mode" checked>
-                <span>🌙 Dark / Light Mode</span>
-              </label>
-              <label class="lp-config-feature lp-config-feature--selected">
-                <input type="checkbox" data-feature="scroll-reveal" checked>
-                <span>📜 Scroll Reveal</span>
-              </label>
-              <label class="lp-config-feature lp-config-feature--selected">
-                <input type="checkbox" data-feature="back-to-top" checked>
-                <span>⬆️ Back to Top Button</span>
-              </label>
-              <label class="lp-config-feature lp-config-feature--selected">
-                <input type="checkbox" data-feature="image-lightbox" checked>
-                <span>🖼️ Image Lightbox</span>
-              </label>
-              <label class="lp-config-feature lp-config-feature--selected">
-                <input type="checkbox" data-feature="image-slider" checked>
-                <span>🎞️ Image Slider / Carousel</span>
-              </label>
-              <label class="lp-config-feature lp-config-feature--selected">
-                <input type="checkbox" data-feature="hover-effects" checked>
-                <span>🖱️ Hover Effects avanzati</span>
-              </label>
-              <label class="lp-config-feature lp-config-feature--selected">
-                <input type="checkbox" data-feature="animated-counters" checked>
-                <span>🔢 Animated Counters</span>
-              </label>
-              <label class="lp-config-feature lp-config-feature--selected">
-                <input type="checkbox" data-feature="search-interna" checked>
-                <span>🔍 Ricerca interna</span>
-              </label>
-              <label class="lp-config-feature lp-config-feature--selected">
-                <input type="checkbox" data-feature="filtro-categorie" checked>
-                <span>🏷️ Filtro Categorie</span>
-              </label>
-              <label class="lp-config-feature lp-config-feature--selected">
-                <input type="checkbox" data-feature="faq-accordion" checked>
-                <span>❓ FAQ Accordion</span>
-              </label>
-              <label class="lp-config-feature lp-config-feature--selected">
-                <input type="checkbox" data-feature="whatsapp-chat" checked>
-                <span>💬 WhatsApp Chat Button</span>
-              </label>
-              <label class="lp-config-feature lp-config-feature--selected">
-                <input type="checkbox" data-feature="mappa-interattiva" checked>
-                <span>📍 Mappa Interattiva</span>
-              </label>
-              <label class="lp-config-feature lp-config-feature--selected">
-                <input type="checkbox" data-feature="before-after-slider" checked>
-                <span>↔️ Before / After Image Slider</span>
-              </label>
-              <label class="lp-config-feature lp-config-feature--selected">
-                <input type="checkbox" data-feature="marquee-text" checked>
-                <span>➡️ Marquee Text</span>
-              </label>
-              <label class="lp-config-feature lp-config-feature--selected">
-                <input type="checkbox" data-feature="animated-progress" checked>
-                <span>📊 Animated Progress Bar</span>
-              </label>
-            </div>
-            <input type="hidden" name="config-selected-features" value="">
-          </div>
-
-          <div class="lp-config-prezzo">
-            <span class="lp-config-prezzo-label">Richiedi preventivo</span>
-            <span class="lp-config-prezzo-sub">Potrebbe cambiare in base alle tue scelte</span>
-            <span id="config-prezzo-totale" class="lp-config-prezzo-totale">250 €</span>
-          </div>
         </div>
         <textarea
           name="messaggio"
@@ -907,6 +770,162 @@
           </svg>
           Scrivimi su WhatsApp
         </a>
+          </div>
+          <!-- Configuratore Sito (colonna laterale) -->
+          <div id="configuratore-sito" class="lp-configuratore-sito" style="display: none;">
+            <h4 class="lp-config-title">Configura il tuo sito</h4>
+
+            <div class="lp-config-block">
+              <label class="lp-config-label">Tipo di sito</label>
+              <div class="lp-config-radio-grid">
+                <label class="lp-config-option lp-config-option--active">
+                  <input type="radio" name="config-tipo-sito" value="landing" checked required>
+                  <span class="lp-config-opt-text">
+                    <strong>Landing page</strong>
+                    <small>Una sola pagina per presentare la tua attività. 250 €</small>
+                  </span>
+                </label>
+                <label class="lp-config-option">
+                  <input type="radio" name="config-tipo-sito" value="multipage" required>
+                  <span class="lp-config-opt-text">
+                    <strong>Sito vetrina</strong>
+                    <small>Più pagine: home, servizi, contatti. Da 300 €</small>
+                  </span>
+                </label>
+              </div>
+              <input type="hidden" name="config-tipo" value="landing">
+            </div>
+
+            <div class="lp-config-block">
+              <label class="lp-config-label">Numero di pagine</label>
+              <div class="lp-config-stepper" id="config-pages-stepper">
+                <button type="button" class="lp-config-number-btn" data-step="-1" aria-label="Riduci">−</button>
+                <span id="config-pages-display">1</span>
+                <button type="button" class="lp-config-number-btn" data-step="+1" aria-label="Aumenta">+</button>
+              </div>
+              <small class="lp-config-hint" id="config-pages-hint">50 € a pagina (dalla seconda)</small>
+              <input type="hidden" name="config-pages" value="1">
+            </div>
+
+            <div class="lp-config-block">
+              <label class="lp-config-option lp-config-option--checkbox">
+                <input type="checkbox" id="config-img-pro">
+                <span class="lp-config-opt-text">
+                  <strong>Immagini professionali</strong>
+                  <small>Ricerca e ottimizzazione di immagini. +20 €</small>
+                </span>
+              </label>
+              <input type="hidden" name="config-img" value="0">
+            </div>
+
+            <div class="lp-config-block">
+              <label class="lp-config-option lp-config-option--checkbox">
+                <input type="checkbox" id="config-copywriting">
+                <span class="lp-config-opt-text">
+                  <strong>Copywriting / Testi</strong>
+                  <small>Creazione e revisione dei testi. Incluso</small>
+                </span>
+              </label>
+              <input type="hidden" name="config-copywriting" value="0">
+            </div>
+
+            <div class="lp-config-block">
+              <label class="lp-config-label" for="config-lingue">Lingue aggiuntive</label>
+              <div class="lp-config-lingue">
+                <input type="number" name="config-lingue" id="config-lingue" value="0" min="0" class="lp-input lp-config-lingue-input" required>
+                <span class="lp-config-hint">+50 € a lingua</span>
+              </div>
+            </div>
+
+            <div class="lp-config-block">
+              <label class="lp-config-label">Funzionalità <small>(+10 € l'una)</small></label>
+              <div class="lp-config-features-grid" id="config-features-grid">
+                <label class="lp-config-feature">
+                  <input type="checkbox" data-feature="dark-light-mode">
+                  <span>Dark / Light mode</span>
+                  <span class="lp-config-info" title="Passa automaticamente o a comando tra tema scuro e chiaro.">i</span>
+                </label>
+                <label class="lp-config-feature">
+                  <input type="checkbox" data-feature="scroll-reveal">
+                  <span>Scroll reveal</span>
+                  <span class="lp-config-info" title="Animazioni di apparizione degli elementi mentre scorri la pagina.">i</span>
+                </label>
+                <label class="lp-config-feature">
+                  <input type="checkbox" data-feature="back-to-top">
+                  <span>Torna su</span>
+                  <span class="lp-config-info" title="Bottone che riporta rapidamente all'inizio della pagina.">i</span>
+                </label>
+                <label class="lp-config-feature">
+                  <input type="checkbox" data-feature="image-lightbox">
+                  <span>Lightbox immagini</span>
+                  <span class="lp-config-info" title="Ingrandisce le immagini a schermo intero al clic, con chiusura semplice.">i</span>
+                </label>
+                <label class="lp-config-feature">
+                  <input type="checkbox" data-feature="image-slider">
+                  <span>Slider / Carousel</span>
+                  <span class="lp-config-info" title="Gallerie a scorrimento automatico o manuale tra più immagini.">i</span>
+                </label>
+                <label class="lp-config-feature">
+                  <input type="checkbox" data-feature="hover-effects">
+                  <span>Effetti hover</span>
+                  <span class="lp-config-info" title="Transizioni e animazioni al passaggio del mouse su elementi.">i</span>
+                </label>
+                <label class="lp-config-feature">
+                  <input type="checkbox" data-feature="animated-counters">
+                  <span>Contatori animati</span>
+                  <span class="lp-config-info" title="Numeri che contano fino al valore finale quando entrano nello schermo.">i</span>
+                </label>
+                <label class="lp-config-feature">
+                  <input type="checkbox" data-feature="search-interna">
+                  <span>Ricerca interna</span>
+                  <span class="lp-config-info" title="Campo di ricerca che filtra i contenuti del sito.">i</span>
+                </label>
+                <label class="lp-config-feature">
+                  <input type="checkbox" data-feature="filtro-categorie">
+                  <span>Filtro categorie</span>
+                  <span class="lp-config-info" title="Filtra i contenuti per categoria o argomento.">i</span>
+                </label>
+                <label class="lp-config-feature">
+                  <input type="checkbox" data-feature="faq-accordion">
+                  <span>FAQ Accordion</span>
+                  <span class="lp-config-info" title="Domande frequenti espandibili a fisarmonica.">i</span>
+                </label>
+                <label class="lp-config-feature">
+                  <input type="checkbox" data-feature="whatsapp-chat">
+                  <span>Bottone WhatsApp</span>
+                  <span class="lp-config-info" title="Pulsante fisso che apre una chat WhatsApp con te.">i</span>
+                </label>
+                <label class="lp-config-feature">
+                  <input type="checkbox" data-feature="mappa-interattiva">
+                  <span>Mappa interattiva</span>
+                  <span class="lp-config-info" title="Mappa in cui i clienti possono vedere la posizione.">i</span>
+                </label>
+                <label class="lp-config-feature">
+                  <input type="checkbox" data-feature="before-after-slider">
+                  <span>Prima / Dopo</span>
+                  <span class="lp-config-info" title="Comparatore trascinabile tra un'immagine prima e una dopo.">i</span>
+                </label>
+                <label class="lp-config-feature">
+                  <input type="checkbox" data-feature="marquee-text">
+                  <span>Testo scorrevole</span>
+                  <span class="lp-config-info" title="Testo che scorre in modo continuo, effetto tendina.">i</span>
+                </label>
+                <label class="lp-config-feature">
+                  <input type="checkbox" data-feature="animated-progress">
+                  <span>Barre di avanzamento</span>
+                  <span class="lp-config-info" title="Barre che si riempiono in animazione per mostrare competenze o valori.">i</span>
+                </label>
+              </div>
+              <input type="hidden" name="config-selected-features" value="">
+            </div>
+
+            <div class="lp-config-prezzo">
+              <span class="lp-config-prezzo-label">Preventivo stimato</span>
+              <span class="lp-config-prezzo-sub">Potrebbe cambiare in base alle tue scelte</span>
+              <span id="config-prezzo-totale" class="lp-config-prezzo-totale">250 €</span>
+            </div>
+          </div>
+        </div>
       </form>
       </div>
     </section>

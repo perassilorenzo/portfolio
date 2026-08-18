@@ -3643,3 +3643,96 @@ a:hover,
     grid-template-columns: 1fr;
   }
 }
+
+/* Configuratore a lato del form */
+.lp-contact-form--config {
+  max-width: 1000px;
+}
+.lp-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+.lp-contact-col-main {
+  min-width: 0;
+}
+.lp-configuratore-sito {
+  border-top: none;
+  border-left: 1px solid var(--border-color);
+  padding-top: 2px;
+  padding-left: 28px;
+  margin-top: 0;
+}
+.lp-config-stepper--active .lp-config-number-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+.lp-config-stepper:not(.lp-config-stepper--active) .lp-config-number-btn {
+  opacity: 0.35;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.lp-config-stepper:not(.lp-config-stepper--active) > span {
+  color: var(--text-secondary);
+}
+.lp-config-info {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: help;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.lp-config-info:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.lp-config-info::after {
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 200px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 0.72rem;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.4;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 20;
+  pointer-events: none;
+}
+.lp-config-info:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 900px) {
+  .lp-contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .lp-configuratore-sito {
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+    padding-left: 0;
+    padding-top: 20px;
+  }
+}

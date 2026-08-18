@@ -795,15 +795,47 @@ document.addEventListener("DOMContentLoaded", function () {
   var configuratore = document.getElementById("configuratore-sito");
   var reasonSelect = document.getElementById("contactReason");
   var prezzoTotale = document.getElementById("config-prezzo-totale");
-  var extraPagesDisplay = document.getElementById("config-extra-pages-display");
-  var extraPagesHidden = document.querySelector(
-    'input[name="config-extra-pages"]',
-  );
+  var pagesDisplay = document.getElementById("config-pages-display");
+  var pagesHidden = document.querySelector('input[name="config-pages"]');
+  var pagesStepper = document.getElementById("config-pages-stepper");
+  var pagesHint = document.getElementById("config-pages-hint");
+  var tipoSito = document.querySelectorAll('input[name="config-tipo-sito"]');
+
+  var PAGES_MIN = 1;
+  var PAGES_MIN_MULTI = 2;
+
+  function getTipo() {
+    var t = document.querySelector('input[name="config-tipo-sito"]:checked');
+    return t ? t.value : "landing";
+  }
+
+  function getPages() {
+    return parseInt(pagesDisplay.textContent) || 1;
+  }
+
+  function setPages(n) {
+    if (pagesDisplay) pagesDisplay.textContent = n;
+    if (pagesHidden) pagesHidden.value = n;
+  }
+
+  function aggiornaPaginePerTipo() {
+    var tipo = getTipo();
+    if (tipo === "multipage") {
+      if (pagesStepper) pagesStepper.classList.add("lp-config-stepper--active");
+      var cur = getPages();
+      if (cur < PAGES_MIN_MULTI) setPages(PAGES_MIN_MULTI);
+    } else {
+      if (pagesStepper) pagesStepper.classList.remove("lp-config-stepper--active");
+      setPages(PAGES_MIN);
+    }
+    aggiornaPrezzo();
+  }
 
   function aggiornaPrezzo() {
+    var tipo = getTipo();
     var prezzo = 250;
-    var pagineExtra = parseInt(extraPagesDisplay.textContent) || 0;
-    prezzo += pagineExtra * 50;
+    var pagine = getPages();
+    if (tipo === "multipage") prezzo += (pagine - 1) * 50;
     var imgPro = document.getElementById("config-img-pro");
     if (imgPro && imgPro.checked) prezzo += 20;
     var lingue = parseInt(document.getElementById("config-lingue").value) || 0;
@@ -819,21 +851,27 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (reasonSelect && configuratore) {
+    var contactFormEl = document.querySelector(".lp-contact-form");
     reasonSelect.addEventListener("change", function () {
-      configuratore.style.display =
-        this.value === "configura-sito" ? "block" : "none";
+      var isConfig = this.value === "configura-sito";
+      configuratore.style.display = isConfig ? "block" : "none";
+      if (contactFormEl) contactFormEl.classList.toggle("lp-contact-form--config", isConfig);
     });
   }
+
+  tipoSito.forEach(function (radio) {
+    radio.addEventListener("change", aggiornaPaginePerTipo);
+  });
 
   var numBtns = document.querySelectorAll(".lp-config-number-btn");
   numBtns.forEach(function (btn) {
     btn.addEventListener("click", function () {
-      var cur = parseInt(extraPagesDisplay.textContent) || 0;
+      if (getTipo() !== "multipage") return;
+      var cur = getPages();
       var step = parseInt(this.dataset.step);
       var next = cur + step;
-      if (next < 0) next = 0;
-      extraPagesDisplay.textContent = next;
-      if (extraPagesHidden) extraPagesHidden.value = next;
+      if (next < PAGES_MIN_MULTI) next = PAGES_MIN_MULTI;
+      setPages(next);
       aggiornaPrezzo();
     });
   });
@@ -858,7 +896,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cb.addEventListener("change", aggiornaPrezzo);
     });
 
-  aggiornaPrezzo();
+  aggiornaPaginePerTipo();
 
   var contactForm = document.querySelector(".lp-contact-form");
   if (contactForm) {
@@ -876,7 +914,8 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      var pagineExtra = parseInt(extraPagesDisplay.textContent) || 0;
+      var tipo = configTipo.value;
+      var pagine = getPages();
       var imgPro = document.getElementById("config-img-pro");
       var copywriting = document.getElementById("config-copywriting");
       var lingue = parseInt(document.getElementById("config-lingue").value) || 0;
@@ -884,19 +923,21 @@ document.addEventListener("DOMContentLoaded", function () {
       document
         .querySelectorAll("#config-features-grid input[data-feature]:checked")
         .forEach(function (cb) {
-          features.push(cb.textContent.trim());
+          var label = cb.closest("label");
+          var name = label ? label.querySelector("span").textContent.trim() : "";
+          features.push(name);
         });
       var prezzo = 250;
-      prezzo += pagineExtra * 50;
+      if (tipo === "multipage") prezzo += (pagine - 1) * 50;
       if (imgPro && imgPro.checked) prezzo += 20;
       prezzo += lingue * 50;
       prezzo += features.length * 10;
 
       var summary =
         "Tipo di Sito: " +
-        (configTipo.value === "landing" ? "Landing Page (1 pagina)" : "Multi-pagina") +
-        "\nPagine extra: " +
-        pagineExtra +
+        (tipo === "landing" ? "Landing page (1 pagina)" : "Sito vetrina (" + pagine + " pagine)") +
+        "\nNumero pagine: " +
+        pagine +
         "\nImmagini professionali: " +
         (imgPro && imgPro.checked ? "Sì (+20 €)" : "No") +
         "\nCopywriting: " +
