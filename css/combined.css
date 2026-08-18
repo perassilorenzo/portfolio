@@ -3477,14 +3477,12 @@ a:hover,
 
 /* ===== Configuratore Sito ===== */
 .lp-configuratore-sito {
-  margin-top: 4px;
-  padding: 20px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
+  padding-top: 2px;
+  border-top: 1px solid var(--border-color);
 }
 .lp-config-title {
   font-size: 1.15rem;
@@ -3513,22 +3511,13 @@ a:hover,
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 14px;
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
-  background: var(--bg-secondary);
+  padding: 4px 0;
+  color: var(--text-primary);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 .lp-config-option:hover {
-  border-color: var(--accent);
-  background: var(--accent-soft);
-}
-.lp-config-option:has(input:checked),
-.lp-config-option--active {
-  border-color: var(--accent);
-  background: var(--accent-soft);
-  box-shadow: 0 0 0 1px var(--accent);
+  color: var(--accent);
 }
 .lp-config-option input[type="radio"],
 .lp-config-option input[type="checkbox"] {
@@ -3555,36 +3544,12 @@ a:hover,
 .lp-config-option--checkbox {
   align-items: flex-start;
 }
-.lp-config-checkbox {
-  flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  margin-top: 2px;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  background: var(--bg-primary);
-  position: relative;
-}
-.lp-config-option--checkbox input:checked + .lp-config-checkbox {
-  background: var(--accent);
-  border-color: var(--accent);
-}
-.lp-config-option--checkbox input:checked + .lp-config-checkbox::after {
-  content: "";
-  position: absolute;
-  left: 5px;
-  top: 1px;
-  width: 5px;
-  height: 10px;
-  border: solid #000;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
 .lp-config-stepper {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 12px;
+  max-width: 220px;
 }
 .lp-config-stepper > span {
   text-align: center;
@@ -3605,7 +3570,6 @@ a:hover,
 }
 .lp-config-number-btn:hover {
   border-color: var(--accent);
-  background: var(--accent-soft);
   color: var(--accent);
 }
 .lp-config-hint {
@@ -3624,26 +3588,19 @@ a:hover,
 .lp-config-features-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 6px 12px;
 }
 .lp-config-feature {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 12px;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  background: var(--bg-secondary);
+  padding: 4px 0;
+  color: var(--text-primary);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 .lp-config-feature:hover {
-  border-color: var(--accent);
-}
-.lp-config-feature:has(input:checked),
-.lp-config-feature--selected {
-  border-color: var(--accent);
-  background: var(--accent-soft);
+  color: var(--accent);
 }
 .lp-config-feature input {
   accent-color: var(--accent);
@@ -3661,10 +3618,8 @@ a:hover,
   flex-direction: column;
   align-items: center;
   gap: 2px;
-  padding: 18px;
-  border: 1px solid var(--accent);
-  border-radius: 12px;
-  background: var(--accent-soft);
+  padding-top: 18px;
+  border-top: 1px solid var(--border-color);
   text-align: center;
 }
 .lp-config-prezzo-label {
