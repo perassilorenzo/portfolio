@@ -689,6 +689,27 @@
             required
             data-lang-key="contactEmail"
           />
+          <input
+            type="text"
+            name="azienda"
+            class="lp-input lp-config-field"
+            placeholder="Nome azienda (opzionale)"
+            data-lang-key="contactCompany"
+          />
+          <input
+            type="email"
+            name="email-azienda"
+            class="lp-input lp-config-field"
+            placeholder="Email azienda (opzionale)"
+            data-lang-key="contactCompanyEmail"
+          />
+          <input
+            type="tel"
+            name="telefono"
+            class="lp-input lp-config-field"
+            placeholder="Numero di telefono"
+            data-lang-key="contactPhone"
+          />
           <select
             name="motivo"
             class="lp-input lp-select"
@@ -696,7 +717,7 @@
             data-lang-key="contactReason"
           >
             <option value="" disabled selected>Motivo</option>
-            <option value="configura-sito">Configura il mio sito</option>
+            <option value="configura-sito">Configura il tuo sito</option>
             <option value="idea">Solo un'idea</option>
             <option value="collaborazione">Collaborazione</option>
             <option value="altro">Altro</option>
@@ -716,14 +737,14 @@
           <input
             type="text"
             name="oggetto"
-            class="lp-input"
+            class="lp-input lp-non-config-field"
             placeholder="Oggetto"
             data-lang-key="contactSubject"
           />
         </div>
         <textarea
           name="messaggio"
-          class="lp-textarea"
+          class="lp-textarea lp-non-config-field"
           placeholder="Il tuo messaggio..."
           rows="6"
           required
@@ -736,7 +757,7 @@
         <p class="lp-text-secondary mt-2 small" data-lang-key="contactPrezzoNota">
           Il prezzo non è definitivo: verrà confermato in base ai dettagli del tuo progetto.
         </p>
-        <p class="lp-text-secondary mt-4 small">
+        <p class="lp-text-secondary mt-2 small">
           Oppure
           <button
             class="lp-copy-btn"
@@ -745,7 +766,7 @@
             copiami l'email
           </button>
         </p>
-        <p class="lp-text-secondary mt-3">
+        <p class="lp-text-secondary mt-2">
           Sarò più veloce a rispondere su WhatsApp
         </p>
         <a
@@ -767,24 +788,24 @@
           </svg>
           Scrivimi su WhatsApp
         </a>
-          </div>
-          <!-- Configuratore Sito (colonna laterale) -->
+        </div>
+        <!-- Configuratore Sito (colonna laterale) -->
           <div id="configuratore-sito" class="lp-configuratore-sito" style="display: none;">
-            <h4 class="lp-config-title">Configura il tuo sito</h4>
+            <h4 class="lp-config-title" data-lang-key="configTitle">Configura il tuo sito</h4>
 
             <div class="lp-config-block">
-              <label class="lp-config-label">Tipo di sito</label>
+              <label class="lp-config-label" data-lang-key="configTypeLabel">Tipo di sito</label>
               <div class="lp-config-radio-grid">
                 <label class="lp-config-option lp-config-option--active">
                   <input type="radio" name="config-tipo-sito" value="landing" checked required>
-                  <span class="lp-config-opt-text">
+                  <span class="lp-config-opt-text" data-lang-key="configLandingText" data-lang-html>
                     <strong>Landing page</strong>
                     <small>Una sola pagina per presentare la tua attività. 250 €</small>
                   </span>
                 </label>
                 <label class="lp-config-option">
                   <input type="radio" name="config-tipo-sito" value="multipage" required>
-                  <span class="lp-config-opt-text">
+                  <span class="lp-config-opt-text" data-lang-key="configMultiText" data-lang-html>
                     <strong>Sito vetrina</strong>
                     <small>Più pagine: home, servizi, contatti. Da 300 €</small>
                   </span>
@@ -794,20 +815,20 @@
             </div>
 
             <div class="lp-config-block">
-              <label class="lp-config-label">Numero di pagine</label>
+              <label class="lp-config-label" data-lang-key="configPagesLabel">Numero di pagine</label>
               <div class="lp-config-stepper" id="config-pages-stepper">
                 <button type="button" class="lp-config-number-btn" data-step="-1" aria-label="Riduci">−</button>
                 <span id="config-pages-display">1</span>
                 <button type="button" class="lp-config-number-btn" data-step="+1" aria-label="Aumenta">+</button>
               </div>
-              <small class="lp-config-hint" id="config-pages-hint">50 € a pagina (dalla seconda)</small>
+              <small class="lp-config-hint" id="config-pages-hint" data-lang-key="configPagesHint">50 € a pagina (dalla seconda)</small>
               <input type="hidden" name="config-pages" value="1">
             </div>
 
             <div class="lp-config-block">
               <label class="lp-config-option lp-config-option--checkbox">
                 <input type="checkbox" id="config-img-pro">
-                <span class="lp-config-opt-text">
+                <span class="lp-config-opt-text" data-lang-key="configImgProText" data-lang-html>
                   <strong>Immagini professionali</strong>
                   <small>Ricerca e ottimizzazione di immagini. +20 €</small>
                 </span>
@@ -816,109 +837,101 @@
             </div>
 
             <div class="lp-config-block">
-              <label class="lp-config-option lp-config-option--checkbox">
-                <input type="checkbox" id="config-copywriting">
-                <span class="lp-config-opt-text">
-                  <strong>Copywriting / Testi</strong>
-                  <small>Creazione e revisione dei testi. Incluso</small>
-                </span>
-              </label>
-              <input type="hidden" name="config-copywriting" value="0">
-            </div>
-
-            <div class="lp-config-block">
-              <label class="lp-config-label" for="config-lingue">Lingue aggiuntive</label>
-              <div class="lp-config-lingue">
-                <input type="number" name="config-lingue" id="config-lingue" value="0" min="0" class="lp-input lp-config-lingue-input" required>
-                <span class="lp-config-hint">+50 € a lingua</span>
+              <label class="lp-config-label" data-lang-key="configLangLabel">Lingue aggiuntive</label>
+              <div class="lp-config-stepper" id="config-lingue-stepper">
+                <button type="button" class="lp-config-number-btn" data-lang-step="-1" aria-label="Riduci">−</button>
+                <span id="config-lingue-display">0</span>
+                <button type="button" class="lp-config-number-btn" data-lang-step="+1" aria-label="Aumenta">+</button>
               </div>
+              <small class="lp-config-hint" data-lang-key="configLangHint">+50 € a lingua</small>
+              <input type="hidden" name="config-lingue" id="config-lingue" value="0">
             </div>
 
             <div class="lp-config-block">
-              <label class="lp-config-label">Funzionalità <small>(+10 € l'una)</small></label>
+              <label class="lp-config-label" data-lang-key="configFeaturesLabel" data-lang-html>Funzionalità <small>(+10 € l'una)</small></label>
               <div class="lp-config-features-grid" id="config-features-grid">
                 <label class="lp-config-feature">
                   <input type="checkbox" data-feature="dark-light-mode">
-                  <span>Dark / Light mode</span>
-                  <span class="lp-config-info" title="Passa automaticamente o a comando tra tema scuro e chiaro.">i</span>
+                  <span data-lang-key="configF1">Dark / Light mode</span>
+                  <span class="lp-config-info" data-lang-title="configF1Info" title="Passa automaticamente o a comando tra tema scuro e chiaro.">i</span>
                 </label>
                 <label class="lp-config-feature">
                   <input type="checkbox" data-feature="scroll-reveal">
-                  <span>Scroll reveal</span>
-                  <span class="lp-config-info" title="Animazioni di apparizione degli elementi mentre scorri la pagina.">i</span>
+                  <span data-lang-key="configF2">Scroll reveal</span>
+                  <span class="lp-config-info" data-lang-title="configF2Info" title="Animazioni di apparizione degli elementi mentre scorri la pagina.">i</span>
                 </label>
                 <label class="lp-config-feature">
                   <input type="checkbox" data-feature="back-to-top">
-                  <span>Torna su</span>
-                  <span class="lp-config-info" title="Bottone che riporta rapidamente all'inizio della pagina.">i</span>
+                  <span data-lang-key="configF3">Torna su</span>
+                  <span class="lp-config-info" data-lang-title="configF3Info" title="Bottone che riporta rapidamente all'inizio della pagina.">i</span>
                 </label>
                 <label class="lp-config-feature">
                   <input type="checkbox" data-feature="image-lightbox">
-                  <span>Lightbox immagini</span>
-                  <span class="lp-config-info" title="Ingrandisce le immagini a schermo intero al clic, con chiusura semplice.">i</span>
+                  <span data-lang-key="configF4">Lightbox immagini</span>
+                  <span class="lp-config-info" data-lang-title="configF4Info" title="Ingrandisce le immagini a schermo intero al clic, con chiusura semplice.">i</span>
                 </label>
                 <label class="lp-config-feature">
                   <input type="checkbox" data-feature="image-slider">
-                  <span>Slider / Carousel</span>
-                  <span class="lp-config-info" title="Gallerie a scorrimento automatico o manuale tra più immagini.">i</span>
+                  <span data-lang-key="configF5">Slider / Carousel</span>
+                  <span class="lp-config-info" data-lang-title="configF5Info" title="Gallerie a scorrimento automatico o manuale tra più immagini.">i</span>
                 </label>
                 <label class="lp-config-feature">
                   <input type="checkbox" data-feature="hover-effects">
-                  <span>Effetti hover</span>
-                  <span class="lp-config-info" title="Transizioni e animazioni al passaggio del mouse su elementi.">i</span>
+                  <span data-lang-key="configF6">Effetti hover</span>
+                  <span class="lp-config-info" data-lang-title="configF6Info" title="Transizioni e animazioni al passaggio del mouse su elementi.">i</span>
                 </label>
                 <label class="lp-config-feature">
                   <input type="checkbox" data-feature="animated-counters">
-                  <span>Contatori animati</span>
-                  <span class="lp-config-info" title="Numeri che contano fino al valore finale quando entrano nello schermo.">i</span>
+                  <span data-lang-key="configF7">Contatori animati</span>
+                  <span class="lp-config-info" data-lang-title="configF7Info" title="Numeri che contano fino al valore finale quando entrano nello schermo.">i</span>
                 </label>
                 <label class="lp-config-feature">
                   <input type="checkbox" data-feature="search-interna">
-                  <span>Ricerca interna</span>
-                  <span class="lp-config-info" title="Campo di ricerca che filtra i contenuti del sito.">i</span>
+                  <span data-lang-key="configF8">Ricerca interna</span>
+                  <span class="lp-config-info" data-lang-title="configF8Info" title="Campo di ricerca che filtra i contenuti del sito.">i</span>
                 </label>
                 <label class="lp-config-feature">
                   <input type="checkbox" data-feature="filtro-categorie">
-                  <span>Filtro categorie</span>
-                  <span class="lp-config-info" title="Filtra i contenuti per categoria o argomento.">i</span>
+                  <span data-lang-key="configF9">Filtro categorie</span>
+                  <span class="lp-config-info" data-lang-title="configF9Info" title="Filtra i contenuti per categoria o argomento.">i</span>
                 </label>
                 <label class="lp-config-feature">
                   <input type="checkbox" data-feature="faq-accordion">
-                  <span>FAQ Accordion</span>
-                  <span class="lp-config-info" title="Domande frequenti espandibili a fisarmonica.">i</span>
+                  <span data-lang-key="configF10">FAQ Accordion</span>
+                  <span class="lp-config-info" data-lang-title="configF10Info" title="Domande frequenti espandibili a fisarmonica.">i</span>
                 </label>
                 <label class="lp-config-feature">
                   <input type="checkbox" data-feature="whatsapp-chat">
-                  <span>Bottone WhatsApp</span>
-                  <span class="lp-config-info" title="Pulsante fisso che apre una chat WhatsApp con te.">i</span>
+                  <span data-lang-key="configF11">Bottone WhatsApp</span>
+                  <span class="lp-config-info" data-lang-title="configF11Info" title="Pulsante fisso che apre una chat WhatsApp con te.">i</span>
                 </label>
                 <label class="lp-config-feature">
                   <input type="checkbox" data-feature="mappa-interattiva">
-                  <span>Mappa interattiva</span>
-                  <span class="lp-config-info" title="Mappa in cui i clienti possono vedere la posizione.">i</span>
+                  <span data-lang-key="configF12">Mappa interattiva</span>
+                  <span class="lp-config-info" data-lang-title="configF12Info" title="Mappa in cui i clienti possono vedere la posizione.">i</span>
                 </label>
                 <label class="lp-config-feature">
                   <input type="checkbox" data-feature="before-after-slider">
-                  <span>Prima / Dopo</span>
-                  <span class="lp-config-info" title="Comparatore trascinabile tra un'immagine prima e una dopo.">i</span>
+                  <span data-lang-key="configF13">Prima / Dopo</span>
+                  <span class="lp-config-info" data-lang-title="configF13Info" title="Comparatore trascinabile tra un'immagine prima e una dopo.">i</span>
                 </label>
                 <label class="lp-config-feature">
                   <input type="checkbox" data-feature="marquee-text">
-                  <span>Testo scorrevole</span>
-                  <span class="lp-config-info" title="Testo che scorre in modo continuo, effetto tendina.">i</span>
+                  <span data-lang-key="configF14">Testo scorrevole</span>
+                  <span class="lp-config-info" data-lang-title="configF14Info" title="Testo che scorre in modo continuo, effetto tendina.">i</span>
                 </label>
                 <label class="lp-config-feature">
                   <input type="checkbox" data-feature="animated-progress">
-                  <span>Barre di avanzamento</span>
-                  <span class="lp-config-info" title="Barre che si riempiono in animazione per mostrare competenze o valori.">i</span>
+                  <span data-lang-key="configF15">Barre di avanzamento</span>
+                  <span class="lp-config-info" data-lang-title="configF15Info" title="Barre che si riempiono in animazione per mostrare competenze o valori.">i</span>
                 </label>
               </div>
               <input type="hidden" name="config-selected-features" value="">
             </div>
 
             <div class="lp-config-prezzo">
-              <span class="lp-config-prezzo-label">Preventivo stimato</span>
-              <span class="lp-config-prezzo-sub">Potrebbe cambiare in base alle tue scelte</span>
+              <span class="lp-config-prezzo-label" data-lang-key="configPriceLabel">Preventivo stimato</span>
+              <span class="lp-config-prezzo-sub" data-lang-key="configPriceSub">Potrebbe cambiare in base alle tue scelte</span>
               <span id="config-prezzo-totale" class="lp-config-prezzo-totale">250 €</span>
             </div>
           </div>

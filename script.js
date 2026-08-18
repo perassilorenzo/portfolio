@@ -593,9 +593,12 @@ document.addEventListener("DOMContentLoaded", function () {
       ctaBtn: "Parliamone",
       contactName: "Il tuo nome",
       contactEmail: "La tua email",
+      contactCompany: "Nome azienda (opzionale)",
+      contactCompanyEmail: "Email azienda (opzionale)",
+      contactPhone: "Numero di telefono",
       contactReason: "Motivo",
       contactReasonOpts: [
-        "Configura il mio sito",
+        "Configura il tuo sito",
         "Solo un'idea",
         "Collaborazione",
         "Altro",
@@ -610,6 +613,53 @@ document.addEventListener("DOMContentLoaded", function () {
       contactMsg: "Il tuo messaggio...",
       contactBtn: "Invia preventivo",
       contactPrezzoNota: "Il prezzo non è definitivo: verrà confermato in base ai dettagli del tuo progetto.",
+      contactBtnAlt: "Invia messaggio",
+      contactPrezzoNotaAlt: "Ti rispondo appena possibile!",
+      configTitle: "Configura il tuo sito",
+      configTypeLabel: "Tipo di sito",
+      configLandingText:
+        "<strong>Landing page</strong><small>Una sola pagina per presentare la tua attività. 250 €</small>",
+      configMultiText:
+        "<strong>Sito vetrina</strong><small>Più pagine: home, servizi, contatti. Da 300 €</small>",
+      configPagesLabel: "Numero di pagine",
+      configPagesHint: "50 € a pagina (dalla seconda)",
+      configImgProText:
+        "<strong>Immagini professionali</strong><small>Ricerca e ottimizzazione di immagini. +20 €</small>",
+      configLangLabel: "Lingue aggiuntive",
+      configLangHint: "+50 € a lingua",
+      configFeaturesLabel: "Funzionalità <small>(+10 € l'una)</small>",
+      configPriceLabel: "Preventivo stimato",
+      configPriceSub: "Potrebbe cambiare in base alle tue scelte",
+      configF1: "Dark / Light mode",
+      configF1Info: "Passa automaticamente o a comando tra tema scuro e chiaro.",
+      configF2: "Scroll reveal",
+      configF2Info: "Animazioni di apparizione degli elementi mentre scorri la pagina.",
+      configF3: "Torna su",
+      configF3Info: "Bottone che riporta rapidamente all'inizio della pagina.",
+      configF4: "Lightbox immagini",
+      configF4Info: "Ingrandisce le immagini a schermo intero al clic, con chiusura semplice.",
+      configF5: "Slider / Carousel",
+      configF5Info: "Gallerie a scorrimento automatico o manuale tra più immagini.",
+      configF6: "Effetti hover",
+      configF6Info: "Transizioni e animazioni al passaggio del mouse su elementi.",
+      configF7: "Contatori animati",
+      configF7Info: "Numeri che contano fino al valore finale quando entrano nello schermo.",
+      configF8: "Ricerca interna",
+      configF8Info: "Campo di ricerca che filtra i contenuti del sito.",
+      configF9: "Filtro categorie",
+      configF9Info: "Filtra i contenuti per categoria o argomento.",
+      configF10: "FAQ Accordion",
+      configF10Info: "Domande frequenti espandibili a fisarmonica.",
+      configF11: "Bottone WhatsApp",
+      configF11Info: "Pulsante fisso che apre una chat WhatsApp con te.",
+      configF12: "Mappa interattiva",
+      configF12Info: "Mappa in cui i clienti possono vedere la posizione.",
+      configF13: "Prima / Dopo",
+      configF13Info: "Comparatore trascinabile tra un'immagine prima e una dopo.",
+      configF14: "Testo scorrevole",
+      configF14Info: "Testo che scorre in modo continuo, effetto tendina.",
+      configF15: "Barre di avanzamento",
+      configF15Info: "Barre che si riempiono in animazione per mostrare competenze o valori.",
       footerTag: "Developer, fashion, tech & Customly founder",
       footerPages: "Pages",
       footerSocial: "Social",
@@ -728,6 +778,9 @@ document.addEventListener("DOMContentLoaded", function () {
       ctaBtn: "Let's talk",
       contactName: "Your name",
       contactEmail: "Your email",
+      contactCompany: "Company name (optional)",
+      contactCompanyEmail: "Company email (optional)",
+      contactPhone: "Phone number",
       contactReason: "Reason",
       contactReasonOpts: ["Configure my website", "Just an idea", "Collaboration", "Other"],
       contactService: "Service",
@@ -740,6 +793,53 @@ document.addEventListener("DOMContentLoaded", function () {
       contactMsg: "Your message...",
       contactBtn: "Send quote",
       contactPrezzoNota: "The price is not final: it will be confirmed based on your project details.",
+      contactBtnAlt: "Send message",
+      contactPrezzoNotaAlt: "I'll get back to you as soon as possible, within 24 hours at most.",
+      configTitle: "Configure your website",
+      configTypeLabel: "Site type",
+      configLandingText:
+        "<strong>Landing page</strong><small>A single page to present your business. €250</small>",
+      configMultiText:
+        "<strong>Showcase site</strong><small>Multiple pages: home, services, contacts. From €300</small>",
+      configPagesLabel: "Number of pages",
+      configPagesHint: "€50 per page (from the second)",
+      configImgProText:
+        "<strong>Professional images</strong><small>Image research and optimization. +€20</small>",
+      configLangLabel: "Additional languages",
+      configLangHint: "+€50 per language",
+      configFeaturesLabel: "Features <small>(+€10 each)</small>",
+      configPriceLabel: "Estimated quote",
+      configPriceSub: "May change based on your choices",
+      configF1: "Dark / Light mode",
+      configF1Info: "Switches automatically or on command between dark and light theme.",
+      configF2: "Scroll reveal",
+      configF2Info: "Appearance animations as you scroll the page.",
+      configF3: "Back to top",
+      configF3Info: "Button that quickly returns to the top of the page.",
+      configF4: "Image lightbox",
+      configF4Info: "Enlarges images to full screen on click, with simple closing.",
+      configF5: "Slider / Carousel",
+      configF5Info: "Auto or manual image galleries.",
+      configF6: "Hover effects",
+      configF6Info: "Transitions and animations on mouse hover.",
+      configF7: "Animated counters",
+      configF7Info: "Numbers that count up to the final value when entering the screen.",
+      configF8: "Internal search",
+      configF8Info: "Search field that filters site content.",
+      configF9: "Category filter",
+      configF9Info: "Filters content by category or topic.",
+      configF10: "FAQ Accordion",
+      configF10Info: "Expandable frequently asked questions.",
+      configF11: "WhatsApp button",
+      configF11Info: "Fixed button that opens a WhatsApp chat with you.",
+      configF12: "Interactive map",
+      configF12Info: "Map where customers can see the location.",
+      configF13: "Before / After",
+      configF13Info: "Draggable comparison between a before and after image.",
+      configF14: "Marquee text",
+      configF14Info: "Continuously scrolling text, curtain effect.",
+      configF15: "Progress bars",
+      configF15Info: "Animated filling bars to show skills or values.",
       footerTag: "Developer, fashion, tech & Customly founder",
       footerPages: "Pages",
       footerSocial: "Social",
@@ -755,7 +855,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".lp-lang-btn").forEach(function (e) {
       e.classList.toggle("active", e.dataset.langBtn === $);
     });
-    document.querySelectorAll("[data-lang-key]").forEach(function (e) {
+    document
+      .querySelectorAll("[data-lang-key], [data-lang-title]")
+      .forEach(function (e) {
       var o = e.dataset.langKey;
       if (LANG[$][o]) {
         if (e.hasAttribute("data-lang-html")) e.innerHTML = LANG[$][o];
@@ -768,6 +870,8 @@ document.addEventListener("DOMContentLoaded", function () {
           e.placeholder = LANG[$][o];
         else e.textContent = LANG[$][o];
       }
+      if (e.hasAttribute("data-lang-title") && LANG[$][e.dataset.langTitle])
+        e.title = LANG[$][e.dataset.langTitle];
     });
   }
   var _rs = document.getElementById("contactReason"),
@@ -800,6 +904,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var pagesStepper = document.getElementById("config-pages-stepper");
   var pagesHint = document.getElementById("config-pages-hint");
   var tipoSito = document.querySelectorAll('input[name="config-tipo-sito"]');
+  var lingueDisplay = document.getElementById("config-lingue-display");
+  var lingueHidden = document.getElementById("config-lingue");
 
   var PAGES_MIN = 1;
   var PAGES_MIN_MULTI = 2;
@@ -816,6 +922,16 @@ document.addEventListener("DOMContentLoaded", function () {
   function setPages(n) {
     if (pagesDisplay) pagesDisplay.textContent = n;
     if (pagesHidden) pagesHidden.value = n;
+  }
+
+  function getLingue() {
+    return parseInt(lingueDisplay ? lingueDisplay.textContent : "0") || 0;
+  }
+
+  function setLingue(n) {
+    if (n < 0) n = 0;
+    if (lingueDisplay) lingueDisplay.textContent = n;
+    if (lingueHidden) lingueHidden.value = n;
   }
 
   function aggiornaPaginePerTipo() {
@@ -838,7 +954,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (tipo === "multipage") prezzo += (pagine - 1) * 50;
     var imgPro = document.getElementById("config-img-pro");
     if (imgPro && imgPro.checked) prezzo += 20;
-    var lingue = parseInt(document.getElementById("config-lingue").value) || 0;
+    var lingue = getLingue();
     prezzo += lingue * 50;
     var funzionalita = 0;
     document
@@ -853,12 +969,19 @@ document.addEventListener("DOMContentLoaded", function () {
   if (reasonSelect && configuratore) {
     var contactFormEl = document.querySelector(".lp-contact-form");
     var wrapperEl = document.querySelector(".contact-form-wrapper");
-    reasonSelect.addEventListener("change", function () {
-      var isConfig = this.value === "configura-sito";
+    var submitBtn = document.querySelector(".lp-contact-form button[type=submit]");
+    var prezzoNota = document.querySelector('[data-lang-key="contactPrezzoNota"]');
+    function aggStatoConfig() {
+      var isConfig = reasonSelect.value === "configura-sito";
       configuratore.style.display = isConfig ? "block" : "none";
       if (contactFormEl) contactFormEl.classList.toggle("lp-contact-form--config", isConfig);
       if (wrapperEl) wrapperEl.classList.toggle("lp-contact-form--config", isConfig);
-    });
+      if (submitBtn) submitBtn.dataset.langKey = isConfig ? "contactBtn" : "contactBtnAlt";
+      if (prezzoNota) prezzoNota.dataset.langKey = isConfig ? "contactPrezzoNota" : "contactPrezzoNotaAlt";
+      setLang(_lang);
+    }
+    reasonSelect.addEventListener("change", aggStatoConfig);
+    aggStatoConfig();
   }
 
   tipoSito.forEach(function (radio) {
@@ -868,6 +991,13 @@ document.addEventListener("DOMContentLoaded", function () {
   var numBtns = document.querySelectorAll(".lp-config-number-btn");
   numBtns.forEach(function (btn) {
     btn.addEventListener("click", function () {
+      if (this.hasAttribute("data-lang-step")) {
+        var cur = getLingue();
+        var step = parseInt(this.dataset.langStep);
+        setLingue(cur + step);
+        aggiornaPrezzo();
+        return;
+      }
       if (getTipo() !== "multipage") return;
       var cur = getPages();
       var step = parseInt(this.dataset.step);
@@ -878,12 +1008,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  var lingueInput = document.getElementById("config-lingue");
-  var recalcFields = [
-    "config-img-pro",
-    "config-copywriting",
-    "config-lingue",
-  ];
+  var recalcFields = ["config-img-pro", "config-lingue"];
   recalcFields.forEach(function (id) {
     var el = document.getElementById(id);
     if (el)
@@ -891,7 +1016,6 @@ document.addEventListener("DOMContentLoaded", function () {
         aggiornaPrezzo();
       });
   });
-  if (lingueInput) lingueInput.addEventListener("input", aggiornaPrezzo);
   document
     .querySelectorAll("#config-features-grid input[data-feature]")
     .forEach(function (cb) {
@@ -919,8 +1043,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var tipo = configTipo.value;
       var pagine = getPages();
       var imgPro = document.getElementById("config-img-pro");
-      var copywriting = document.getElementById("config-copywriting");
-      var lingue = parseInt(document.getElementById("config-lingue").value) || 0;
+      var lingue = getLingue();
       var features = [];
       document
         .querySelectorAll("#config-features-grid input[data-feature]:checked")
@@ -942,8 +1065,6 @@ document.addEventListener("DOMContentLoaded", function () {
         pagine +
         "\nImmagini professionali: " +
         (imgPro && imgPro.checked ? "Sì (+20 €)" : "No") +
-        "\nCopywriting: " +
-        (copywriting && copywriting.checked ? "Incluso" : "No") +
         "\nLingue aggiuntive: " +
         lingue +
         "\nFunzionalità (" +
