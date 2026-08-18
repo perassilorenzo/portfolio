@@ -696,8 +696,8 @@
             data-lang-key="contactReason"
           >
             <option value="" disabled selected>Motivo</option>
-            <option value="preventivo">Preventivo
-              <option value="configura-sito">Configura il tuo sito</option>
+            <option value="preventivo">Preventivo</option>
+            <option value="configura-sito">Configura il mio sito</option>
             <option value="collaborazione">Collaborazione</option>
             <option value="idea">Solo un'idea</option>
             <option value="altro">Altro</option>
@@ -733,14 +733,14 @@
                 <input type="radio" name="config-tipo-sito" value="landing" checked required>
                 <span class="lp-config-opt-text">
                   <strong>Landing Page (1 pagina)</strong>
-                  <small>Ideale per presentare la tua attività.</small>
+                  <small>Ideale per presentare la tua attività. 250 €</small>
                 </span>
               </label>
               <label class="lp-config-option">
                 <input type="radio" name="config-tipo-sito" value="multipage" required>
                 <span class="lp-config-opt-text">
-                  <strong>Multi-pagina</strong>
-                  <small>Sito con più pagine (home, about, servizi, contatti).</small>
+                  <strong>Sito Vetrina (Multi-pagina)</strong>
+                  <small>Sito con più pagine (home, about, servizi, contatti). 350 €</small>
                 </span>
               </label>
             </div>
@@ -871,8 +871,11 @@
         ></textarea>
 
         <button type="submit" class="lp-btn mt-3" data-lang-key="contactBtn">
-          Richiedi preventivo
+          Invia preventivo
         </button>
+        <p class="lp-text-secondary mt-2 small" data-lang-key="contactPrezzoNota">
+          Il prezzo non è definitivo: verrà confermato in base ai dettagli del tuo progetto.
+        </p>
         <p class="lp-text-secondary mt-4 small">
           Oppure
           <button
