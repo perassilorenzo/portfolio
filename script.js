@@ -627,6 +627,15 @@ document.addEventListener("DOMContentLoaded", function () {
         "<strong>Immagini professionali</strong><small>Ricerca e ottimizzazione di immagini. +20 €</small>",
       configLangLabel: "Lingue aggiuntive",
       configLangHint: "Prima lingua inclusa, +50 € dalla seconda",
+      configAdminText:
+        "<strong>Admin Panel</strong><small>Il cliente modifica contenuti in autonomia. +150 €</small>",
+      configMaintLabel: "Manutenzione",
+      configMaintNoAdmin:
+        "<strong>Senza Admin Panel</strong><small>30 €/mese — aggiornamenti fatti da me</small>",
+      configMaintAdmin:
+        "<strong>Con Admin Panel</strong><small>15 €/mese — contenuti a carico del cliente</small>",
+      configMaintAuto:
+        "<strong>Autonomo</strong><small>0 €/mese — interventi fatturati a parte</small>",
       configFeaturesLabel: "Funzionalità <small>(+10 € l'una)</small>",
       configPriceLabel: "Preventivo stimato",
       configPriceSub: "Potrebbe cambiare in base alle tue scelte",
@@ -807,6 +816,15 @@ document.addEventListener("DOMContentLoaded", function () {
         "<strong>Professional images</strong><small>Image research and optimization. +€20</small>",
       configLangLabel: "Additional languages",
       configLangHint: "First language included, +€50 from the second",
+      configAdminText:
+        "<strong>Admin Panel</strong><small>The client edits content independently. +€150</small>",
+      configMaintLabel: "Maintenance",
+      configMaintNoAdmin:
+        "<strong>Without Admin Panel</strong><small>€30/month — updates handled by me</small>",
+      configMaintAdmin:
+        "<strong>With Admin Panel</strong><small>€15/month — content handled by the client</small>",
+      configMaintAuto:
+        "<strong>Self-managed</strong><small>€0/month — work billed separately</small>",
       configFeaturesLabel: "Features <small>(+€10 each)</small>",
       configPriceLabel: "Estimated quote",
       configPriceSub: "May change based on your choices",
@@ -956,6 +974,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (imgPro && imgPro.checked) prezzo += 20;
     var lingue = getLingue();
     if (lingue > 1) prezzo += (lingue - 1) * 50;
+    var adminPanel = document.getElementById("config-admin-panel");
+    if (adminPanel && adminPanel.checked) prezzo += 150;
     var funzionalita = 0;
     document
       .querySelectorAll("#config-features-grid input[data-feature]:checked")
@@ -1008,7 +1028,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  var recalcFields = ["config-img-pro", "config-lingue"];
+  var recalcFields = ["config-img-pro", "config-lingue", "config-admin-panel"];
   recalcFields.forEach(function (id) {
     var el = document.getElementById(id);
     if (el)
@@ -1044,6 +1064,8 @@ document.addEventListener("DOMContentLoaded", function () {
       var pagine = getPages();
       var imgPro = document.getElementById("config-img-pro");
       var lingue = getLingue();
+      var adminPanel = document.getElementById("config-admin-panel");
+      var manutenzione = document.querySelector('input[name="config-manutenzione"]:checked');
       var features = [];
       document
         .querySelectorAll("#config-features-grid input[data-feature]:checked")
@@ -1056,7 +1078,14 @@ document.addEventListener("DOMContentLoaded", function () {
       if (tipo === "multipage") prezzo += (pagine - 1) * 50;
       if (imgPro && imgPro.checked) prezzo += 20;
       if (lingue > 1) prezzo += (lingue - 1) * 50;
+      if (adminPanel && adminPanel.checked) prezzo += 150;
       prezzo += features.length * 10;
+
+      var manutenzioneTesto = "Autonomo (0 €/mese)";
+      if (manutenzione && manutenzione.value === "senza-admin")
+        manutenzioneTesto = "Senza Admin Panel (30 €/mese)";
+      else if (manutenzione && manutenzione.value === "con-admin")
+        manutenzioneTesto = "Con Admin Panel (15 €/mese)";
 
       var summary =
         "Tipo di Sito: " +
@@ -1067,6 +1096,10 @@ document.addEventListener("DOMContentLoaded", function () {
         (imgPro && imgPro.checked ? "Sì (+20 €)" : "No") +
         "\nLingue aggiuntive: " +
         lingue +
+        "\nAdmin Panel: " +
+        (adminPanel && adminPanel.checked ? "Sì (+150 €)" : "No") +
+        "\nManutenzione: " +
+        manutenzioneTesto +
         "\nFunzionalità (" +
         features.length +
         "): " +

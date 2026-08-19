@@ -843,8 +843,46 @@
                 <span id="config-lingue-display">1</span>
                 <button type="button" class="lp-config-number-btn" data-lang-step="+1" aria-label="Aumenta">+</button>
               </div>
-              <small class="lp-config-hint" data-lang-key="configLangHint">+50 € a lingua</small>
+              <small class="lp-config-hint" data-lang-key="configLangHint">Prima lingua inclusa, +50 € dalla seconda</small>
               <input type="hidden" name="config-lingue" id="config-lingue" value="1">
+            </div>
+
+            <div class="lp-config-block">
+              <label class="lp-config-option lp-config-option--checkbox">
+                <input type="checkbox" id="config-admin-panel">
+                <span class="lp-config-opt-text" data-lang-key="configAdminText" data-lang-html>
+                  <strong>Admin Panel</strong>
+                  <small>Il cliente modifica contenuti in autonomia. +150 €</small>
+                </span>
+              </label>
+              <input type="hidden" name="config-admin" value="0">
+            </div>
+
+            <div class="lp-config-block">
+              <label class="lp-config-label" data-lang-key="configMaintLabel">Manutenzione</label>
+              <div class="lp-config-maint">
+                <label class="lp-config-option lp-config-option--checkbox">
+                  <input type="radio" name="config-manutenzione" value="senza-admin" checked>
+                  <span class="lp-config-opt-text" data-lang-key="configMaintNoAdmin" data-lang-html>
+                    <strong>Senza Admin Panel</strong>
+                    <small>30 €/mese — aggiornamenti fatti da me</small>
+                  </span>
+                </label>
+                <label class="lp-config-option lp-config-option--checkbox">
+                  <input type="radio" name="config-manutenzione" value="con-admin">
+                  <span class="lp-config-opt-text" data-lang-key="configMaintAdmin" data-lang-html>
+                    <strong>Con Admin Panel</strong>
+                    <small>15 €/mese — contenuti a carico del cliente</small>
+                  </span>
+                </label>
+                <label class="lp-config-option lp-config-option--checkbox">
+                  <input type="radio" name="config-manutenzione" value="autonomo">
+                  <span class="lp-config-opt-text" data-lang-key="configMaintAuto" data-lang-html>
+                    <strong>Autonomo</strong>
+                    <small>0 €/mese — interventi fatturati a parte</small>
+                  </span>
+                </label>
+              </div>
             </div>
 
             <div class="lp-config-block">
