@@ -54,3 +54,4 @@
 .lp-total-note{color:var(--text-secondary);font-size:.8rem}
 .lp-total-btn{width:100%;margin-top:12px;justify-content:center}
 @media (max-width:900px){.lp-contact-grid{grid-template-columns:1fr}.lp-config-style-grid{grid-template-columns:1fr 1fr}}
+.lp-field-label.lp-req::after{content:' *';color:var(--accent);font-weight:700}

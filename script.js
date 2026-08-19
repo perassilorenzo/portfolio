@@ -593,9 +593,11 @@ document.addEventListener("DOMContentLoaded", function () {
       ctaBtn: "Parliamone",
       contactName: "Il tuo nome",
       contactEmail: "La tua email",
+      contactEmailPh: "La tua email",
       contactCompany: "Nome azienda (opzionale)",
       contactCompanyEmail: "Email azienda (opzionale)",
       contactPhone: "Numero di telefono",
+      contactPhonePh: "Telefono / WhatsApp",
       contactReason: "Motivo",
       contactReasonOpts: [
         "Configura il tuo sito",
@@ -609,6 +611,8 @@ document.addEventListener("DOMContentLoaded", function () {
       cfBusiness: "Azienda / Attività / Professionista",
       cfNome: "Nome",
       cfCognome: "Cognome",
+      cfNomePh: "Il tuo nome",
+      cfCognomePh: "Il tuo cognome",
       cfPrivatoScopo: "Per cosa ti serve il sito?",
       cfPrivatoScopoPh: "Portfolio, CV, artista, progetto...",
       cfPrivatoEsistente: "Eventuale sito/social esistente",
@@ -861,9 +865,11 @@ document.addEventListener("DOMContentLoaded", function () {
       ctaBtn: "Let's talk",
       contactName: "Your name",
       contactEmail: "Your email",
+      contactEmailPh: "Your email",
       contactCompany: "Company name (optional)",
       contactCompanyEmail: "Company email (optional)",
       contactPhone: "Phone number",
+      contactPhonePh: "Phone / WhatsApp",
       contactReason: "Reason",
       contactReasonOpts: ["Configure my website", "Just an idea", "Collaboration", "Other"],
       cfReason: "What do you need?",
@@ -872,6 +878,8 @@ document.addEventListener("DOMContentLoaded", function () {
       cfBusiness: "Company / Business / Professional",
       cfNome: "First name",
       cfCognome: "Last name",
+      cfNomePh: "Your first name",
+      cfCognomePh: "Your last name",
       cfPrivatoScopo: "What do you need the site for?",
       cfPrivatoScopoPh: "Portfolio, CV, artist, project...",
       cfPrivatoEsistente: "Existing site/social",
@@ -1070,7 +1078,10 @@ document.addEventListener("DOMContentLoaded", function () {
   var pagineWrap = document.getElementById("config-pagine-wrap");
   var pagineGrid = document.getElementById("config-pages-grid");
   var imgTypeWrap = document.getElementById("config-img-type-wrap");
-  var lingueSel = document.getElementById("config-lingue");
+  var lingueDisplay = document.getElementById("config-lingue-display");
+  var lingueHidden = document.getElementById("config-lingue");
+  var pagineAltroDisplay = document.getElementById("config-pagine-altro-display");
+  var pagineAltroHidden = document.getElementById("config-pagine-altro");
   var cfPrivato = document.getElementById("cf-privato");
   var cfAzienda = document.getElementById("cf-azienda");
 
@@ -1080,18 +1091,36 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function getPagineExtra() {
-    if (!pagineGrid) return 0;
     var n = 0;
-    pagineGrid
-      .querySelectorAll('input[data-page]:checked:not([disabled])')
-      .forEach(function () {
-        n++;
-      });
+    if (pagineGrid) {
+      pagineGrid
+        .querySelectorAll('input[data-page]:checked:not([disabled])')
+        .forEach(function () {
+          n++;
+        });
+    }
+    n += parseInt(pagineAltroDisplay ? pagineAltroDisplay.textContent : "0") || 0;
     return n;
   }
 
+  function getPagineAltro() {
+    return parseInt(pagineAltroDisplay ? pagineAltroDisplay.textContent : "0") || 0;
+  }
+
+  function setPagineAltro(n) {
+    if (n < 0) n = 0;
+    if (pagineAltroDisplay) pagineAltroDisplay.textContent = n;
+    if (pagineAltroHidden) pagineAltroHidden.value = n;
+  }
+
   function getLingue() {
-    return parseInt(lingueSel ? lingueSel.value : "1") || 1;
+    return parseInt(lingueDisplay ? lingueDisplay.textContent : "1") || 1;
+  }
+
+  function setLingue(n) {
+    if (n < 1) n = 1;
+    if (lingueDisplay) lingueDisplay.textContent = n;
+    if (lingueHidden) lingueHidden.value = n;
   }
 
   function getAdmin() {
@@ -1160,6 +1189,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var wrapperEl = document.querySelector(".contact-form-wrapper");
     if (contactFormEl) contactFormEl.classList.toggle("lp-contact-form--config", isConfig);
     if (wrapperEl) wrapperEl.classList.toggle("lp-contact-form--config", isConfig);
+    var tipoClienteEl = document.getElementById("cf-tipo-cliente");
+    var privatoEl = document.getElementById("cf-privato");
+    var aziendaEl = document.getElementById("cf-azienda");
+    if (tipoClienteEl) tipoClienteEl.style.display = isConfig ? "block" : "none";
+    if (privatoEl) privatoEl.style.display = isConfig ? "block" : "none";
+    if (aziendaEl) aziendaEl.style.display = "none";
     setLang(_lang);
   }
 
@@ -1173,8 +1208,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   if (pagineGrid)
     pagineGrid.addEventListener("change", aggiornaPrezzo);
-  if (lingueSel)
-    lingueSel.addEventListener("change", aggiornaPrezzo);
+  document
+    .querySelectorAll("#config-lingue-stepper [data-lang-step]")
+    .forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        setLingue(getLingue() + parseInt(this.dataset.langStep));
+        aggiornaPrezzo();
+      });
+    });
+  document
+    .querySelectorAll("[data-altro-step]")
+    .forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        setPagineAltro(getPagineAltro() + parseInt(this.dataset.altroStep));
+        aggiornaPrezzo();
+      });
+    });
   document
     .querySelectorAll('#config-pages-grid input[data-page], #config-features-grid input[data-feature]')
     .forEach(function (cb) {
@@ -1252,6 +1301,8 @@ document.addEventListener("DOMContentLoaded", function () {
             var l = cb.closest("label");
             pagine.push(l ? l.querySelector("span").textContent.trim() : cb.value);
           });
+          var altro = getPagineAltro();
+          for (var a = 0; a < altro; a++) pagine.push("Altro");
           lines.push("Pagine: " + pagine.join(", "));
         }
         var contenuti = (document.querySelector('input[name="config-contenuti"]:checked') || {}).value || "";

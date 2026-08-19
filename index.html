@@ -672,7 +672,7 @@
           <!-- ===== COLONNA SINISTRA — Dati Cliente ===== -->
           <div class="lp-contact-col lp-contact-col-main">
             <div class="lp-field-block">
-              <label class="lp-field-label" data-lang-key="cfReason">Cosa ti serve?</label>
+              <label class="lp-field-label lp-req" data-lang-key="cfReason">Cosa ti serve?</label>
               <select
                 name="motivo"
                 class="lp-input lp-select"
@@ -687,7 +687,7 @@
               </select>
             </div>
 
-            <div class="lp-field-block">
+            <div id="cf-tipo-cliente" class="lp-field-block" style="display:none">
               <label class="lp-field-label" data-lang-key="cfClientType">Tipo di cliente</label>
               <div class="lp-radio-row">
                 <label class="lp-radio-opt">
@@ -702,14 +702,26 @@
             </div>
 
             <div class="contact-top-fields">
-              <input type="text" name="nome" class="lp-input" placeholder="Nome" required data-lang-key="cfNome" />
-              <input type="text" name="cognome" class="lp-input" placeholder="Cognome" required data-lang-key="cfCognome" />
-              <input type="email" name="email" class="lp-input" placeholder="Email" required data-lang-key="contactEmail" />
-              <input type="tel" name="telefono" class="lp-input" placeholder="Telefono / WhatsApp" required data-lang-key="contactPhone" />
+              <div class="lp-field-block">
+                <label class="lp-field-label lp-req" data-lang-key="cfNome">Nome</label>
+                <input type="text" name="nome" class="lp-input" placeholder="Nome" required data-lang-key="cfNomePh" />
+              </div>
+              <div class="lp-field-block">
+                <label class="lp-field-label lp-req" data-lang-key="cfCognome">Cognome</label>
+                <input type="text" name="cognome" class="lp-input" placeholder="Cognome" required data-lang-key="cfCognomePh" />
+              </div>
+              <div class="lp-field-block">
+                <label class="lp-field-label lp-req" data-lang-key="contactEmail">Email</label>
+                <input type="email" name="email" class="lp-input" placeholder="Email" required data-lang-key="contactEmailPh" />
+              </div>
+              <div class="lp-field-block">
+                <label class="lp-field-label lp-req" data-lang-key="contactPhone">Telefono / WhatsApp</label>
+                <input type="tel" name="telefono" class="lp-input" placeholder="Telefono / WhatsApp" required data-lang-key="contactPhonePh" />
+              </div>
             </div>
 
             <!-- Privato / Personale -->
-            <div id="cf-privato" class="lp-field-block">
+            <div id="cf-privato" class="lp-field-block" style="display:none">
               <div class="lp-field-block">
                 <label class="lp-field-label" data-lang-key="cfPrivatoScopo">Per cosa ti serve il sito?</label>
                 <input type="text" name="privato-scopo" class="lp-input" placeholder="Portfolio, CV, artista, progetto..." data-lang-key="cfPrivatoScopoPh" />
@@ -758,8 +770,40 @@
             </div>
 
             <div class="lp-field-block">
-              <label class="lp-field-label" data-lang-key="cfMessaggio">Il tuo messaggio</label>
+              <label class="lp-field-label lp-req" data-lang-key="cfMessaggio">Il tuo messaggio</label>
               <textarea name="messaggio" class="lp-textarea" placeholder="Scrivimi..." rows="6" required data-lang-key="contactMsg"></textarea>
+            </div>
+
+            <div class="lp-contact-alternative">
+              <p class="lp-text-secondary small">
+                Oppure
+                <button
+                  class="lp-copy-btn"
+                  onclick="navigator.clipboard.writeText('perassi.lorenzo1804@gmail.com').then(() => this.textContent='Copiata!').catch(() => {})"
+                >
+                  copiami l'email
+                </button>
+              </p>
+              <p class="lp-text-secondary small">Sarò più veloce a rispondere su WhatsApp</p>
+              <a
+                href="https://wa.me/393293360374"
+                target="_blank"
+                rel="noopener"
+                class="lp-btn lp-btn-wa"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  style="vertical-align: middle; margin-right: 6px"
+                >
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                  />
+                </svg>
+                Scrivimi su WhatsApp
+              </a>
             </div>
           </div>
 
@@ -820,10 +864,16 @@
                   <input type="checkbox" data-page="blog">
                   <span data-lang-key="cfPageBlog">Blog</span>
                 </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-page="altro">
-                  <span data-lang-key="cfPageAltro">Altro</span>
-                </label>
+              </div>
+              <div class="lp-config-block lp-config-altro">
+                <span class="lp-config-label" data-lang-key="cfPageAltro">Altro</span>
+                <div class="lp-config-stepper lp-config-stepper--active">
+                  <button type="button" class="lp-config-number-btn" data-altro-step="-1" aria-label="Riduci">−</button>
+                  <span id="config-pagine-altro-display">0</span>
+                  <button type="button" class="lp-config-number-btn" data-altro-step="+1" aria-label="Aumenta">+</button>
+                </div>
+                <small class="lp-config-hint">+50 € a pagina</small>
+                <input type="hidden" name="config-pagine-altro" id="config-pagine-altro" value="0">
               </div>
               <small class="lp-config-hint" data-lang-key="cfPagesHint">Prima pagina inclusa, +50 € dalla seconda</small>
             </div>
@@ -865,13 +915,13 @@
             <!-- C. Lingue -->
             <div class="lp-config-block">
               <label class="lp-config-label" data-lang-key="configLangLabel">Lingue</label>
-              <select name="config-lingue" id="config-lingue" class="lp-input lp-select lp-config-lingue-select" data-lang-key="configLangSel">
-                <option value="1" selected>1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4+</option>
-              </select>
+              <div class="lp-config-stepper lp-config-stepper--active" id="config-lingue-stepper">
+                <button type="button" class="lp-config-number-btn" data-lang-step="-1" aria-label="Riduci">−</button>
+                <span id="config-lingue-display">1</span>
+                <button type="button" class="lp-config-number-btn" data-lang-step="+1" aria-label="Aumenta">+</button>
+              </div>
               <small class="lp-config-hint" data-lang-key="configLangHint">1 lingua inclusa, +50 € dalla seconda</small>
+              <input type="hidden" name="config-lingue" id="config-lingue" value="1">
             </div>
 
             <!-- D. Stile visivo -->
