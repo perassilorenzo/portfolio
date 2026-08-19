@@ -603,6 +603,80 @@ document.addEventListener("DOMContentLoaded", function () {
         "Collaborazione",
         "Altro",
       ],
+      cfReason: "Cosa ti serve?",
+      cfClientType: "Tipo di cliente",
+      cfPrivate: "Privato / Personale",
+      cfBusiness: "Azienda / Attività / Professionista",
+      cfNome: "Nome",
+      cfCognome: "Cognome",
+      cfPrivatoScopo: "Per cosa ti serve il sito?",
+      cfPrivatoScopoPh: "Portfolio, CV, artista, progetto...",
+      cfPrivatoEsistente: "Eventuale sito/social esistente",
+      cfPrivatoEsistentePh: "https://...",
+      cfAziendaNome: "Nome Azienda / Attività",
+      cfAziendaNomePh: "Nome della tua attività",
+      cfSettore: "Settore",
+      cfSettoreSel: "Settore",
+      cfSettoreSelPh: "Seleziona",
+      cfLocalita: "Località (Città / Zona)",
+      cfLocalitaPh: "Es. Milano",
+      cfAziendaCosa: "Cosa fa l'attività?",
+      cfAziendaCosaPh: "Descrivi brevemente l'attività",
+      cfAziendaSito: "Sito web attuale",
+      cfAziendaSitoPh: "https://...",
+      cfAziendaSocial: "Instagram / Social",
+      cfAziendaSocialPh: "https://...",
+      cfMessaggio: "Il tuo messaggio",
+      cfPageHome: "Home",
+      cfIncluded: "(inclusa)",
+      cfPageAbout: "Chi sono / About",
+      cfPageServizi: "Servizi",
+      cfPagePortfolio: "Portfolio / Gallery",
+      cfPageContatti: "Contatti",
+      cfPageFaq: "FAQ",
+      cfPageBlog: "Blog",
+      cfPageAltro: "Altro",
+      cfPagesHint: "Prima pagina inclusa, +50 € dalla seconda",
+      cfContenutiLabel: "Hai già i contenuti?",
+      cfContenutiTutto: "Ho testi e immagini",
+      cfContenutiImg: "Ho bisogno di immagini",
+      cfContenutiTesti: "Ho bisogno di aiuto con i testi",
+      cfContenutiEntrambi: "Ho bisogno di entrambi",
+      cfImgTypeLabel: "Che tipo di immagini ti servono?",
+      cfImgTypeSel: "Tipo di immagini",
+      cfImgTypePh: "Seleziona",
+      cfImgStock: "Immagini stock",
+      cfImgGenerate: "Immagini generate / creative",
+      cfImgFoto: "Foto dell'attività",
+      cfImgDontKnow: "Non lo so ancora",
+      configLangSel: "Lingue",
+      cfStyleLabel: "Stile visivo",
+      cfStyleMinimal: "Minimal",
+      cfStyleModern: "Modern",
+      cfStyleBold: "Bold",
+      cfStyleLuxury: "Luxury",
+      cfStyleCreative: "Creative",
+      cfStyleElegant: "Elegant",
+      cfAdminLabel: "Admin Panel (Pannello di gestione)",
+      cfAdminNo: "No (0 €)",
+      cfAdminSi: "Sì, voglio un pannello di gestione (+150 €)",
+      cfMaintLabel: "Manutenzione post-pubblicazione",
+      cfMaintNo: "No (nessun costo mensile)",
+      cfMaintSi: "Sì, gestione completa",
+      cfMaintNote: "Senza Admin Panel 30 €/mese, con Admin Panel 15 €/mese (solo bug e problemi tecnici).",
+      cfProgettoLabel: "Raccontami brevemente il progetto",
+      cfProgettoPh: "Che tipo di sito hai in mente? Cosa vorresti ottenere?",
+      cfBudgetLabel: "Hai un budget indicativo?",
+      cfBudgetSel: "Budget indicativo",
+      cfBudgetPh: "Seleziona",
+      cfBudget1: "< 250 €",
+      cfBudget2: "250–500 €",
+      cfBudget3: "500–750 €",
+      cfBudget4: "750–1.000 €",
+      cfBudget5: "1.000 €+",
+      cfBudgetNo: "Non ho ancora deciso",
+      cfTotalLabel: "Preventivo una tantum stimato",
+      cfTotalNote: "Il prezzo potrebbe cambiare, ma dovrebbe aggirarsi su quella cifra.",
       contactService: "Servizio",
       contactServiceOpts: [
         "Web Development & Management",
@@ -618,9 +692,9 @@ document.addEventListener("DOMContentLoaded", function () {
       configTitle: "Configura il tuo sito",
       configTypeLabel: "Tipo di sito",
       configLandingText:
-        "<strong>Landing page</strong><small>Una sola pagina per presentare la tua attività. 250 €</small>",
+        "<strong>Landing page</strong><small>1 pagina — 250 €</small>",
       configMultiText:
-        "<strong>Sito vetrina</strong><small>Più pagine: home, servizi, contatti. Da 300 €</small>",
+        "<strong>Sito vetrina</strong><small>Da 2 pagine — 300 €</small>",
       configPagesLabel: "Numero di pagine",
       configPagesHint: "50 € a pagina (dalla seconda)",
       configImgProText:
@@ -792,6 +866,80 @@ document.addEventListener("DOMContentLoaded", function () {
       contactPhone: "Phone number",
       contactReason: "Reason",
       contactReasonOpts: ["Configure my website", "Just an idea", "Collaboration", "Other"],
+      cfReason: "What do you need?",
+      cfClientType: "Client type",
+      cfPrivate: "Private / Personal",
+      cfBusiness: "Company / Business / Professional",
+      cfNome: "First name",
+      cfCognome: "Last name",
+      cfPrivatoScopo: "What do you need the site for?",
+      cfPrivatoScopoPh: "Portfolio, CV, artist, project...",
+      cfPrivatoEsistente: "Existing site/social",
+      cfPrivatoEsistentePh: "https://...",
+      cfAziendaNome: "Company / Business name",
+      cfAziendaNomePh: "Your business name",
+      cfSettore: "Sector",
+      cfSettoreSel: "Sector",
+      cfSettoreSelPh: "Select",
+      cfLocalita: "Location (City / Area)",
+      cfLocalitaPh: "e.g. Milan",
+      cfAziendaCosa: "What does the business do?",
+      cfAziendaCosaPh: "Briefly describe the business",
+      cfAziendaSito: "Current website",
+      cfAziendaSitoPh: "https://...",
+      cfAziendaSocial: "Instagram / Social",
+      cfAziendaSocialPh: "https://...",
+      cfMessaggio: "Your message",
+      cfPageHome: "Home",
+      cfIncluded: "(included)",
+      cfPageAbout: "About",
+      cfPageServizi: "Services",
+      cfPagePortfolio: "Portfolio / Gallery",
+      cfPageContatti: "Contact",
+      cfPageFaq: "FAQ",
+      cfPageBlog: "Blog",
+      cfPageAltro: "Other",
+      cfPagesHint: "First page included, +€50 from the second",
+      cfContenutiLabel: "Do you already have the content?",
+      cfContenutiTutto: "I have texts and images",
+      cfContenutiImg: "I need images",
+      cfContenutiTesti: "I need help with texts",
+      cfContenutiEntrambi: "I need both",
+      cfImgTypeLabel: "What type of images do you need?",
+      cfImgTypeSel: "Image type",
+      cfImgTypePh: "Select",
+      cfImgStock: "Stock images",
+      cfImgGenerate: "Generated / creative images",
+      cfImgFoto: "Photos of the business",
+      cfImgDontKnow: "I don't know yet",
+      configLangSel: "Languages",
+      cfStyleLabel: "Visual style",
+      cfStyleMinimal: "Minimal",
+      cfStyleModern: "Modern",
+      cfStyleBold: "Bold",
+      cfStyleLuxury: "Luxury",
+      cfStyleCreative: "Creative",
+      cfStyleElegant: "Elegant",
+      cfAdminLabel: "Admin Panel (Management panel)",
+      cfAdminNo: "No (€0)",
+      cfAdminSi: "Yes, I want a management panel (+€150)",
+      cfMaintLabel: "Post-launch maintenance",
+      cfMaintNo: "No (no monthly cost)",
+      cfMaintSi: "Yes, full management",
+      cfMaintNote: "Without Admin Panel €30/month, with Admin Panel €15/month (only bugs and technical issues).",
+      cfProgettoLabel: "Tell me briefly about the project",
+      cfProgettoPh: "What kind of site do you have in mind? What would you like to achieve?",
+      cfBudgetLabel: "Do you have an indicative budget?",
+      cfBudgetSel: "Indicative budget",
+      cfBudgetPh: "Select",
+      cfBudget1: "< €250",
+      cfBudget2: "€250–500",
+      cfBudget3: "€500–750",
+      cfBudget4: "€750–1,000",
+      cfBudget5: "€1,000+",
+      cfBudgetNo: "I haven't decided yet",
+      cfTotalLabel: "Estimated one-time quote",
+      cfTotalNote: "The price could change, but should be around that figure.",
       contactService: "Service",
       contactServiceOpts: [
         "Web Development & Management",
@@ -807,9 +955,9 @@ document.addEventListener("DOMContentLoaded", function () {
       configTitle: "Configure your website",
       configTypeLabel: "Site type",
       configLandingText:
-        "<strong>Landing page</strong><small>A single page to present your business. €250</small>",
+        "<strong>Landing page</strong><small>1 page — €250</small>",
       configMultiText:
-        "<strong>Showcase site</strong><small>Multiple pages: home, services, contacts. From €300</small>",
+        "<strong>Showcase site</strong><small>From 2 pages — €300</small>",
       configPagesLabel: "Number of pages",
       configPagesHint: "€50 per page (from the second)",
       configImgProText:
@@ -917,89 +1065,105 @@ document.addEventListener("DOMContentLoaded", function () {
   var configuratore = document.getElementById("configuratore-sito");
   var reasonSelect = document.getElementById("contactReason");
   var prezzoTotale = document.getElementById("config-prezzo-totale");
-  var pagesDisplay = document.getElementById("config-pages-display");
-  var pagesHidden = document.querySelector('input[name="config-pages"]');
-  var pagesStepper = document.getElementById("config-pages-stepper");
-  var pagesHint = document.getElementById("config-pages-hint");
+  var prezzoMensile = document.getElementById("config-prezzo-mensile");
   var tipoSito = document.querySelectorAll('input[name="config-tipo-sito"]');
-  var lingueDisplay = document.getElementById("config-lingue-display");
-  var lingueHidden = document.getElementById("config-lingue");
-
-  var PAGES_MIN = 1;
-  var PAGES_MIN_MULTI = 2;
+  var pagineWrap = document.getElementById("config-pagine-wrap");
+  var pagineGrid = document.getElementById("config-pages-grid");
+  var imgTypeWrap = document.getElementById("config-img-type-wrap");
+  var lingueSel = document.getElementById("config-lingue");
+  var cfPrivato = document.getElementById("cf-privato");
+  var cfAzienda = document.getElementById("cf-azienda");
 
   function getTipo() {
     var t = document.querySelector('input[name="config-tipo-sito"]:checked');
     return t ? t.value : "landing";
   }
 
-  function getPages() {
-    return parseInt(pagesDisplay.textContent) || 1;
-  }
-
-  function setPages(n) {
-    if (pagesDisplay) pagesDisplay.textContent = n;
-    if (pagesHidden) pagesHidden.value = n;
+  function getPagineExtra() {
+    if (!pagineGrid) return 0;
+    var n = 0;
+    pagineGrid
+      .querySelectorAll('input[data-page]:checked:not([disabled])')
+      .forEach(function () {
+        n++;
+      });
+    return n;
   }
 
   function getLingue() {
-    return parseInt(lingueDisplay ? lingueDisplay.textContent : "0") || 0;
+    return parseInt(lingueSel ? lingueSel.value : "1") || 1;
   }
 
-  function setLingue(n) {
-    if (n < 1) n = 1;
-    if (lingueDisplay) lingueDisplay.textContent = n;
-    if (lingueHidden) lingueHidden.value = n;
+  function getAdmin() {
+    var t = document.querySelector('input[name="config-admin"]:checked');
+    return t && t.value === "si";
+  }
+
+  function getMaint() {
+    var t = document.querySelector('input[name="config-manutenzione"]:checked');
+    return t && t.value === "si";
+  }
+
+  function getPrezzoUnaTantum() {
+    var tipo = getTipo();
+    var prezzo = tipo === "multipage" ? 250 + getPagineExtra() * 50 : 250;
+    var lingue = getLingue();
+    if (lingue > 1) prezzo += (lingue - 1) * 50;
+    if (getAdmin()) prezzo += 150;
+    var funz = 0;
+    document
+      .querySelectorAll("#config-features-grid input[data-feature]:checked")
+      .forEach(function () {
+        funz++;
+      });
+    prezzo += funz * 10;
+    return prezzo;
+  }
+
+  function getCanoneMensile() {
+    if (!getMaint()) return 0;
+    return getAdmin() ? 15 : 30;
   }
 
   function aggiornaPaginePerTipo() {
     var tipo = getTipo();
-    if (tipo === "multipage") {
-      if (pagesStepper) pagesStepper.classList.add("lp-config-stepper--active");
-      var cur = getPages();
-      if (cur < PAGES_MIN_MULTI) setPages(PAGES_MIN_MULTI);
-    } else {
-      if (pagesStepper) pagesStepper.classList.remove("lp-config-stepper--active");
-      setPages(PAGES_MIN);
-    }
+    if (pagineWrap) pagineWrap.style.display = tipo === "multipage" ? "block" : "none";
     aggiornaPrezzo();
   }
 
-  function aggiornaPrezzo() {
-    var tipo = getTipo();
-    var prezzo = 250;
-    var pagine = getPages();
-    if (tipo === "multipage") prezzo += (pagine - 1) * 50;
-    var imgPro = document.getElementById("config-img-pro");
-    if (imgPro && imgPro.checked) prezzo += 20;
-    var lingue = getLingue();
-    if (lingue > 1) prezzo += (lingue - 1) * 50;
-    var adminPanel = document.getElementById("config-admin-panel");
-    if (adminPanel && adminPanel.checked) prezzo += 150;
-    var funzionalita = 0;
-    document
-      .querySelectorAll("#config-features-grid input[data-feature]:checked")
-      .forEach(function () {
-        funzionalita++;
-      });
-    prezzo += funzionalita * 10;
-    if (prezzoTotale) prezzoTotale.textContent = prezzo + " €";
+  function aggiornaContenuti() {
+    var t = document.querySelector('input[name="config-contenuti"]:checked');
+    var needImg = t && (t.value === "serve-img" || t.value === "serve-entrambi");
+    if (imgTypeWrap) imgTypeWrap.style.display = needImg ? "block" : "none";
   }
 
-  if (reasonSelect && configuratore) {
+  function aggiornaPrezzo() {
+    var prezzo = getPrezzoUnaTantum();
+    if (prezzoTotale) prezzoTotale.textContent = prezzo + " €";
+    var canone = getCanoneMensile();
+    if (prezzoMensile) {
+      if (canone > 0) {
+        prezzoMensile.style.display = "block";
+        prezzoMensile.textContent = "+ " + canone + " €/mese";
+      } else {
+        prezzoMensile.style.display = "none";
+      }
+    }
+  }
+
+  function aggStatoConfig() {
+    var isConfig = reasonSelect && reasonSelect.value === "configura-sito";
+    if (configuratore) configuratore.style.display = isConfig ? "block" : "none";
+    var totalBox = document.querySelector(".lp-total-box");
+    if (totalBox) totalBox.classList.toggle("lp-total-box--config", isConfig);
     var contactFormEl = document.querySelector(".lp-contact-form");
     var wrapperEl = document.querySelector(".contact-form-wrapper");
-    var submitBtn = document.querySelector(".lp-contact-form button[type=submit]");
-    var prezzoNota = document.querySelector('[data-lang-key="contactPrezzoNota"]');
-    function aggStatoConfig() {
-      var isConfig = reasonSelect.value === "configura-sito";
-      configuratore.style.display = isConfig ? "block" : "none";
-      if (contactFormEl) contactFormEl.classList.toggle("lp-contact-form--config", isConfig);
-      if (wrapperEl) wrapperEl.classList.toggle("lp-contact-form--config", isConfig);
-      if (submitBtn) submitBtn.dataset.langKey = isConfig ? "contactBtn" : "contactBtnAlt";
-      if (prezzoNota) prezzoNota.dataset.langKey = isConfig ? "contactPrezzoNota" : "contactPrezzoNotaAlt";
-      setLang(_lang);
-    }
+    if (contactFormEl) contactFormEl.classList.toggle("lp-contact-form--config", isConfig);
+    if (wrapperEl) wrapperEl.classList.toggle("lp-contact-form--config", isConfig);
+    setLang(_lang);
+  }
+
+  if (reasonSelect) {
     reasonSelect.addEventListener("change", aggStatoConfig);
     aggStatoConfig();
   }
@@ -1007,117 +1171,129 @@ document.addEventListener("DOMContentLoaded", function () {
   tipoSito.forEach(function (radio) {
     radio.addEventListener("change", aggiornaPaginePerTipo);
   });
-
-  var numBtns = document.querySelectorAll(".lp-config-number-btn");
-  numBtns.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      if (this.hasAttribute("data-lang-step")) {
-        var cur = getLingue();
-        var step = parseInt(this.dataset.langStep);
-        setLingue(cur + step);
-        aggiornaPrezzo();
-        return;
-      }
-      if (getTipo() !== "multipage") return;
-      var cur = getPages();
-      var step = parseInt(this.dataset.step);
-      var next = cur + step;
-      if (next < PAGES_MIN_MULTI) next = PAGES_MIN_MULTI;
-      setPages(next);
-      aggiornaPrezzo();
-    });
-  });
-
-  var recalcFields = ["config-img-pro", "config-lingue", "config-admin-panel"];
-  recalcFields.forEach(function (id) {
-    var el = document.getElementById(id);
-    if (el)
-      el.addEventListener("change", function () {
-        aggiornaPrezzo();
-      });
-  });
+  if (pagineGrid)
+    pagineGrid.addEventListener("change", aggiornaPrezzo);
+  if (lingueSel)
+    lingueSel.addEventListener("change", aggiornaPrezzo);
   document
-    .querySelectorAll("#config-features-grid input[data-feature]")
+    .querySelectorAll('#config-pages-grid input[data-page], #config-features-grid input[data-feature]')
     .forEach(function (cb) {
       cb.addEventListener("change", aggiornaPrezzo);
     });
+  document
+    .querySelectorAll('input[name="config-contenuti"]')
+    .forEach(function (r) {
+      r.addEventListener("change", aggiornaContenuti);
+    });
+  document
+    .querySelectorAll('input[name="config-admin"], input[name="config-manutenzione"]')
+    .forEach(function (r) {
+      r.addEventListener("change", aggiornaPrezzo);
+    });
+
+  // Tipo cliente: mostra/nascondi blocchi
+  document
+    .querySelectorAll('input[name="tipo-cliente"]')
+    .forEach(function (r) {
+      r.addEventListener("change", function () {
+        var isAzienda = this.value === "azienda";
+        if (cfPrivato) cfPrivato.style.display = isAzienda ? "none" : "block";
+        if (cfAzienda) cfAzienda.style.display = isAzienda ? "block" : "none";
+      });
+    });
 
   aggiornaPaginePerTipo();
+  aggiornaContenuti();
+  aggiornaPrezzo();
 
   var contactForm = document.querySelector(".lp-contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       var isConfig =
         reasonSelect && reasonSelect.value === "configura-sito";
-      if (!isConfig) return;
 
-      var configTipo = document.querySelector(
-        'input[name="config-tipo-sito"]:checked',
-      );
-      if (!configTipo) {
-        e.preventDefault();
-        alert("Per favore seleziona il tipo di sito.");
-        return;
+      var tipoCliente = (document.querySelector('input[name="tipo-cliente"]:checked') || {}).value || "";
+      var nome = (document.querySelector('input[name="nome"]') || {}).value || "";
+      var cognome = (document.querySelector('input[name="cognome"]') || {}).value || "";
+      var email = (document.querySelector('input[name="email"]') || {}).value || "";
+      var telefono = (document.querySelector('input[name="telefono"]') || {}).value || "";
+      var messaggio = (document.querySelector('textarea[name="messaggio"]') || {}).value || "";
+
+      var lines = [];
+      lines.push("DATI CLIENTE");
+      lines.push("Nome: " + nome + " " + cognome);
+      lines.push("Email: " + email);
+      lines.push("Telefono: " + telefono);
+      lines.push("Tipo cliente: " + (tipoCliente === "azienda" ? "Azienda" : "Privato"));
+
+      if (tipoCliente === "azienda") {
+        var v = function (n) { return (document.querySelector('input[name="' + n + '"]') || {}).value || ""; };
+        lines.push("Azienda: " + v("azienda-nome"));
+        lines.push("Settore: " + ((document.querySelector('select[name="azienda-settore"]') || {}).value || ""));
+        lines.push("Località: " + v("azienda-localita"));
+        lines.push("Cosa fa: " + v("azienda-cosa"));
+        lines.push("Sito: " + v("azienda-sito"));
+        lines.push("Social: " + v("azienda-social"));
+      } else {
+        var v2 = function (n) { return (document.querySelector('input[name="' + n + '"]') || {}).value || ""; };
+        lines.push("Scopo: " + v2("privato-scopo"));
+        lines.push("Esistente: " + v2("privato-esistente"));
+      }
+      lines.push("Messaggio: " + messaggio);
+
+      if (isConfig) {
+        lines.push("");
+        lines.push("CONFIGURAZIONE");
+        var tipo = getTipo();
+        lines.push("Tipo: " + (tipo === "multipage" ? "Sito vetrina" : "Landing page"));
+        if (tipo === "multipage") {
+          var pagine = ["Home"];
+          pagineGrid.querySelectorAll('input[data-page]:checked:not([disabled])').forEach(function (cb) {
+            var l = cb.closest("label");
+            pagine.push(l ? l.querySelector("span").textContent.trim() : cb.value);
+          });
+          lines.push("Pagine: " + pagine.join(", "));
+        }
+        var contenuti = (document.querySelector('input[name="config-contenuti"]:checked') || {}).value || "";
+        lines.push("Contenuti: " + contenuti);
+        if (contenuti === "serve-img" || contenuti === "serve-entrambi") {
+          lines.push("Tipo immagini: " + ((document.querySelector('select[name="config-img-type"]') || {}).value || ""));
+        }
+        lines.push("Lingue: " + getLingue());
+        lines.push("Stile: " + ((document.querySelector('input[name="config-style"]:checked') || {}).value || ""));
+        var features = [];
+        document.querySelectorAll("#config-features-grid input[data-feature]:checked").forEach(function (cb) {
+          var l = cb.closest("label");
+          features.push(l ? l.querySelector("span").textContent.trim() : "");
+        });
+        lines.push("Funzionalità (" + features.length + "): " + (features.length ? features.join(", ") : "nessuna"));
+        lines.push("Admin Panel: " + (getAdmin() ? "Sì" : "No"));
+        lines.push("Manutenzione: " + (getMaint() ? "Sì" : "No"));
+        lines.push("Budget: " + ((document.querySelector('select[name="config-budget"]') || {}).value || ""));
+        var progetto = (document.querySelector('textarea[name="config-progetto"]') || {}).value || "";
+        lines.push("Progetto: " + progetto);
+        lines.push("");
+        lines.push("Preventivo una tantum: " + getPrezzoUnaTantum() + " €");
+        if (getCanoneMensile() > 0) lines.push("Canone mensile: +" + getCanoneMensile() + " €/mese");
+        lines.push("Il prezzo potrebbe cambiare, ma dovrebbe aggirarsi su quella cifra.");
       }
 
-      var tipo = configTipo.value;
-      var pagine = getPages();
-      var imgPro = document.getElementById("config-img-pro");
-      var lingue = getLingue();
-      var adminPanel = document.getElementById("config-admin-panel");
-      var manutenzione = document.querySelector('input[name="config-manutenzione"]:checked');
-      var features = [];
-      document
-        .querySelectorAll("#config-features-grid input[data-feature]:checked")
-        .forEach(function (cb) {
-          var label = cb.closest("label");
-          var name = label ? label.querySelector("span").textContent.trim() : "";
-          features.push(name);
-        });
-      var prezzo = 250;
-      if (tipo === "multipage") prezzo += (pagine - 1) * 50;
-      if (imgPro && imgPro.checked) prezzo += 20;
-      if (lingue > 1) prezzo += (lingue - 1) * 50;
-      if (adminPanel && adminPanel.checked) prezzo += 150;
-      prezzo += features.length * 10;
-
-      var manutenzioneTesto = "Autonomo (0 €/mese)";
-      if (manutenzione && manutenzione.value === "senza-admin")
-        manutenzioneTesto = "Senza Admin Panel (30 €/mese)";
-      else if (manutenzione && manutenzione.value === "con-admin")
-        manutenzioneTesto = "Con Admin Panel (15 €/mese)";
-
-      var summary =
-        "Tipo di Sito: " +
-        (tipo === "landing" ? "Landing page (1 pagina)" : "Sito vetrina (" + pagine + " pagine)") +
-        "\nNumero pagine: " +
-        pagine +
-        "\nImmagini professionali: " +
-        (imgPro && imgPro.checked ? "Sì (+20 €)" : "No") +
-        "\nLingue aggiuntive: " +
-        lingue +
-        "\nAdmin Panel: " +
-        (adminPanel && adminPanel.checked ? "Sì (+150 €)" : "No") +
-        "\nManutenzione: " +
-        manutenzioneTesto +
-        "\nFunzionalità (" +
-        features.length +
-        "): " +
-        (features.length ? features.join(", ") : "nessuna") +
-        "\nPrezzo stimato: " +
-        prezzo +
-        " €\n\nIl preventivo finale potrebbe variare in base alle tue scelte.";
-
+      var summary = lines.join("\n");
       var configHidden = document.createElement("input");
       configHidden.type = "hidden";
       configHidden.name = "config-riepilogo";
       configHidden.value = summary;
       contactForm.appendChild(configHidden);
 
-      var selFeatures = document.querySelector(
-        'input[name="config-selected-features"]',
-      );
-      if (selFeatures) selFeatures.value = features.join(", ");
+      var selFeatures = document.querySelector('input[name="config-selected-features"]');
+      if (selFeatures) {
+        var feats = [];
+        document.querySelectorAll("#config-features-grid input[data-feature]:checked").forEach(function (cb) {
+          var l = cb.closest("label");
+          feats.push(l ? l.querySelector("span").textContent.trim() : "");
+        });
+        selFeatures.value = feats.join(", ");
+      }
     });
   }
 });
