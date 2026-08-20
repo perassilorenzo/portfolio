@@ -3540,7 +3540,8 @@ body:hover {
 .lp-contact-summary-body {
   display:flex;
   flex-direction:column;
-  gap:16px
+  gap:16px;
+  margin-bottom:16px
 }
 
 .lp-contact-item {
@@ -4087,4 +4088,12 @@ body.glow-active .lp-bg-glow {
   .lp-label-after {
     right: 10px;
   }
+}
+
+
+/* Ensure footer is opaque and stays above background glow */
+.lp-footer {
+  position: relative;
+  z-index: 10;
+  background: var(--bg-secondary) !important;
 }
