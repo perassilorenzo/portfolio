@@ -24,39 +24,39 @@ Portfolio personale di Lorenzo Perassi — developer, founder di Customly e stud
 
 ## sezioni
 
-| Sezione        | Descrizione                                                                     |
-| -------------- | ------------------------------------------------------------------------------- |
-| Hero           | Branding personale con badge disponibilità, typewriter, contatori e link social |
-| About          | Chi sono, background e percorso con terminale animato                           |
-| Servizi        | Web design, custom fashion e comunicazione & contenuti con CTA preventivo       |
-| Processo       | Percorso in 4 step: scoperta, proposta, realizzazione, consegna & supporto      |
-| Customly       | Sezione dedicata alla piattaforma Customly con descrizione e CTA al sito        |
-| Projects       | Customly · CRYBU · Fashion Customization                                        |
-| Testimonianze  | Recensioni clienti (placeholder in attesa delle prime)                          |
-| Experience     | Customly — Founder · Omnia4Web · Stage IT presso Bertolotto Porte               |
-| Tools & Skills | Griglia 2x2 di competenze con tooltip di livello e contesto                     |
-| FAQ            | Accordion con domande frequenti su prezzi, tempi e consegna                     |
-| Contact        | Form (Formspree) + WhatsApp                                                     |
+| Sezione          | Descrizione                                                                     |
+| ---------------- | ------------------------------------------------------------------------------- |
+| Hero             | Branding personale con badge disponibilità, typewriter, contatori e link social |
+| Servizi          | Web design vetrina (250€+) e mantenimento continuativo (30€+/mese)              |
+| Comparison Slider| Componente interattivo Prima/Dopo ("Dalla creazione al risultato finale")       |
+| Perché Scegliermi| 4 punti di forza per mostrare i vantaggi del lavoro diretto rispetto a un'agenzia|
+| Projects         | Progetti selezionati: Customly, CRYBU e Custom Fashion                          |
+| Customly         | Sezione dedicata alla piattaforma Customly con descrizione e CTA al sito        |
+| Experience       | Timeline con esperienze: Customly, Omnia4Web, Stage IT Bertolotto e ITIS        |
+| Certificazioni   | Certificazioni (es. CS50x Harvard) con link alla repository GitHub              |
+| Tools & Skills   | Griglia di competenze divisa per categoria con tooltip                          |
+| Contact          | Form di contatto Formspree + Configuratore interattivo di preventivo + WhatsApp |
 
 ## tech stack
 
 - **HTML5** — Semantico, accessibile, SEO-ready con JSON-LD, Open Graph, Twitter Cards
-- **CSS3** — Custom properties, animazioni, glassmorphism, responsive
-- **JavaScript** (vanilla) — IntersectionObserver, drag scroll, lightbox, filtri progetti, i18n IT/EN
+- **CSS3** — Custom properties, animazioni, glassmorphic UI, responsive, `clip-path`
+- **JavaScript** (vanilla) — Slider prima/dopo, mouse glow tracking, IntersectionObserver, drag scroll, lightbox, filtri progetti, i18n IT/EN
 - **Bootstrap 5.3** — Navbar, griglia, layout responsive
 - **Express** — Server con compressione e caching immutabile degli asset statici
 - **Devicon** — Icone tecnologie
 - **Formspree** — Backend form serverless
-- **Google Fonts** — JetBrains Mono, IBM Plex Mono, Fraunces
+- **Google Fonts** — Space Grotesk, JetBrains Mono, IBM Plex Mono, Fraunces
 
 ## features
 
-- **Tema scuro** con effetti glassmorphism e bordo accent
+- **Tema scuro** con bordo accent e **Mouse Glow Effect** di sfondo che segue il cursore
+- **Interactive Before/After Slider** per confrontare codice sorgente e risultato finale del sito
+- **Configuratore di preventivo interattivo** in 2 colonne nel form di contatto
 - **i18n** — Italiano/Inglese con salvataggio preferenza in localStorage
-- **Filtri progetti** — All · Client Work · Personal Project · Fashion Customization
+- **Filtri progetti** — All · Client Work · Personal Project
 - **Lightbox** per immagini e video con navigazione touch, swipe e frecce
-- **Progress bar** di lettura
-- **FAQ accordion** nativa (`<details>`)
+- **Progress bar** di lettura e pulsante Back-to-Top
 - **Tipografia animata** (typewriter) e contatori
 - **Timeline esperienze** interattiva
 - **SEO** — JSON-LD, Open Graph, Twitter Cards, sitemap.xml, robots.txt

@@ -201,7 +201,7 @@
             <li>Deploy su Cloudflare Pages</li>
             <li>Consegna repo GitHub + istruzioni autonomia</li>
           </ul>
-          <p class="lp-text-secondary small mt-3 mb-3"><strong>Sito web: a partire da 250€+</strong></p>
+          <p class="lp-text-secondary small mt-3 mb-3" data-lang-key="serv1Price" data-lang-html><strong>Sito web: a partire da 250€+</strong></p>
           <a href="#contact" class="lp-btn text-decoration-none">Configura il tuo sito <span class="lp-cta-arrow">→</span></a>
         </div>
 
@@ -222,17 +222,54 @@
             <li>Gestione errori e bug</li>
             <li>Codice e hosting su Cloudflare mio personale</li>
           </ul>
-          <p class="lp-text-secondary small mt-3 mb-1"><strong>Mantenimento: a partire da 30€+/mese</strong></p>
-          <p class="lp-text-secondary small text-opacity-75 mb-0" style="font-size: 0.78rem;">* Servizio riservato esclusivamente ai siti realizzati da me</p>
+          <p class="lp-text-secondary small mt-3 mb-1" data-lang-key="serv2Price" data-lang-html><strong>Mantenimento: a partire da 30€+/mese</strong></p>
+          <p class="lp-text-secondary small text-opacity-75 mb-0" style="font-size: 0.78rem;" data-lang-key="serv2Note">* Servizio riservato esclusivamente ai siti realizzati da me</p>
         </div>
       </div>
     </div>
   </section>
 
+  <div class="lp-divider"></div>
+
+  <!-- BEFORE / AFTER COMPARISON SLIDER -->
+  <section class="lp-section lp-reveal" id="comparison">
+    <div class="lp-section-header text-center">
+      <h2 class="lp-big-title">Dalla creazione al risultato finale</h2>
+      <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="comparisonSub">
+        Trasformo righe di codice pulito in esperienze web moderne e ad alte prestazioni.
+      </h3>
+    </div>
+    <div class="lp-comparison-container px-4">
+      <div class="lp-comparison-box">
+        <!-- Image After (Result - Base layer) -->
+        <div class="lp-comparison-layer lp-comparison-after">
+          <img src="assets/comparison-after-site.png" alt="Risultato finale - Sito Web" loading="lazy" />
+          <span class="lp-comparison-label lp-label-after" data-lang-key="comparisonAfterLabel">Risultato Finale</span>
+        </div>
+        <!-- Image Before (Code - Top clipped layer) -->
+        <div class="lp-comparison-layer lp-comparison-before" id="comparisonBefore">
+          <img src="assets/comparison-before-code.png" alt="Codice sorgente" loading="lazy" />
+          <span class="lp-comparison-label lp-label-before" data-lang-key="comparisonBeforeLabel">Codice Sorgente</span>
+        </div>
+        <!-- Slider Handle -->
+        <div class="lp-comparison-handle" id="comparisonHandle">
+          <div class="lp-comparison-line"></div>
+          <div class="lp-comparison-circle">
+            <span>◄</span><span>►</span>
+          </div>
+        </div>
+        <!-- Range input controller overlay -->
+        <input type="range" min="0" max="100" value="50" class="lp-comparison-input" id="comparisonRange" aria-label="Confronto prima e dopo" />
+      </div>
+    </div>
+  </section>
+
+  <div class="lp-divider"></div>
+
   <!-- PERCHÉ SONO MEGLIO DI UN'AGENZIA -->
   <section class="lp-section lp-reveal" id="why-choose-me">
     <div class="lp-section-header">
-      <h2 class="lp-big-title">PERCHÉ SONO MEGLIO DI UN'AGENZIA?</h2>
+      <h2 class="lp-big-title" data-lang-key="whyTitle">PERCHÉ SONO MEGLIO DI UN'AGENZIA?</h2>
       <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="whySub">
         Niente costi gonfiati, niente intermediari. Solo un rapporto diretto, trasparente e locale.
       </h3>
@@ -240,24 +277,24 @@
     <div class="lp-why-choose-grid px-4">
       <!-- Card 1 -->
       <div class="lp-why-card lp-reveal">
-        <h4 class="lp-why-title">COSTI RIDOTTI E ZERO SPRECHI</h4>
-        <p class="lp-text-secondary small">Studio informatica e lavoro come freelancer indipendente. Non ho un ufficio fisso né spese di gestione enormi da ricaricare sul tuo preventivo: paghi solo il valore reale del tuo sito.</p>
+        <h4 class="lp-why-title" data-lang-key="whyCard1Title">COSTI RIDOTTI E ZERO SPRECHI</h4>
+        <p class="lp-text-secondary small" data-lang-key="whyCard1Body">Studio informatica e lavoro come freelancer indipendente. Non ho un ufficio fisso né spese di gestione enormi da ricaricare sul tuo preventivo: paghi solo il valore reale del tuo sito.</p>
       </div>
       <!-- Card 2 -->
       <div class="lp-why-card lp-reveal">
-        <h4 class="lp-why-title">RAPPORTO DIRETTO E TRASPARENTE</h4>
-        <p class="lp-text-secondary small">Ci sono solo io. Parli direttamente con chi scrive il codice e cura il design, senza commerciali o intermediari. Nessuna incomprensione e totale trasparenza su ogni fase.</p>
+        <h4 class="lp-why-title" data-lang-key="whyCard2Title">RAPPORTO DIRETTO E TRASPARENTE</h4>
+        <p class="lp-text-secondary small" data-lang-key="whyCard2Body">Ci sono solo io. Parli direttamente con chi scrive il codice e cura il design, senza commerciali o intermediari. Nessuna incomprensione e totale trasparenza su ogni fase.</p>
       </div>
       <!-- Card 3 -->
       <div class="lp-why-card lp-reveal">
-        <h4 class="lp-why-title">VICINO A TE E ALLA TUA REALTÀ</h4>
-        <p class="lp-text-secondary small">Sono della zona e preferisco costruire relazioni umane e trasparenti. Possiamo conoscerci di persona, bere un caffè e definire insieme ogni dettaglio del progetto.</p>
+        <h4 class="lp-why-title" data-lang-key="whyCard3Title">VICINO A TE E ALLA TUA REALTÀ</h4>
+        <p class="lp-text-secondary small" data-lang-key="whyCard3Body">Sono della zona e preferisco costruire relazioni umane e trasparenti. Possiamo conoscerci di persona, bere un caffè e definire insieme ogni dettaglio del progetto.</p>
       </div>
       <!-- Card 4 CTA -->
       <div class="lp-why-card lp-reveal d-flex flex-column justify-content-between">
         <div>
-          <h4 class="lp-why-title">HAI GIÀ UN'IDEA?</h4>
-          <p class="lp-text-secondary small">Configura il tuo sito in pochi passi e scopri subito una stima trasparente del prezzo.</p>
+          <h4 class="lp-why-title" data-lang-key="whyCard4Title">HAI GIÀ UN'IDEA?</h4>
+          <p class="lp-text-secondary small" data-lang-key="whyCard4Body">Configura il tuo sito in pochi passi e scopri subito una stima trasparente del prezzo.</p>
         </div>
         <a href="#contact" class="lp-btn lp-btn-solid text-decoration-none mt-3">Configura il tuo sito <span class="lp-cta-arrow">→</span></a>
       </div>
@@ -373,7 +410,7 @@
             un capo unico: design prima, poi codice. Su Cloudflare Pages, D1 e
             R2 gestisco catalogo, configuratore e design end-to-end.
           </p>
-          <p class="lp-text-secondary small mb-3">
+          <p class="lp-text-secondary small mb-3" data-lang-key="customlyMvp" data-lang-html>
             <strong>Agosto 2026</strong> — MVP live su customly.it.
           </p>
           <div class="d-flex flex-wrap gap-2 mb-4">
@@ -385,7 +422,7 @@
             <span class="lp-tag">JavaScript</span>
             <span class="lp-tag">Cloudflare</span>
           </div>
-          <a href="https://customly.it" target="_blank" rel="noopener" class="lp-btn lp-btn-solid text-decoration-none">
+          <a href="https://customly.it" target="_blank" rel="noopener" class="lp-btn lp-btn-solid text-decoration-none" data-lang-key="customlyBtn" data-lang-html>
             Visita customly.it <span class="lp-cta-arrow">→</span>
           </a>
         </div>
@@ -506,7 +543,7 @@
   <!-- CERTIFICATIONS -->
   <section class="lp-section lp-reveal" id="certifications">
     <div class="lp-section-header">
-      <h2 class="lp-big-title">Certificazioni</h2>
+      <h2 class="lp-big-title" data-lang-key="certificationsTitle">Certificazioni</h2>
       <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="certificationsSub">
         Il mio percorso di certificazioni
       </h3>
@@ -519,7 +556,7 @@
             <h4 class="lp-cert-title">CS50x: Intro to Computer Science</h4>
             <p class="lp-cert-subtitle">Harvard University</p>
             <div class="d-flex align-items-center gap-2 mt-2">
-              <span class="lp-badge lp-badge-accent">In corso</span>
+              <span class="lp-badge lp-badge-accent" data-lang-key="certCS50Badge">In corso</span>
               <a href="https://github.com/perassilorenzo/cs50x" target="_blank" rel="noopener noreferrer" class="lp-cert-link">
                 <i class="devicon-github-original colored me-1" style="font-size: 0.9rem;"></i>
                 <span>GitHub Repo</span>
@@ -1177,10 +1214,10 @@
 
       <div class="lp-footer-col">
         <h3 class="lp-footer-subtitle" data-lang-key="footerPages">Pages</h3>
-        <a href="#hero">Home</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#hero" data-lang-key="footerNavHome">Home</a>
+        <a href="#services" data-lang-key="footerNavServices">Services</a>
+        <a href="#projects" data-lang-key="footerNavProjects">Projects</a>
+        <a href="#contact" data-lang-key="footerNavContact">Contact</a>
       </div>
 
       <div class="lp-footer-col">

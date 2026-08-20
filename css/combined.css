@@ -2927,9 +2927,7 @@ body:hover {
 .lp-service-icon {
   background:rgba(255,107,26,.1)
 }
-.lp-footer:hover {
-  background:rgba(255,107,26,.05)!important
-}
+.lp-footer:hover { background: var(--bg-secondary) !important; }
 .lp-cta-card:hover {
   background:rgba(255,107,26,.1)!important
 }
@@ -4102,4 +4100,11 @@ body.glow-active .lp-bg-glow {
   position: relative;
   z-index: 10;
   background: var(--bg-secondary) !important;
+}
+
+
+/* Lock footer background completely against any hover changes */
+.lp-footer, .lp-footer:hover, .lp-footer-container, .lp-footer-container:hover, .lp-footer-bottom, .lp-footer-bottom:hover {
+  background: var(--bg-secondary) !important;
+  background-color: var(--bg-secondary) !important;
 }
