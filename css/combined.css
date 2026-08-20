@@ -4148,3 +4148,148 @@ body.glow-active .lp-bg-glow {
   background: var(--bg-secondary) !important;
   background-color: var(--bg-secondary) !important;
 }
+
+/* ==========================================================================
+   RESPONSIVE UI/UX POLISH
+   ========================================================================== */
+
+/* Larger, comfortable touch targets on small screens */
+@media (max-width: 767px) {
+  .lp-lang-btn {
+    min-height: 40px;
+    min-width: 52px;
+  }
+  .lp-config-number-btn {
+    min-width: 48px;
+    height: 48px;
+  }
+  .lp-filter-btn {
+    min-height: 40px;
+  }
+  .lp-contact-social-btn {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Mobile navbar: keep links readable, align lang group, improve spacing */
+@media (max-width: 991px) {
+  .lp-navbar .navbar-collapse {
+    padding: 16px 20px 24px;
+  }
+  .lp-navbar .navbar-nav {
+    gap: 12px;
+  }
+  .lp-lang-group {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-color);
+    justify-content: flex-start;
+  }
+  .lp-nav-link {
+    font-size: 1rem;
+    padding: 6px 0;
+  }
+}
+
+/* Hero: full-width CTA buttons stack cleanly, tighter spacing */
+@media (max-width: 575px) {
+  .lp-hero-content .d-flex.flex-wrap {
+    gap: 10px;
+  }
+  .lp-hero-content .d-flex.flex-wrap .lp-btn {
+    width: 100%;
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+  .lp-big-title {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+  }
+  .lp-subtitle-offset {
+    font-size: 0.95rem;
+  }
+}
+
+/* Section headers: balance on small screens */
+@media (max-width: 575px) {
+  .lp-section-header {
+    text-align: left;
+  }
+}
+
+/* Sticky total box: compact on mobile so it never covers controls */
+@media (max-width: 767px) {
+  .lp-total-box--config {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 16px 16px 0 0;
+    padding: 14px 16px;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.45);
+  }
+  .lp-total-box-inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px 12px;
+    text-align: left;
+  }
+  .lp-total-amount {
+    font-size: 1.5rem;
+  }
+  .lp-total-btn {
+    margin-top: 8px;
+    width: 100%;
+  }
+  .lp-total-note {
+    flex-basis: 100%;
+  }
+}
+
+/* Contact actions: full-width buttons on small screens */
+@media (max-width: 575px) {
+  .lp-contact-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .lp-contact-actions .lp-btn,
+  .lp-contact-actions .lp-btn-wa {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Footer: stack columns cleanly on the smallest screens */
+@media (max-width: 575px) {
+  .lp-footer-container {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .lp-footer-col {
+    width: 100%;
+  }
+  .lp-footer-bottom {
+    text-align: center;
+  }
+}
+
+/* Timeline: tighter on very small screens */
+@media (max-width: 575px) {
+  .lp-timeline-item {
+    gap: 10px;
+  }
+  .lp-timeline-content h4 {
+    font-size: 0.84rem;
+  }
+}
+
+/* Prevent horizontal scroll on all mobile */
+@media (max-width: 991px) {
+  body {
+    overflow-x: hidden;
+  }
+  .lp-projects-track {
+    padding-right: 0;
+  }
+}
