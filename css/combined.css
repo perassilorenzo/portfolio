@@ -3530,7 +3530,7 @@ body:hover {
 .lp-contact-summary {
   display:flex;
   flex-direction:column;
-  gap:28px
+  gap:24px
 }
 
 .lp-contact-summary .lp-config-title {
@@ -3540,7 +3540,7 @@ body:hover {
 .lp-contact-summary-body {
   display:flex;
   flex-direction:column;
-  gap:20px
+  gap:16px
 }
 
 .lp-contact-item {
@@ -3605,8 +3605,7 @@ a.lp-contact-item-value:hover {
   display:flex;
   gap:12px;
   align-items:center;
-  flex-wrap:wrap;
-  margin-top:8px
+  flex-wrap:wrap
 }
 
 .lp-contact-social-btn {
@@ -3937,5 +3936,153 @@ body.glow-active .lp-bg-glow {
 @media (min-width: 992px) {
   .lp-cert-grid {
     grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+
+/* Before / After Image Comparison Slider */
+.lp-comparison-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.lp-comparison-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  overflow: hidden;
+  user-select: none;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.lp-comparison-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.lp-comparison-layer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  display: block;
+}
+
+.lp-comparison-before {
+  z-index: 2;
+  clip-path: inset(0 50% 0 0);
+  transition: clip-path 0.05s linear;
+}
+
+.lp-comparison-label {
+  position: absolute;
+  top: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 8px;
+  backdrop-filter: blur(12px);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.lp-label-before {
+  left: 16px;
+  background: rgba(10, 10, 10, 0.85);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.lp-label-after {
+  right: 16px;
+  background: rgba(10, 10, 10, 0.85);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.lp-comparison-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  z-index: 3;
+  pointer-events: none;
+  transform: translateX(-50%);
+  transition: left 0.05s linear;
+}
+
+.lp-comparison-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: var(--accent);
+  transform: translateX(-50%);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.lp-comparison-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 0.75rem;
+  box-shadow: 0 0 20px rgba(255, 107, 26, 0.4);
+}
+
+.lp-comparison-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 5;
+  margin: 0;
+}
+
+@media (max-width: 575px) {
+  .lp-comparison-box {
+    aspect-ratio: 4 / 3;
+  }
+  .lp-comparison-circle {
+    width: 36px;
+    height: 36px;
+    font-size: 0.65rem;
+  }
+  .lp-comparison-label {
+    top: 10px;
+    font-size: 0.62rem;
+    padding: 4px 10px;
+  }
+  .lp-label-before {
+    left: 10px;
+  }
+  .lp-label-after {
+    right: 10px;
   }
 }
