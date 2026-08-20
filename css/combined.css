@@ -3605,7 +3605,8 @@ a.lp-contact-item-value:hover {
   display:flex;
   gap:12px;
   align-items:center;
-  flex-wrap:wrap
+  flex-wrap:wrap;
+  margin-top:8px
 }
 
 .lp-contact-social-btn {
