@@ -3533,6 +3533,12 @@ body:hover {
   gap:24px
 }
 
+.lp-contact-summary--inline {
+  margin-top:24px;
+  border-top:1px solid var(--border-color);
+  padding-top:24px
+}
+
 .lp-contact-summary .lp-config-title {
   margin:0
 }

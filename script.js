@@ -679,7 +679,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cfBudget4: "750–1.000 €",
       cfBudget5: "1.000 €+",
       cfBudgetNo: "Non ho ancora deciso",
-      cfTotalLabel: "Preventivo una tantum stimato",
+      cfTotalLabel: "Preventivo stimato",
       cfTotalNote: "Il prezzo potrebbe cambiare, ma dovrebbe aggirarsi su quella cifra.",
       summaryTitle: "Contatti",
       summaryEmail: "Email",
@@ -759,7 +759,7 @@ document.addEventListener("DOMContentLoaded", function () {
       footerSocial: "Social",
       footerContact: "Contact",
       footerAvailable: "Disponibile per collaborazioni",
-      footerCopy: "Tutti i diritti riservati",
+      footerCopy: "© 2026 Lorenzo Perassi — Tutti i diritti riservati",
     },
     en: {
       navAbout: "About",
@@ -1033,7 +1033,7 @@ document.addEventListener("DOMContentLoaded", function () {
       footerSocial: "Social",
       footerContact: "Contact",
       footerAvailable: "Available for collaborations",
-      footerCopy: "All rights reserved",
+      footerCopy: "© 2026 Lorenzo Perassi — All rights reserved",
     },
   };
   let _lang = localStorage.getItem("lang") || "it";
@@ -1203,7 +1203,16 @@ document.addEventListener("DOMContentLoaded", function () {
       totalBox.classList.toggle("lp-total-box--config", isConfig);
     }
     var summaryEl = document.getElementById("contact-summary");
-    if (summaryEl) summaryEl.style.display = isConfig ? "none" : "block";
+    var altEl = document.querySelector(".lp-contact-alternative");
+    if (summaryEl) {
+      summaryEl.style.display = "block";
+      summaryEl.classList.toggle("lp-contact-summary--inline", isConfig);
+      if (isConfig && altEl) {
+        altEl.parentNode.insertBefore(summaryEl, altEl.nextSibling);
+      } else if (!isConfig && configuratore) {
+        configuratore.parentNode.insertBefore(summaryEl, configuratore);
+      }
+    }
     var nonConfigBtn = document.getElementById("lp-btn-nonconfig");
     if (nonConfigBtn) nonConfigBtn.style.display = isConfig ? "none" : "inline-flex";
     var contactFormEl = document.querySelector(".lp-contact-form");
@@ -1369,15 +1378,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Global background mouse glow tracking
+  // Global background mouse glow tracking (disabled over footer)
   var bgGlow = document.getElementById("bgGlow");
+  var footerEl = document.querySelector(".lp-footer");
   if (bgGlow) {
     window.addEventListener("mousemove", function (e) {
+      if (footerEl) {
+        var rect = footerEl.getBoundingClientRect();
+        if (e.clientY >= rect.top) {
+          bgGlow.style.opacity = "0";
+          return;
+        }
+      }
       bgGlow.style.left = e.clientX + "px";
       bgGlow.style.top = e.clientY + "px";
       if (!document.body.classList.contains("glow-active")) {
         document.body.classList.add("glow-active");
       }
+      bgGlow.style.opacity = "1";
     }, { passive: true });
+  }
+
+  // Before / After Image Comparison Slider
+  var compRange = document.getElementById("comparisonRange");
+  var compBefore = document.getElementById("comparisonBefore");
+  var compHandle = document.getElementById("comparisonHandle");
+  if (compRange && compBefore && compHandle) {
+    var updateComparison = function (val) {
+      compBefore.style.clipPath = "inset(0 " + (100 - val) + "% 0 0)";
+      compHandle.style.left = val + "%";
+    };
+    compRange.addEventListener("input", function (e) {
+      updateComparison(e.target.value);
+    });
+    updateComparison(compRange.value || 50);
   }
 });
