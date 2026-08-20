@@ -4211,8 +4211,15 @@ body.glow-active .lp-bg-glow {
 
 /* Mobile navbar: keep links readable, align lang group, improve spacing */
 @media (max-width: 991px) {
+  .lp-navbar {
+    top: 8px;
+    width: 94%;
+    padding: 8px 16px;
+  }
   .lp-navbar .navbar-collapse {
     padding: 16px 20px 24px;
+    border-radius: 16px;
+    margin-top: 10px;
   }
   .lp-navbar .navbar-nav {
     gap: 12px;
@@ -4224,8 +4231,38 @@ body.glow-active .lp-bg-glow {
     justify-content: flex-start;
   }
   .lp-nav-link {
-    font-size: 1rem;
-    padding: 6px 0;
+    font-size: 1.05rem;
+    padding: 8px 0;
+  }
+  .lp-nav-divider {
+    display: none;
+  }
+}
+
+/* Services cards: compact on mobile, full-width CTA, smaller number */
+@media (max-width: 575px) {
+  .lp-service-card {
+    padding: 24px 20px 20px;
+    border-radius: 16px;
+  }
+  .lp-service-card .lp-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .lp-service-num {
+    font-size: clamp(3.4rem, 11vw, 4.6rem);
+    top: -6px;
+    right: 14px;
+  }
+  .lp-service-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Long comparison subtitle: too heavy on small screens, hide it */
+@media (max-width: 575px) {
+  .lp-comparison-sub {
+    display: none;
   }
 }
 
@@ -4389,4 +4426,52 @@ body.glow-active .lp-bg-glow {
   width: auto;
   max-width: 90vw;
   object-fit: contain;
+}
+
+/* ==========================================================================
+   MOBILE CONTACT + CONFIGURATOR
+   ========================================================================== */
+
+/* Single-column contact: recapiti always visible, configurator below form */
+@media (max-width: 900px) {
+  .lp-contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .lp-configuratore-sito {
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+    padding-left: 0;
+    padding-top: 20px;
+  }
+  .lp-contact-summary--inline {
+    margin-top: 4px;
+    border-top: none;
+    padding-top: 0;
+  }
+}
+
+/* Contact recapiti: tighten spacing on very small screens */
+@media (max-width: 575px) {
+  .lp-contact-grid {
+    gap: 20px;
+  }
+  .lp-contact-item-icon,
+  .lp-contact-social-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .lp-contact-item-value {
+    font-size: 0.88rem;
+  }
+  .lp-contact-social-row {
+    gap: 10px;
+  }
+  .lp-configuratore-sito {
+    padding-top: 18px;
+  }
+  .lp-config-style-grid {
+    grid-template-columns: 1fr;
+  }
 }
