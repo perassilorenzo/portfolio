@@ -681,6 +681,13 @@ document.addEventListener("DOMContentLoaded", function () {
       cfBudgetNo: "Non ho ancora deciso",
       cfTotalLabel: "Preventivo una tantum stimato",
       cfTotalNote: "Il prezzo potrebbe cambiare, ma dovrebbe aggirarsi su quella cifra.",
+      summaryTitle: "Contatti",
+      summaryEmail: "Email",
+      summaryWhatsapp: "WhatsApp",
+      summaryLocation: "Location",
+      summaryLocationVal: "Saluzzo (CN), Italy",
+      cfWaBtn: "Scrivimi su WhatsApp",
+      contactSend: "Invia",
       contactService: "Servizio",
       contactServiceOpts: [
         "Web Development & Management",
@@ -948,6 +955,13 @@ document.addEventListener("DOMContentLoaded", function () {
       cfBudgetNo: "I haven't decided yet",
       cfTotalLabel: "Estimated one-time quote",
       cfTotalNote: "The price could change, but should be around that figure.",
+      summaryTitle: "Contacts",
+      summaryEmail: "Email",
+      summaryWhatsapp: "WhatsApp",
+      summaryLocation: "Location",
+      summaryLocationVal: "Saluzzo (CN), Italy",
+      cfWaBtn: "Message me on WhatsApp",
+      contactSend: "Send",
       contactService: "Service",
       contactServiceOpts: [
         "Web Development & Management",
@@ -1184,7 +1198,14 @@ document.addEventListener("DOMContentLoaded", function () {
     var isConfig = reasonSelect && reasonSelect.value === "configura-sito";
     if (configuratore) configuratore.style.display = isConfig ? "block" : "none";
     var totalBox = document.querySelector(".lp-total-box");
-    if (totalBox) totalBox.classList.toggle("lp-total-box--config", isConfig);
+    if (totalBox) {
+      totalBox.style.display = isConfig ? "block" : "none";
+      totalBox.classList.toggle("lp-total-box--config", isConfig);
+    }
+    var summaryEl = document.getElementById("contact-summary");
+    if (summaryEl) summaryEl.style.display = isConfig ? "none" : "block";
+    var nonConfigBtn = document.getElementById("lp-btn-nonconfig");
+    if (nonConfigBtn) nonConfigBtn.style.display = isConfig ? "none" : "inline-flex";
     var contactFormEl = document.querySelector(".lp-contact-form");
     var wrapperEl = document.querySelector(".contact-form-wrapper");
     if (contactFormEl) contactFormEl.classList.toggle("lp-contact-form--config", isConfig);
@@ -1346,5 +1367,17 @@ document.addEventListener("DOMContentLoaded", function () {
         selFeatures.value = feats.join(", ");
       }
     });
+  }
+
+  // Global background mouse glow tracking
+  var bgGlow = document.getElementById("bgGlow");
+  if (bgGlow) {
+    window.addEventListener("mousemove", function (e) {
+      bgGlow.style.left = e.clientX + "px";
+      bgGlow.style.top = e.clientY + "px";
+      if (!document.body.classList.contains("glow-active")) {
+        document.body.classList.add("glow-active");
+      }
+    }, { passive: true });
   }
 });
