@@ -3696,23 +3696,55 @@ a.lp-contact-item-value:hover {
 }
 
 .lp-why-card {
-  background: var(--bg-card);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--bg-card), var(--bg-secondary));
   border: 1px solid var(--border-color);
-  border-radius: 20px;
-  padding: 28px 24px;
+  border-radius: 22px;
+  padding: 30px 26px;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lp-why-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
 }
 
 .lp-why-card:hover {
   border-color: var(--accent);
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(255, 107, 26, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 44px rgba(255, 107, 26, 0.18);
+}
+
+.lp-why-card:hover::before {
+  opacity: 1;
 }
 
 .lp-why-icon {
-  font-size: 2rem;
-  margin-bottom: 12px;
-  display: inline-block;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lp-why-card:hover .lp-why-icon {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 8px 20px var(--accent-glow);
+  transform: translateY(-2px);
 }
 
 .lp-why-title {
@@ -3722,6 +3754,10 @@ a.lp-contact-item-value:hover {
   color: var(--text-primary);
   margin: 0 0 10px 0;
   letter-spacing: -0.3px;
+}
+
+.lp-why-card-cta {
+  background: linear-gradient(160deg, var(--accent-soft), var(--bg-card) 70%);
 }
 
 @media (max-width: 991px) {
@@ -3736,6 +3772,10 @@ a.lp-contact-item-value:hover {
   }
   .lp-why-card {
     padding: 20px 18px;
+  }
+  .lp-why-icon {
+    width: 48px;
+    height: 48px;
   }
 }
 

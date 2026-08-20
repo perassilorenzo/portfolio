@@ -175,7 +175,7 @@
   <!-- SERVIZI -->
   <section class="lp-section lp-reveal" id="services">
     <div class="lp-section-header">
-      <h2 class="lp-big-title">Servizi</h2>
+      <h2 class="lp-big-title" data-lang-key="servTitle">Servizi</h2>
       <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="servSub">
         Cosa posso fare per te
       </h3>
@@ -187,14 +187,14 @@
           <div class="lp-service-top">
             <span class="lp-service-num">01</span>
           </div>
-          <h4 class="lp-service-title mb-2">Sito web</h4>
-          <p class="lp-text-secondary small mb-3">
+          <h4 class="lp-service-title mb-2" data-lang-key="serv1Title">Sito web</h4>
+          <p class="lp-text-secondary small mb-3" data-lang-key="serv1Desc">
             Realizzo siti statici vetrina: UI pulita, performance, SEO tecnica.
             Dallo sviluppo al deploy — tu fornisci i contenuti, io creo il
             prodotto finito.
           </p>
-          <span class="lp-service-inc">Cosa include</span>
-          <ul class="lp-service-list">
+          <span class="lp-service-inc" data-lang-key="servIncludes">Cosa include</span>
+          <ul class="lp-service-list" data-lang-key="serv1List" data-lang-html>
             <li>Sviluppo frontend (HTML, CSS, JS vanilla)</li>
             <li>Design responsive e mobile</li>
             <li>Setup dominio (Aruba) + Cloudflare hosting</li>
@@ -202,7 +202,7 @@
             <li>Consegna repo GitHub + istruzioni autonomia</li>
           </ul>
           <p class="lp-text-secondary small mt-3 mb-3" data-lang-key="serv1Price" data-lang-html><strong>Sito web: a partire da 250€+</strong></p>
-          <a href="#contact" class="lp-btn text-decoration-none">Configura il tuo sito <span class="lp-cta-arrow">→</span></a>
+          <a href="#contact" class="lp-btn text-decoration-none" data-lang-key="serv1Cta">Configura il tuo sito <span class="lp-cta-arrow">→</span></a>
         </div>
 
         <!-- Mantenimento -->
@@ -210,14 +210,14 @@
           <div class="lp-service-top">
             <span class="lp-service-num">02</span>
           </div>
-          <h4 class="lp-service-title mb-2">Mantenimento</h4>
-          <p class="lp-text-secondary small mb-3">
+          <h4 class="lp-service-title mb-2" data-lang-key="serv2Title">Mantenimento</h4>
+          <p class="lp-text-secondary small mb-3" data-lang-key="serv2Desc">
             Il sito non finisce al lancio. Mi occupo della gestione tecnica continua:
             aggiornamenti, sicurezza, modifiche contenuti, monitoraggio. Tu fai il
             tuo lavoro, io tengo in piedi l'infrastruttura.
           </p>
-          <span class="lp-service-inc">Cosa include</span>
-          <ul class="lp-service-list">
+          <span class="lp-service-inc" data-lang-key="servIncludes">Cosa include</span>
+          <ul class="lp-service-list" data-lang-key="serv2List" data-lang-html>
             <li>Piccole modifiche al sito su richiesta</li>
             <li>Gestione errori e bug</li>
             <li>Codice e hosting su Cloudflare mio personale</li>
@@ -234,7 +234,7 @@
   <!-- BEFORE / AFTER COMPARISON SLIDER -->
   <section class="lp-section lp-reveal" id="comparison">
     <div class="lp-section-header text-center">
-      <h2 class="lp-big-title">Dalla creazione al risultato finale</h2>
+      <h2 class="lp-big-title" data-lang-key="comparisonTitle">Dalla creazione al risultato finale</h2>
       <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="comparisonSub">
         Trasformo righe di codice pulito in esperienze web moderne e ad alte prestazioni.
       </h3>
@@ -277,26 +277,38 @@
     <div class="lp-why-choose-grid px-4">
       <!-- Card 1 -->
       <div class="lp-why-card lp-reveal">
+        <span class="lp-why-icon">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </span>
         <h4 class="lp-why-title" data-lang-key="whyCard1Title">COSTI RIDOTTI E ZERO SPRECHI</h4>
         <p class="lp-text-secondary small" data-lang-key="whyCard1Body">Studio informatica e lavoro come freelancer indipendente. Non ho un ufficio fisso né spese di gestione enormi da ricaricare sul tuo preventivo: paghi solo il valore reale del tuo sito.</p>
       </div>
       <!-- Card 2 -->
       <div class="lp-why-card lp-reveal">
+        <span class="lp-why-icon">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg>
+        </span>
         <h4 class="lp-why-title" data-lang-key="whyCard2Title">RAPPORTO DIRETTO E TRASPARENTE</h4>
         <p class="lp-text-secondary small" data-lang-key="whyCard2Body">Ci sono solo io. Parli direttamente con chi scrive il codice e cura il design, senza commerciali o intermediari. Nessuna incomprensione e totale trasparenza su ogni fase.</p>
       </div>
       <!-- Card 3 -->
       <div class="lp-why-card lp-reveal">
+        <span class="lp-why-icon">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
         <h4 class="lp-why-title" data-lang-key="whyCard3Title">VICINO A TE E ALLA TUA REALTÀ</h4>
         <p class="lp-text-secondary small" data-lang-key="whyCard3Body">Sono della zona e preferisco costruire relazioni umane e trasparenti. Possiamo conoscerci di persona, bere un caffè e definire insieme ogni dettaglio del progetto.</p>
       </div>
       <!-- Card 4 CTA -->
-      <div class="lp-why-card lp-reveal d-flex flex-column justify-content-between">
+      <div class="lp-why-card lp-why-card-cta lp-reveal d-flex flex-column justify-content-between">
         <div>
+          <span class="lp-why-icon">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2z"/></svg>
+          </span>
           <h4 class="lp-why-title" data-lang-key="whyCard4Title">HAI GIÀ UN'IDEA?</h4>
           <p class="lp-text-secondary small" data-lang-key="whyCard4Body">Configura il tuo sito in pochi passi e scopri subito una stima trasparente del prezzo.</p>
         </div>
-        <a href="#contact" class="lp-btn lp-btn-solid text-decoration-none mt-3">Configura il tuo sito <span class="lp-cta-arrow">→</span></a>
+        <a href="#contact" class="lp-btn lp-btn-solid text-decoration-none mt-3" data-lang-key="serv1Cta">Configura il tuo sito <span class="lp-cta-arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -304,7 +316,7 @@
   <!-- PROJECTS -->
   <section class="lp-section" id="projects">
     <div class="lp-section-header">
-      <h2 class="lp-big-title">Projects</h2>
+      <h2 class="lp-big-title" data-lang-key="projTitle">Projects</h2>
       <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="projSub">
         Progetti Selezionati
       </h3>
@@ -338,7 +350,7 @@
         </div>
         <div class="lp-project-body">
           <h4 class="fs-5 fw-bold mb-1">Customly</h4>
-          <p class="lp-text-secondary small mb-2">
+          <p class="lp-text-secondary small mb-2" data-lang-key="projCustomlyDesc">
             Piattaforma di custom fashion: unisco moda e tecnologia con un
             configuratore digitale per personalizzare abbigliamento.
           </p>
@@ -362,7 +374,7 @@
         </div>
         <div class="lp-project-body">
           <h4 class="fs-5 fw-bold mb-1">CRYBU</h4>
-          <p class="lp-text-secondary small mb-2">
+          <p class="lp-text-secondary small mb-2" data-lang-key="projCrybuDesc">
             Collaborazione creativa di fashion design & sartoria: ideazione e
             sviluppo di capi custom attraverso ricerca materiali,
             prototipazione e produzione sartoriale. Un progetto che unisce
@@ -401,7 +413,7 @@
         </div>
         <div class="lp-customly-body">
           <h4 class="lp-customly-title mb-1">Customly</h4>
-          <p class="lp-text-secondary small mb-3 fst-italic">make it yours</p>
+          <p class="lp-text-secondary small mb-3 fst-italic" data-lang-key="customlyTagline">make it yours</p>
           <p class="lp-text-secondary mb-3" data-lang-key="customlyDesc">
             Piattaforma di custom fashion che unisce moda e tecnologia. Dal
             configuratore digitale — dove scegli colori, materiali e dettagli —
@@ -433,7 +445,7 @@
   <div class="lp-divider"></div>
   <section class="lp-section lp-reveal" id="experience">
     <div class="lp-section-header">
-      <h2 class="lp-big-title">Experience</h2>
+      <h2 class="lp-big-title" data-lang-key="expTitle">Experience</h2>
       <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="timelineSub">
         Esperienze
       </h3>
@@ -448,7 +460,7 @@
           </div>
         </div>
         <div class="lp-timeline-content">
-          <div class="lp-timeline-date">Ago 2026 — Presente</div>
+          <div class="lp-timeline-date" data-lang-key="tl0Date">Ago 2026 — Presente</div>
           <h4 data-lang-key="tl0Title">Customly — Founder</h4>
           <p data-lang-key="tl0Desc">
             Piattaforma di custom fashion — unisco moda e tecnologia con un
@@ -475,7 +487,7 @@
           </div>
         </div>
         <div class="lp-timeline-content">
-          <div class="lp-timeline-date">Mag 2026 — Lug 2026</div>
+          <div class="lp-timeline-date" data-lang-key="tl1Date">Mag 2026 — Lug 2026</div>
           <h4 data-lang-key="tl1Title">Omnia4Web</h4>
           <p data-lang-key="tl1Desc">
             Supporto alla creazione di contenuti digitali e comunicazione
@@ -498,7 +510,7 @@
           </div>
         </div>
         <div class="lp-timeline-content">
-          <div class="lp-timeline-date">6–18 Lug 2026</div>
+          <div class="lp-timeline-date" data-lang-key="tl8Date">6–18 Lug 2026</div>
           <h4 data-lang-key="tl8Title">Bertolotto Porte — Stage IT</h4>
           <p data-lang-key="tl8Desc">
             Stage estivo di 2 settimane come IT, con focus su gestione
@@ -521,7 +533,7 @@
           </div>
         </div>
         <div class="lp-timeline-content">
-          <div class="lp-timeline-date">2023 — Presente</div>
+          <div class="lp-timeline-date" data-lang-key="tlSchoolDate">2023 — Presente</div>
           <h4 data-lang-key="tlSchoolTitle">IIS G. Vallauri, Fossano — IT & Telecommunications</h4>
           <p data-lang-key="tlSchoolDesc">
             Informatica e Telecomunicazioni. Fondamenti di programmazione,
@@ -553,13 +565,13 @@
         <!-- Card 1: CS50x certification -->
         <div class="lp-cert-card lp-reveal">
           <div class="lp-cert-info">
-            <h4 class="lp-cert-title">CS50x: Intro to Computer Science</h4>
-            <p class="lp-cert-subtitle">Harvard University</p>
+            <h4 class="lp-cert-title" data-lang-key="certCS50Title">CS50x: Intro to Computer Science</h4>
+            <p class="lp-cert-subtitle" data-lang-key="certCS50Sub">Harvard University</p>
             <div class="d-flex align-items-center gap-2 mt-2">
               <span class="lp-badge lp-badge-accent" data-lang-key="certCS50Badge">In corso</span>
               <a href="https://github.com/perassilorenzo/cs50x" target="_blank" rel="noopener noreferrer" class="lp-cert-link">
                 <i class="devicon-github-original colored me-1" style="font-size: 0.9rem;"></i>
-                <span>GitHub Repo</span>
+                <span data-lang-key="certRepo">GitHub Repo</span>
               </a>
             </div>
           </div>
@@ -572,7 +584,7 @@
   <div class="lp-section px-4">
     <section class="lp-tools-section lp-reveal" id="tools">
       <div class="lp-section-header">
-        <h2 class="lp-big-title">Tools</h2>
+        <h2 class="lp-big-title" data-lang-key="toolsTitle">Tools</h2>
         <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="toolsSub">
           Strumenti & Competenze
         </h3>
@@ -695,7 +707,7 @@
 <!-- CONTACT -->
 <section class="lp-contact-section lp-reveal" id="contact">
     <div class="contact-form-wrapper">
-      <h2 class="lp-big-title">Let's connect</h2>
+      <h2 class="lp-big-title" data-lang-key="connectTitle">Let's connect</h2>
       <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="contactSub">
         Restiamo in contatto
       </h3>
@@ -813,15 +825,15 @@
 
             <div class="lp-contact-alternative">
               <p class="lp-text-secondary small">
-                Oppure
+                <span data-lang-key="contactOr">Oppure</span>
                 <button
                   class="lp-copy-btn"
                   onclick="navigator.clipboard.writeText('perassi.lorenzo1804@gmail.com').then(() => this.textContent='Copiata!').catch(() => {})"
                 >
-                  copiami l'email
+                  <span data-lang-key="contactCopyEmail">copiami l'email</span>
                 </button>
               </p>
-              <p class="lp-text-secondary small">Sarò più veloce a rispondere su WhatsApp</p>
+              <p class="lp-text-secondary small" data-lang-key="contactWaFaster">Sarò più veloce a rispondere su WhatsApp</p>
               <div class="lp-contact-actions">
               <a
                 href="https://wa.me/393293360374"
@@ -840,7 +852,7 @@
                     d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
                   />
                 </svg>
-                Scrivimi su WhatsApp
+                <span data-lang-key="waBtnText">Scrivimi su WhatsApp</span>
               </a>
               <button type="submit" class="lp-btn lp-btn-solid" id="lp-btn-nonconfig" style="display:none">
                 <span data-lang-key="contactSend">Invia</span>
@@ -955,7 +967,7 @@
                   <span id="config-pagine-altro-display">0</span>
                   <button type="button" class="lp-config-number-btn" data-altro-step="+1" aria-label="Aumenta">+</button>
                 </div>
-                <small class="lp-config-hint">+50 € a pagina</small>
+                <small class="lp-config-hint" data-lang-key="configPerPageCost">+50 € a pagina</small>
                 <input type="hidden" name="config-pagine-altro" id="config-pagine-altro" value="0">
               </div>
               <small class="lp-config-hint" data-lang-key="cfPagesHint">Prima pagina inclusa, +50 € dalla seconda</small>

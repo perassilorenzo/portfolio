@@ -502,10 +502,22 @@ document.addEventListener("DOMContentLoaded", function () {
       customlyCta: "Visita customly.it",
       customlyNote:
         "Vuoi vedere i progetti da vicino? Il mio profilo Customly:",
+      servTitle: "Servizi",
       servSub: "Cosa posso fare per te",
       servCta: "Richiedi preventivo",
       servCustomCta: "Scopri il mio profilo",
       servIncludes: "Cosa include",
+      serv1Title: "Sito web",
+      serv1Desc:
+        "Realizzo siti statici vetrina: UI pulita, performance, SEO tecnica. Dallo sviluppo al deploy — tu fornisci i contenuti, io creo il prodotto finito.",
+      serv1List:
+        "<li>Sviluppo frontend (HTML, CSS, JS vanilla)</li><li>Design responsive e mobile</li><li>Setup dominio (Aruba) + Cloudflare hosting</li><li>Deploy su Cloudflare Pages</li><li>Consegna repo GitHub + istruzioni autonomia</li>",
+      serv1Cta: "Configura il tuo sito",
+      serv2Title: "Mantenimento",
+      serv2Desc:
+        "Il sito non finisce al lancio. Mi occupo della gestione tecnica continua: aggiornamenti, sicurezza, modifiche contenuti, monitoraggio. Tu fai il tuo lavoro, io tengo in piedi l'infrastruttura.",
+      serv2List:
+        "<li>Piccole modifiche al sito su richiesta</li><li>Gestione errori e bug</li><li>Codice e hosting su Cloudflare mio personale</li>",
       servWebTitle: "Web Development & Management",
       servWebDesc:
         "Realizzo e gestisco siti statici vetrina per attivit\u00e0 locali e brand: dallo sviluppo frontend fino a dominio, build e hosting. Mi occupo anche del mantenimento tecnico dopo la pubblicazione.",
@@ -541,17 +553,28 @@ document.addEventListener("DOMContentLoaded", function () {
       projAll: "All",
       projClient: "Client Work",
       projPersonal: "Personal Project",
+      projTitle: "Projects",
+      projCustomlyDesc:
+        "Piattaforma di custom fashion: unisco moda e tecnologia con un configuratore digitale per personalizzare abbigliamento.",
+      projCrybuDesc:
+        "Collaborazione creativa di fashion design & sartoria: ideazione e sviluppo di capi custom attraverso ricerca materiali, prototipazione e produzione sartoriale. Un progetto che unisce design visivo e lavorazione artigianale per creare pezzi unici.",
       testiSub: "Cosa dicono di me",
       testiEmpty:
         "Al momento non sono disponibili \u2014 presto pubblicher\u00f2 le recensioni dei clienti con cui ho lavorato.",
       timelineSub: "Esperienze",
+      expTitle: "Experience",
+      toolsTitle: "Tools",
+      connectTitle: "Let's connect",
       tl0Title: "Customly \u2014 Founder",
+      tl0Date: "Ago 2026 \u2014 Presente",
       tl0Desc:
         "Piattaforma di custom fashion \u2014 unisco moda e tecnologia con un configuratore digitale per personalizzare abbigliamento in modo semplice e intuitivo.",
       tl1Title: "Omnia4Web",
+      tl1Date: "Mag 2026 \u2014 Lug 2026",
       tl1Desc:
         "Supporto alla creazione di contenuti digitali e comunicazione social. Editing video, grafiche e caption.",
       tl8Title: "Bertolotto Porte \u2014 Stage IT",
+      tl8Date: "6\u201318 Lug 2026",
       tl8Desc:
         "Stage estivo di 2 settimane come IT, con focus su gestione documentale e digitalizzazione archivi.",
       collabSub: "Collaborazioni",
@@ -622,6 +645,15 @@ document.addEventListener("DOMContentLoaded", function () {
       cfSettore: "Settore",
       cfSettoreSel: "Settore",
       cfSettoreSelPh: "Seleziona",
+      cfSettoreSelOpts: [
+        "Ristorazione",
+        "Turismo / Hotel",
+        "Retail / Negozio",
+        "Professionista",
+        "Artigiano",
+        "Creativo",
+        "Altro",
+      ],
       cfLocalita: "Località (Città / Zona)",
       cfLocalitaPh: "Es. Milano",
       cfAziendaCosa: "Cosa fa l'attività?",
@@ -784,10 +816,21 @@ document.addEventListener("DOMContentLoaded", function () {
       customlyBtn: "Visita customly.it <span class=\"lp-cta-arrow\">→</span>",
       tlSchoolTitle: "IIS G. Vallauri, Fossano — Informatica & Telecomunicazioni",
       tlSchoolDesc: "Informatica e Telecomunicazioni. Fondamenti di programmazione, reti, sistemi e sviluppo applicativo full-stack.",
+      tlSchoolDate: "2023 \u2014 Presente",
       footerNavHome: "Home",
       footerNavServices: "Servizi",
       footerNavProjects: "Progetti",
       footerNavContact: "Contatti",
+      comparisonTitle: "Dalla creazione al risultato finale",
+      customlyTagline: "make it yours",
+      certCS50Title: "CS50x: Intro to Computer Science",
+      certCS50Sub: "Harvard University",
+      certRepo: "GitHub Repo",
+      contactOr: "Oppure",
+      contactCopyEmail: "copiami l'email",
+      contactWaFaster: "Sarò più veloce a rispondere su WhatsApp",
+      waBtnText: "Scrivimi su WhatsApp",
+      configPerPageCost: "+50 € a pagina",
     },
     en: {
       navAbout: "About",
@@ -808,10 +851,22 @@ document.addEventListener("DOMContentLoaded", function () {
         "Customly is the custom fashion platform that combines fashion and technology. I designed the whole experience: from the digital configurator \u2014 where you pick colors, materials and garment details simply and instantly \u2014 to the palette, typography and layout choices that make every step clear and frictionless. Every screen, from the catalog to the order summary, starts from the real problem of someone who wants a unique garment: I think about design first, then code. On Cloudflare Pages, D1 and R2 I manage the catalog, configurator and all the end-to-end design.",
       customlyCta: "Visit customly.it",
       customlyNote: "Want to see the projects up close? My Customly profile:",
+      servTitle: "Services",
       servSub: "What I can do for you",
       servCta: "Get a quote",
       servCustomCta: "Discover my profile",
       servIncludes: "What's included",
+      serv1Title: "Website",
+      serv1Desc:
+        "I build static showcase websites: clean UI, performance, technical SEO. From development to deploy — you provide the content, I create the finished product.",
+      serv1List:
+        "<li>Frontend development (HTML, CSS, vanilla JS)</li><li>Responsive & mobile design</li><li>Domain setup (Aruba) + Cloudflare hosting</li><li>Deploy on Cloudflare Pages</li><li>GitHub repo delivery + autonomy instructions</li>",
+      serv1Cta: "Configure your site",
+      serv2Title: "Maintenance",
+      serv2Desc:
+        "The site doesn't end at launch. I handle ongoing technical management: updates, security, content changes, monitoring. You do your work, I keep the infrastructure running.",
+      serv2List:
+        "<li>Small site changes on request</li><li>Error and bug handling</li><li>Code and hosting on my personal Cloudflare</li>",
       servWebTitle: "Web Development & Management",
       servWebDesc:
         "I build and manage static showcase websites for local businesses and brands: from frontend development to domain, build and hosting. I also handle post-launch technical maintenance.",
@@ -847,17 +902,28 @@ document.addEventListener("DOMContentLoaded", function () {
       projAll: "All",
       projClient: "Client Work",
       projPersonal: "Personal Project",
+      projTitle: "Projects",
+      projCustomlyDesc:
+        "Custom fashion platform: I combine fashion and technology with a digital configurator to personalize clothing.",
+      projCrybuDesc:
+        "Creative fashion design & tailoring collaboration: ideating and developing custom garments through material research, prototyping and artisanal production. A project combining visual design and craftsmanship to create unique pieces.",
       testiSub: "What people say about me",
       testiEmpty:
         "Not available yet \u2014 I'll soon publish reviews from the clients I've worked with.",
       timelineSub: "Experience",
+      expTitle: "Experience",
+      toolsTitle: "Tools",
+      connectTitle: "Let's connect",
       tl0Title: "Customly \u2014 Founder",
+      tl0Date: "Aug 2026 \u2014 Present",
       tl0Desc:
         "Custom fashion platform \u2014 I combine fashion and technology with a digital configurator to personalize clothing simply and intuitively.",
       tl1Title: "Omnia4Web",
+      tl1Date: "May 2026 \u2014 Jul 2026",
       tl1Desc:
         "Supporting digital content creation and social communication. Video editing, graphics and captions.",
       tl8Title: "Bertolotto Porte \u2014 IT Internship",
+      tl8Date: "Jul 6\u201318 2026",
       tl8Desc:
         "2-week summer IT internship focused on document management and archive digitalization.",
       collabSub: "Collaborations",
@@ -924,6 +990,15 @@ document.addEventListener("DOMContentLoaded", function () {
       cfSettore: "Sector",
       cfSettoreSel: "Sector",
       cfSettoreSelPh: "Select",
+      cfSettoreSelOpts: [
+        "Restaurant",
+        "Tourism / Hotel",
+        "Retail / Shop",
+        "Professional",
+        "Artisan",
+        "Creative",
+        "Other",
+      ],
       cfLocalita: "Location (City / Area)",
       cfLocalitaPh: "e.g. Milan",
       cfAziendaCosa: "What does the business do?",
@@ -1086,10 +1161,21 @@ document.addEventListener("DOMContentLoaded", function () {
       customlyBtn: "Visit customly.it <span class=\"lp-cta-arrow\">→</span>",
       tlSchoolTitle: "IIS G. Vallauri, Fossano — IT & Telecommunications",
       tlSchoolDesc: "Computer Science & Telecoms. Fundamentals of programming, networks, systems and full-stack app development.",
+      tlSchoolDate: "2023 \u2014 Present",
       footerNavHome: "Home",
       footerNavServices: "Services",
       footerNavProjects: "Projects",
       footerNavContact: "Contact",
+      comparisonTitle: "From creation to the final result",
+      customlyTagline: "make it yours",
+      certCS50Title: "CS50x: Intro to Computer Science",
+      certCS50Sub: "Harvard University",
+      certRepo: "GitHub Repo",
+      contactOr: "Or",
+      contactCopyEmail: "copy my email",
+      contactWaFaster: "I'll be faster to reply on WhatsApp",
+      waBtnText: "Message me on WhatsApp",
+      configPerPageCost: "+50 € per page",
     },
   };
   let _lang = localStorage.getItem("lang") || "it";
