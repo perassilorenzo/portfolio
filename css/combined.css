@@ -4261,7 +4261,7 @@ body.glow-active .lp-bg-glow {
 
 /* Long comparison subtitle: too heavy on small screens, hide it */
 @media (max-width: 575px) {
-  .lp-comparison-sub {
+  .lp-subtitle-offset {
     display: none;
   }
 }
