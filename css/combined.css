@@ -1660,7 +1660,7 @@ a {
 }
 @media (max-width:991px) {
   .lp-process-steps,.lp-services-grid {
-  grid-template-columns:repeat(2,1fr)
+  grid-template-columns:1fr
 }
 .lp-process-steps {
   row-gap:24px
