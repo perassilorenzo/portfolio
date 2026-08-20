@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const _reducedMotion = window.matchMedia
+    ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    : false;
   const o = document.getElementById("navLinks"),
     n = document.querySelector(".navbar-toggler");
   if (o && n && window.bootstrap) {
@@ -831,7 +834,7 @@ document.addEventListener("DOMContentLoaded", function () {
       comparisonSub: "Trasformo righe di codice pulito in esperienze web moderne e ad alte prestazioni.",
       comparisonBeforeLabel: "Codice Sorgente",
       comparisonAfterLabel: "Risultato Finale",
-      whyTitle: "PERCHÉ SONO MEGLIO DI UN'AGENZIA?",
+      whyTitle: "Perché sono meglio di un'agenzia?",
       whySub: "Niente costi gonfiati, niente intermediari. Solo un rapporto diretto, trasparente e locale.",
       whyCard1Title: "COSTI RIDOTTI E ZERO SPRECHI",
       whyCard1Body: "Studio informatica e lavoro come freelancer indipendente. Non ho un ufficio fisso né spese di gestione enormi da ricaricare sul tuo preventivo: paghi solo il valore reale del tuo sito.",
@@ -1176,7 +1179,7 @@ document.addEventListener("DOMContentLoaded", function () {
       comparisonSub: "Transforming clean code into modern, high-performance web experiences.",
       comparisonBeforeLabel: "Source Code",
       comparisonAfterLabel: "Final Result",
-      whyTitle: "WHY CHOOSE ME OVER AN AGENCY?",
+      whyTitle: "Why choose me over an agency?",
       whySub: "No inflated costs, no middlemen. Just a direct, transparent and local relationship.",
       whyCard1Title: "REDUCED COSTS & ZERO WASTE",
       whyCard1Body: "I study computer science and work as an independent freelancer. I don't have fixed office overheads: you only pay for the real value of your website.",
@@ -1214,9 +1217,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   };
   let _lang = localStorage.getItem("lang") || "it";
-  const _reducedMotion = window.matchMedia
-    ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    : false;
   function setLang($) {
     _lang = $;
     localStorage.setItem("lang", $);
@@ -1413,6 +1413,19 @@ document.addEventListener("DOMContentLoaded", function () {
     reasonSelect.addEventListener("change", aggStatoConfig);
     aggStatoConfig();
   }
+
+  document.querySelectorAll("[data-config-trigger]").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (reasonSelect) {
+        reasonSelect.value = "configura-sito";
+        aggStatoConfig();
+        reasonSelect.dispatchEvent(new Event("change"));
+      }
+      var contactEl = document.getElementById("contact");
+      if (contactEl) contactEl.scrollIntoView({ behavior: "smooth" });
+    });
+  });
 
   tipoSito.forEach(function (radio) {
     radio.addEventListener("change", aggiornaPaginePerTipo);
