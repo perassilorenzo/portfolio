@@ -105,12 +105,16 @@ document.addEventListener("DOMContentLoaded", function () {
   if (p) {
     const z =
       "Costruisco siti web, custom fashion e contenuti video che portano risultati.";
-    let G = 0;
-    !(function e() {
-      ((p.textContent = z.slice(0, G)),
-        G++,
-        G <= z.length && setTimeout(e, 30));
-    })();
+    if (_reducedMotion) {
+      p.textContent = z;
+    } else {
+      let G = 0;
+      !(function e() {
+        ((p.textContent = z.slice(0, G)),
+          G++,
+          G <= z.length && setTimeout(e, 30));
+      })();
+    }
   }
   const term = document.querySelector(".lp-terminal");
   if (term) {
@@ -134,8 +138,30 @@ document.addEventListener("DOMContentLoaded", function () {
           if (!en.isIntersecting || done) return;
           ((done = !0),
             obs.unobserve(term),
-            (body.innerHTML = ""),
-            (function step(i, j) {
+            (body.innerHTML = ""));
+          if (_reducedMotion) {
+            lines.forEach((cur) => {
+              const row = document.createElement("div");
+              row.className = "lp-term-line";
+              if (cur.c) {
+                row.insertAdjacentHTML("afterbegin", '<span class="lp-term-prompt">$ </span>');
+                const cmd = document.createElement("span");
+                cmd.className = "lp-term-cmd";
+                cmd.textContent = cur.c;
+                row.appendChild(cmd);
+              } else {
+                row.classList.add("lp-term-out");
+                row.textContent = cur.t;
+              }
+              body.appendChild(row);
+            });
+            const row = document.createElement("div");
+            row.className = "lp-term-line";
+            row.innerHTML = '<span class="lp-term-prompt">$ </span><span class="lp-term-cursor"></span>';
+            body.appendChild(row);
+            return;
+          }
+          (function step(i, j) {
               if (i >= lines.length) {
                 const row = document.createElement("div");
                 ((row.className = "lp-term-line"),
@@ -169,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   body.appendChild(row),
                   setTimeout(() => step(i + 1, 0), 110));
               }
-            })(0, 0));
+            })(0, 0);
         });
       },
       { threshold: 0.4 },
@@ -213,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const glow = heroImage ? heroImage.querySelector(".lp-hero-glow") : null;
     let tiltX = 0,
       tiltY = 0;
-    if (heroImage) {
+    if (heroImage && !_reducedMotion) {
       heroImage.addEventListener("mousemove", (e) => {
         const o = heroImage.getBoundingClientRect();
         const px = (e.clientX - o.left) / o.width - 0.5;
@@ -232,17 +258,19 @@ document.addEventListener("DOMContentLoaded", function () {
         f.style.transform = `translateY(${0.3 * (scrollY * (1 - J))}px)`;
       });
     }
-    addEventListener(
-      "scroll",
-      () => {
-        const e = scrollY * (1 - J);
-        f.style.transform = `translateY(${0.3 * e}px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-      },
-      { passive: !0 },
-    );
+    if (!_reducedMotion) {
+      addEventListener(
+        "scroll",
+        () => {
+          const e = scrollY * (1 - J);
+          f.style.transform = `translateY(${0.3 * e}px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+        },
+        { passive: !0 },
+      );
+    }
   }
   const heroLines = document.querySelectorAll(".lp-hero-line");
-  if (heroLines.length) {
+  if (heroLines.length && !_reducedMotion) {
     addEventListener(
       "scroll",
       () => {
@@ -341,7 +369,8 @@ document.addEventListener("DOMContentLoaded", function () {
     q = document.getElementById("lbDots");
   let k = [],
     S = 0,
-    I = 0;
+    I = 0,
+    _prevFocus = null;
   if (E && b) {
     function C() {
       const e = k[S];
@@ -381,7 +410,10 @@ document.addEventListener("DOMContentLoaded", function () {
       k.length && ((S = (S + e + k.length) % k.length), C());
     }
     function B(e, t) {
-      ((k = e), (S = t), E.classList.add("open"), C());
+      _prevFocus = document.activeElement;
+      E.classList.add("open");
+      E.querySelector(".lp-lightbox-close").focus();
+      C();
     }
     (document.querySelectorAll(".lp-collab-img").forEach((e) => {
       (e.addEventListener("click", (t) => {
@@ -428,7 +460,10 @@ document.addEventListener("DOMContentLoaded", function () {
           "Escape" === e.key && window.closeLightbox());
       }),
       (window.closeLightbox = function () {
-        (E.classList.remove("open"), (b.innerHTML = ""), (k = []));
+        (E.classList.remove("open"),
+          (b.innerHTML = ""),
+          (k = []),
+          _prevFocus && _prevFocus.focus());
       }));
   }
   const track = document.getElementById("projectsTrack"),
@@ -472,7 +507,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   const ctaCard = document.querySelector(".lp-cta-card");
-  if (ctaCard) {
+  if (ctaCard && !_reducedMotion) {
     ctaCard.addEventListener("mousemove", (e) => {
       const o = ctaCard.getBoundingClientRect();
       const x = (e.clientX - o.left) / o.width - 0.5;
@@ -1179,9 +1214,13 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   };
   let _lang = localStorage.getItem("lang") || "it";
+  const _reducedMotion = window.matchMedia
+    ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    : false;
   function setLang($) {
     _lang = $;
     localStorage.setItem("lang", $);
+    document.documentElement.lang = $;
     document.querySelectorAll(".lp-lang-btn").forEach(function (e) {
       e.classList.toggle("active", e.dataset.langBtn === $);
     });
