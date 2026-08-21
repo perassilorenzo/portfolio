@@ -1404,13 +1404,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     var summaryEl = document.getElementById("contact-summary");
     var altEl = document.querySelector(".lp-contact-alternative");
+    var contactGrid = document.querySelector(".lp-contact-grid");
+    var colMain = document.querySelector(".lp-contact-col-main");
+    var isMobileLayout =
+      window.matchMedia &&
+      window.matchMedia("(max-width: 900px)").matches;
     if (summaryEl) {
       summaryEl.style.display = "block";
       summaryEl.classList.toggle("lp-contact-summary--inline", isConfig);
-      if (isConfig && altEl) {
-        altEl.parentNode.insertBefore(summaryEl, altEl.nextSibling);
-      } else if (!isConfig && configuratore) {
-        configuratore.parentNode.insertBefore(summaryEl, configuratore);
+      if (isMobileLayout && contactGrid) {
+        /* Mobile: campi -> configuratore -> alternativa -> recapiti (in fondo) */
+        if (altEl) contactGrid.appendChild(altEl);
+        contactGrid.appendChild(summaryEl);
+      } else {
+        /* Desktop: ripristina l'alternativa nella colonna sinistra */
+        if (altEl && colMain && altEl.parentNode !== colMain) {
+          colMain.appendChild(altEl);
+        }
+        if (isConfig && altEl) {
+          altEl.parentNode.insertBefore(summaryEl, altEl.nextSibling);
+        } else if (!isConfig && configuratore) {
+          configuratore.parentNode.insertBefore(summaryEl, configuratore);
+        }
       }
     }
     var nonConfigBtn = document.getElementById("lp-btn-nonconfig");
@@ -1431,6 +1446,13 @@ document.addEventListener("DOMContentLoaded", function () {
   if (reasonSelect) {
     reasonSelect.addEventListener("change", aggStatoConfig);
     aggStatoConfig();
+  }
+
+  var _mqContactMobile = window.matchMedia("(max-width: 900px)");
+  if (_mqContactMobile.addEventListener) {
+    _mqContactMobile.addEventListener("change", aggStatoConfig);
+  } else if (_mqContactMobile.addListener) {
+    _mqContactMobile.addListener(aggStatoConfig);
   }
 
   document.querySelectorAll("[data-config-trigger]").forEach(function (btn) {

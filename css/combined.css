@@ -4511,3 +4511,43 @@ body.glow-active .lp-bg-glow {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   MOBILE: alternativa + recapiti in fondo al form, footer centrato
+   ========================================================================== */
+
+/* L'alternativa ("Oppure copiami l'email") diventa un blocco a sé, in fondo */
+@media (max-width: 900px) {
+  .lp-contact-grid > .lp-contact-alternative {
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+  }
+}
+
+/* Footer mobile: colonne impilate e centrate */
+@media (max-width: 575px) {
+  .lp-footer {
+    padding: 32px 20px 18px;
+  }
+  .lp-footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 26px;
+  }
+  .lp-footer-col {
+    width: 100%;
+    min-width: 0;
+    flex: none !important;
+    flex-basis: auto !important;
+    align-items: center;
+  }
+  .lp-footer-title {
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+  }
+  .lp-footer-bottom {
+    margin-top: 24px;
+    padding-top: 16px;
+  }
+}
