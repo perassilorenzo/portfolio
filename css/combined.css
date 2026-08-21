@@ -4266,6 +4266,15 @@ body.glow-active .lp-bg-glow {
   }
 }
 
+/* Services cards MUST stack one above the other on responsive.
+   Placed after every .lp-services-grid definition so nothing can override it. */
+@media (max-width: 991px) {
+  .lp-services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+}
+
 /* Hero: full-width CTA buttons stack cleanly, tighter spacing */
 @media (max-width: 575px) {
   .lp-hero-content .d-flex.flex-wrap {
