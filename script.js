@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const _reducedMotion = window.matchMedia
     ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
     : false;
+  const _isMobile = window.matchMedia
+    ? window.matchMedia("(max-width: 767px)").matches
+    : false;
   const o = document.getElementById("navLinks"),
     n = document.querySelector(".navbar-toggler");
   if (o && n && window.bootstrap) {
@@ -234,7 +237,13 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     { threshold: 0 },
   );
-  document.querySelectorAll("video").forEach((e) => h.observe(e));
+  document.querySelectorAll("video").forEach((e) => {
+    // On phones do not make the browser fetch/decode video metadata during
+    // the first paint. The poster remains visible and playback starts only
+    // when the video actually enters the viewport.
+    if (_isMobile) e.preload = "none";
+    h.observe(e);
+  });
   const f = document.querySelector(".lp-hero-img");
   if (f) {
     const J = parseFloat(f.dataset.speed) || 0.95;

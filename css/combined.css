@@ -4643,3 +4643,23 @@ body.glow-active .lp-bg-glow {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Contact mobile: use the whole available column with a comfortable gutter. */
+@media (max-width: 767px) {
+  .lp-contact-section {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    align-items: stretch;
+  }
+  .lp-contact-section .contact-form-wrapper,
+  .lp-contact-section .lp-contact-form,
+  .lp-contact-section .lp-contact-grid,
+  .lp-contact-section .lp-contact-col-main,
+  .lp-contact-section #contact-summary {
+    width: 100%;
+    max-width: none;
+    flex: 0 0 100%;
+  }
+}
