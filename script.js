@@ -524,6 +524,11 @@ document.addEventListener("DOMContentLoaded", function () {
       navAbout: "About",
       navServ: "Servizi",
       skipToContent: "Vai al contenuto",
+      formSending: "Invio in corso…",
+      formSuccess: "Messaggio inviato! Ti risponderò al più presto.",
+      formError: "Errore nell'invio. Riprova o scrivimi su WhatsApp.",
+      metaTitle: "Lorenzo Perassi — Developer, Creator, Fashion & Tech | Portfolio",
+      metaDesc: "Developer, creator e studente di Informatica. Costruisco prodotti digitali dove codice, design e creatività si incontrano. Customly, fashion tech, sviluppo web.",
       navProjects: "Projects",
       navSocials: "Social",
       navContact: "Contact",
@@ -875,6 +880,11 @@ document.addEventListener("DOMContentLoaded", function () {
       navAbout: "About",
       navServ: "Services",
       skipToContent: "Skip to content",
+      formSending: "Sending…",
+      formSuccess: "Message sent! I'll get back to you soon.",
+      formError: "Something went wrong. Try again or reach me on WhatsApp.",
+      metaTitle: "Lorenzo Perassi — Developer, Creator, Fashion & Tech | Portfolio",
+      metaDesc: "Developer, creator and Computer Science student. I build digital products where code, design and creativity meet. Customly, fashion tech, web development.",
       navProjects: "Projects",
       navSocials: "Social",
       navContact: "Contact",
@@ -1223,6 +1233,21 @@ document.addEventListener("DOMContentLoaded", function () {
     _lang = $;
     localStorage.setItem("lang", $);
     document.documentElement.lang = $;
+    if (LANG[$].metaTitle) {
+      document.title = LANG[$].metaTitle;
+      var _ogt = document.querySelector('meta[property="og:title"]');
+      if (_ogt) _ogt.setAttribute("content", LANG[$].metaTitle);
+      var _ott = document.querySelector('meta[name="twitter:title"]');
+      if (_ott) _ott.setAttribute("content", LANG[$].metaTitle);
+    }
+    if (LANG[$].metaDesc) {
+      var _md = document.querySelector('meta[name="description"]');
+      if (_md) _md.setAttribute("content", LANG[$].metaDesc);
+      var _ogd = document.querySelector('meta[property="og:description"]');
+      if (_ogd) _ogd.setAttribute("content", LANG[$].metaDesc);
+      var _otd = document.querySelector('meta[name="twitter:description"]');
+      if (_otd) _otd.setAttribute("content", LANG[$].metaDesc);
+    }
     document.querySelectorAll(".lp-lang-btn").forEach(function (e) {
       e.classList.toggle("active", e.dataset.langBtn === $);
     });
@@ -1523,6 +1548,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var contactForm = document.querySelector(".lp-contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
       var isConfig =
         reasonSelect && reasonSelect.value === "configura-sito";
 
@@ -1595,6 +1621,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       var summary = lines.join("\n");
+      var oldRiepilogo = contactForm.querySelector('input[name="config-riepilogo"]');
+      if (oldRiepilogo) oldRiepilogo.remove();
       var configHidden = document.createElement("input");
       configHidden.type = "hidden";
       configHidden.name = "config-riepilogo";
@@ -1610,6 +1638,46 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         selFeatures.value = feats.join(", ");
       }
+
+      /* Invio AJAX con feedback inline (nessun redirect esterno) */
+      var statusEl = contactForm.querySelector(".lp-form-status");
+      if (!statusEl) {
+        statusEl = document.createElement("p");
+        statusEl.className = "lp-form-status";
+        statusEl.setAttribute("role", "status");
+        statusEl.setAttribute("aria-live", "polite");
+        contactForm.appendChild(statusEl);
+      }
+      var L = LANG[_lang] || {};
+      statusEl.textContent = L.formSending || "Invio in corso…";
+      statusEl.classList.remove("lp-form-status--ok", "lp-form-status--error");
+      var submitBtns = Array.prototype.filter.call(
+        contactForm.querySelectorAll('button[type="submit"]'),
+        function (b) { return b.offsetParent !== null; }
+      );
+      submitBtns.forEach(function (b) { b.disabled = true; });
+      fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: { Accept: "application/json" }
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.json().catch(function () { return {}; });
+        })
+        .then(function () {
+          statusEl.textContent =
+            L.formSuccess || "Messaggio inviato! Ti risponderò al più presto.";
+          statusEl.classList.add("lp-form-status--ok");
+        })
+        .catch(function () {
+          statusEl.textContent =
+            L.formError || "Errore nell'invio. Riprova o scrivimi su WhatsApp.";
+          statusEl.classList.add("lp-form-status--error");
+        })
+        .finally(function () {
+          submitBtns.forEach(function (b) { b.disabled = false; });
+        });
     });
   }
 

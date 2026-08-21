@@ -4573,3 +4573,20 @@ body.glow-active .lp-bg-glow {
     font-size: 0.8rem;
   }
 }
+
+/* Stato invio form: invisibile finché vuoto, nessun impatto sul layout */
+.lp-form-status {
+  margin: 14px 0 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+.lp-form-status:empty {
+  display: none;
+}
+.lp-form-status--ok {
+  color: #4ade80;
+}
+.lp-form-status--error {
+  color: #f87171;
+}
