@@ -4621,3 +4621,25 @@ body.glow-active .lp-bg-glow {
     padding-right:12px;
   }
 }
+
+/* Keep the first mobile paint light: below-the-fold sections are laid out
+   when needed instead of all at once. This prevents a long initial frame
+   while preserving the normal document flow and scroll position. */
+@media (max-width:767px) {
+  .lp-section:not(#services),
+  .lp-divider,
+  .lp-contact-section,
+  .lp-footer {
+    content-visibility:auto;
+    contain-intrinsic-size: auto 700px;
+  }
+}
+
+/* FIX: il form occupa TUTTA la larghezza su mobile
+   (csso riordina le media query: serve override finale) */
+@media (max-width: 900px) {
+  .lp-contact-grid,
+  .lp-contact-form--config .lp-contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
