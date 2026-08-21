@@ -908,6 +908,15 @@ a {
   cursor:pointer;
   background:var(--bg-card)
 }
+.lp-project-video {
+  display:block;
+  width:100%;
+  max-width:min(360px,85vw);
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:12px;
+  background:var(--bg-card)
+}
 .lp-project-media::after {
   content:"";
   position:absolute;
@@ -4435,6 +4444,115 @@ body.glow-active .lp-bg-glow {
   width: auto;
   max-width: 90vw;
   object-fit: contain;
+}
+
+/* Skip link: hidden until keyboard focus */
+.lp-skip-link {
+  position: fixed;
+  top: -60px;
+  left: 16px;
+  z-index: 3000;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #0a0a0a;
+  font-weight: 700;
+  text-decoration: none;
+  transition: top 0.25s ease;
+}
+.lp-skip-link:focus-visible {
+  top: 12px;
+}
+
+/* ==========================================================================
+   BOOTSTRAP REPLACEMENT — minimal utilities + navbar behavior
+   Only the subset actually used by this site.
+   ========================================================================== */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.collapse:not(.show) {
+  display: none;
+}
+.navbar-toggler {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  vertical-align: middle;
+  background: no-repeat center / 100% 100% url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23f5f5f5' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+  }
+  .navbar-expand-lg .navbar-toggler {
+    display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar-expand-lg .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
+}
+
+/* Keep original navbar spacing (utilities above would otherwise override) */
+.lp-navbar .navbar-nav {
+  gap: 16px;
+}
+@media (min-width: 992px) {
+  .lp-navbar .navbar-nav {
+    gap: 24px;
+  }
+}
+
+/* Utilities actually used in the markup */
+.d-flex { display: flex; }
+.d-none { display: none; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-column { flex-direction: column; }
+.align-items-center { align-items: center; }
+.justify-content-end { justify-content: flex-end; }
+.justify-content-between { justify-content: space-between; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 1rem; }
+.gap-4 { gap: 1.5rem; }
+.px-3 { padding-left: 1rem; padding-right: 1rem; }
+.px-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.ms-auto { margin-left: auto; }
+.me-1 { margin-right: 0.25rem; }
+.small { font-size: 0.875em; }
+.fw-bold { font-weight: 700; }
+.fs-5 { font-size: 1.25rem; }
+.text-decoration-none { text-decoration: none; }
+.text-center { text-align: center; }
+.text-opacity-75 { opacity: 0.75; }
+
+@media (min-width: 992px) {
+  .d-lg-block { display: block; }
+  .align-items-lg-center { align-items: center; }
+  .ms-lg-3 { margin-left: 1rem; }
 }
 
 /* ==========================================================================

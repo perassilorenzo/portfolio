@@ -4,11 +4,18 @@ document.addEventListener("DOMContentLoaded", function () {
     : false;
   const o = document.getElementById("navLinks"),
     n = document.querySelector(".navbar-toggler");
-  if (o && n && window.bootstrap) {
-    const M = new bootstrap.Collapse(o, { toggle: !1 });
+  if (o && n) {
+    const closeMenu = () => {
+      o.classList.remove("show");
+      n.setAttribute("aria-expanded", "false");
+    };
+    n.addEventListener("click", () => {
+      const open = o.classList.toggle("show");
+      n.setAttribute("aria-expanded", open ? "true" : "false");
+    });
     o.querySelectorAll(".nav-link").forEach((e) => {
       e.addEventListener("click", () => {
-        "none" !== window.getComputedStyle(n).display && M.hide();
+        "none" !== window.getComputedStyle(n).display && closeMenu();
       });
     });
   }
@@ -523,6 +530,7 @@ document.addEventListener("DOMContentLoaded", function () {
     it: {
       navAbout: "About",
       navServ: "Servizi",
+      skipToContent: "Vai al contenuto",
       navProjects: "Projects",
       navSocials: "Social",
       navContact: "Contact",
@@ -873,6 +881,7 @@ document.addEventListener("DOMContentLoaded", function () {
     en: {
       navAbout: "About",
       navServ: "Services",
+      skipToContent: "Skip to content",
       navProjects: "Projects",
       navSocials: "Social",
       navContact: "Contact",
@@ -1263,6 +1272,23 @@ document.addEventListener("DOMContentLoaded", function () {
     addEventListener("scroll", onScroll, { passive: true });
   }
   setLang(_lang);
+
+  /* ===== Accessibilità: collega label ai controlli (for/id) ===== */
+  document
+    .querySelectorAll("label.lp-field-label:not([for]), label.lp-config-label:not([for])")
+    .forEach(function (label) {
+      var block = label.closest(".lp-field-block") || label.closest(".lp-config-block");
+      if (!block) return;
+      var control = block.querySelector(
+        "input:not([type=hidden]):not([type=radio]):not([type=checkbox]), select, textarea"
+      );
+      if (!control) return;
+      if (!control.id) {
+        control.id = "f-" + (control.name || "field") + "-" +
+          Math.abs(Array.prototype.indexOf.call(document.querySelectorAll("label"), label));
+      }
+      label.setAttribute("for", control.id);
+    });
 
   /* ===== Configuratore Sito ===== */
   var configuratore = document.getElementById("configuratore-sito");
