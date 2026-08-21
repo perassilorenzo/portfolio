@@ -44,9 +44,9 @@ Portfolio personale di Lorenzo Perassi — developer, founder di Customly e stud
 - **JavaScript** (vanilla) — Slider prima/dopo, mouse glow tracking, IntersectionObserver, drag scroll, lightbox, filtri progetti, i18n IT/EN
 - **Bootstrap 5.3** — Navbar, griglia, layout responsive
 - **Express** — Server con compressione e caching immutabile degli asset statici
-- **Devicon** — Icone tecnologie
-- **Formspree** — Backend form serverless
-- **Google Fonts** — Space Grotesk, JetBrains Mono, IBM Plex Mono, Fraunces
+- **Devicon** — Icone tecnologie (self-hosted in `assets/devicon/`, nessuna dipendenza CDN)
+- **Formspree** — Backend form serverless con invio AJAX e honeypot anti-spam
+- **Google Fonts** — Fraunces, Space Grotesk, JetBrains Mono (variabili)
 
 ## features
 
@@ -59,9 +59,13 @@ Portfolio personale di Lorenzo Perassi — developer, founder di Customly e stud
 - **Progress bar** di lettura e pulsante Back-to-Top
 - **Tipografia animata** (typewriter) e contatori
 - **Timeline esperienze** interattiva
-- **SEO** — JSON-LD, Open Graph, Twitter Cards, sitemap.xml, robots.txt
-- **Accessibilità** — Gerarchia heading, aria-label, focus visible, skip navigation
-- **100% mobile responsive**
+- **SEO** — JSON-LD, Open Graph (con dimensioni immagine), Twitter Cards, sitemap.xml, robots.txt, title/meta dinamici col cambio lingua
+- **Accessibilità** — Gerarchia heading, aria-label, focus visible, skip navigation, label collegate agli input, `aria-live` sul prezzo del configuratore
+- **Form** — Invio AJAX con feedback inline (successo/errore) e honeypot anti-spam
+- **Sicurezza** — Security headers via `_headers` (nosniff, X-Frame-Options, Referrer-Policy, Permissions-Policy)
+- **PWA-ready** — `manifest.json` con icone 180/512, installabile su mobile
+- **404 personalizzata** — Pagina di errore in tema, bilingue IT/EN
+- **100% mobile responsive** — Servizi in colonna singola, footer ridisegnato, recapiti a fine form
 
 ## struttura
 
