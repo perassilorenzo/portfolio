@@ -4,18 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
     : false;
   const o = document.getElementById("navLinks"),
     n = document.querySelector(".navbar-toggler");
-  if (o && n) {
-    const closeMenu = () => {
-      o.classList.remove("show");
-      n.setAttribute("aria-expanded", "false");
-    };
-    n.addEventListener("click", () => {
-      const open = o.classList.toggle("show");
-      n.setAttribute("aria-expanded", open ? "true" : "false");
-    });
+  if (o && n && window.bootstrap) {
+    const M = new bootstrap.Collapse(o, { toggle: !1 });
     o.querySelectorAll(".nav-link").forEach((e) => {
       e.addEventListener("click", () => {
-        "none" !== window.getComputedStyle(n).display && closeMenu();
+        "none" !== window.getComputedStyle(n).display && M.hide();
       });
     });
   }
