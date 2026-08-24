@@ -784,6 +784,10 @@ document.addEventListener("DOMContentLoaded", function () {
       summaryWhatsapp: "WhatsApp",
       summaryLocation: "Location",
       summaryLocationVal: "Saluzzo (CN), Italy",
+      bookingTitle: "Prenota un incontro",
+      bookingCall: "Videocall",
+      bookingInPerson: "Di persona",
+      bookingHint: "Scegli il tipo di incontro:",
       cfWaBtn: "Scrivimi su WhatsApp",
       contactSend: "Invia",
       contactService: "Servizio",
@@ -1148,6 +1152,10 @@ document.addEventListener("DOMContentLoaded", function () {
       summaryWhatsapp: "WhatsApp",
       summaryLocation: "Location",
       summaryLocationVal: "Saluzzo (CN), Italy",
+      bookingTitle: "Book a meeting",
+      bookingCall: "Video call",
+      bookingInPerson: "In person",
+      bookingHint: "Choose your meeting type:",
       cfWaBtn: "Message me on WhatsApp",
       contactSend: "Send",
       contactService: "Service",
@@ -1324,7 +1332,54 @@ document.addEventListener("DOMContentLoaded", function () {
     onScroll();
     addEventListener("scroll", onScroll, { passive: true });
   }
-  setLang(_lang);
+  /* ===== Booking Calendly: scelta tipo incontro -> popup Calendly ===== */
+  (function () {
+    var BOOKING_URLS = {
+      call: "https://calendly.com/perassi-lorenzo1804/30min",
+      personal:
+        "https://calendly.com/perassi-lorenzo1804/personal-meeting",
+    };
+    var BOOKING_THEME =
+      "hide_gdpr_banner=1&background_color=0a0a0a&text_color=f5f5f5&primary_color=ff6b1a";
+    var wrap = document.getElementById("lp-booking");
+    if (!wrap) return;
+    var _clScript = null;
+    function ensureCalendly(cb) {
+      if (window.Calendly) {
+        cb();
+        return;
+      }
+      if (!_clScript) {
+        _clScript = document.createElement("script");
+        _clScript.src =
+          "https://assets.calendly.com/assets/external/widget.js";
+        _clScript.async = true;
+        document.head.appendChild(_clScript);
+        var css = document.createElement("link");
+        css.rel = "stylesheet";
+        css.href = "https://assets.calendly.com/assets/external/widget.css";
+        document.head.appendChild(css);
+      }
+      _clScript.addEventListener("load", cb, { once: true });
+    }
+    wrap.querySelectorAll("[data-booking-popup]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var type = btn.dataset.bookingPopup;
+        if (!BOOKING_URLS[type]) return;
+        ensureCalendly(function () {
+          if (!window.Calendly) return;
+          window.Calendly.initPopupWidget({
+            url:
+              BOOKING_URLS[type] +
+              "?" +
+              BOOKING_THEME +
+              "&locale=" +
+              (_lang === "en" ? "en" : "it"),
+          });
+        });
+      });
+    });
+  })();
 
   /* ===== Accessibilità: collega label ai controlli (for/id) ===== */
   document
@@ -1554,7 +1609,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (privatoEl) privatoEl.style.display = isConfig ? "block" : "none";
     if (aziendaEl) aziendaEl.style.display = "none";
     applicaStepMobile();
-    setLang(_lang);
+  setLang(_lang);
   }
 
   if (reasonSelect) {
