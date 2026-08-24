@@ -1582,19 +1582,31 @@ document.addEventListener("DOMContentLoaded", function () {
       contactGrid.appendChild(summaryEl);
     } else {
       /* Desktop: ripristina l'ordine originale del DOM */
-      if (configuratore && summaryEl &&
-          configuratore.previousElementSibling !== summaryEl) {
-        summaryEl.parentNode.insertBefore(configuratore, summaryEl.nextSibling);
-      }
       if (altEl && colMain && altEl.parentNode !== colMain) {
         colMain.appendChild(altEl);
       }
-        if (isConfig && altEl) {
+      if (isConfig && altEl) {
+        /* Config: riepilogo inline nella colonna sinistra, dopo l'alternativa */
+        if (summaryEl.parentNode !== altEl.parentNode ||
+            summaryEl.previousElementSibling !== altEl) {
           altEl.parentNode.insertBefore(summaryEl, altEl.nextSibling);
-        } else if (!isConfig && configuratore) {
-          configuratore.parentNode.insertBefore(summaryEl, configuratore);
+        }
+      } else if (!isConfig && contactGrid) {
+        /* Non-config: summary e configuratore tornano colonne dirette della
+           griglia, nell'ordine originale (colMain, summary, configuratore).
+           Se restassero dentro colMain dopo un toggle, la colonna destra
+           apparirebbe sotto alla sinistra. */
+        if (configuratore && configuratore.parentNode !== contactGrid) {
+          contactGrid.appendChild(configuratore);
+        }
+        var cfgInGrid =
+          configuratore && configuratore.parentNode === contactGrid;
+        if (summaryEl.parentNode !== contactGrid ||
+            (cfgInGrid && summaryEl.nextElementSibling !== configuratore)) {
+          contactGrid.insertBefore(summaryEl, cfgInGrid ? configuratore : null);
         }
       }
+    }
     }
     var nonConfigBtn = document.getElementById("lp-btn-nonconfig");
     if (nonConfigBtn) nonConfigBtn.style.display = isConfig ? "none" : "inline-flex";
