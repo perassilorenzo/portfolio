@@ -3121,6 +3121,135 @@ html {
   color:var(--text-primary);
   font-size:.85rem
 }
+
+/* Gruppi funzionalità: card ordinata per categoria */
+#config-features-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:12px;
+  margin-top:10px
+}
+
+#config-features-grid .lp-cf-fgroup {
+  border:1px solid var(--border-color);
+  border-radius:12px;
+  background:rgba(255,255,255,.02);
+  transition:border-color .3s ease
+}
+
+#config-features-grid .lp-cf-fgroup:hover,
+#config-features-grid .lp-cf-fgroup.is-open {
+  border-color:rgba(255,107,26,.35)
+}
+
+.lp-cf-fgroup-head {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  width:100%;
+  padding:12px 14px;
+  background:none;
+  border:none;
+  border-radius:12px;
+  color:var(--text-primary);
+  font-family:inherit;
+  text-align:left;
+  cursor:pointer
+}
+
+.lp-cf-fgroup-num {
+  flex-shrink:0;
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  color:var(--accent)
+}
+
+.lp-cf-fgroup-titles {
+  flex:1;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:2px
+}
+
+.lp-cf-fgroup-title {
+  font-size:.9rem;
+  font-weight:700
+}
+
+.lp-cf-fgroup-desc {
+  color:var(--text-secondary);
+  font-size:.72rem;
+  font-weight:400;
+  line-height:1.35
+}
+
+.lp-cf-fgroup-chev {
+  flex-shrink:0;
+  display:none;
+  color:var(--text-secondary);
+  transition:transform .25s ease
+}
+
+.lp-cf-fgroup.is-open .lp-cf-fgroup-chev {
+  transform:rotate(180deg)
+}
+
+.lp-cf-fgroup-body {
+  padding:2px 14px 12px
+}
+
+/* Righe funzionalità: pill compatte, feedback chiaro su selezione */
+.lp-cf-fgroup-body .lp-config-feature {
+  border:1px solid var(--border-color);
+  border-radius:10px;
+  background:rgba(255,255,255,.02);
+  padding:9px 12px;
+  margin-top:8px;
+  gap:10px;
+  transition:border-color .25s ease,color .25s ease,background .25s ease
+}
+
+.lp-cf-fgroup-body .lp-config-feature:hover {
+  border-color:rgba(255,107,26,.45);
+  color:var(--accent)
+}
+
+.lp-cf-fgroup-body .lp-config-feature:has(input:checked) {
+  border-color:var(--accent);
+  background:rgba(255,107,26,.08)
+}
+
+/* Desktop: gruppi sempre aperti, nessun accordion */
+@media (min-width:901px) {
+  .lp-cf-fgroup-head {
+    cursor:default
+  }
+}
+
+/* Mobile: accordion per gruppo (primo aperto di default) */
+@media (max-width:900px) {
+  #config-features-grid .lp-cf-fgroup-body {
+    display:none;
+    padding-top:0
+  }
+  #config-features-grid .lp-cf-fgroup.is-open .lp-cf-fgroup-body {
+    display:block
+  }
+  .lp-cf-fgroup-chev {
+    display:inline-flex
+  }
+}
+
+/* Tooltip "i": non esce dallo schermo su mobile */
+@media (max-width:575px) {
+  .lp-config-info::after {
+    left:-6px;
+    transform:none;
+    max-width:min(230px,72vw)
+  }
+}
 .lp-config-prezzo {
   display:flex;
   flex-direction:column;
@@ -3484,8 +3613,10 @@ html {
 
 .lp-config-style {
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
+  gap:5px;
   padding:14px 8px;
   border:1px solid var(--border-color);
   border-radius:12px;
@@ -3495,6 +3626,44 @@ html {
   font-weight:600;
   text-align:center;
   transition:all .3s ease
+}
+
+.lp-config-demo-link {
+  font-size:.68rem;
+  font-weight:500;
+  letter-spacing:.02em;
+  text-decoration:none;
+  opacity:.75;
+  border-bottom:1px dashed currentColor;
+  padding-bottom:1px;
+  transition:opacity .25s ease
+}
+
+.lp-config-demo-link:hover,
+.lp-config-demo-link:focus-visible {
+  opacity:1
+}
+
+/* Preview video template nelle card stile (desktop orizzontale, mobile verticale) */
+.lp-style-video {
+  width:100%;
+  aspect-ratio:16/9;
+  max-height:180px;
+  object-fit:cover;
+  object-position:top;
+  border-radius:10px;
+  display:block;
+  margin-bottom:4px;
+  background:#111;
+  pointer-events:none
+}
+
+@media (max-width:767px) {
+  .lp-style-video {
+    aspect-ratio:9/16;
+    max-height:340px;
+    margin-bottom:8px;
+  }
 }
 
 .lp-config-style:hover {
@@ -3579,6 +3748,70 @@ html {
   background:var(--accent-strong);
   border-color:var(--accent-strong);
   color:#fff
+}
+
+/* Barra step mobile-config: ‹ [Configurazione | I tuoi dati] › (display via JS) */
+.lp-cf-stepnav {
+  display:none;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-top:14px
+}
+
+.lp-cf-steparrow {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  flex-shrink:0;
+  border-radius:50%;
+  border:1px solid var(--border-color);
+  background:transparent;
+  color:var(--text-primary);
+  cursor:pointer;
+  transition:border-color .25s ease,color .25s ease,opacity .25s ease
+}
+
+.lp-cf-steparrow:hover:not(:disabled),
+.lp-cf-steparrow:focus-visible:not(:disabled) {
+  border-color:var(--accent);
+  color:var(--accent)
+}
+
+.lp-cf-steparrow:disabled {
+  opacity:.3;
+  cursor:default
+}
+
+.lp-cf-dots {
+  display:flex;
+  align-items:center;
+  gap:8px
+}
+
+.lp-cf-dot {
+  width:10px;
+  height:10px;
+  padding:0;
+  border:none;
+  border-radius:50%;
+  background:var(--border-color);
+  cursor:pointer;
+  transition:background .25s ease,transform .25s ease
+}
+
+.lp-cf-dot.is-active {
+  background:var(--accent);
+  transform:scale(1.25)
+}
+
+/* Bottone invio sotto i dati cliente (mobile-config, display via JS) */
+.lp-cf-submit {
+  width:100%;
+  justify-content:center;
+  margin-top:16px
 }
 
 .lp-contact-summary {
@@ -4319,33 +4552,46 @@ body.glow-active .lp-bg-glow {
   }
 }
 
-/* Sticky total box: compact on mobile so it never covers controls */
+/* Sticky total box: pill compatta flottante su mobile */
 @media (max-width: 767px) {
   .lp-total-box--config {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 16px 16px 0 0;
-    padding: 14px 16px;
-    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.45);
+    bottom: 12px;
+    width: calc(100% - 24px);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 999px;
+    padding: 8px 8px 8px 18px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
   }
   .lp-total-box-inner {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    gap: 6px 12px;
+    gap: 10px;
     text-align: left;
   }
+  .lp-total-label {
+    font-size: 0.62rem;
+  }
   .lp-total-amount {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
+    white-space: nowrap;
+  }
+  .lp-total-monthly,
+  .lp-total-note {
+    display: none;
   }
   .lp-total-btn {
-    margin-top: 8px;
-    width: 100%;
+    margin-top: 0;
+    width: auto;
+    padding: 9px 18px;
+    font-size: 0.85rem;
+    border-radius: 999px;
   }
-  .lp-total-note {
-    flex-basis: 100%;
+  /* Spazio per la card flottante sotto l'ultima sezione della griglia */
+  .lp-contact-form--config .lp-contact-grid {
+    padding-bottom: 72px;
   }
 }
 
@@ -4456,24 +4702,6 @@ body.glow-active .lp-bg-glow {
   object-fit: contain;
 }
 
-/* Skip link: hidden until keyboard focus */
-.lp-skip-link {
-  position: fixed;
-  top: -60px;
-  left: 16px;
-  z-index: 3000;
-  padding: 10px 18px;
-  border-radius: 12px;
-  background: var(--accent);
-  color: #0a0a0a;
-  font-weight: 700;
-  text-decoration: none;
-  transition: top 0.25s ease;
-}
-.lp-skip-link:focus-visible {
-  top: 12px;
-}
-
 /* ==========================================================================
    MOBILE CONTACT + CONFIGURATOR
    ========================================================================== */
@@ -4490,6 +4718,48 @@ body.glow-active .lp-bg-glow {
     border-top: 1px solid var(--border-color);
     padding-left: 0;
     padding-top: 20px;
+  }
+  /* Configuratore annidato nella colonna form durante lo step mobile-config:
+     niente bordi/padding da colonna, il pannello vive dentro il flusso campi */
+  .lp-contact-col-main .lp-configuratore-sito {
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-top: 4px;
+    width: auto;
+  }
+  /* Slider a due pannelli: configuratore <-> dati cliente.
+     L'altezza viene fissata via JS sul pannello attivo così non resta
+     spazio vuoto quando i due pannelli hanno altezze diverse. */
+  .lp-contact-form--config .lp-cf-slider {
+    overflow: hidden;
+    margin-top: 4px;
+    transition: height 0.35s ease;
+  }
+  .lp-contact-form--config .lp-cf-track {
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.35s ease;
+  }
+  .lp-contact-form--config .lp-cf-panel {
+    flex: 0 0 100%;
+    min-width: 0;
+    align-self: flex-start;
+    /* evita il margin-collapse attraverso il pannello:
+       l'altezza misurata da JS resta esatta */
+    display: flow-root;
+  }
+  .lp-contact-form--config .lp-cf-panel > :first-child {
+    margin-top: 0;
+  }
+  .lp-contact-form--config .lp-cf-track.is-step-dati {
+    transform: translateX(-100%);
+  }
+  /* In modalità config su mobile l'invio sta sotto i dati cliente,
+     non nella card prezzo sticky (che resta solo indicatore) */
+  .lp-contact-form--config .lp-total-btn {
+    display: none;
   }
   .lp-contact-summary--inline {
     margin-top: 4px;

@@ -16,6 +16,9 @@ PORT=3011 node server.js
 # Rebuild CSS minificato (OBBLIGATORIO dopo ogni modifica a combined.css)
 node_modules/.bin/csso css/combined.css --output css/combined.min.css
 
+# Rebuild CSS demo template (OBBLIGATORIO dopo ogni modifica a templates.css)
+node_modules/.bin/csso css/templates.css --output css/templates.min.css
+
 # Verifiche pre-commit
 node --check script.js          # sintassi JS
 curl -s -o /dev/null -w "%{http_code}" http://localhost:PORT/   # smoke test
@@ -26,15 +29,28 @@ curl -s -o /dev/null -w "%{http_code}" http://localhost:PORT/   # smoke test
 - **CSS**: `css/combined.css` è la fonte; `combined.min.css` va SEMPRE rigenerato con csso.
   Il file contiene regole duplicate: le ultime vincono. Le media query mobile sono
   raggruppate a FINE file (blocco "MOBILE CONTACT + CONFIGURATOR", perf block, footer).
+- **Demo template**: 6 landing standalone in `templates/<nome>/index.html` (URL
+  `/templates/<nome>`, funziona su Cloudflare Pages ed Express). NON usano Bootstrap,
+  combined.css né script.js: condividono `css/templates.css` (+min via csso) e
+  `js/templates.js`. Temi via classe body (`theme-minimal`, …), prefissi `mn- md- bd- lx- cr- el-`.
+  Il video placeholder è in `.tpl-video-frame` (commento "VIDEO SLOT" segna il punto di sostituzione).
+  Deep-link `/?config=1#contact` apre direttamente il configuratore (gestito in script.js).
 - **i18n**: dizionario `LANG` in script.js (~riga 522 IT, ~875 EN). Ogni chiave nuova
   va aggiunta in ENTRAMBE le lingue. Applicazione via `setLang($)` + attributi
   `data-lang-key` / `data-lang-html` / `data-lang-title` / `data-lang-placeholder`.
 - **Form contatti**: invio AJAX a Formspree (`mvznrbeq`) con feedback inline
   `.lp-form-status`. Honeypot `_gotcha`. Il campo nascosto `config-riepilogo` viene
   deduplicato a ogni submit. NON resettare il form dopo l'invio.
-- **Configuratore**: `aggStatoConfig()` è responsive-aware (matchMedia 900px):
-  su mobile sposta `.lp-contact-alternative` e `#contact-summary` in fondo alla griglia;
-  su desktop ripristina l'ordine originale. Listener `_mqContactMobile` ri-applica al resize.
+- **Configuratore**: `aggStatoConfig()` è responsive-aware (matchMedia 900px).
+  Su mobile+config diventa uno **slider a 2 pannelli** (`#cf-slider > #cf-track`):
+  `#configuratore-sito` viene spostato via JS dentro `#cf-slot-config`, i dati
+  cliente stanno in `#cf-dati-wrap`; navigazione con frecce/dot (`#cf-step-nav`,
+  stato in `_cfStep`, funzioni `applicaStepMobile()`/`vaiAStep()`). L'invio
+  (`#lp-btn-config-mobile`) sta nel pannello dati; la pill sticky del prezzo
+  (`.lp-total-box--config`) su mobile è solo indicatore (bottone nascosto ≤900px
+  in config). Fuori da mobile+config: `.lp-contact-alternative` e
+  `#contact-summary` riordinati come prima, tutto ripristinato al resize
+  (listener `_mqContactMobile`).
 - **Estetica**: le modifiche non devono cambiare l'aspetto visibile senza esplicita
   richiesta dell'utente.
 

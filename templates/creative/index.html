@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Website Template — Portfolio</title>
+  <meta name="description"
+    content="Demo dello stile Creative: composizioni asimmetriche, overlap controllati e motion presente. Esempio fittizio — FRAME creative studio." />
+  <link rel="canonical" href="https://lorenzoperassi.it/templates/creative" />
+  <meta name="theme-color" content="#f3efe7" />
+  <meta property="og:title" content="Creative Website Template — Portfolio" />
+  <meta property="og:description" content="Demo dello stile Creative: creative, experimental, dynamic, visual." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lorenzoperassi.it/templates/creative" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ff4d24'/><text y='.9em' x='.1em' font-size='70' fill='%23f3efe7'>F</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/templates.min.css" />
+</head>
+
+<body class="theme-creative">
+  <a class="tpl-skip" href="#main">Vai al contenuto</a>
+
+  <header class="tpl-nav">
+    <div class="tpl-wrap tpl-nav-inner">
+      <a class="tpl-brand" href="./">FRAME*</a>
+      <nav class="tpl-links tpl-panel" id="tpl-panel" aria-label="Navigazione principale">
+        <a href="#servizi">Servizi</a>
+        <a href="#lavori">Lavori</a>
+        <a href="#metodo">Metodo</a>
+        <a href="#crew">Crew</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <a class="tpl-back" href="../../?config=1#contact">
+          <span aria-hidden="true">←</span><span class="tpl-back-label">Configura il tuo sito</span>
+        </a>
+        <button class="tpl-burger" type="button" aria-expanded="false" aria-controls="tpl-panel" aria-label="Apri menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero asimmetrico -->
+    <section class="cr-hero tpl-wrap" aria-labelledby="cr-hero-t">
+      <span class="cr-sticker" aria-hidden="true">EST.<br>2019 · TORINO</span>
+      <p class="cr-hero-kicker"><span class="cr-dot" aria-hidden="true"></span> Creative studio — aperti a nuovi progetti</p>
+      <h1 id="cr-hero-t">
+        <span class="tpl-reveal is-in" style="display:block;">Facciamo<br>le cose</span>
+        <span class="hl-red">brutte?</span><br>
+        <span class="hl-outline">No. Facciamo quelle</span><br>
+        <span style="display:inline-block;transform:rotate(1deg);">che si ricordano.</span>
+      </h1>
+      <div class="cr-hero-row">
+        <p>
+          FRAME è uno studio creativo: campagne, video, identità e contenuti
+          per brand che hanno qualcosa da dire e zero voglia di sembrare tutti uguali.
+        </p>
+        <div class="cr-btns">
+          <a class="cr-btn" href="#lavori">Guarda i lavori</a>
+          <a class="cr-btn cr-btn--alt" href="../../?config=1#contact">Configura il sito</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee tipografico -->
+    <div class="tpl-marquee cr-marquee-text" aria-hidden="true">
+      <div class="tpl-marquee-track">
+        <span>Idee —</span><span class="out">Movimento —</span><span>Rumore giusto —</span>
+        <span>Idee —</span><span class="out">Movimento —</span><span>Rumore giusto —</span>
+      </div>
+    </div>
+
+    <!-- Video preview -->
+    <section class="tpl-video-preview tpl-wrap" aria-label="Anteprima video del sito" style="padding-top:clamp(44px,6vw,80px);">
+      <div class="tpl-video-head">
+        <span class="tpl-video-title">Anteprima del sito in movimento</span>
+        <span class="tpl-video-badge">Video in arrivo</span>
+      </div>
+      <div class="tpl-video-frame" style="border:2px solid var(--cr-ink);box-shadow:8px 8px 0 var(--cr-yellow);">
+        <!-- ================================================================
+             VIDEO SLOT — sostituire TUTTO il contenuto di .tpl-video-frame con:
+             <video src="../../assets/templates/creative-scroll.webm"
+                    poster="/assets/templates/creative-poster.webp"
+                    controls muted playsinline preload="metadata"></video>
+             ================================================================= -->
+        <div class="tpl-video-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M4 4h16v16H4z"></path>
+            <path d="M10 9.5v5l4.5-2.5z" stroke-linejoin="round"></path>
+          </svg>
+          <strong>Video preview</strong>
+          <small>Scroll della landing — coming soon</small>
+        </div>
+      </div>
+      <p class="tpl-video-caption">Uno scroll della home: com'è navigare questo stile.</p>
+    </section>
+
+    <!-- Servizi inclinati -->
+    <section class="tpl-section tpl-wrap" id="servizi" aria-labelledby="cr-serv-t">
+      <h2 id="cr-serv-t" style="font-family:Syne;font-weight:800;font-size:clamp(1.9rem,4vw,3rem);margin-top:14px;">Cosa sappiamo fare</h2>
+      <div class="cr-services">
+        <article class="cr-card tpl-reveal">
+          <span class="cr-card-num">/01</span>
+          <h3>Campagne</h3>
+          <p>Dal concept al lancio: idee che rompono lo scroll e arrivano dritte al punto.</p>
+        </article>
+        <article class="cr-card tpl-reveal" data-delay="1">
+          <span class="cr-card-num">/02</span>
+          <h3>Video &amp; motion</h3>
+          <p>Reel, docu brevi e animazioni. Se serve muoversi veloce, impariamo il passo.</p>
+        </article>
+        <article class="cr-card tpl-reveal" data-delay="2">
+          <span class="cr-card-num">/03</span>
+          <h3>Identità visive</h3>
+          <p>Loghi, sistemi grafici e tono di voce coerenti su ogni superficie.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Lavori irregolari -->
+    <section class="tpl-section tpl-wrap" id="lavori" aria-labelledby="cr-work-t">
+      <h2 id="cr-work-t" style="font-family:Syne;font-weight:800;font-size:clamp(1.9rem,4vw,3rem);">Lavori scelti</h2>
+      <div class="cr-work">
+        <div class="cr-shot cr-shot-a tpl-ph tpl-reveal" role="img" aria-label="Campagna Vela Surf Club: fotografia ad alto contrasto con tipografia arancione"><span class="cr-shot-year">2026</span><span class="cr-shot-label">Vela Surf Club — campagna estate</span></div>
+        <div class="cr-shot cr-shot-b tpl-ph tpl-reveal" data-delay="1" role="img" aria-label="Copertina album Blu Notte: illustrazione animata su fondo blu"><span class="cr-shot-year">2025</span><span class="cr-shot-label">Blu Notte — cover &amp; visuals</span></div>
+        <div class="cr-shot cr-shot-c tpl-ph tpl-reveal" role="img" aria-label="Packaging Giallozero: serie di etichette gialle per birra artigianale"><span class="cr-shot-year">2025</span><span class="cr-shot-label">Giallozero — packaging</span></div>
+        <div class="cr-shot cr-shot-d tpl-ph tpl-reveal" data-delay="1" role="img" aria-label="Titoli di testa del documentario Strade di Pietra su fondo nero"><span class="cr-shot-year">2024</span><span class="cr-shot-label">Strade di Pietra — titoli</span></div>
+      </div>
+    </section>
+
+    <!-- Metodo zigzag -->
+    <section class="tpl-section tpl-wrap" id="metodo" aria-labelledby="cr-met-t">
+      <h2 id="cr-met-t" style="font-family:Syne;font-weight:800;font-size:clamp(1.9rem,4vw,3rem);">Come lavoriamo</h2>
+      <div class="cr-process">
+        <div class="cr-step tpl-reveal">
+          <div><h3>Sgombriamo il campo</h3><p>Un workshop da due ore dove diciamo subito cosa non funziona. Costa meno di tre mesi di forfait.</p></div>
+        </div>
+        <div class="cr-step tpl-reveal" data-delay="1">
+          <div><h3>Buttiamo giù tanto</h3><p>Tre direzioni visive diverse, presentate insieme ai numeri: cosa dovrebbe ottenere ognuna.</p></div>
+        </div>
+        <div class="cr-step tpl-reveal">
+          <div><h3>Eseguiamo per davvero</h3><p>Produzione interna: riprese, editing, grafica. Nessun pezzo delegato all'ultimo a freelance improvvisati.</p></div>
+        </div>
+        <div class="cr-step tpl-reveal" data-delay="1">
+          <div><h3>Misuriamo e sistemiamo</h3><p>Dopo trenta giorni guardiamo i dati insieme e correggiamo ciò che non ha funzionato. Incluso.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Crew -->
+    <section class="tpl-section tpl-wrap" id="crew" aria-labelledby="cr-crew-t">
+      <h2 id="cr-crew-t" style="font-family:Syne;font-weight:800;font-size:clamp(1.9rem,4vw,3rem);">La crew</h2>
+      <div class="cr-team">
+        <div class="cr-member tpl-reveal"><span class="cr-face" style="background:#ffb46b;" aria-hidden="true"></span><span>Marta Viola<small>creative director</small></span></div>
+        <div class="cr-member tpl-reveal" data-delay="1"><span class="cr-face" style="background:#93a7ff;" aria-hidden="true"></span><span>Nico Ferraro<small>video &amp; motion</small></span></div>
+        <div class="cr-member tpl-reveal" data-delay="2"><span class="cr-face" style="background:#ffe27a;" aria-hidden="true"></span><span>Ilenia Satta<small>copywriter</small></span></div>
+        <div class="cr-member tpl-reveal"><span class="cr-face" style="background:#7ee0c0;" aria-hidden="true"></span><span>Tommaso Rina<small>account &amp; caos manager</small></span></div>
+      </div>
+    </section>
+
+    <!-- CTA finale -->
+    <section class="tpl-section tpl-wrap cr-final" aria-labelledby="cr-fin-t">
+      <h2 id="cr-fin-t" class="tpl-reveal">Il tuo sito può avere<br><span class="rot">questa personalità.</span></h2>
+      <div class="cr-btns" style="justify-content:center;margin-top:36px;">
+        <a class="cr-btn tpl-reveal" href="../../?config=1#contact">Configura il tuo sito</a>
+        <a class="cr-btn cr-btn--alt tpl-reveal" data-delay="1" href="mailto:perassi.lorenzo1804@gmail.com">Scrivi una mail</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="tpl-footer" aria-label="Footer">
+    <div class="tpl-wrap" style="border-top:2px solid var(--cr-ink);padding-top:44px;">
+      <div class="tpl-footer-grid">
+        <div>
+          <a class="tpl-brand" href="./" style="display:inline-block;">FRAME*</a>
+          <p style="color:var(--cr-mut);margin-top:16px;max-width:34ch;">
+            Creative studio — demo fittizia creata per mostrare lo stile Creative.
+          </p>
+        </div>
+        <div>
+          <h3 style="color:var(--cr-red);opacity:1;">Indice</h3>
+          <a href="#servizi">Servizi</a>
+          <a href="#lavori">Lavori</a>
+          <a href="#metodo">Metodo</a>
+        </div>
+        <div>
+          <h3 style="color:var(--cr-blue);opacity:1;">Contatti</h3>
+          <a href="#crew">Via Rosmini 9, Torino</a>
+          <a href="mailto:ciao@framestudio.it">ciao@framestudio.it</a>
+          <a href="../../?config=1#contact">Configura il tuo sito</a>
+        </div>
+      </div>
+      <div class="tpl-footer-bottom">
+        <span>© 2026 FRAME Studio — contenuto dimostrativo</span>
+        <a href="../../" style="display:inline;">← Portfolio di Lorenzo Perassi</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/templates.js" defer></script>
+</body>
+
+</html>

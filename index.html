@@ -116,7 +116,6 @@
 </head>
 
 <body>
-  <a class="lp-skip-link" href="#hero" data-lang-key="skipToContent">Vai al contenuto</a>
   <div id="bgGlow" class="lp-bg-glow" aria-hidden="true"></div>
   <div id="readingProgress" class="lp-progress-bar" role="progressbar" aria-label="Progresso lettura"></div>
   <!-- NAVBAR -->
@@ -630,7 +629,7 @@
               <span>CapCut</span>
             </div>
             <div class="lp-tech-item" data-level="Intermediate" data-context="Work & Self-taught">
-              <i class="devicon-edits-original colored"></i>
+              <img src="assets/tools/edits.svg" alt="Edits" class="lp-tool-logo" loading="lazy" />
               <span>Edits</span>
             </div>
           </div>
@@ -697,6 +696,12 @@
                 <option value="altro">Altro</option>
               </select>
             </div>
+
+            <div id="cf-slider" class="lp-cf-slider">
+              <div id="cf-track" class="lp-cf-track">
+                <!-- Su mobile-config #configuratore-sito viene spostato qui dallo script -->
+                <div id="cf-slot-config" class="lp-cf-panel"></div>
+                <div id="cf-dati-wrap" class="lp-cf-panel">
 
             <div id="cf-tipo-cliente" class="lp-field-block" style="display:none">
               <label class="lp-field-label" data-lang-key="cfClientType">Tipo di cliente</label>
@@ -783,6 +788,30 @@
             <div class="lp-field-block">
               <label class="lp-field-label lp-req" data-lang-key="cfMessaggio">Il tuo messaggio</label>
               <textarea name="messaggio" class="lp-textarea" placeholder="Scrivimi..." rows="6" required data-lang-key="contactMsg"></textarea>
+            </div>
+
+              <button type="submit" class="lp-btn lp-btn-solid lp-cf-submit" id="lp-btn-config-mobile" style="display:none">
+                <span data-lang-key="contactSend">Invia</span>
+              </button>
+                </div><!-- /cf-dati-wrap (pannello dati) -->
+              </div><!-- /cf-track -->
+            </div><!-- /cf-slider -->
+
+            <div id="cf-step-nav" class="lp-cf-stepnav" style="display:none">
+              <button type="button" id="cf-step-prev" class="lp-cf-steparrow" aria-label="Precedente" disabled>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <div class="lp-cf-dots">
+                <button type="button" class="lp-cf-dot is-active" data-step="0" aria-label="Configurazione sito"></button>
+                <button type="button" class="lp-cf-dot" data-step="1" aria-label="I tuoi dati"></button>
+              </div>
+              <button type="button" id="cf-step-next" class="lp-cf-steparrow" aria-label="Successiva">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
             </div>
 
             <div class="lp-contact-alternative">
@@ -987,27 +1016,39 @@
               <div class="lp-config-style-grid" id="config-style-grid">
                 <label class="lp-config-style">
                   <input type="radio" name="config-style" value="minimal" checked>
+                  <video class="lp-style-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-desk="assets/minimal.mp4" data-src-mob="assets/minimal-mobile.mp4"></video>
                   <span data-lang-key="cfStyleMinimal">Minimal</span>
+                  <a href="templates/minimal" class="lp-config-demo-link" target="_blank" rel="noopener" data-lang-key="cfStyleDemoLink">Guarda il template</a>
                 </label>
                 <label class="lp-config-style">
                   <input type="radio" name="config-style" value="modern">
+                  <video class="lp-style-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-desk="assets/modern.mp4" data-src-mob="assets/modern-mobile.mp4"></video>
                   <span data-lang-key="cfStyleModern">Modern</span>
+                  <a href="templates/modern" class="lp-config-demo-link" target="_blank" rel="noopener" data-lang-key="cfStyleDemoLink">Guarda il template</a>
                 </label>
                 <label class="lp-config-style">
                   <input type="radio" name="config-style" value="bold">
+                  <video class="lp-style-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-desk="assets/bold.mp4" data-src-mob="assets/bold-mobile.mp4"></video>
                   <span data-lang-key="cfStyleBold">Bold</span>
+                  <a href="templates/bold" class="lp-config-demo-link" target="_blank" rel="noopener" data-lang-key="cfStyleDemoLink">Guarda il template</a>
                 </label>
                 <label class="lp-config-style">
                   <input type="radio" name="config-style" value="luxury">
+                  <video class="lp-style-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-desk="assets/luxury.mp4" data-src-mob="assets/luxury-mobile.mp4"></video>
                   <span data-lang-key="cfStyleLuxury">Luxury</span>
+                  <a href="templates/luxury" class="lp-config-demo-link" target="_blank" rel="noopener" data-lang-key="cfStyleDemoLink">Guarda il template</a>
                 </label>
                 <label class="lp-config-style">
                   <input type="radio" name="config-style" value="creative">
+                  <video class="lp-style-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-desk="assets/creative.mp4" data-src-mob="assets/creative-mobile.mp4"></video>
                   <span data-lang-key="cfStyleCreative">Creative</span>
+                  <a href="templates/creative" class="lp-config-demo-link" target="_blank" rel="noopener" data-lang-key="cfStyleDemoLink">Guarda il template</a>
                 </label>
                 <label class="lp-config-style">
                   <input type="radio" name="config-style" value="elegant">
+                  <video class="lp-style-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-desk="assets/elegant.mp4" data-src-mob="assets/elegant-mobile.mp4"></video>
                   <span data-lang-key="cfStyleElegant">Elegant</span>
+                  <a href="templates/elegant" class="lp-config-demo-link" target="_blank" rel="noopener" data-lang-key="cfStyleDemoLink">Guarda il template</a>
                 </label>
               </div>
             </div>
@@ -1016,81 +1057,155 @@
             <div class="lp-config-block">
               <label class="lp-config-label" data-lang-key="configFeaturesLabel" data-lang-html>Funzionalità <small>(+10 € l'una)</small></label>
               <div class="lp-config-features-grid" id="config-features-grid">
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-feature="dark-light-mode">
-                  <span data-lang-key="configF1">Dark / Light mode</span>
-                  <span class="lp-config-info" data-lang-title="configF1Info" title="Passa automaticamente o a comando tra tema scuro e chiaro.">i</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-feature="scroll-reveal">
-                  <span data-lang-key="configF2">Scroll reveal</span>
-                  <span class="lp-config-info" data-lang-title="configF2Info" title="Animazioni di apparizione degli elementi mentre scorri la pagina.">i</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-feature="back-to-top">
-                  <span data-lang-key="configF3">Torna su</span>
-                  <span class="lp-config-info" data-lang-title="configF3Info" title="Bottone che riporta rapidamente all'inizio della pagina.">i</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-feature="image-lightbox">
-                  <span data-lang-key="configF4">Lightbox immagini</span>
-                  <span class="lp-config-info" data-lang-title="configF4Info" title="Ingrandisce le immagini a schermo intero al clic, con chiusura semplice.">i</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-feature="image-slider">
-                  <span data-lang-key="configF5">Slider / Carousel</span>
-                  <span class="lp-config-info" data-lang-title="configF5Info" title="Gallerie a scorrimento automatico o manuale tra più immagini.">i</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-feature="hover-effects">
-                  <span data-lang-key="configF6">Effetti hover</span>
-                  <span class="lp-config-info" data-lang-title="configF6Info" title="Transizioni e animazioni al passaggio del mouse su elementi.">i</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-feature="animated-counters">
-                  <span data-lang-key="configF7">Contatori animati</span>
-                  <span class="lp-config-info" data-lang-title="configF7Info" title="Numeri che contano fino al valore finale quando entrano nello schermo.">i</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-feature="search-interna">
-                  <span data-lang-key="configF8">Ricerca interna</span>
-                  <span class="lp-config-info" data-lang-title="configF8Info" title="Campo di ricerca che filtra i contenuti del sito.">i</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-feature="filtro-categorie">
-                  <span data-lang-key="configF9">Filtro categorie</span>
-                  <span class="lp-config-info" data-lang-title="configF9Info" title="Filtra i contenuti per categoria o argomento.">i</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-feature="faq-accordion">
-                  <span data-lang-key="configF10">FAQ Accordion</span>
-                  <span class="lp-config-info" data-lang-title="configF10Info" title="Domande frequenti espandibili a fisarmonica.">i</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-feature="whatsapp-chat">
-                  <span data-lang-key="configF11">Bottone WhatsApp</span>
-                  <span class="lp-config-info" data-lang-title="configF11Info" title="Pulsante fisso che apre una chat WhatsApp con te.">i</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-feature="mappa-interattiva">
-                  <span data-lang-key="configF12">Mappa interattiva</span>
-                  <span class="lp-config-info" data-lang-title="configF12Info" title="Mappa in cui i clienti possono vedere la posizione.">i</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-feature="before-after-slider">
-                  <span data-lang-key="configF13">Prima / Dopo</span>
-                  <span class="lp-config-info" data-lang-title="configF13Info" title="Comparatore trascinabile tra un'immagine prima e una dopo.">i</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-feature="marquee-text">
-                  <span data-lang-key="configF14">Testo scorrevole</span>
-                  <span class="lp-config-info" data-lang-title="configF14Info" title="Testo che scorre in modo continuo, effetto tendina.">i</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-feature="animated-progress">
-                  <span data-lang-key="configF15">Barre di avanzamento</span>
-                  <span class="lp-config-info" data-lang-title="configF15Info" title="Barre che si riempiono in animazione per mostrare competenze o valori.">i</span>
-                </label>
+                <section class="lp-cf-fgroup is-open" id="cfg-fgroup-1">
+                  <button type="button" class="lp-cf-fgroup-head" aria-expanded="true" aria-controls="cfg-fgroup-1-body">
+                    <span class="lp-cf-fgroup-num">01</span>
+                    <span class="lp-cf-fgroup-titles">
+                      <span class="lp-cf-fgroup-title" data-lang-key="cfgFg1Title">Aspetto & Animazioni</span>
+                      <small class="lp-cf-fgroup-desc" data-lang-key="cfgFg1Desc">Personalizza l'aspetto e il movimento del sito.</small>
+                    </span>
+                    <svg class="lp-cf-fgroup-chev" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <div class="lp-cf-fgroup-body" id="cfg-fgroup-1-body">
+                    <label class="lp-config-feature">
+                      <input type="checkbox" data-feature="dark-light-mode">
+                      <span data-lang-key="configF1">Dark / Light mode</span>
+                      <span class="lp-config-info" data-lang-title="configF1Info" title="Passa automaticamente o a comando tra tema scuro e chiaro.">i</span>
+                    </label>
+                    <label class="lp-config-feature">
+                      <input type="checkbox" data-feature="scroll-reveal">
+                      <span data-lang-key="configF2">Scroll reveal</span>
+                      <span class="lp-config-info" data-lang-title="configF2Info" title="Animazioni di apparizione degli elementi mentre scorri la pagina.">i</span>
+                    </label>
+                    <label class="lp-config-feature">
+                      <input type="checkbox" data-feature="hover-effects">
+                      <span data-lang-key="configF6">Effetti hover</span>
+                      <span class="lp-config-info" data-lang-title="configF6Info" title="Transizioni e animazioni al passaggio del mouse su elementi.">i</span>
+                    </label>
+                    <label class="lp-config-feature">
+                      <input type="checkbox" data-feature="marquee-text">
+                      <span data-lang-key="configF14">Testo scorrevole</span>
+                      <span class="lp-config-info" data-lang-title="configF14Info" title="Testo che scorre in modo continuo, effetto tendina.">i</span>
+                    </label>
+                  </div>
+                </section>
+
+                <section class="lp-cf-fgroup" id="cfg-fgroup-2">
+                  <button type="button" class="lp-cf-fgroup-head" aria-expanded="false" aria-controls="cfg-fgroup-2-body">
+                    <span class="lp-cf-fgroup-num">02</span>
+                    <span class="lp-cf-fgroup-titles">
+                      <span class="lp-cf-fgroup-title" data-lang-key="cfgFg2Title">Immagini & Media</span>
+                      <small class="lp-cf-fgroup-desc" data-lang-key="cfgFg2Desc">Funzioni avanzate per immagini e contenuti visivi.</small>
+                    </span>
+                    <svg class="lp-cf-fgroup-chev" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <div class="lp-cf-fgroup-body" id="cfg-fgroup-2-body">
+                    <label class="lp-config-feature">
+                      <input type="checkbox" data-feature="image-lightbox">
+                      <span data-lang-key="configF4">Lightbox immagini</span>
+                      <span class="lp-config-info" data-lang-title="configF4Info" title="Ingrandisce le immagini a schermo intero al clic, con chiusura semplice.">i</span>
+                    </label>
+                    <label class="lp-config-feature">
+                      <input type="checkbox" data-feature="image-slider">
+                      <span data-lang-key="configF5">Slider / Carousel</span>
+                      <span class="lp-config-info" data-lang-title="configF5Info" title="Gallerie a scorrimento automatico o manuale tra più immagini.">i</span>
+                    </label>
+                    <label class="lp-config-feature">
+                      <input type="checkbox" data-feature="before-after-slider">
+                      <span data-lang-key="configF13">Prima / Dopo</span>
+                      <span class="lp-config-info" data-lang-title="configF13Info" title="Comparatore trascinabile tra un'immagine prima e una dopo.">i</span>
+                    </label>
+                  </div>
+                </section>
+
+                <section class="lp-cf-fgroup" id="cfg-fgroup-3">
+                  <button type="button" class="lp-cf-fgroup-head" aria-expanded="false" aria-controls="cfg-fgroup-3-body">
+                    <span class="lp-cf-fgroup-num">03</span>
+                    <span class="lp-cf-fgroup-titles">
+                      <span class="lp-cf-fgroup-title" data-lang-key="cfgFg3Title">Contenuti & Navigazione</span>
+                      <small class="lp-cf-fgroup-desc" data-lang-key="cfgFg3Desc">Rendi più semplice esplorare e organizzare i contenuti.</small>
+                    </span>
+                    <svg class="lp-cf-fgroup-chev" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <div class="lp-cf-fgroup-body" id="cfg-fgroup-3-body">
+                    <label class="lp-config-feature">
+                      <input type="checkbox" data-feature="back-to-top">
+                      <span data-lang-key="configF3">Torna su</span>
+                      <span class="lp-config-info" data-lang-title="configF3Info" title="Bottone che riporta rapidamente all'inizio della pagina.">i</span>
+                    </label>
+                    <label class="lp-config-feature">
+                      <input type="checkbox" data-feature="search-interna">
+                      <span data-lang-key="configF8">Ricerca interna</span>
+                      <span class="lp-config-info" data-lang-title="configF8Info" title="Campo di ricerca che filtra i contenuti del sito.">i</span>
+                    </label>
+                    <label class="lp-config-feature">
+                      <input type="checkbox" data-feature="filtro-categorie">
+                      <span data-lang-key="configF9">Filtro categorie</span>
+                      <span class="lp-config-info" data-lang-title="configF9Info" title="Filtra i contenuti per categoria o argomento.">i</span>
+                    </label>
+                    <label class="lp-config-feature">
+                      <input type="checkbox" data-feature="faq-accordion">
+                      <span data-lang-key="configF10">FAQ Accordion</span>
+                      <span class="lp-config-info" data-lang-title="configF10Info" title="Domande frequenti espandibili a fisarmonica.">i</span>
+                    </label>
+                  </div>
+                </section>
+
+                <section class="lp-cf-fgroup" id="cfg-fgroup-4">
+                  <button type="button" class="lp-cf-fgroup-head" aria-expanded="false" aria-controls="cfg-fgroup-4-body">
+                    <span class="lp-cf-fgroup-num">04</span>
+                    <span class="lp-cf-fgroup-titles">
+                      <span class="lp-cf-fgroup-title" data-lang-key="cfgFg4Title">Dati & Informazioni</span>
+                      <small class="lp-cf-fgroup-desc" data-lang-key="cfgFg4Desc">Mostra dati, informazioni e contenuti interattivi.</small>
+                    </span>
+                    <svg class="lp-cf-fgroup-chev" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <div class="lp-cf-fgroup-body" id="cfg-fgroup-4-body">
+                    <label class="lp-config-feature">
+                      <input type="checkbox" data-feature="animated-counters">
+                      <span data-lang-key="configF7">Contatori animati</span>
+                      <span class="lp-config-info" data-lang-title="configF7Info" title="Numeri che contano fino al valore finale quando entrano nello schermo.">i</span>
+                    </label>
+                    <label class="lp-config-feature">
+                      <input type="checkbox" data-feature="animated-progress">
+                      <span data-lang-key="configF15">Barre di avanzamento</span>
+                      <span class="lp-config-info" data-lang-title="configF15Info" title="Barre che si riempiono in animazione per mostrare competenze o valori.">i</span>
+                    </label>
+                    <label class="lp-config-feature">
+                      <input type="checkbox" data-feature="mappa-interattiva">
+                      <span data-lang-key="configF12">Mappa interattiva</span>
+                      <span class="lp-config-info" data-lang-title="configF12Info" title="Mappa in cui i clienti possono vedere la posizione.">i</span>
+                    </label>
+                  </div>
+                </section>
+
+                <section class="lp-cf-fgroup" id="cfg-fgroup-5">
+                  <button type="button" class="lp-cf-fgroup-head" aria-expanded="false" aria-controls="cfg-fgroup-5-body">
+                    <span class="lp-cf-fgroup-num">05</span>
+                    <span class="lp-cf-fgroup-titles">
+                      <span class="lp-cf-fgroup-title" data-lang-key="cfgFg5Title">Contatto</span>
+                      <small class="lp-cf-fgroup-desc" data-lang-key="cfgFg5Desc">Facilita il contatto diretto con i tuoi clienti.</small>
+                    </span>
+                    <svg class="lp-cf-fgroup-chev" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <div class="lp-cf-fgroup-body" id="cfg-fgroup-5-body">
+                    <label class="lp-config-feature">
+                      <input type="checkbox" data-feature="whatsapp-chat">
+                      <span data-lang-key="configF11">Bottone WhatsApp</span>
+                      <span class="lp-config-info" data-lang-title="configF11Info" title="Pulsante fisso che apre una chat WhatsApp con te.">i</span>
+                    </label>
+                  </div>
+                </section>
               </div>
               <input type="hidden" name="config-selected-features" value="">
             </div>

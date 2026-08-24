@@ -532,7 +532,7 @@ document.addEventListener("DOMContentLoaded", function () {
     it: {
       navAbout: "About",
       navServ: "Servizi",
-      skipToContent: "Vai al contenuto",
+
       formSending: "Invio in corso…",
       formSuccess: "Messaggio inviato! Ti risponderò al più presto.",
       formError: "Errore nell'invio. Riprova o scrivimi su WhatsApp.",
@@ -740,6 +740,19 @@ document.addEventListener("DOMContentLoaded", function () {
       cfImgDontKnow: "Non lo so ancora",
       configLangSel: "Lingue",
       cfStyleLabel: "Stile visivo",
+      cfStyleDemoLink: "Guarda il template ↗",
+      cfStepConfig: "Configurazione sito",
+      cfStepDati: "I tuoi dati",
+      cfgFg1Title: "Aspetto & Animazioni",
+      cfgFg1Desc: "Personalizza l'aspetto e il movimento del sito.",
+      cfgFg2Title: "Immagini & Media",
+      cfgFg2Desc: "Funzioni avanzate per immagini e contenuti visivi.",
+      cfgFg3Title: "Contenuti & Navigazione",
+      cfgFg3Desc: "Rendi più semplice esplorare e organizzare i contenuti.",
+      cfgFg4Title: "Dati & Informazioni",
+      cfgFg4Desc: "Mostra dati, informazioni e contenuti interattivi.",
+      cfgFg5Title: "Contatto",
+      cfgFg5Desc: "Facilita il contatto diretto con i tuoi clienti.",
       cfStyleMinimal: "Minimal",
       cfStyleModern: "Modern",
       cfStyleBold: "Bold",
@@ -888,7 +901,7 @@ document.addEventListener("DOMContentLoaded", function () {
     en: {
       navAbout: "About",
       navServ: "Services",
-      skipToContent: "Skip to content",
+
       formSending: "Sending…",
       formSuccess: "Message sent! I'll get back to you soon.",
       formError: "Something went wrong. Try again or reach me on WhatsApp.",
@@ -1091,6 +1104,19 @@ document.addEventListener("DOMContentLoaded", function () {
       cfImgDontKnow: "I don't know yet",
       configLangSel: "Languages",
       cfStyleLabel: "Visual style",
+      cfStyleDemoLink: "View template ↗",
+      cfStepConfig: "Site setup",
+      cfStepDati: "Your details",
+      cfgFg1Title: "Look & Animations",
+      cfgFg1Desc: "Customize your site's look and motion.",
+      cfgFg2Title: "Images & Media",
+      cfgFg2Desc: "Advanced features for images and visual content.",
+      cfgFg3Title: "Content & Navigation",
+      cfgFg3Desc: "Make content easier to explore and organize.",
+      cfgFg4Title: "Data & Information",
+      cfgFg4Desc: "Show data, info and interactive content.",
+      cfgFg5Title: "Contact",
+      cfgFg5Desc: "Make it easy for customers to reach you.",
       cfStyleMinimal: "Minimal",
       cfStyleModern: "Modern",
       cfStyleBold: "Bold",
@@ -1428,9 +1454,46 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  var _cfStep = 0; /* 0 = configuratore, 1 = dati cliente */
+
+  /* Altezza dello slider = pannello attivo, così non resta spazio vuoto
+     quando i due pannelli hanno lunghezze diverse */
+  function aggiornaAltezzaSlider() {
+    var slider = document.getElementById("cf-slider");
+    var track = document.getElementById("cf-track");
+    if (!slider || !track) return;
+    var mobile =
+      window.matchMedia("(max-width:900px)").matches &&
+      document.querySelector(".lp-contact-form--config");
+    var active = track.children[_cfStep] || track.children[0];
+    if (mobile && active) {
+      slider.style.height = active.offsetHeight + "px";
+    } else {
+      slider.style.height = "";
+    }
+  }
+
+  function applicaStepMobile() {
+    var track = document.getElementById("cf-track");
+    var wrap = document.getElementById("cf-dati-wrap");
+    var sub = document.getElementById("lp-btn-config-mobile");
+    var prevB = document.getElementById("cf-step-prev");
+    var nextB = document.getElementById("cf-step-next");
+    var dots = document.querySelectorAll(".lp-cf-dot");
+    var dati = _cfStep === 1;
+    if (wrap) wrap.classList.remove("lp-dati-collapsed");
+    if (track) track.classList.toggle("is-step-dati", dati);
+    if (sub) sub.style.display = dati ? "inline-flex" : "none";
+    if (prevB) prevB.disabled = !dati;
+    if (nextB) nextB.disabled = dati;
+    Array.prototype.forEach.call(dots, function (d) {
+      d.classList.toggle("is-active", Number(d.dataset.step) === _cfStep);
+    });
+    aggiornaAltezzaSlider();
+  }
+
   function aggStatoConfig() {
     var isConfig = reasonSelect && reasonSelect.value === "configura-sito";
-    if (configuratore) configuratore.style.display = isConfig ? "block" : "none";
     var totalBox = document.querySelector(".lp-total-box");
     if (totalBox) {
       totalBox.style.display = isConfig ? "block" : "none";
@@ -1446,15 +1509,31 @@ document.addEventListener("DOMContentLoaded", function () {
     if (summaryEl) {
       summaryEl.style.display = "block";
       summaryEl.classList.toggle("lp-contact-summary--inline", isConfig);
-      if (isMobileLayout && contactGrid) {
-        /* Mobile: campi -> configuratore -> alternativa -> recapiti (in fondo) */
-        if (altEl) contactGrid.appendChild(altEl);
-        contactGrid.appendChild(summaryEl);
-      } else {
-        /* Desktop: ripristina l'alternativa nella colonna sinistra */
-        if (altEl && colMain && altEl.parentNode !== colMain) {
-          colMain.appendChild(altEl);
-        }
+    var stepNavEl = document.getElementById("cf-step-nav");
+    var slotCfg = document.getElementById("cf-slot-config");
+    var stepMode = isMobileLayout && isConfig;
+    if (!stepMode) _cfStep = 0;
+    if (stepNavEl) stepNavEl.style.display = stepMode ? "flex" : "none";
+    if (configuratore) {
+      configuratore.style.display = isConfig ? "block" : "none";
+    }
+    if (isMobileLayout && contactGrid) {
+      /* Mobile config a slider: pannello configuratore dentro lo slot del track */
+      if (stepMode && configuratore && slotCfg &&
+          configuratore.parentNode !== slotCfg) {
+        slotCfg.appendChild(configuratore);
+      }
+      if (altEl) contactGrid.appendChild(altEl);
+      contactGrid.appendChild(summaryEl);
+    } else {
+      /* Desktop: ripristina l'ordine originale del DOM */
+      if (configuratore && summaryEl &&
+          configuratore.previousElementSibling !== summaryEl) {
+        summaryEl.parentNode.insertBefore(configuratore, summaryEl.nextSibling);
+      }
+      if (altEl && colMain && altEl.parentNode !== colMain) {
+        colMain.appendChild(altEl);
+      }
         if (isConfig && altEl) {
           altEl.parentNode.insertBefore(summaryEl, altEl.nextSibling);
         } else if (!isConfig && configuratore) {
@@ -1474,13 +1553,91 @@ document.addEventListener("DOMContentLoaded", function () {
     if (tipoClienteEl) tipoClienteEl.style.display = isConfig ? "block" : "none";
     if (privatoEl) privatoEl.style.display = isConfig ? "block" : "none";
     if (aziendaEl) aziendaEl.style.display = "none";
+    applicaStepMobile();
     setLang(_lang);
   }
 
   if (reasonSelect) {
     reasonSelect.addEventListener("change", aggStatoConfig);
     aggStatoConfig();
+
+    /* Deep-link dalle demo template: /?config=1#contact apre direttamente il configuratore */
+    try {
+      if (new URLSearchParams(window.location.search).get("config") === "1") {
+        reasonSelect.value = "configura-sito";
+        aggStatoConfig();
+      }
+    } catch (err) { /* URLSearchParams non supportato: ignora */ }
   }
+
+  /* Navigazione a step mobile: ‹ [Configurazione | I tuoi dati] › */
+  var reduceMotionStep =
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function vaiAStep(s) {
+    if (s === _cfStep) return;
+    _cfStep = s;
+    applicaStepMobile();
+    if (s === 1) {
+      var slider = document.getElementById("cf-slider");
+      if (slider) {
+        slider.scrollIntoView({
+          behavior: reduceMotionStep ? "auto" : "smooth",
+          block: "start",
+        });
+      }
+    }
+  }
+  var stepPrevBtn = document.getElementById("cf-step-prev");
+  var stepNextBtn = document.getElementById("cf-step-next");
+  if (stepPrevBtn) {
+    stepPrevBtn.addEventListener("click", function () {
+      vaiAStep(0);
+    });
+  }
+  if (stepNextBtn) {
+    stepNextBtn.addEventListener("click", function () {
+      vaiAStep(1);
+    });
+  }
+  Array.prototype.forEach.call(
+    document.querySelectorAll(".lp-cf-dot"),
+    function (d) {
+      d.addEventListener("click", function () {
+        vaiAStep(Number(d.dataset.step));
+      });
+    }
+  );
+  window.addEventListener("resize", aggiornaAltezzaSlider);
+  window.addEventListener("load", aggiornaAltezzaSlider);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(aggiornaAltezzaSlider);
+  }
+  var contactFormStep = document.querySelector(".lp-contact-form");
+  if (contactFormStep) {
+    contactFormStep.addEventListener(
+      "invalid",
+      function (e) {
+        var wrap = document.getElementById("cf-dati-wrap");
+        if (wrap && wrap.contains(e.target)) vaiAStep(1);
+      },
+      true
+    );
+  }
+
+  /* Accordion gruppi funzionalità: solo visualizzazione, checkbox intatte.
+     Su desktop i gruppi restano comunque aperti (CSS >900px). */
+  Array.prototype.forEach.call(
+    document.querySelectorAll(".lp-cf-fgroup-head"),
+    function (head) {
+      head.addEventListener("click", function () {
+        var g = head.closest(".lp-cf-fgroup");
+        if (!g) return;
+        var open = g.classList.toggle("is-open");
+        head.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    }
+  );
 
   var _mqContactMobile = window.matchMedia("(max-width: 900px)");
   if (_mqContactMobile.addEventListener) {
@@ -1488,6 +1645,62 @@ document.addEventListener("DOMContentLoaded", function () {
   } else if (_mqContactMobile.addListener) {
     _mqContactMobile.addListener(aggStatoConfig);
   }
+
+  /* Video preview card stile: orizzontali su desktop, verticali su mobile.
+     Caricamento lazy al primo ingresso in viewport, play/pause su visibilità. */
+  (function () {
+    var mqVid = window.matchMedia("(max-width: 767px)");
+    var reduceMotion =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var vids = Array.prototype.slice.call(
+      document.querySelectorAll(".lp-style-video")
+    );
+    if (!vids.length) return;
+    function syncSrc(v) {
+      var want = mqVid.matches ? v.dataset.srcMob : v.dataset.srcDesk;
+      if (want && v.getAttribute("src") !== want) {
+        v.setAttribute("src", want);
+        v.load();
+      }
+    }
+    function playSafe(v) {
+      if (reduceMotion) return;
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    }
+    vids.forEach(syncSrc);
+    function onMq() {
+      vids.forEach(function (v) {
+        var wasPlaying = !v.paused;
+        syncSrc(v);
+        if (wasPlaying) playSafe(v);
+      });
+    }
+    if (mqVid.addEventListener) mqVid.addEventListener("change", onMq);
+    else if (mqVid.addListener) mqVid.addListener(onMq);
+    if ("IntersectionObserver" in window) {
+      var ioVideo = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (en) {
+            var v = en.target;
+            if (en.isIntersecting) {
+              syncSrc(v);
+              playSafe(v);
+            } else {
+              v.pause();
+            }
+          });
+        },
+        { threshold: 0.25 }
+      );
+      vids.forEach(function (v) {
+        ioVideo.observe(v);
+      });
+    } else {
+      vids.forEach(playSafe);
+    }
+  })();
 
   document.querySelectorAll("[data-config-trigger]").forEach(function (btn) {
     btn.addEventListener("click", function (e) {
