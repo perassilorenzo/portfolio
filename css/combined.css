@@ -4274,6 +4274,10 @@ a.lp-contact-item-value:hover {
   background: var(--accent-soft);
 }
 
+.lp-cert-card--logo-left {
+  flex-direction: row-reverse;
+}
+
 @media (max-width: 575px) {
   .lp-cert-card {
     flex-direction: column-reverse;

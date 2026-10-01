@@ -33,7 +33,7 @@ Portfolio personale di Lorenzo Perassi — developer, founder di Customly e stud
 | Projects         | Progetti selezionati: Customly, CRYBU e Custom Fashion                          |
 | Customly         | Sezione dedicata alla piattaforma Customly con descrizione e CTA al sito        |
 | Experience       | Timeline con esperienze: Customly, Omnia4Web, Stage IT Bertolotto e ITIS        |
-| Certificazioni   | Certificazioni (es. CS50x Harvard) con link alla repository GitHub              |
+| Certificazioni   | NASA Fundamentals of Remote Sensing (link all'attestato PDF) e CS50x Harvard   |
 | Tools & Skills   | Griglia di competenze divisa per categoria con tooltip                          |
 | Contact          | Form di contatto Formspree + Configuratore interattivo di preventivo + WhatsApp |
 
