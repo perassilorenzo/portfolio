@@ -918,13 +918,13 @@ document.addEventListener("DOMContentLoaded", function () {
       maniTitle: "«Ma chi cazzo pensi di essere?»",
       maniSub: "Bella domanda. Ti rispondo con i fatti.",
       maniP1:
-        "Uno studente di Informatica che nel frattempo continua a costruire cose. Studio all'IIS Vallauri, ma non ho aspettato il diploma per iniziare: ho fondato Customly, una piattaforma di custom fashion che unisce moda e tecnologia, e ci lavoro sopra ogni settimana.",
+        "Uno studente di Informatica che nel frattempo continua a costruire cose. Studio all’IIS Vallauri, ma non ho aspettato il diploma per iniziare: ho fondato Customly, una piattaforma di custom fashion che unisce moda e tecnologia, e ci lavoro sopra ogni settimana.",
       maniP2:
-        "Nel frattempo ho cucito e prototipato capi con CRYBU, sviluppato siti web, creato contenuti video e social, e collaborato con brand locali come Aleyesure e pagine creative come StageStreetwear.",
+        "Nel frattempo sto continuando a lavorare sul design e sulla prototipazione di capi con CRYBU, un progetto su cui continuerò a lavorare. Creo capi custom per chi vuole distinguersi, sviluppo siti web, continuo a creare contenuti video su varie piattaforme e ho collaborato con brand di abbigliamento come Aleyesure e StageStreetwear.",
       maniP3:
-        "Ho lavorato sui contenuti digitali con Omnia4Web, fatto uno stage IT da Bertolotto Porte tra gestionali e archivi digitali, preso una certificazione NASA sul telerilevamento e sto seguendo il CS50x di Harvard. Imparo facendo, non collezionando attestati.",
+        "Ho lavorato sui contenuti digitali con Omnia4Web e fatto uno stage IT da Bertolotto Porte, tra gestionali e archivi digitali. Ho conseguito una certificazione NASA sul telerilevamento per approfondire l’argomento in vista della partecipazione alla NASA Space Apps Challenge, sto seguendo il CS50x di Harvard e conseguirò nuovi corsi e certificazioni.",
       maniP4:
-        "Non ho un'agenzia, non ho un listino, non ho pacchetti preconfezionati. Ho progetti iniziati — alcuni finiti, altri ancora aperti — e la voglia di continuare a costruirne.",
+        "Non ho un’agenzia, non ho un listino, non ho pacchetti preconfezionati. Ho progetti iniziati, alcuni finiti, altri ancora aperti, e la voglia di continuare a costruirne.",
       maniP5:
         "Se cercavi qualcuno con un catalogo di servizi, non sono io. Se cercavi qualcuno con cui costruire qualcosa, sei nel posto giusto.",
       maniCta: "Parliamone",
@@ -1381,9 +1381,9 @@ document.addEventListener("DOMContentLoaded", function () {
       maniP1:
         "A Computer Science student who keeps building things in the meantime. I study at IIS Vallauri, but I didn't wait for graduation to start: I founded Customly, a custom fashion platform combining fashion and technology, and I work on it every week.",
       maniP2:
-        "Along the way I've sewn and prototyped garments with CRYBU, built websites, created video and social content, and collaborated with local brands like Aleyesure and creative pages like StageStreetwear.",
+        "In the meantime I'm continuing to work on the design and prototyping of garments with CRYBU, a project I'll keep working on. I create custom garments for those who want to stand out, I build websites, I keep creating video content across platforms, and I've collaborated with clothing brands like Aleyesure and StageStreetwear.",
       maniP3:
-        "I've worked on digital content with Omnia4Web, done an IT internship at Bertolotto Porte between management software and digital archives, earned a NASA certification on remote sensing and I'm taking Harvard's CS50x. I learn by doing, not by collecting certificates.",
+        "I've worked on digital content with Omnia4Web and done an IT internship at Bertolotto Porte, between management software and digital archives. I've earned a NASA certification on remote sensing to deepen the topic ahead of taking part in the NASA Space Apps Challenge, I'm taking Harvard's CS50x, and I'll earn new courses and certifications.",
       maniP4:
         "I don't have an agency, a price list or pre-made packages. I have projects — some finished, some still open — and the will to keep building.",
       maniP5:

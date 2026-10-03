@@ -5018,6 +5018,12 @@ body.glow-active .lp-bg-glow {
   animation-play-state:paused
 }
 /* Slim brand strip: small label above, scrolling names act as a divider */
+#story.lp-section {
+  margin-top:clamp(24px,6vw,56px)
+}
+#collaborations.lp-section {
+  margin-top:0
+}
 .lp-collab-label {
   font-family:var(--font-mono);
   font-size:.85rem;
