@@ -4999,8 +4999,8 @@ body.glow-active .lp-bg-glow {
   }
 }
 
-/* COLLABORATIONS MARQUEE — slow infinite logo strip, chill & minimal.
-   Track holds the set twice; -50% loop is seamless (items use margin, no flex gap). */
+/* COLLABORATIONS MARQUEE — classic slow brand strip.
+   Track holds the set 4x (two identical halves); -50% loop is seamless. */
 .lp-collab-marquee {
   overflow:hidden;
   max-width:1100px;
@@ -5010,41 +5010,46 @@ body.glow-active .lp-bg-glow {
 }
 .lp-collab-track {
   display:flex;
+  align-items:center;
   width:max-content;
-  animation:marqueeScroll 45s linear infinite
+  animation:marqueeScroll 40s linear infinite
 }
 .lp-collab-marquee:hover .lp-collab-track {
   animation-play-state:paused
 }
 .lp-collab-item {
-  margin:0 14px 0 0;
-  text-align:center;
+  display:flex;
+  align-items:center;
+  margin:0 56px 0 0;
   flex:0 0 auto
 }
 .lp-collab-item img {
-  width:150px;
-  height:150px;
+  width:64px;
+  height:64px;
   object-fit:cover;
-  border-radius:24px;
+  border-radius:50%;
   border:1px solid var(--border-color);
   display:block;
   background:var(--bg-card)
 }
 .lp-collab-item figcaption {
-  margin-top:10px;
+  margin-left:12px;
   font-family:var(--font-mono);
-  font-size:.8rem;
+  font-size:.85rem;
   letter-spacing:1px;
-  color:var(--text-secondary)
+  color:var(--text-secondary);
+  white-space:nowrap
 }
 @media (max-width: 767px) {
   .lp-collab-item {
-    margin-right:9px
+    margin-right:36px
   }
   .lp-collab-item img {
-    width:110px;
-    height:110px;
-    border-radius:18px
+    width:48px;
+    height:48px
+  }
+  .lp-collab-item figcaption {
+    font-size:.75rem
   }
 }
 @media (prefers-reduced-motion: reduce) {
