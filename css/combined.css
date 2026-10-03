@@ -5017,6 +5017,35 @@ body.glow-active .lp-bg-glow {
 .lp-collab-marquee:hover .lp-collab-track {
   animation-play-state:paused
 }
+/* Slim brand strip: small side label + scrolling names, acts as a divider */
+.lp-collab-strip {
+  display:flex;
+  align-items:center;
+  gap:28px;
+  max-width:1100px;
+  margin:0 auto
+}
+.lp-collab-label {
+  font-family:var(--font-mono);
+  font-size:.85rem;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#171310;
+  white-space:nowrap;
+  margin:0
+}
+.lp-collab-strip .lp-collab-marquee {
+  flex:1 1 auto;
+  min-width:0;
+  margin:0
+}
+@media (max-width: 767px) {
+  .lp-collab-strip {
+    flex-direction:column;
+    gap:14px
+  }
+}
 .lp-collab-item {
   display:flex;
   align-items:center;
