@@ -915,7 +915,7 @@ document.addEventListener("DOMContentLoaded", function () {
       whyCard4Title: "HAI UN'IDEA?",
       whyCard4Body: "Raccontamela e vediamo se ha senso costruirla insieme.",
       whyCard4Cta: "Parliamone",
-      maniTitle: "Ma chi cazzo pensi di essere?",
+      maniTitle: "«Ma chi cazzo pensi di essere?»",
       maniSub: "Bella domanda. Ti rispondo con i fatti.",
       maniP1:
         "Uno studente di Informatica che nel frattempo continua a costruire cose. Studio all'IIS Vallauri, ma non ho aspettato il diploma per iniziare: ho fondato Customly, una piattaforma di custom fashion che unisce moda e tecnologia, e ci lavoro sopra ogni settimana.",
@@ -936,6 +936,7 @@ document.addEventListener("DOMContentLoaded", function () {
       storyCapCustomly: "Customly — la piattaforma di custom fashion che ho fondato.",
       storyCapCrybu: "CRYBU — prototipazione, cucito e capi unici.",
       storyCapCollab: "Aleyesure e StageStreetwear — collaborazioni, contenuti e video.",
+      storyCapTilt: "Dietro le quinte.",
       storyBridge1: "E in pratica, come lavoro?",
       storyBridge2: "Ok, hai visto chi sono e come lavoro. Ma perché dovresti lavorare proprio con me?",
       storyWhySub: "Il titolo è provocatorio, la risposta è semplice.",
@@ -1373,7 +1374,7 @@ document.addEventListener("DOMContentLoaded", function () {
       whyCard4Title: "HAVE AN IDEA?",
       whyCard4Body: "Tell me about it and let's see if it makes sense to build it together.",
       whyCard4Cta: "Let's talk",
-      maniTitle: "So who the hell do you think you are?",
+      maniTitle: "\u201cSo who the hell do you think you are?\u201d",
       maniSub: "Fair question. Let me answer with facts.",
       maniP1:
         "A Computer Science student who keeps building things in the meantime. I study at IIS Vallauri, but I didn't wait for graduation to start: I founded Customly, a custom fashion platform combining fashion and technology, and I work on it every week.",
@@ -1394,6 +1395,7 @@ document.addEventListener("DOMContentLoaded", function () {
       storyCapCustomly: "Customly — the custom fashion platform I founded.",
       storyCapCrybu: "CRYBU — prototyping, sewing and one-of-a-kind garments.",
       storyCapCollab: "Aleyesure and StageStreetwear — collaborations, content and video.",
+      storyCapTilt: "Behind the scenes.",
       storyBridge1: "And how do I actually work?",
       storyBridge2: "Ok, you've seen who I am and how I work. But why should you work with me, exactly?",
       storyWhySub: "The title is provocative, the answer is simple.",
