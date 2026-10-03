@@ -918,11 +918,11 @@ document.addEventListener("DOMContentLoaded", function () {
       maniTitle: "«Ma chi cazzo pensi di essere?»",
       maniSub: "Bella domanda. Ti rispondo con i fatti.",
       maniP1:
-        "Uno studente di Informatica che nel frattempo continua a costruire cose. Studio all’IIS Vallauri, ma non ho aspettato il diploma per iniziare: ho fondato Customly, una piattaforma di custom fashion che unisce moda e tecnologia, e ci lavoro sopra ogni settimana.",
+        "Uno studente di Informatica che nel frattempo continua a costruire cose. Studio all’<a href=\"https://vallauri.edu\" target=\"_blank\" rel=\"noopener\">IIS Vallauri</a>, ma non ho aspettato il diploma per iniziare: ho fondato <a href=\"https://customly.it\" target=\"_blank\" rel=\"noopener\">Customly</a>, una piattaforma di custom fashion che unisce moda e tecnologia, e ci lavoro sopra ogni settimana.",
       maniP2:
-        "Nel frattempo sto continuando a lavorare sul design e sulla prototipazione di capi con CRYBU, un progetto su cui continuerò a lavorare. Creo capi custom per chi vuole distinguersi, sviluppo siti web, continuo a creare contenuti video su varie piattaforme e ho collaborato con brand di abbigliamento come Aleyesure e StageStreetwear.",
+        "Nel frattempo sto continuando a lavorare sul design e sulla prototipazione di capi con <a href=\"https://crybu.io\" target=\"_blank\" rel=\"noopener\">CRYBU</a>, un progetto su cui continuerò a lavorare. Creo capi custom per chi vuole distinguersi, sviluppo siti web, continuo a creare contenuti video su varie piattaforme e ho collaborato con brand di abbigliamento come <a href=\"https://aleyesure.com\" target=\"_blank\" rel=\"noopener\">Aleyesure</a> e <a href=\"https://stagestreeware.it\" target=\"_blank\" rel=\"noopener\">StageStreetwear</a>.",
       maniP3:
-        "Ho lavorato sui contenuti digitali con Omnia4Web e fatto uno stage IT da Bertolotto Porte, tra gestionali e archivi digitali. Ho conseguito una certificazione NASA sul telerilevamento per approfondire l’argomento in vista della partecipazione alla NASA Space Apps Challenge, sto seguendo il CS50x di Harvard e conseguirò nuovi corsi e certificazioni.",
+        "Ho lavorato sui contenuti digitali con <a href=\"https://omnia4web.com\" target=\"_blank\" rel=\"noopener\">Omnia4Web</a> e fatto uno stage IT da <a href=\"https://bertolotto.com\" target=\"_blank\" rel=\"noopener\">Bertolotto Porte</a>, tra gestionali e archivi digitali. Ho conseguito una certificazione NASA sul telerilevamento per approfondire l’argomento in vista della partecipazione alla NASA Space Apps Challenge, sto seguendo il CS50x di Harvard e conseguirò nuovi corsi e certificazioni.",
       maniP4:
         "Non ho un’agenzia, non ho un listino, non ho pacchetti preconfezionati. Ho progetti iniziati, alcuni finiti, altri ancora aperti, e la voglia di continuare a costruirne.",
       maniP5:
@@ -1379,11 +1379,11 @@ document.addEventListener("DOMContentLoaded", function () {
       maniTitle: "\u201cSo who the hell do you think you are?\u201d",
       maniSub: "Fair question. Let me answer with facts.",
       maniP1:
-        "A Computer Science student who keeps building things in the meantime. I study at IIS Vallauri, but I didn't wait for graduation to start: I founded Customly, a custom fashion platform combining fashion and technology, and I work on it every week.",
+        "A Computer Science student who keeps building things in the meantime. I study at <a href=\"https://vallauri.edu\" target=\"_blank\" rel=\"noopener\">IIS Vallauri</a>, but I didn't wait for graduation to start: I founded <a href=\"https://customly.it\" target=\"_blank\" rel=\"noopener\">Customly</a>, a custom fashion platform combining fashion and technology, and I work on it every week.",
       maniP2:
-        "In the meantime I'm continuing to work on the design and prototyping of garments with CRYBU, a project I'll keep working on. I create custom garments for those who want to stand out, I build websites, I keep creating video content across platforms, and I've collaborated with clothing brands like Aleyesure and StageStreetwear.",
+        "In the meantime I'm continuing to work on the design and prototyping of garments with <a href=\"https://crybu.io\" target=\"_blank\" rel=\"noopener\">CRYBU</a>, a project I'll keep working on. I create custom garments for those who want to stand out, I build websites, I keep creating video content across platforms, and I've collaborated with clothing brands like <a href=\"https://aleyesure.com\" target=\"_blank\" rel=\"noopener\">Aleyesure</a> and <a href=\"https://stagestreeware.it\" target=\"_blank\" rel=\"noopener\">StageStreetwear</a>.",
       maniP3:
-        "I've worked on digital content with Omnia4Web and done an IT internship at Bertolotto Porte, between management software and digital archives. I've earned a NASA certification on remote sensing to deepen the topic ahead of taking part in the NASA Space Apps Challenge, I'm taking Harvard's CS50x, and I'll earn new courses and certifications.",
+        "I've worked on digital content with <a href=\"https://omnia4web.com\" target=\"_blank\" rel=\"noopener\">Omnia4Web</a> and done an IT internship at <a href=\"https://bertolotto.com\" target=\"_blank\" rel=\"noopener\">Bertolotto Porte</a>, between management software and digital archives. I've earned a NASA certification on remote sensing to deepen the topic ahead of taking part in the NASA Space Apps Challenge, I'm taking Harvard's CS50x, and I'll earn new courses and certifications.",
       maniP4:
         "I don't have an agency, a price list or pre-made packages. I have projects — some finished, some still open — and the will to keep building.",
       maniP5:

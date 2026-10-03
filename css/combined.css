@@ -5149,6 +5149,16 @@ body.glow-active .lp-bg-glow {
   color:#dbdbe2;
   line-height:1.75
 }
+.lp-story a {
+  color:var(--accent);
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+  font-weight:600
+}
+.lp-story a:hover {
+  text-decoration-thickness:2px
+}
 .lp-story-lead {
   color:#dbdbe2
 }
