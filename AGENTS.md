@@ -43,13 +43,13 @@ curl -s -o /dev/null -w "%{http_code}" http://localhost:PORT/   # smoke test
   viene deduplicato a ogni submit. NON resettare il form dopo l'invio.
   Niente configuratore/prezzi: rimossi da HTML+JS (storico: slider `#cf-slider`,
   `aggStatoConfig()`, deep-link `?config=1` — non più attivi).
-- **Sezioni** (ordine): hero → #projects →
-  #collaborations (marquee `.lp-collab-marquee`, set x4 per loop -50%
-  seamless) → #experience → #certifications → #story (UNICO racconto
-  editoriale in 3 atti: manifesto + #comparison slider + 5 punti numerati
-  `.lp-story-point`; stili `.lp-story-*` in fondo a combined.css) →
-  #contact. Niente #about, niente #tools, niente #services,
-  niente #lets-build, niente #convinced.
+- **Sezioni** (ordine): hero → #story (UNICO racconto editoriale in 3 atti:
+  manifesto con foto `assets/personal/` + #comparison slider in banda
+  `.lp-band` + 5 punti numerati `.lp-story-point`; stili `.lp-story-*` in
+  fondo a combined.css) → #projects → #experience → #certifications →
+  #collaborations (marquee `.lp-collab-marquee` in banda `.lp-band`, set x4
+  per loop -50% seamless) → #contact. Niente #about, niente #tools,
+  niente #services, niente #lets-build, niente #convinced.
 - **Estetica**: le modifiche non devono cambiare l'aspetto visibile senza esplicita
   richiesta dell'utente.
 

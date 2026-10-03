@@ -5188,3 +5188,62 @@ body.glow-active .lp-bg-glow {
     gap:10px
   }
 }
+
+/* LP-BAND — inset color band for section breaks (story act 2, collaborations) */
+.lp-band {
+  background:var(--bg-secondary);
+  border:1px solid var(--border-color);
+  border-radius:28px;
+  max-width:1020px;
+  margin:4rem auto;
+  padding:clamp(2rem,5vw,3.5rem) clamp(1rem,4vw,2.5rem)
+}
+.lp-band > .lp-story-kicker:first-child {
+  margin-top:0
+}
+@media (max-width: 767px) {
+  .lp-band {
+    border-radius:20px
+  }
+}
+
+/* STORY chapters — subordinate to the act-1 display title: one topic, three chapters */
+.lp-story-chapter {
+  font-family:var(--font-brand);
+  font-weight:300;
+  font-size:clamp(1.9rem,5vw,3rem);
+  line-height:1.05;
+  letter-spacing:-0.01em;
+  text-align:center;
+  text-wrap:balance;
+  margin:0 auto;
+  max-width:800px
+}
+.lp-story-kicker--inband {
+  margin-top:0
+}
+
+/* STORY portrait keeps its natural vertical shape */
+.lp-story-portrait img {
+  width:min(320px,74vw);
+  height:auto;
+  aspect-ratio:auto
+}
+
+/* COLLAB marquee — names stay prominent: they give the strip its value */
+.lp-collab-item img {
+  width:72px;
+  height:72px
+}
+.lp-collab-item figcaption {
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:.5px;
+  color:var(--text-primary)
+}
+@media (max-width: 767px) {
+  .lp-collab-item img {
+    width:56px;
+    height:56px
+  }
+}

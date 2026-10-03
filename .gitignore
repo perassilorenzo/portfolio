@@ -1,1 +1,5 @@
 node_modules/
+# Video personali pesanti: non committare file enormi (vedi AGENTS.md)
+assets/personal/*.MOV
+assets/personal/*.mov
+assets/personal/*.MP4
