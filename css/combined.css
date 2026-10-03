@@ -5020,15 +5020,20 @@ body.glow-active .lp-bg-glow {
 .lp-collab-item {
   display:flex;
   align-items:center;
-  margin:0 56px 0 0;
-  flex:0 0 auto
+  margin:0 28px 0 0;
+  flex:0 0 auto;
+  opacity:.7;
+  transition:opacity .3s ease
+}
+.lp-collab-item:hover {
+  opacity:1
 }
 .lp-collab-item img {
   width:64px;
   height:64px;
   object-fit:cover;
   border-radius:50%;
-  border:1px solid var(--border-color);
+  border:none;
   display:block;
   background:var(--bg-card)
 }
@@ -5042,7 +5047,7 @@ body.glow-active .lp-bg-glow {
 }
 @media (max-width: 767px) {
   .lp-collab-item {
-    margin-right:36px
+    margin-right:20px
   }
   .lp-collab-item img {
     width:48px;
@@ -5233,9 +5238,9 @@ body {
   max-width:100vw;
   margin-left:calc(50% - 50vw);
   margin-right:calc(50% - 50vw);
-  margin-top:4rem;
-  margin-bottom:4rem;
-  padding:clamp(3rem,7vw,5rem) clamp(1rem,4vw,2.5rem);
+  margin-top:2.5rem;
+  margin-bottom:2.5rem;
+  padding:clamp(1.5rem,4vw,2.5rem) clamp(1rem,4vw,2.5rem);
   border-top:1px solid var(--border-color);
   border-bottom:1px solid var(--border-color)
 }
@@ -5292,7 +5297,56 @@ body {
   transform:rotate(90deg)
 }
 
-/* STORY chapters — subordinate to the act-1 display title: one topic, three chapters */
+/* STORY trio — three verticals (photo, video, photo), middle one raised */
+.lp-story-trio {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  align-items:start;
+  margin:2.75rem 0 1rem
+}
+.lp-story-trio .lp-story-figure {
+  margin:0
+}
+.lp-story-trio img,
+.lp-story-trio video {
+  width:100%;
+  aspect-ratio:9/16;
+  object-fit:cover;
+  border-radius:20px;
+  border:1px solid var(--border-color);
+  display:block;
+  background:var(--bg-card)
+}
+.lp-story-trio-cap {
+  font-family:var(--font-mono);
+  font-size:.78rem;
+  letter-spacing:1px
+}
+@media (min-width: 768px) {
+  .lp-story-trio .is-mid {
+    transform:translateY(28px)
+  }
+}
+@media (max-width: 767px) {
+  .lp-story-trio {
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    padding-bottom:10px;
+    margin-left:-24px;
+    margin-right:-24px;
+    padding-left:24px;
+    padding-right:24px
+  }
+  .lp-story-trio .lp-story-figure {
+    flex:0 0 62vw;
+    scroll-snap-align:center
+  }
+  .lp-story-trio .is-mid {
+    transform:none
+  }
+}
 .lp-story-chapter {
   font-family:var(--font-brand);
   font-weight:300;

@@ -1,5 +1,5 @@
 node_modules/
-# Video personali pesanti: non committare file enormi (vedi AGENTS.md)
-assets/personal/*.MOV
+# Video sorgente pesante: resta fuori dal repo (vedi AGENTS.md).
+# Le versioni web compresse (story-verticale.webm/.mp4) VANNO committate.
+assets/personal/IMG_0232.MOV
 assets/personal/*.mov
-assets/personal/*.MP4
