@@ -5057,3 +5057,134 @@ body.glow-active .lp-bg-glow {
     animation:none
   }
 }
+
+/* STORY — one continuous editorial narrative (chi sono → come lavoro → perché io) */
+.lp-story-kicker {
+  font-family:var(--font-mono);
+  font-size:.85rem;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--accent);
+  text-align:center;
+  margin:5rem 0 1.25rem
+}
+.lp-story > .lp-story-kicker:first-child {
+  margin-top:0
+}
+.lp-story-display {
+  font-family:var(--font-brand);
+  font-weight:300;
+  font-size:clamp(2.5rem,8vw,4.75rem);
+  line-height:1.02;
+  letter-spacing:-0.02em;
+  text-align:center;
+  text-wrap:balance;
+  margin:0 auto;
+  max-width:900px
+}
+.lp-story-lead {
+  text-align:center;
+  font-size:1.15rem;
+  max-width:640px;
+  margin:1.25rem auto 0
+}
+.lp-story-portrait {
+  text-align:center;
+  margin:3rem auto
+}
+.lp-story-portrait img {
+  width:min(300px,72vw);
+  aspect-ratio:4/5;
+  object-fit:cover;
+  border-radius:28px;
+  border:1px solid var(--border-color);
+  background:var(--bg-card)
+}
+.lp-story-portrait figcaption,
+.lp-story-figure figcaption {
+  font-family:var(--font-mono);
+  font-size:.78rem;
+  letter-spacing:1px;
+  color:var(--text-secondary);
+  margin-top:.75rem
+}
+.lp-story-col {
+  max-width:680px;
+  margin:0 auto;
+  padding:0 24px
+}
+.lp-story-col > p {
+  margin:0 0 1.4rem
+}
+.lp-story-figure {
+  margin:2.75rem 0
+}
+.lp-story-figure img {
+  width:100%;
+  border-radius:20px;
+  border:1px solid var(--border-color);
+  display:block;
+  background:var(--bg-card)
+}
+.lp-story-duo {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin:2.75rem 0 .75rem
+}
+.lp-story-duo .lp-story-figure {
+  margin:0
+}
+.lp-story-duo-cap {
+  text-align:center;
+  font-family:var(--font-mono);
+  font-size:.78rem;
+  letter-spacing:1px
+}
+.lp-story-bridge {
+  font-family:var(--font-brand);
+  font-style:italic;
+  font-weight:300;
+  font-size:clamp(1.5rem,4vw,2.25rem);
+  line-height:1.2;
+  text-align:center;
+  text-wrap:balance;
+  margin:4rem auto;
+  max-width:640px
+}
+.lp-story-point {
+  display:grid;
+  grid-template-columns:56px 1fr;
+  gap:18px;
+  padding:1.75rem 0;
+  border-top:1px solid var(--border-color)
+}
+.lp-story-point:last-of-type {
+  border-bottom:1px solid var(--border-color)
+}
+.lp-story-num {
+  font-family:var(--font-mono);
+  font-size:1rem;
+  color:var(--accent)
+}
+.lp-story-point h4 {
+  margin:0 0 .4rem;
+  font-size:1.05rem;
+  letter-spacing:.02em
+}
+.lp-story-point p {
+  margin:0
+}
+.lp-story-cta {
+  text-align:center;
+  margin:3rem 0 0
+}
+@media (max-width: 767px) {
+  .lp-story-point {
+    grid-template-columns:40px 1fr;
+    gap:12px
+  }
+  .lp-story-duo {
+    gap:10px
+  }
+}
