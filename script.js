@@ -435,13 +435,13 @@ document.addEventListener("DOMContentLoaded", function () {
         (e.style.cursor = "pointer"));
     }),
       document.querySelectorAll(".lp-project-media").forEach((e) => {
+        e.style.cursor = "pointer";
         e.addEventListener("click", (t) => {
           if (trackDragged) return;
           t.stopPropagation();
           const o = e.closest(".lp-project-card");
-          if (!o) return;
-          const n = o.dataset.video;
-          B(n ? [n] : [o.dataset.media], 0);
+          const url = o && o.dataset.link;
+          if (url) window.open(url, "_blank", "noopener");
         });
       }),
       w.addEventListener("click", (e) => {
