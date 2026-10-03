@@ -5401,7 +5401,7 @@ body {
   }
   .lp-story-trio .lp-story-figure {
     flex:none;
-    width:min(200px,54vw);
+    width:min(160px,44vw);
     margin:0
   }
   .lp-story-trio .lp-story-figure:nth-child(1) {
@@ -5411,12 +5411,12 @@ body {
   .lp-story-trio .lp-story-figure:nth-child(2) {
     align-self:flex-end;
     transform:rotate(2deg);
-    margin-top:-26px
+    margin-top:-20px
   }
   .lp-story-trio .lp-story-figure:nth-child(3) {
     align-self:flex-start;
     transform:rotate(-2deg);
-    margin-top:-26px
+    margin-top:-20px
   }
   .lp-story-trio .is-mid {
     transform:rotate(2deg)
