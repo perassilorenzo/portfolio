@@ -129,9 +129,6 @@
     <div class="collapse navbar-collapse justify-content-end" id="navLinks">
       <ul class="navbar-nav gap-4 align-items-lg-center">
         <li class="nav-item">
-          <a class="nav-link lp-nav-link" href="#collaborations" data-lang-key="navServ">Collaborazioni</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link lp-nav-link" href="#projects" data-lang-key="navProjects">Projects</a>
         </li>
         <li class="nav-item">
@@ -175,7 +172,7 @@
       <div class="d-flex flex-wrap gap-3 mt-3">
         <a href="#projects" class="lp-btn text-decoration-none nav-link" data-lang-key="heroBtn1">Guarda i progetti</a>
         <a href="https://www.linkedin.com/in/perassilorenzo/" target="_blank" rel="noopener" class="lp-btn text-decoration-none" data-lang-key="heroBtn3">Scarica CV</a>
-        <a href="#contact" class="lp-btn text-decoration-none nav-link" data-lang-key="heroBtn2">Contattami</a>
+        <a href="#contact" class="lp-btn text-decoration-none nav-link" data-lang-key="heroBtn2">Collaboriamo</a>
       </div>
     </div>
     <div class="lp-hero-image ms-auto" id="heroImage">
@@ -184,32 +181,64 @@
     </div>
   </section>
 
-  <!-- ABOUT / CHI SONO -->
-  <section class="lp-section lp-reveal" id="about">
+  <!-- LET'S BUILD SOMETHING -->
+  <!-- LET'S BUILD SOMETHING -->
+  <section class="lp-section lp-reveal" id="lets-build">
     <div class="lp-section-header">
-      <h2 class="lp-big-title" data-lang-key="aboutTitle">Chi sono</h2>
-      <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="aboutSub">
-        Developer, creator &amp; student
+      <h2 class="lp-big-title" data-lang-key="letsTitle">Let's build something</h2>
+      <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="letsTagline">
+        Non devi scegliere un servizio da un catalogo. Porta un'idea e capiamo insieme come svilupparla.
       </h3>
     </div>
-    <div class="px-4" style="max-width: 820px; margin: 0 auto;">
-      <p class="lp-text-secondary" data-lang-key="aboutP1" data-lang-html>
-        Studio Informatica, ma il mio lavoro non si ferma al codice. Mi interessa costruire progetti che uniscono tecnologia, design, moda, contenuti e business.
-      </p>
-      <p class="lp-text-secondary mt-3" data-lang-key="aboutP2" data-lang-html>
-        Che sia un sito, un brand, un capo o un'idea ancora tutta da definire: se vuoi costruire qualcosa, possiamo svilupparla insieme.
+    <div class="lp-why-choose-grid px-4">
+      <!-- Web -->
+      <div class="lp-why-card lp-reveal">
+        <span class="lp-why-icon">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </span>
+        <h4 class="lp-why-title" data-lang-key="letsWebTitle">WEB</h4>
+        <p class="lp-text-secondary small" data-lang-key="letsWebDesc">Siti web, web app, prodotti digitali e progetti online.</p>
+      </div>
+      <!-- Fashion & Sewing -->
+      <div class="lp-why-card lp-reveal">
+        <span class="lp-why-icon">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88"/><path d="M14.47 14.48 20 20"/><path d="M8.12 8.12 12 12"/></svg>
+        </span>
+        <h4 class="lp-why-title" data-lang-key="letsFashionTitle">FASHION &amp; SEWING</h4>
+        <p class="lp-text-secondary small" data-lang-key="letsFashionDesc">Custom fashion, design, cucito, prototipazione e sviluppo di capi.</p>
+      </div>
+      <!-- Content -->
+      <div class="lp-why-card lp-reveal">
+        <span class="lp-why-icon">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M22 8.5l-6 3.5 6 3.5v-7z"/></svg>
+        </span>
+        <h4 class="lp-why-title" data-lang-key="letsContentTitle">CONTENT</h4>
+        <p class="lp-text-secondary small" data-lang-key="letsContentDesc">Video, social, contenuti e progetti di comunicazione.</p>
+      </div>
+      <!-- Something else -->
+      <div class="lp-why-card lp-reveal">
+        <span class="lp-why-icon">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg>
+        </span>
+        <h4 class="lp-why-title" data-lang-key="letsElseTitle">SOMETHING ELSE</h4>
+        <p class="lp-text-secondary small" data-lang-key="letsElseDesc">Hai un'idea che non rientra qui? Parliamone.</p>
+      </div>
+    </div>
+    <div class="px-4" style="max-width: 820px; margin: 24px auto 0;">
+      <p class="lp-text-secondary text-center" data-lang-key="letsNote" data-lang-html>
+        Lavoro su progetti diversi in ambiti diversi: se hai qualcosa in mente — anche se non sai ancora bene cosa — <a href="#contact">raccontamelo</a> e vediamo insieme da dove partire.
       </p>
     </div>
   </section>
 
   <div class="lp-divider"></div>
 
-  <!-- BEFORE / AFTER COMPARISON SLIDER -->
+  <!-- DALLA CREAZIONE AL RISULTATO FINALE -->
   <section class="lp-section lp-reveal" id="comparison">
     <div class="lp-section-header text-center">
-      <h2 class="lp-big-title" data-lang-key="comparisonTitle">Dall'idea al risultato finale</h2>
+      <h2 class="lp-big-title" data-lang-key="comparisonTitle">Dalla creazione al risultato finale</h2>
       <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="comparisonSub">
-        Trasformo idee in progetti concreti, unendo tecnologia, creatività e attenzione ai dettagli.
+        Ogni progetto parte da un'idea: la disegno, la costruisco e la porto fino al risultato finale — in qualunque ambito.
       </h3>
     </div>
     <div class="lp-comparison-container px-4">
@@ -235,67 +264,10 @@
         <input type="range" min="0" max="100" value="50" class="lp-comparison-input" id="comparisonRange" aria-label="Confronto prima e dopo" />
       </div>
     </div>
-  </section>
-
-  <div class="lp-divider"></div>
-
-  <!-- COLLABORATIONS / COSA POSSIAMO CREARE -->
-  <section class="lp-section lp-reveal" id="collaborations">
-    <div class="lp-section-header">
-      <h2 class="lp-big-title" data-lang-key="collabTitle">Let's build something</h2>
-      <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="collabTagline">
-        Hai un'idea? Possiamo svilupparla insieme.
-      </h3>
-    </div>
-    <div class="lp-why-choose-grid px-4">
-      <!-- Web -->
-      <div class="lp-why-card lp-reveal">
-        <span class="lp-why-icon">
-          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        </span>
-        <h4 class="lp-why-title" data-lang-key="collabWebTitle">WEB</h4>
-        <p class="lp-text-secondary small" data-lang-key="collabWebDesc">Siti, landing page, web app e prodotti digitali.</p>
-      </div>
-      <!-- Fashion & Sewing -->
-      <div class="lp-why-card lp-reveal">
-        <span class="lp-why-icon">
-          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88"/><path d="M14.47 14.48 20 20"/><path d="M8.12 8.12 12 12"/></svg>
-        </span>
-        <h4 class="lp-why-title" data-lang-key="collabFashionTitle">FASHION &amp; SEWING</h4>
-        <p class="lp-text-secondary small" data-lang-key="collabFashionDesc">Custom, design, prototipazione e sviluppo di capi.</p>
-      </div>
-      <!-- Brands -->
-      <div class="lp-why-card lp-reveal">
-        <span class="lp-why-icon">
-          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg>
-        </span>
-        <h4 class="lp-why-title" data-lang-key="collabBrandsTitle">BRANDS</h4>
-        <p class="lp-text-secondary small" data-lang-key="collabBrandsDesc">Concept, contenuti, identità e progetti creativi.</p>
-      </div>
-      <!-- Content -->
-      <div class="lp-why-card lp-reveal">
-        <span class="lp-why-icon">
-          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M22 8.5l-6 3.5 6 3.5v-7z"/></svg>
-        </span>
-        <h4 class="lp-why-title" data-lang-key="collabContentTitle">CONTENT</h4>
-        <p class="lp-text-secondary small" data-lang-key="collabContentDesc">Video, social e comunicazione.</p>
-      </div>
-      <!-- Tech -->
-      <div class="lp-why-card lp-reveal">
-        <span class="lp-why-icon">
-          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
-        </span>
-        <h4 class="lp-why-title" data-lang-key="collabTechTitle">TECH</h4>
-        <p class="lp-text-secondary small" data-lang-key="collabTechDesc">Software, automazioni e sperimentazione.</p>
-      </div>
-      <!-- Something else -->
-      <div class="lp-why-card lp-reveal">
-        <span class="lp-why-icon">
-          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg>
-        </span>
-        <h4 class="lp-why-title" data-lang-key="collabElseTitle">SOMETHING ELSE</h4>
-        <p class="lp-text-secondary small" data-lang-key="collabElseDesc">Hai un'idea che non rientra qui? Parliamone.</p>
-      </div>
+    <div class="px-4" style="max-width: 820px; margin: 24px auto 0;">
+      <p class="lp-text-secondary text-center" data-lang-key="comparisonNote" data-lang-html>
+        Dall'idea alla progettazione, dalla realizzazione al risultato: questo è il mio modo di lavorare, che si tratti di un sito, di un capo o di un contenuto.
+      </p>
     </div>
   </section>
 
@@ -318,9 +290,6 @@
       </button>
       <button class="lp-filter-btn" data-filter="personal-project" data-lang-key="projPersonal">
         Personal Project
-      </button>
-      <button class="lp-filter-btn" data-filter="collaborations" data-lang-key="projCollab">
-        Collaborations
       </button>
     </div>
 
@@ -375,38 +344,6 @@
           </div>
         </div>
       </div>
-      <div class="lp-project-card" data-category="collaborations" data-media="assets/collab/aleyesure.jpg">
-        <div class="lp-project-media" data-lightbox-media>
-          <img src="assets/collab/aleyesure.jpg" alt="Aleyesure" class="lp-project-img" loading="lazy" />
-        </div>
-        <div class="lp-project-body">
-          <h4 class="fs-5 fw-bold mb-1">Aleyesure</h4>
-          <p class="lp-text-secondary small mb-1">Brand · Content · Video</p>
-          <p class="lp-text-secondary small mb-2" data-lang-key="collab1Desc">
-            All'interno dei miei video sponsorizzo capi di abbigliamento di Aleyesure, brand locale che porta avanti lo slogan "Support local business".
-          </p>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="lp-badge">Collaborazione</span>
-            <span class="lp-badge">Content</span>
-          </div>
-        </div>
-      </div>
-      <div class="lp-project-card" data-category="collaborations" data-media="assets/collab/stage.jpg">
-        <div class="lp-project-media" data-lightbox-media>
-          <img src="assets/collab/stage.jpg" alt="StageStreetwear" class="lp-project-img" loading="lazy" />
-        </div>
-        <div class="lp-project-body">
-          <h4 class="fs-5 fw-bold mb-1">StageStreetwear</h4>
-          <p class="lp-text-secondary small mb-1">Streetwear · Content · Video</p>
-          <p class="lp-text-secondary small mb-2" data-lang-key="collab2Desc">
-            Ho fatto un video insieme e ci sentiamo.
-          </p>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="lp-badge">Collaborazione</span>
-            <span class="lp-badge">Video</span>
-          </div>
-        </div>
-      </div>
     </div>
     <button class="lp-projects-prev" id="projectsPrev" aria-label="Precedenti">
       ‹
@@ -418,49 +355,40 @@
 
   <div class="lp-divider"></div>
 
-  <!-- PERCHÉ SONO MEGLIO DI UN'AGENZIA -->
-  <section class="lp-section lp-reveal" id="why-choose-me">
-    <div class="lp-section-header">
-      <h2 class="lp-big-title" data-lang-key="whyTitle">Perché sono meglio di un'agenzia?</h2>
-      <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="whySub">
-        Perché lavorare direttamente con me: niente costi gonfiati, niente intermediari.
+  <!-- COLLABORATIONS MARQUEE -->
+  <section class="lp-section lp-reveal" id="collaborations">
+    <div class="lp-section-header text-center">
+      <h2 class="lp-big-title" data-lang-key="collabTitle">Selected collaborations</h2>
+      <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="collabTagline">
+        Brands, people &amp; projects I've worked with.
       </h3>
     </div>
-    <div class="lp-why-choose-grid px-4">
-      <!-- Card 1 -->
-      <div class="lp-why-card lp-reveal">
-        <span class="lp-why-icon">
-          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </span>
-        <h4 class="lp-why-title" data-lang-key="whyCard1Title">COSTI RIDOTTI E ZERO SPRECHI</h4>
-        <p class="lp-text-secondary small" data-lang-key="whyCard1Body">Se sono solo io, non devo costruire una struttura enorme intorno al progetto: paghi solo il valore reale del lavoro, senza costi gonfiati.</p>
-      </div>
-      <!-- Card 2 -->
-      <div class="lp-why-card lp-reveal">
-        <span class="lp-why-icon">
-          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg>
-        </span>
-        <h4 class="lp-why-title" data-lang-key="whyCard2Title">RAPPORTO DIRETTO E TRASPARENTE</h4>
-        <p class="lp-text-secondary small" data-lang-key="whyCard2Body">Parli direttamente con chi sviluppa, progetta e lavora sul progetto, senza commerciali o intermediari. Nessuna incomprensione e totale trasparenza su ogni fase.</p>
-      </div>
-      <!-- Card 3 -->
-      <div class="lp-why-card lp-reveal">
-        <span class="lp-why-icon">
-          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </span>
-        <h4 class="lp-why-title" data-lang-key="whyCard3Title">FLESSIBILE E VICINO AL PROGETTO</h4>
-        <p class="lp-text-secondary small" data-lang-key="whyCard3Body">Non devi adattare la tua idea a un pacchetto predefinito: entro nel progetto e lavoro insieme a te, invece di limitarmi a consegnarti qualcosa.</p>
-      </div>
-      <!-- Card 4 CTA -->
-      <div class="lp-why-card lp-why-card-cta lp-reveal d-flex flex-column justify-content-between">
-        <div>
-          <span class="lp-why-icon">
-            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2z"/></svg>
-          </span>
-          <h4 class="lp-why-title" data-lang-key="whyCard4Title">HAI GIÀ UN'IDEA?</h4>
-          <p class="lp-text-secondary small" data-lang-key="whyCard4Body">Raccontami cosa hai in mente e vediamo insieme come svilupparla.</p>
-        </div>
-        <a href="#contact" class="lp-btn lp-btn-solid text-decoration-none mt-3" data-lang-key="whyCard4Cta">Parliamone <span class="lp-cta-arrow">→</span></a>
+    <div class="lp-collab-marquee" aria-label="Collaborazioni">
+      <div class="lp-collab-track">
+        <figure class="lp-collab-item">
+          <img src="assets/collab/aleyesure.jpg" alt="Aleyesure" loading="lazy" />
+          <figcaption>Aleyesure</figcaption>
+        </figure>
+        <figure class="lp-collab-item">
+          <img src="assets/collab/stage.jpg" alt="StageStreetwear" loading="lazy" />
+          <figcaption>StageStreetwear</figcaption>
+        </figure>
+        <figure class="lp-collab-item">
+          <img src="assets/collab/crybu.jpg" alt="CRYBU" loading="lazy" />
+          <figcaption>CRYBU</figcaption>
+        </figure>
+        <figure class="lp-collab-item" aria-hidden="true">
+          <img src="assets/collab/aleyesure.jpg" alt="" loading="lazy" />
+          <figcaption>Aleyesure</figcaption>
+        </figure>
+        <figure class="lp-collab-item" aria-hidden="true">
+          <img src="assets/collab/stage.jpg" alt="" loading="lazy" />
+          <figcaption>StageStreetwear</figcaption>
+        </figure>
+        <figure class="lp-collab-item" aria-hidden="true">
+          <img src="assets/collab/crybu.jpg" alt="" loading="lazy" />
+          <figcaption>CRYBU</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -623,135 +551,128 @@
     </div>
   </section>
   <div class="lp-divider"></div>
-  <div class="lp-section px-4">
-    <section class="lp-tools-section lp-reveal" id="tools">
-      <div class="lp-section-header">
-        <h2 class="lp-big-title" data-lang-key="toolsTitle">Tools</h2>
-        <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="toolsSub">
-          Strumenti & Competenze
-        </h3>
+  <!-- MANIFESTO -->
+  <section class="lp-section lp-reveal" id="manifesto">
+    <div class="lp-section-header">
+      <h2 class="lp-big-title" data-lang-key="maniTitle">Ma chi cazzo pensi di essere?</h2>
+      <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="maniSub">
+        Bella domanda. Ti rispondo con i fatti.
+      </h3>
+    </div>
+    <div class="px-4" style="max-width: 820px; margin: 0 auto;">
+      <p class="lp-text-secondary" data-lang-key="maniP1" data-lang-html>
+        Uno studente di Informatica che nel frattempo continua a costruire cose. Studio all'IIS Vallauri, ma non ho aspettato il diploma per iniziare: ho fondato Customly, una piattaforma di custom fashion che unisce moda e tecnologia, e ci lavoro sopra ogni settimana.
+      </p>
+      <p class="lp-text-secondary mt-3" data-lang-key="maniP2" data-lang-html>
+        Nel frattempo ho cucito e prototipato capi con CRYBU, sviluppato siti web, creato contenuti video e social, e collaborato con brand locali come Aleyesure e pagine creative come StageStreetwear.
+      </p>
+      <p class="lp-text-secondary mt-3" data-lang-key="maniP3" data-lang-html>
+        Ho lavorato sui contenuti digitali con Omnia4Web, fatto uno stage IT da Bertolotto Porte tra gestionali e archivi digitali, preso una certificazione NASA sul telerilevamento e sto seguendo il CS50x di Harvard. Imparo facendo, non collezionando attestati.
+      </p>
+      <p class="lp-text-secondary mt-3" data-lang-key="maniP4" data-lang-html>
+        Non ho un'agenzia, non ho un listino, non ho pacchetti preconfezionati. Ho progetti iniziati — alcuni finiti, altri ancora aperti — e la voglia di continuare a costruirne.
+      </p>
+      <p class="lp-text-secondary mt-3" data-lang-key="maniP5" data-lang-html>
+        Se cercavi qualcuno con un catalogo di servizi, non sono io. Se cercavi qualcuno con cui costruire qualcosa, sei nel posto giusto.
+      </p>
+      <div class="mt-4">
+        <a href="#contact" class="lp-btn text-decoration-none" data-lang-key="maniCta">Parliamone <span class="lp-cta-arrow">→</span></a>
       </div>
-      <div class="lp-tools-groups">
-        <div class="lp-tool-group lp-reveal">
-          <h4 class="lp-tool-group-title">
-            <span data-lang-key="toolGroupLangs">Linguaggi</span>
-            <span class="lp-tool-count">07</span>
-          </h4>
-          <div class="lp-tech-grid">
-            <div class="lp-tech-item" data-level="Intermediate" data-context="School & Self-taught">
-              <i class="devicon-html5-plain colored"></i>
-              <span>HTML</span>
-            </div>
-            <div class="lp-tech-item" data-level="Intermediate" data-context="School & Self-taught">
-              <i class="devicon-css3-plain colored"></i>
-              <span>CSS</span>
-            </div>
-            <div class="lp-tech-item" data-level="Intermediate" data-context="School & Self-taught">
-              <i class="devicon-javascript-plain colored"></i>
-              <span>JS</span>
-            </div>
-            <div class="lp-tech-item" data-level="Beginner" data-context="School">
-              <i class="devicon-c-plain colored"></i>
-              <span>C</span>
-            </div>
-            <div class="lp-tech-item" data-level="Beginner" data-context="School">
-              <i class="devicon-csharp-plain colored"></i>
-              <span>C#</span>
-            </div>
-            <div class="lp-tech-item" data-level="Beginner" data-context="Self-taught">
-              <i class="devicon-python-plain colored"></i>
-              <span>Python</span>
-            </div>
-            <div class="lp-tech-item" data-level="Intermediate" data-context="School & Self-taught">
-              <i class="devicon-bash-plain colored"></i>
-              <span>Bash</span>
-            </div>
-          </div>
-        </div>
-        <div class="lp-tool-group lp-reveal">
-          <h4 class="lp-tool-group-title">
-            <span data-lang-key="toolGroupWeb">Web & Cloud</span>
-            <span class="lp-tool-count">04</span>
-          </h4>
-          <div class="lp-tech-grid">
-            <div class="lp-tech-item" data-level="Intermediate" data-context="School & Self-taught">
-              <i class="devicon-git-plain colored"></i>
-              <span>Git</span>
-            </div>
-            <div class="lp-tech-item" data-level="Intermediate" data-context="School & Self-taught">
-              <i class="devicon-github-original colored"></i>
-              <span>GitHub</span>
-            </div>
-            <div class="lp-tech-item" data-level="Intermediate" data-context="Self-taught">
-              <i class="devicon-cloudflare-plain colored"></i>
-              <span>Cloudflare</span>
-            </div>
-            <div class="lp-tech-item" data-level="Beginner" data-context="Self-taught">
-              <img src="assets/tools/n8n.svg" alt="n8n" class="lp-tool-logo" loading="lazy" />
-              <span>n8n</span>
-            </div>
-          </div>
-        </div>
-        <div class="lp-tool-group lp-reveal">
-          <h4 class="lp-tool-group-title">
-            <span data-lang-key="toolGroupDesign">Design & Editing</span>
-            <span class="lp-tool-count">04</span>
-          </h4>
-          <div class="lp-tech-grid">
-            <div class="lp-tech-item" data-level="Advanced" data-context="Work & Self-taught">
-              <i class="devicon-canva-original colored"></i>
-              <span>Canva</span>
-            </div>
-            <div class="lp-tech-item" data-level="Beginner" data-context="Work">
-              <img src="assets/tools/lightroom.svg" alt="Lightroom" class="lp-tool-logo" loading="lazy" />
-              <span>Lightroom</span>
-            </div>
-            <div class="lp-tech-item" data-level="Beginner" data-context="Self-taught">
-              <img src="assets/tools/capcut.svg" alt="CapCut" class="lp-tool-logo" loading="lazy" />
-              <span>CapCut</span>
-            </div>
-            <div class="lp-tech-item" data-level="Intermediate" data-context="Work & Self-taught">
-              <img src="assets/tools/edits.svg" alt="Edits" class="lp-tool-logo" loading="lazy" />
-              <span>Edits</span>
-            </div>
-          </div>
-        </div>
-        <div class="lp-tool-group lp-reveal">
-          <h4 class="lp-tool-group-title">
-            <span data-lang-key="toolGroupTools">Strumenti & Office</span>
-            <span class="lp-tool-count">04</span>
-          </h4>
-          <div class="lp-tech-grid">
-            <div class="lp-tech-item" data-level="Advanced" data-context="School & Self-taught">
-              <i class="devicon-vscode-plain colored"></i>
-              <span>VSCode</span>
-            </div>
-            <div class="lp-tech-item" data-level="Beginner" data-context="School">
-              <i class="devicon-visualstudio-plain colored"></i>
-              <span>VS</span>
-            </div>
-            <div class="lp-tech-item" data-level="Intermediate" data-context="School & Self-taught">
-              <img src="assets/tools/excel.svg" alt="Excel" class="lp-tool-logo" loading="lazy" />
-              <span>Excel</span>
-            </div>
-            <div class="lp-tech-item" data-level="Intermediate" data-context="School & Self-taught">
-              <img src="assets/tools/word.svg" alt="Word" class="lp-tool-logo" loading="lazy" />
-              <span>Word</span>
-            </div>
-          </div>
-        </div>
+    </div>
+  </section>
+
+  <div class="lp-divider"></div>
+
+  <!-- PERCHÉ SONO MEGLIO DI UN'AGENZIA -->
+  <section class="lp-section lp-reveal" id="why-choose-me">
+    <div class="lp-section-header">
+      <h2 class="lp-big-title" data-lang-key="whyTitle">Perché sono meglio di un'agenzia?</h2>
+      <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="whySub">
+        Non perché le agenzie siano sbagliate: semplicemente, lavorare direttamente con una persona a volte è più semplice.
+      </h3>
+    </div>
+    <div class="lp-why-choose-grid px-4">
+      <!-- Card 1 -->
+      <div class="lp-why-card lp-reveal">
+        <span class="lp-why-icon">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg>
+        </span>
+        <h4 class="lp-why-title" data-lang-key="whyCard1Title">RAPPORTO DIRETTO</h4>
+        <p class="lp-text-secondary small" data-lang-key="whyCard1Body">Parli con chi progetta e costruisce il progetto, non con un commerciale. Quello che dici è quello che viene fatto.</p>
       </div>
-    </section>
-  </div>
+      <!-- Card 2 -->
+      <div class="lp-why-card lp-reveal">
+        <span class="lp-why-icon">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2z"/></svg>
+        </span>
+        <h4 class="lp-why-title" data-lang-key="whyCard2Title">NIENTE PACCHETTI PREDEFINITI</h4>
+        <p class="lp-text-secondary small" data-lang-key="whyCard2Body">Non devi adattare la tua idea a un catalogo: partiamo da quello che hai in mente e costruiamo intorno a quello.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="lp-why-card lp-reveal">
+        <span class="lp-why-icon">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </span>
+        <h4 class="lp-why-title" data-lang-key="whyCard3Title">STRUTTURA SNELLA, COSTI CHIARI</h4>
+        <p class="lp-text-secondary small" data-lang-key="whyCard3Body">Niente strati, niente intermediari: sai sempre con chi stai parlando e per cosa stai pagando.</p>
+      </div>
+      <!-- Card 4 CTA -->
+      <div class="lp-why-card lp-why-card-cta lp-reveal d-flex flex-column justify-content-between">
+        <div>
+          <span class="lp-why-icon">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <h4 class="lp-why-title" data-lang-key="whyCard4Title">HAI UN'IDEA?</h4>
+          <p class="lp-text-secondary small" data-lang-key="whyCard4Body">Raccontamela e vediamo se ha senso costruirla insieme.</p>
+        </div>
+        <a href="#contact" class="lp-btn lp-btn-solid text-decoration-none mt-3" data-lang-key="whyCard4Cta">Parliamone <span class="lp-cta-arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="lp-divider"></div>
+
+  <!-- NON SEI ANCORA CONVINTO? -->
+  <section class="lp-section lp-reveal" id="convinced">
+    <div class="lp-section-header">
+      <h2 class="lp-big-title" data-lang-key="convTitle">Non sei ancora convinto?</h2>
+      <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="convSub">
+        Le domande che probabilmente ti stai facendo — con risposte oneste.
+      </h3>
+    </div>
+    <div class="lp-why-choose-grid px-4">
+      <div class="lp-why-card lp-reveal">
+        <h4 class="lp-why-title" data-lang-key="conv1Title">MA HAI GIÀ LAVORATO CON QUALCUNO?</h4>
+        <p class="lp-text-secondary small" data-lang-key="conv1Body" data-lang-html>Sì: brand, pagine creative e progetti reali. Li trovi nelle <a href="#collaborations">collaborazioni</a> e nei <a href="#projects">progetti</a>.</p>
+      </div>
+      <div class="lp-why-card lp-reveal">
+        <h4 class="lp-why-title" data-lang-key="conv2Title">E SE IL MIO PROGETTO È DIVERSO?</h4>
+        <p class="lp-text-secondary small" data-lang-key="conv2Body">Non esiste un catalogo rigido: si parte dall'idea, qualunque essa sia.</p>
+      </div>
+      <div class="lp-why-card lp-reveal">
+        <h4 class="lp-why-title" data-lang-key="conv3Title">COME FACCIO A CAPIRE COSA SAI FARE?</h4>
+        <p class="lp-text-secondary small" data-lang-key="conv3Body" data-lang-html>Guarda i <a href="#projects">progetti</a>, le <a href="#experience">esperienze</a> e le <a href="#certifications">certificazioni</a>: parlano più di qualsiasi promessa.</p>
+      </div>
+      <div class="lp-why-card lp-reveal">
+        <h4 class="lp-why-title" data-lang-key="conv4Title">POSSO SEMPLICEMENTE RACCONTARTI LA MIA IDEA?</h4>
+        <p class="lp-text-secondary small" data-lang-key="conv4Body" data-lang-html>Sì, è il modo migliore per iniziare. <a href="#contact">Scrivimi</a>.</p>
+      </div>
+    </div>
+    <div class="px-4" style="max-width: 820px; margin: 24px auto 0;">
+      <p class="lp-text-secondary small text-center" data-lang-key="convRevBody" data-lang-html>
+        <strong data-lang-key="convRevTitle">Recensioni verificate</strong> — le recensioni dei progetti e delle collaborazioni verranno pubblicate qui, senza filtri.
+      </p>
+    </div>
+  </section>
 
   <div class="lp-divider"></div>
 
 <!-- CONTACT -->
 <section class="lp-contact-section lp-reveal" id="contact">
     <div class="contact-form-wrapper">
-      <h2 class="lp-big-title" data-lang-key="connectTitle">Hai un'idea?</h2>
+      <h2 class="lp-big-title" data-lang-key="connectTitle">Let's build something together.</h2>
       <h3 class="lp-text-secondary lp-subtitle-offset" data-lang-key="contactSub">
-        Che sia un progetto digitale, un brand, un capo, un'app, un sito o qualcosa che non hai ancora definito completamente, raccontami cosa hai in mente.
+        Se hai un progetto, un'idea, un brand, un capo da sviluppare, un sito, una web app o semplicemente qualcosa che vuoi provare a costruire, raccontamelo.
       </h3>
       <form
         class="lp-contact-form"
@@ -761,139 +682,33 @@
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;width:0;opacity:0" aria-hidden="true">
         <div class="lp-contact-grid">
 
-          <!-- ===== COLONNA SINISTRA — Dati Cliente ===== -->
+          <!-- ===== COLONNA SINISTRA — Form semplice ===== -->
           <div class="lp-contact-col lp-contact-col-main">
             <div class="lp-field-block">
-              <label class="lp-field-label lp-req" data-lang-key="cfReason">Cosa ti serve?</label>
-              <select
-                name="motivo"
-                class="lp-input lp-select"
-                id="contactReason"
-                data-lang-key="contactReason"
-              >
-                <option value="" disabled selected>Motivo</option>
-                <option value="configura-sito">Configura il mio sito</option>
-                <option value="idea">Solo un'idea</option>
-                <option value="collaborazione">Collaborazione</option>
-                <option value="altro">Altro</option>
+              <label class="lp-field-label lp-req" data-lang-key="cfNome">Nome</label>
+              <input type="text" name="nome" class="lp-input" placeholder="Come ti chiami?" required data-lang-key="cfNomePh" />
+            </div>
+            <div class="lp-field-block">
+              <label class="lp-field-label lp-req" data-lang-key="contactEmail">Email</label>
+              <input type="email" name="email" class="lp-input" placeholder="Dove posso risponderti?" required data-lang-key="contactEmailPh" />
+            </div>
+            <div class="lp-field-block">
+              <label class="lp-field-label" data-lang-key="contactType">Tipo di progetto (facoltativo)</label>
+              <select name="tipo-progetto" class="lp-input lp-select" data-lang-key="contactType">
+                <option value="" selected>Tipo di progetto (facoltativo)</option>
+                <option value="web">Web</option>
+                <option value="fashion">Fashion &amp; Sewing</option>
+                <option value="content">Content</option>
+                <option value="brand">Brand</option>
+                <option value="tech">Tech</option>
+                <option value="collaboration">Collaboration</option>
+                <option value="something-else">Something else</option>
               </select>
             </div>
 
-            <div id="cf-slider" class="lp-cf-slider">
-              <div id="cf-track" class="lp-cf-track">
-                <!-- Su mobile-config #configuratore-sito viene spostato qui dallo script -->
-                <div id="cf-slot-config" class="lp-cf-panel"></div>
-                <div id="cf-dati-wrap" class="lp-cf-panel">
-
-            <div id="cf-tipo-cliente" class="lp-field-block" style="display:none">
-              <label class="lp-field-label" data-lang-key="cfClientType">Tipo di cliente</label>
-              <div class="lp-radio-row">
-                <label class="lp-radio-opt">
-                  <input type="radio" name="tipo-cliente" value="privato" checked>
-                  <span data-lang-key="cfPrivate">Privato / Personale</span>
-                </label>
-                <label class="lp-radio-opt">
-                  <input type="radio" name="tipo-cliente" value="azienda">
-                  <span data-lang-key="cfBusiness">Azienda / Attività / Professionista</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="contact-top-fields">
-              <div class="lp-field-block">
-                <label class="lp-field-label lp-req" data-lang-key="cfNome">Nome</label>
-                <input type="text" name="nome" class="lp-input" placeholder="Nome" required data-lang-key="cfNomePh" />
-              </div>
-              <div class="lp-field-block">
-                <label class="lp-field-label lp-req" data-lang-key="cfCognome">Cognome</label>
-                <input type="text" name="cognome" class="lp-input" placeholder="Cognome" required data-lang-key="cfCognomePh" />
-              </div>
-              <div class="lp-field-block">
-                <label class="lp-field-label lp-req" data-lang-key="contactEmail">Email</label>
-                <input type="email" name="email" class="lp-input" placeholder="Email" required data-lang-key="contactEmailPh" />
-              </div>
-              <div class="lp-field-block">
-                <label class="lp-field-label lp-req" data-lang-key="contactPhone">Telefono / WhatsApp</label>
-                <input type="tel" name="telefono" class="lp-input" placeholder="Telefono / WhatsApp" required data-lang-key="contactPhonePh" />
-              </div>
-            </div>
-
-            <!-- Privato / Personale -->
-            <div id="cf-privato" class="lp-field-block" style="display:none">
-              <div class="lp-field-block">
-                <label class="lp-field-label" data-lang-key="cfPrivatoScopo">Per cosa ti serve il sito?</label>
-                <input type="text" name="privato-scopo" class="lp-input" placeholder="Portfolio, CV, artista, progetto..." data-lang-key="cfPrivatoScopoPh" />
-              </div>
-              <div class="lp-field-block">
-                <label class="lp-field-label" data-lang-key="cfPrivatoEsistente">Eventuale sito/social esistente</label>
-                <input type="text" name="privato-esistente" class="lp-input" placeholder="https://..." data-lang-key="cfPrivatoEsistentePh" />
-              </div>
-            </div>
-
-            <!-- Azienda / Attività -->
-            <div id="cf-azienda" class="lp-field-block" style="display:none">
-              <div class="lp-field-block">
-                <label class="lp-field-label" data-lang-key="cfAziendaNome">Nome Azienda / Attività</label>
-                <input type="text" name="azienda-nome" class="lp-input" data-lang-key="cfAziendaNomePh" />
-              </div>
-              <div class="lp-field-block">
-                <label class="lp-field-label" data-lang-key="cfSettore">Settore</label>
-                <select name="azienda-settore" class="lp-input lp-select" data-lang-key="cfSettoreSel">
-                  <option value="" disabled selected data-lang-key="cfSettoreSelPh">Seleziona</option>
-                  <option value="ristorazione">Ristorazione</option>
-                  <option value="turismo">Turismo / Hotel</option>
-                  <option value="retail">Retail / Negozio</option>
-                  <option value="professionista">Professionista</option>
-                  <option value="artigiano">Artigiano</option>
-                  <option value="creativo">Creativo</option>
-                  <option value="altro">Altro</option>
-                </select>
-              </div>
-              <div class="lp-field-block">
-                <label class="lp-field-label" data-lang-key="cfLocalita">Località (Città / Zona)</label>
-                <input type="text" name="azienda-localita" class="lp-input" data-lang-key="cfLocalitaPh" />
-              </div>
-              <div class="lp-field-block">
-                <label class="lp-field-label" data-lang-key="cfAziendaCosa">Cosa fa l'attività?</label>
-                <input type="text" name="azienda-cosa" class="lp-input" data-lang-key="cfAziendaCosaPh" />
-              </div>
-              <div class="lp-field-block">
-                <label class="lp-field-label" data-lang-key="cfAziendaSito">Sito web attuale</label>
-                <input type="text" name="azienda-sito" class="lp-input" placeholder="https://..." data-lang-key="cfAziendaSitoPh" />
-              </div>
-              <div class="lp-field-block">
-                <label class="lp-field-label" data-lang-key="cfAziendaSocial">Instagram / Social</label>
-                <input type="text" name="azienda-social" class="lp-input" placeholder="https://..." data-lang-key="cfAziendaSocialPh" />
-              </div>
-            </div>
-
             <div class="lp-field-block">
-              <label class="lp-field-label lp-req" data-lang-key="cfMessaggio">Raccontami il progetto</label>
-              <textarea name="messaggio" class="lp-textarea" placeholder="Raccontami cosa hai in mente..." rows="6" required data-lang-key="contactMsg"></textarea>
-            </div>
-
-              <button type="submit" class="lp-btn lp-btn-solid lp-cf-submit" id="lp-btn-config-mobile" style="display:none">
-                <span data-lang-key="contactSend">Invia</span>
-              </button>
-                </div><!-- /cf-dati-wrap (pannello dati) -->
-              </div><!-- /cf-track -->
-            </div><!-- /cf-slider -->
-
-            <div id="cf-step-nav" class="lp-cf-stepnav" style="display:none">
-              <button type="button" id="cf-step-prev" class="lp-cf-steparrow" aria-label="Precedente" disabled>
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
-              <div class="lp-cf-dots">
-                <button type="button" class="lp-cf-dot is-active" data-step="0" aria-label="Configurazione sito"></button>
-                <button type="button" class="lp-cf-dot" data-step="1" aria-label="I tuoi dati"></button>
-              </div>
-              <button type="button" id="cf-step-next" class="lp-cf-steparrow" aria-label="Successiva">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
+              <label class="lp-field-label lp-req" data-lang-key="cfMessaggio">Messaggio</label>
+              <textarea name="messaggio" class="lp-textarea" placeholder="Raccontami la tua idea..." rows="6" required data-lang-key="contactMsg"></textarea>
             </div>
 
             <div class="lp-contact-alternative">
@@ -927,8 +742,8 @@
                 </svg>
                 <span data-lang-key="waBtnText">Scrivimi su WhatsApp</span>
               </a>
-              <button type="submit" class="lp-btn lp-btn-solid" id="lp-btn-nonconfig" style="display:none">
-                <span data-lang-key="contactSend">Invia</span>
+              <button type="submit" class="lp-btn lp-btn-solid" id="lp-btn-send">
+                <span data-lang-key="contactSend">Parliamone →</span>
               </button>
             </div>
           </div>
@@ -974,404 +789,8 @@
               <a href="mailto:perassi.lorenzo1804@gmail.com" class="lp-contact-social-btn" aria-label="Email"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></a>
               <a href="tel:+393293360374" class="lp-contact-social-btn" aria-label="Phone"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.08 4.18 2 2 0 014.06 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"></path></svg></a>
             </div>
-            <div class="lp-contact-divider"></div>
-            <!-- ===== BOOKING CALENDLY ===== -->
-            <div class="lp-booking" id="lp-booking">
-              <h4 class="lp-config-title" data-lang-key="bookingTitle">Prenota un incontro</h4>
-              <p class="lp-text-secondary small" data-lang-key="bookingHint">Scegli il tipo di incontro:</p>
-              <div class="lp-booking-actions">
-                <button type="button" class="lp-booking-btn" data-booking-popup="call">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="14" height="12" rx="2"></rect><path d="M22 8.5l-6 3.5 6 3.5v-7z"></path></svg>
-                  <span data-lang-key="bookingCall">Videocall</span>
-                </button>
-                <button type="button" class="lp-booking-btn" data-booking-popup="personal">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.6-7-11a7 7 0 1114 0c0 5.4-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
-                  <span data-lang-key="bookingInPerson">Di persona</span>
-                </button>
-              </div>
-            </div>
           </div>
 
-          <div id="configuratore-sito" class="lp-configuratore-sito lp-contact-col" style="display: none;">
-            <h4 class="lp-config-title" data-lang-key="configTitle">Configura il tuo sito</h4>
-
-            <!-- A. Tipo di sito & Pagine -->
-            <div class="lp-config-block">
-              <label class="lp-config-label" data-lang-key="configTypeLabel">Tipo di sito</label>
-              <div class="lp-config-radio-grid">
-                <label class="lp-config-option lp-config-option--active">
-                  <input type="radio" name="config-tipo-sito" value="landing" checked required>
-                  <span class="lp-config-opt-text" data-lang-key="configLandingText" data-lang-html>
-                    <strong>Landing page</strong>
-                    <small>1 pagina — 250 €</small>
-                  </span>
-                </label>
-                <label class="lp-config-option">
-                  <input type="radio" name="config-tipo-sito" value="multipage" required>
-                  <span class="lp-config-opt-text" data-lang-key="configMultiText" data-lang-html>
-                    <strong>Sito vetrina</strong>
-                    <small>Da 2 pagine — 300 €</small>
-                  </span>
-                </label>
-              </div>
-            </div>
-
-            <div id="config-pagine-wrap" class="lp-config-block" style="display:none">
-              <label class="lp-config-label" data-lang-key="configPagesLabel">Pagine del sito</label>
-              <div class="lp-config-features-grid" id="config-pages-grid">
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-page="home" checked disabled>
-                  <span data-lang-key="cfPageHome">Home</span>
-                  <span class="lp-config-included" data-lang-key="cfIncluded">(inclusa)</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-page="about">
-                  <span data-lang-key="cfPageAbout">Chi sono / About</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-page="servizi">
-                  <span data-lang-key="cfPageServizi">Servizi</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-page="portfolio">
-                  <span data-lang-key="cfPagePortfolio">Portfolio / Gallery</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-page="contatti">
-                  <span data-lang-key="cfPageContatti">Contatti</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-page="faq">
-                  <span data-lang-key="cfPageFaq">FAQ</span>
-                </label>
-                <label class="lp-config-feature">
-                  <input type="checkbox" data-page="blog">
-                  <span data-lang-key="cfPageBlog">Blog</span>
-                </label>
-              </div>
-              <div class="lp-config-block lp-config-altro">
-                <span class="lp-config-label" data-lang-key="cfPageAltro">Altro</span>
-                <div class="lp-config-stepper lp-config-stepper--active">
-                  <button type="button" class="lp-config-number-btn" data-altro-step="-1" aria-label="Riduci">−</button>
-                  <span id="config-pagine-altro-display">0</span>
-                  <button type="button" class="lp-config-number-btn" data-altro-step="+1" aria-label="Aumenta">+</button>
-                </div>
-                <small class="lp-config-hint" data-lang-key="configPerPageCost">+50 € a pagina</small>
-                <input type="hidden" name="config-pagine-altro" id="config-pagine-altro" value="0">
-              </div>
-              <small class="lp-config-hint" data-lang-key="cfPagesHint">Prima pagina inclusa, +50 € dalla seconda</small>
-            </div>
-
-            <!-- B. Contenuti -->
-            <div class="lp-config-block">
-              <label class="lp-config-label" data-lang-key="cfContenutiLabel">Hai già i contenuti?</label>
-              <div class="lp-config-maint">
-                <label class="lp-config-option lp-config-option--checkbox">
-                  <input type="radio" name="config-contenuti" value="ho-tutto" checked>
-                  <span class="lp-config-opt-text" data-lang-key="cfContenutiTutto">Ho testi e immagini</span>
-                </label>
-                <label class="lp-config-option lp-config-option--checkbox">
-                  <input type="radio" name="config-contenuti" value="serve-img">
-                  <span class="lp-config-opt-text" data-lang-key="cfContenutiImg">Ho bisogno di immagini</span>
-                </label>
-                <label class="lp-config-option lp-config-option--checkbox">
-                  <input type="radio" name="config-contenuti" value="serve-testi">
-                  <span class="lp-config-opt-text" data-lang-key="cfContenutiTesti">Ho bisogno di aiuto con i testi</span>
-                </label>
-                <label class="lp-config-option lp-config-option--checkbox">
-                  <input type="radio" name="config-contenuti" value="serve-entrambi">
-                  <span class="lp-config-opt-text" data-lang-key="cfContenutiEntrambi">Ho bisogno di entrambi</span>
-                </label>
-              </div>
-            </div>
-
-            <div id="config-img-type-wrap" class="lp-config-block" style="display:none">
-              <label class="lp-config-label" data-lang-key="cfImgTypeLabel">Che tipo di immagini ti servono?</label>
-              <select name="config-img-type" class="lp-input lp-select" data-lang-key="cfImgTypeSel">
-                <option value="" disabled selected data-lang-key="cfImgTypePh">Seleziona</option>
-                <option data-lang-key="cfImgStock">Immagini stock</option>
-                <option data-lang-key="cfImgGenerate">Immagini generate / creative</option>
-                <option data-lang-key="cfImgFoto">Foto dell'attività</option>
-                <option data-lang-key="cfImgDontKnow">Non lo so ancora</option>
-              </select>
-            </div>
-
-            <!-- C. Lingue -->
-            <div class="lp-config-block">
-              <label class="lp-config-label" data-lang-key="configLangLabel">Lingue</label>
-              <div class="lp-config-stepper lp-config-stepper--active" id="config-lingue-stepper">
-                <button type="button" class="lp-config-number-btn" data-lang-step="-1" aria-label="Riduci">−</button>
-                <span id="config-lingue-display">1</span>
-                <button type="button" class="lp-config-number-btn" data-lang-step="+1" aria-label="Aumenta">+</button>
-              </div>
-              <small class="lp-config-hint" data-lang-key="configLangHint">1 lingua inclusa, +50 € dalla seconda</small>
-              <input type="hidden" name="config-lingue" id="config-lingue" value="1">
-            </div>
-
-            <!-- D. Stile visivo -->
-            <div class="lp-config-block">
-              <label class="lp-config-label" data-lang-key="cfStyleLabel">Stile visivo</label>
-              <div class="lp-config-style-grid" id="config-style-grid">
-                <label class="lp-config-style">
-                  <input type="radio" name="config-style" value="minimal" checked>
-                  <video class="lp-style-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-desk="assets/minimal.mp4" data-src-mob="assets/minimal-mobile.mp4"></video>
-                  <span data-lang-key="cfStyleMinimal">Minimal</span>
-                  <a href="templates/minimal" class="lp-config-demo-link" target="_blank" rel="noopener" data-lang-key="cfStyleDemoLink">Guarda il template</a>
-                </label>
-                <label class="lp-config-style">
-                  <input type="radio" name="config-style" value="modern">
-                  <video class="lp-style-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-desk="assets/modern.mp4" data-src-mob="assets/modern-mobile.mp4"></video>
-                  <span data-lang-key="cfStyleModern">Modern</span>
-                  <a href="templates/modern" class="lp-config-demo-link" target="_blank" rel="noopener" data-lang-key="cfStyleDemoLink">Guarda il template</a>
-                </label>
-                <label class="lp-config-style">
-                  <input type="radio" name="config-style" value="bold">
-                  <video class="lp-style-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-desk="assets/bold.mp4" data-src-mob="assets/bold-mobile.mp4"></video>
-                  <span data-lang-key="cfStyleBold">Bold</span>
-                  <a href="templates/bold" class="lp-config-demo-link" target="_blank" rel="noopener" data-lang-key="cfStyleDemoLink">Guarda il template</a>
-                </label>
-                <label class="lp-config-style">
-                  <input type="radio" name="config-style" value="luxury">
-                  <video class="lp-style-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-desk="assets/luxury.mp4" data-src-mob="assets/luxury-mobile.mp4"></video>
-                  <span data-lang-key="cfStyleLuxury">Luxury</span>
-                  <a href="templates/luxury" class="lp-config-demo-link" target="_blank" rel="noopener" data-lang-key="cfStyleDemoLink">Guarda il template</a>
-                </label>
-                <label class="lp-config-style">
-                  <input type="radio" name="config-style" value="creative">
-                  <video class="lp-style-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-desk="assets/creative.mp4" data-src-mob="assets/creative-mobile.mp4"></video>
-                  <span data-lang-key="cfStyleCreative">Creative</span>
-                  <a href="templates/creative" class="lp-config-demo-link" target="_blank" rel="noopener" data-lang-key="cfStyleDemoLink">Guarda il template</a>
-                </label>
-                <label class="lp-config-style">
-                  <input type="radio" name="config-style" value="elegant">
-                  <video class="lp-style-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-desk="assets/elegant.mp4" data-src-mob="assets/elegant-mobile.mp4"></video>
-                  <span data-lang-key="cfStyleElegant">Elegant</span>
-                  <a href="templates/elegant" class="lp-config-demo-link" target="_blank" rel="noopener" data-lang-key="cfStyleDemoLink">Guarda il template</a>
-                </label>
-              </div>
-            </div>
-
-            <!-- E. Funzionalità -->
-            <div class="lp-config-block">
-              <label class="lp-config-label" data-lang-key="configFeaturesLabel" data-lang-html>Funzionalità <small>(+10 € l'una)</small></label>
-              <div class="lp-config-features-grid" id="config-features-grid">
-                <section class="lp-cf-fgroup is-open" id="cfg-fgroup-1">
-                  <button type="button" class="lp-cf-fgroup-head" aria-expanded="true" aria-controls="cfg-fgroup-1-body">
-                    <span class="lp-cf-fgroup-num">01</span>
-                    <span class="lp-cf-fgroup-titles">
-                      <span class="lp-cf-fgroup-title" data-lang-key="cfgFg1Title">Aspetto & Animazioni</span>
-                      <small class="lp-cf-fgroup-desc" data-lang-key="cfgFg1Desc">Personalizza l'aspetto e il movimento del sito.</small>
-                    </span>
-                    <svg class="lp-cf-fgroup-chev" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </button>
-                  <div class="lp-cf-fgroup-body" id="cfg-fgroup-1-body">
-                    <label class="lp-config-feature">
-                      <input type="checkbox" data-feature="dark-light-mode">
-                      <span data-lang-key="configF1">Dark / Light mode</span>
-                      <span class="lp-config-info" data-lang-title="configF1Info" title="Passa automaticamente o a comando tra tema scuro e chiaro.">i</span>
-                    </label>
-                    <label class="lp-config-feature">
-                      <input type="checkbox" data-feature="scroll-reveal">
-                      <span data-lang-key="configF2">Scroll reveal</span>
-                      <span class="lp-config-info" data-lang-title="configF2Info" title="Animazioni di apparizione degli elementi mentre scorri la pagina.">i</span>
-                    </label>
-                    <label class="lp-config-feature">
-                      <input type="checkbox" data-feature="hover-effects">
-                      <span data-lang-key="configF6">Effetti hover</span>
-                      <span class="lp-config-info" data-lang-title="configF6Info" title="Transizioni e animazioni al passaggio del mouse su elementi.">i</span>
-                    </label>
-                    <label class="lp-config-feature">
-                      <input type="checkbox" data-feature="marquee-text">
-                      <span data-lang-key="configF14">Testo scorrevole</span>
-                      <span class="lp-config-info" data-lang-title="configF14Info" title="Testo che scorre in modo continuo, effetto tendina.">i</span>
-                    </label>
-                  </div>
-                </section>
-
-                <section class="lp-cf-fgroup" id="cfg-fgroup-2">
-                  <button type="button" class="lp-cf-fgroup-head" aria-expanded="false" aria-controls="cfg-fgroup-2-body">
-                    <span class="lp-cf-fgroup-num">02</span>
-                    <span class="lp-cf-fgroup-titles">
-                      <span class="lp-cf-fgroup-title" data-lang-key="cfgFg2Title">Immagini & Media</span>
-                      <small class="lp-cf-fgroup-desc" data-lang-key="cfgFg2Desc">Funzioni avanzate per immagini e contenuti visivi.</small>
-                    </span>
-                    <svg class="lp-cf-fgroup-chev" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </button>
-                  <div class="lp-cf-fgroup-body" id="cfg-fgroup-2-body">
-                    <label class="lp-config-feature">
-                      <input type="checkbox" data-feature="image-lightbox">
-                      <span data-lang-key="configF4">Lightbox immagini</span>
-                      <span class="lp-config-info" data-lang-title="configF4Info" title="Ingrandisce le immagini a schermo intero al clic, con chiusura semplice.">i</span>
-                    </label>
-                    <label class="lp-config-feature">
-                      <input type="checkbox" data-feature="image-slider">
-                      <span data-lang-key="configF5">Slider / Carousel</span>
-                      <span class="lp-config-info" data-lang-title="configF5Info" title="Gallerie a scorrimento automatico o manuale tra più immagini.">i</span>
-                    </label>
-                    <label class="lp-config-feature">
-                      <input type="checkbox" data-feature="before-after-slider">
-                      <span data-lang-key="configF13">Prima / Dopo</span>
-                      <span class="lp-config-info" data-lang-title="configF13Info" title="Comparatore trascinabile tra un'immagine prima e una dopo.">i</span>
-                    </label>
-                  </div>
-                </section>
-
-                <section class="lp-cf-fgroup" id="cfg-fgroup-3">
-                  <button type="button" class="lp-cf-fgroup-head" aria-expanded="false" aria-controls="cfg-fgroup-3-body">
-                    <span class="lp-cf-fgroup-num">03</span>
-                    <span class="lp-cf-fgroup-titles">
-                      <span class="lp-cf-fgroup-title" data-lang-key="cfgFg3Title">Contenuti & Navigazione</span>
-                      <small class="lp-cf-fgroup-desc" data-lang-key="cfgFg3Desc">Rendi più semplice esplorare e organizzare i contenuti.</small>
-                    </span>
-                    <svg class="lp-cf-fgroup-chev" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </button>
-                  <div class="lp-cf-fgroup-body" id="cfg-fgroup-3-body">
-                    <label class="lp-config-feature">
-                      <input type="checkbox" data-feature="back-to-top">
-                      <span data-lang-key="configF3">Torna su</span>
-                      <span class="lp-config-info" data-lang-title="configF3Info" title="Bottone che riporta rapidamente all'inizio della pagina.">i</span>
-                    </label>
-                    <label class="lp-config-feature">
-                      <input type="checkbox" data-feature="search-interna">
-                      <span data-lang-key="configF8">Ricerca interna</span>
-                      <span class="lp-config-info" data-lang-title="configF8Info" title="Campo di ricerca che filtra i contenuti del sito.">i</span>
-                    </label>
-                    <label class="lp-config-feature">
-                      <input type="checkbox" data-feature="filtro-categorie">
-                      <span data-lang-key="configF9">Filtro categorie</span>
-                      <span class="lp-config-info" data-lang-title="configF9Info" title="Filtra i contenuti per categoria o argomento.">i</span>
-                    </label>
-                    <label class="lp-config-feature">
-                      <input type="checkbox" data-feature="faq-accordion">
-                      <span data-lang-key="configF10">FAQ Accordion</span>
-                      <span class="lp-config-info" data-lang-title="configF10Info" title="Domande frequenti espandibili a fisarmonica.">i</span>
-                    </label>
-                  </div>
-                </section>
-
-                <section class="lp-cf-fgroup" id="cfg-fgroup-4">
-                  <button type="button" class="lp-cf-fgroup-head" aria-expanded="false" aria-controls="cfg-fgroup-4-body">
-                    <span class="lp-cf-fgroup-num">04</span>
-                    <span class="lp-cf-fgroup-titles">
-                      <span class="lp-cf-fgroup-title" data-lang-key="cfgFg4Title">Dati & Informazioni</span>
-                      <small class="lp-cf-fgroup-desc" data-lang-key="cfgFg4Desc">Mostra dati, informazioni e contenuti interattivi.</small>
-                    </span>
-                    <svg class="lp-cf-fgroup-chev" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </button>
-                  <div class="lp-cf-fgroup-body" id="cfg-fgroup-4-body">
-                    <label class="lp-config-feature">
-                      <input type="checkbox" data-feature="animated-counters">
-                      <span data-lang-key="configF7">Contatori animati</span>
-                      <span class="lp-config-info" data-lang-title="configF7Info" title="Numeri che contano fino al valore finale quando entrano nello schermo.">i</span>
-                    </label>
-                    <label class="lp-config-feature">
-                      <input type="checkbox" data-feature="animated-progress">
-                      <span data-lang-key="configF15">Barre di avanzamento</span>
-                      <span class="lp-config-info" data-lang-title="configF15Info" title="Barre che si riempiono in animazione per mostrare competenze o valori.">i</span>
-                    </label>
-                    <label class="lp-config-feature">
-                      <input type="checkbox" data-feature="mappa-interattiva">
-                      <span data-lang-key="configF12">Mappa interattiva</span>
-                      <span class="lp-config-info" data-lang-title="configF12Info" title="Mappa in cui i clienti possono vedere la posizione.">i</span>
-                    </label>
-                  </div>
-                </section>
-
-                <section class="lp-cf-fgroup" id="cfg-fgroup-5">
-                  <button type="button" class="lp-cf-fgroup-head" aria-expanded="false" aria-controls="cfg-fgroup-5-body">
-                    <span class="lp-cf-fgroup-num">05</span>
-                    <span class="lp-cf-fgroup-titles">
-                      <span class="lp-cf-fgroup-title" data-lang-key="cfgFg5Title">Contatto</span>
-                      <small class="lp-cf-fgroup-desc" data-lang-key="cfgFg5Desc">Facilita il contatto diretto con i tuoi clienti.</small>
-                    </span>
-                    <svg class="lp-cf-fgroup-chev" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </button>
-                  <div class="lp-cf-fgroup-body" id="cfg-fgroup-5-body">
-                    <label class="lp-config-feature">
-                      <input type="checkbox" data-feature="whatsapp-chat">
-                      <span data-lang-key="configF11">Bottone WhatsApp</span>
-                      <span class="lp-config-info" data-lang-title="configF11Info" title="Pulsante fisso che apre una chat WhatsApp con te.">i</span>
-                    </label>
-                  </div>
-                </section>
-              </div>
-              <input type="hidden" name="config-selected-features" value="">
-            </div>
-
-            <!-- F. Admin Panel -->
-            <div class="lp-config-block">
-              <label class="lp-config-label" data-lang-key="cfAdminLabel">Admin Panel (Pannello di gestione)</label>
-              <div class="lp-config-maint">
-                <label class="lp-config-option lp-config-option--checkbox">
-                  <input type="radio" name="config-admin" value="no" checked>
-                  <span class="lp-config-opt-text" data-lang-key="cfAdminNo">No (0 €)</span>
-                </label>
-                <label class="lp-config-option lp-config-option--checkbox">
-                  <input type="radio" name="config-admin" value="si">
-                  <span class="lp-config-opt-text" data-lang-key="cfAdminSi">Sì, voglio un pannello di gestione (+150 €)</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- G. Manutenzione -->
-            <div class="lp-config-block">
-              <label class="lp-config-label" data-lang-key="cfMaintLabel">Manutenzione post-pubblicazione</label>
-              <div class="lp-config-maint">
-                <label class="lp-config-option lp-config-option--checkbox">
-                  <input type="radio" name="config-manutenzione" value="no" checked>
-                  <span class="lp-config-opt-text" data-lang-key="cfMaintNo">No (nessun costo mensile)</span>
-                </label>
-                <label class="lp-config-option lp-config-option--checkbox">
-                  <input type="radio" name="config-manutenzione" value="si">
-                  <span class="lp-config-opt-text" data-lang-key="cfMaintSi">Sì, gestione completa</span>
-                </label>
-              </div>
-              <small class="lp-config-hint" data-lang-key="cfMaintNote">Senza Admin Panel 30 €/mese, con Admin Panel 15 €/mese (solo bug e problemi tecnici).</small>
-            </div>
-
-            <!-- H. Progetto -->
-            <div class="lp-config-block">
-              <label class="lp-field-label" data-lang-key="cfProgettoLabel">Raccontami brevemente il progetto</label>
-              <textarea name="config-progetto" class="lp-textarea" rows="5" placeholder="Che tipo di sito hai in mente? Cosa vorresti ottenere?" data-lang-key="cfProgettoPh"></textarea>
-            </div>
-
-            <!-- I. Budget -->
-            <div class="lp-config-block">
-              <label class="lp-field-label" data-lang-key="cfBudgetLabel">Hai un budget indicativo?</label>
-              <select name="config-budget" class="lp-input lp-select" data-lang-key="cfBudgetSel">
-                <option value="" disabled selected data-lang-key="cfBudgetPh">Seleziona</option>
-                <option data-lang-key="cfBudget1">&lt; 250 €</option>
-                <option data-lang-key="cfBudget2">250–500 €</option>
-                <option data-lang-key="cfBudget3">500–750 €</option>
-                <option data-lang-key="cfBudget4">750–1.000 €</option>
-                <option data-lang-key="cfBudget5">1.000 €+</option>
-                <option data-lang-key="cfBudgetNo">Non ho ancora deciso</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <!-- Box totale sticky -->
-        <div class="lp-total-box" style="display: none;">
-          <div class="lp-total-box-inner">
-            <span class="lp-total-label" data-lang-key="cfTotalLabel">Preventivo una tantum stimato</span>
-            <span id="config-prezzo-totale" class="lp-total-amount" aria-live="polite">250 €</span>
-            <span id="config-prezzo-mensile" class="lp-total-monthly" style="display:none">+ 0 €/mese</span>
-            <p class="lp-total-note" data-lang-key="cfTotalNote">Il prezzo potrebbe cambiare, ma dovrebbe aggirarsi su quella cifra.</p>
-            <button type="submit" class="lp-btn lp-total-btn" data-lang-key="contactBtn">
-              Invia richiesta di preventivo
-            </button>
-          </div>
         </div>
       </form>
       </div>
@@ -1395,15 +814,15 @@
       <div class="lp-footer-col">
         <h2 class="lp-footer-title">LORENZO PERASSI</h2>
         <p class="lp-footer-text" data-lang-key="footerTag">
-          Developer, fashion, tech & Customly founder
+          Developer, creator & Customly founder
         </p>
       </div>
 
       <div class="lp-footer-col">
         <h3 class="lp-footer-subtitle" data-lang-key="footerPages">Pages</h3>
         <a href="#hero" data-lang-key="footerNavHome">Home</a>
-        <a href="#collaborations" data-lang-key="footerNavServices">Collaborazioni</a>
         <a href="#projects" data-lang-key="footerNavProjects">Projects</a>
+        <a href="#collaborations" data-lang-key="footerNavCollab">Collaborations</a>
         <a href="#contact" data-lang-key="footerNavContact">Contact</a>
       </div>
 

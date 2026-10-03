@@ -34,23 +34,19 @@ curl -s -o /dev/null -w "%{http_code}" http://localhost:PORT/   # smoke test
   combined.css né script.js: condividono `css/templates.css` (+min via csso) e
   `js/templates.js`. Temi via classe body (`theme-minimal`, …), prefissi `mn- md- bd- lx- cr- el-`.
   Il video placeholder è in `.tpl-video-frame` (commento "VIDEO SLOT" segna il punto di sostituzione).
-  Deep-link `/?config=1#contact` apre direttamente il configuratore (gestito in script.js).
 - **i18n**: dizionario `LANG` in script.js (~riga 522 IT, ~875 EN). Ogni chiave nuova
   va aggiunta in ENTRAMBE le lingue. Applicazione via `setLang($)` + attributi
   `data-lang-key` / `data-lang-html` / `data-lang-title` / `data-lang-placeholder`.
-- **Form contatti**: invio AJAX a Formspree (`mvznrbeq`) con feedback inline
-  `.lp-form-status`. Honeypot `_gotcha`. Il campo nascosto `config-riepilogo` viene
-  deduplicato a ogni submit. NON resettare il form dopo l'invio.
-- **Configuratore**: `aggStatoConfig()` è responsive-aware (matchMedia 900px).
-  Su mobile+config diventa uno **slider a 2 pannelli** (`#cf-slider > #cf-track`):
-  `#configuratore-sito` viene spostato via JS dentro `#cf-slot-config`, i dati
-  cliente stanno in `#cf-dati-wrap`; navigazione con frecce/dot (`#cf-step-nav`,
-  stato in `_cfStep`, funzioni `applicaStepMobile()`/`vaiAStep()`). L'invio
-  (`#lp-btn-config-mobile`) sta nel pannello dati; la pill sticky del prezzo
-  (`.lp-total-box--config`) su mobile è solo indicatore (bottone nascosto ≤900px
-  in config). Fuori da mobile+config: `.lp-contact-alternative` e
-  `#contact-summary` riordinati come prima, tutto ripristinato al resize
-  (listener `_mqContactMobile`).
+- **Form contatti**: SEMPLICE (Nome, Email, Tipo progetto facoltativo, Messaggio).
+  Invio AJAX a Formspree (`mvznrbeq`) con feedback inline `.lp-form-status`.
+  Honeypot `_gotcha`. Il campo nascosto `config-riepilogo` (riepilogo testuale)
+  viene deduplicato a ogni submit. NON resettare il form dopo l'invio.
+  Niente configuratore/prezzi: rimossi da HTML+JS (storico: slider `#cf-slider`,
+  `aggStatoConfig()`, deep-link `?config=1` — non più attivi).
+- **Sezioni** (ordine): hero → #lets-build → #comparison → #projects →
+  #collaborations (marquee `.lp-collab-marquee`, set duplicato per loop -50%
+  seamless) → #experience → #certifications → #manifesto → #why-choose-me →
+  #convinced → #contact. Niente #about, niente #tools, niente #services.
 - **Estetica**: le modifiche non devono cambiare l'aspetto visibile senza esplicita
   richiesta dell'utente.
 

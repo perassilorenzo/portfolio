@@ -543,8 +543,20 @@ document.addEventListener("DOMContentLoaded", function () {
       navSocials: "Social",
       navContact: "Contact",
       heroBtn1: "Guarda i progetti",
-      heroBtn2: "Contattami",
+      heroBtn2: "Collaboriamo",
       heroAvail: "Disponibile per nuovi progetti",
+      letsTitle: "Let's build something",
+      letsTagline: "Non devi scegliere un servizio da un catalogo. Porta un'idea e capiamo insieme come svilupparla.",
+      letsWebTitle: "WEB",
+      letsWebDesc: "Siti web, web app, prodotti digitali e progetti online.",
+      letsFashionTitle: "FASHION & SEWING",
+      letsFashionDesc: "Custom fashion, design, cucito, prototipazione e sviluppo di capi.",
+      letsContentTitle: "CONTENT",
+      letsContentDesc: "Video, social, contenuti e progetti di comunicazione.",
+      letsElseTitle: "SOMETHING ELSE",
+      letsElseDesc: "Hai un'idea che non rientra qui? Parliamone.",
+      letsNote:
+        "Lavoro su progetti diversi in ambiti diversi: se hai qualcosa in mente — anche se non sai ancora bene cosa — <a href=\"#contact\">raccontamelo</a> e vediamo insieme da dove partire.",
       aboutTitle: "Chi sono",
       aboutSub: "Developer, creator & student",
       aboutP1:
@@ -606,8 +618,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "Mi occupo di collab e contenuti condivisi: ideo, edito e pubblico contenuti che finiscono sia sul mio profilo IG che sul tuo. Non \u00e8 il mio focus principale, ma un extra da gestire in modo semplice e diretto.",
       projSub: "Selected Projects",
       projCollab: "Collaborations",
-      collabTitle: "Let's build something",
-      collabTagline: "Hai un'idea? Possiamo svilupparla insieme.",
+      collabTitle: "Selected collaborations",
+      collabTagline: "Brands, people & projects I've worked with.",
       collabWebTitle: "WEB",
       collabWebDesc: "Siti, landing page, web app e prodotti digitali.",
       collabFashionTitle: "FASHION & SEWING",
@@ -634,7 +646,7 @@ document.addEventListener("DOMContentLoaded", function () {
       timelineSub: "Esperienze",
       expTitle: "Experience",
       toolsTitle: "Tools",
-      connectTitle: "Hai un'idea?",
+      connectTitle: "Let's build something together.",
       tl0Title: "Customly \u2014 Founder",
       tl0Date: "Ago 2026 \u2014 Presente",
       tl0Desc:
@@ -677,7 +689,7 @@ document.addEventListener("DOMContentLoaded", function () {
       faq5Q: "Posso contattarti anche solo per un'idea?",
       faq5A:
         "S\u00ec, puoi scrivermi anche nelle fasi iniziali. Possiamo valutare insieme se l'idea pu\u00f2 trasformarsi in un progetto concreto.",
-      contactSub: "Che sia un progetto digitale, un brand, un capo, un'app, un sito o qualcosa che non hai ancora definito completamente, raccontami cosa hai in mente.",
+      contactSub: "Se hai un progetto, un'idea, un brand, un capo da sviluppare, un sito, una web app o semplicemente qualcosa che vuoi provare a costruire, raccontamelo.",
       contactDesc: "Scrivimi per collaborazioni, idee o progetti.",
       ctaLabel: "Hai un'idea o un progetto?",
       ctaTitle: 'Facciamolo <span class="lp-cta-accent">su misura.</span>',
@@ -686,7 +698,17 @@ document.addEventListener("DOMContentLoaded", function () {
       ctaBtn: "Parliamone",
       contactName: "Il tuo nome",
       contactEmail: "La tua email",
-      contactEmailPh: "La tua email",
+      contactEmailPh: "Dove posso risponderti?",
+      contactType: "Tipo di progetto (facoltativo)",
+      contactTypeOpts: [
+        "Web",
+        "Fashion & Sewing",
+        "Content",
+        "Brand",
+        "Tech",
+        "Collaboration",
+        "Something else",
+      ],
       contactCompany: "Nome azienda (opzionale)",
       contactCompanyEmail: "Email azienda (opzionale)",
       contactPhone: "Numero di telefono",
@@ -704,7 +726,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cfBusiness: "Azienda / Attività / Professionista",
       cfNome: "Nome",
       cfCognome: "Cognome",
-      cfNomePh: "Il tuo nome",
+      cfNomePh: "Come ti chiami?",
       cfCognomePh: "Il tuo cognome",
       cfPrivatoScopo: "Per cosa ti serve il sito?",
       cfPrivatoScopoPh: "Portfolio, CV, artista, progetto...",
@@ -732,7 +754,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cfAziendaSitoPh: "https://...",
       cfAziendaSocial: "Instagram / Social",
       cfAziendaSocialPh: "https://...",
-      cfMessaggio: "Raccontami il progetto",
+      cfMessaggio: "Messaggio",
       cfPageHome: "Home",
       cfIncluded: "(inclusa)",
       cfPageAbout: "Chi sono / About",
@@ -806,7 +828,7 @@ document.addEventListener("DOMContentLoaded", function () {
       bookingInPerson: "Di persona",
       bookingHint: "Scegli il tipo di incontro:",
       cfWaBtn: "Scrivimi su WhatsApp",
-      contactSend: "Iniziamo a parlarne →",
+      contactSend: "Parliamone →",
       contactService: "Servizio",
       contactServiceOpts: [
         "Web Development & Management",
@@ -814,7 +836,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Collab & Sponsor",
       ],
       contactSubject: "Oggetto",
-      contactMsg: "Raccontami cosa hai in mente...",
+      contactMsg: "Raccontami la tua idea...",
       contactBtn: "Invia preventivo",
       contactPrezzoNota: "Il prezzo non è definitivo: verrà confermato in base ai dettagli del tuo progetto.",
       contactBtnAlt: "Invia messaggio",
@@ -873,27 +895,56 @@ document.addEventListener("DOMContentLoaded", function () {
       configF14Info: "Testo che scorre in modo continuo, effetto tendina.",
       configF15: "Barre di avanzamento",
       configF15Info: "Barre che si riempiono in animazione per mostrare competenze o valori.",
-      footerTag: "Developer, fashion, tech & Customly founder",
+      footerTag: "Developer, creator & Customly founder",
       footerPages: "Pages",
       footerSocial: "Social",
       footerContact: "Contact",
       footerAvailable: "Disponibile per collaborazioni",
       footerCopy: "© 2026 Lorenzo Perassi — Tutti i diritti riservati",
       navCustomly: "Customly",
-      comparisonSub: "Trasformo idee in progetti concreti, unendo tecnologia, creatività e attenzione ai dettagli.",
+      comparisonSub: "Ogni progetto parte da un'idea: la disegno, la costruisco e la porto fino al risultato finale — in qualunque ambito.",
+      comparisonNote: "Dall'idea alla progettazione, dalla realizzazione al risultato: questo è il mio modo di lavorare, che si tratti di un sito, di un capo o di un contenuto.",
       comparisonBeforeLabel: "Codice Sorgente",
       comparisonAfterLabel: "Risultato Finale",
       whyTitle: "Perché sono meglio di un'agenzia?",
-      whySub: "Perché lavorare direttamente con me: niente costi gonfiati, niente intermediari.",
-      whyCard1Title: "COSTI RIDOTTI E ZERO SPRECHI",
-      whyCard1Body: "Se sono solo io, non devo costruire una struttura enorme intorno al progetto: paghi solo il valore reale del lavoro, senza costi gonfiati.",
-      whyCard2Title: "RAPPORTO DIRETTO E TRASPARENTE",
-      whyCard2Body: "Parli direttamente con chi sviluppa, progetta e lavora sul progetto, senza commerciali o intermediari. Nessuna incomprensione e totale trasparenza su ogni fase.",
-      whyCard3Title: "FLESSIBILE E VICINO AL PROGETTO",
-      whyCard3Body: "Non devi adattare la tua idea a un pacchetto predefinito: entro nel progetto e lavoro insieme a te, invece di limitarmi a consegnarti qualcosa.",
-      whyCard4Title: "HAI GIÀ UN'IDEA?",
-      whyCard4Body: "Raccontami cosa hai in mente e vediamo insieme come svilupparla.",
+      whySub: "Non perché le agenzie siano sbagliate: semplicemente, lavorare direttamente con una persona a volte è più semplice.",
+      whyCard1Title: "RAPPORTO DIRETTO",
+      whyCard1Body: "Parli con chi progetta e costruisce il progetto, non con un commerciale. Quello che dici è quello che viene fatto.",
+      whyCard2Title: "NIENTE PACCHETTI PREDEFINITI",
+      whyCard2Body: "Non devi adattare la tua idea a un catalogo: partiamo da quello che hai in mente e costruiamo intorno a quello.",
+      whyCard3Title: "STRUTTURA SNELLA, COSTI CHIARI",
+      whyCard3Body: "Niente strati, niente intermediari: sai sempre con chi stai parlando e per cosa stai pagando.",
+      whyCard4Title: "HAI UN'IDEA?",
+      whyCard4Body: "Raccontamela e vediamo se ha senso costruirla insieme.",
       whyCard4Cta: "Parliamone",
+      maniTitle: "Ma chi cazzo pensi di essere?",
+      maniSub: "Bella domanda. Ti rispondo con i fatti.",
+      maniP1:
+        "Uno studente di Informatica che nel frattempo continua a costruire cose. Studio all'IIS Vallauri, ma non ho aspettato il diploma per iniziare: ho fondato Customly, una piattaforma di custom fashion che unisce moda e tecnologia, e ci lavoro sopra ogni settimana.",
+      maniP2:
+        "Nel frattempo ho cucito e prototipato capi con CRYBU, sviluppato siti web, creato contenuti video e social, e collaborato con brand locali come Aleyesure e pagine creative come StageStreetwear.",
+      maniP3:
+        "Ho lavorato sui contenuti digitali con Omnia4Web, fatto uno stage IT da Bertolotto Porte tra gestionali e archivi digitali, preso una certificazione NASA sul telerilevamento e sto seguendo il CS50x di Harvard. Imparo facendo, non collezionando attestati.",
+      maniP4:
+        "Non ho un'agenzia, non ho un listino, non ho pacchetti preconfezionati. Ho progetti iniziati — alcuni finiti, altri ancora aperti — e la voglia di continuare a costruirne.",
+      maniP5:
+        "Se cercavi qualcuno con un catalogo di servizi, non sono io. Se cercavi qualcuno con cui costruire qualcosa, sei nel posto giusto.",
+      maniCta: "Parliamone",
+      convTitle: "Non sei ancora convinto?",
+      convSub: "Le domande che probabilmente ti stai facendo — con risposte oneste.",
+      conv1Title: "MA HAI GIÀ LAVORATO CON QUALCUNO?",
+      conv1Body:
+        "Sì: brand, pagine creative e progetti reali. Li trovi nelle <a href=\"#collaborations\">collaborazioni</a> e nei <a href=\"#projects\">progetti</a>.",
+      conv2Title: "E SE IL MIO PROGETTO È DIVERSO?",
+      conv2Body: "Non esiste un catalogo rigido: si parte dall'idea, qualunque essa sia.",
+      conv3Title: "COME FACCIO A CAPIRE COSA SAI FARE?",
+      conv3Body:
+        "Guarda i <a href=\"#projects\">progetti</a>, le <a href=\"#experience\">esperienze</a> e le <a href=\"#certifications\">certificazioni</a>: parlano più di qualsiasi promessa.",
+      conv4Title: "POSSO SEMPLICEMENTE RACCONTARTI LA MIA IDEA?",
+      conv4Body: "Sì, è il modo migliore per iniziare. <a href=\"#contact\">Scrivimi</a>.",
+      convRevTitle: "Recensioni verificate",
+      convRevBody:
+        "<strong>Recensioni verificate</strong> — le recensioni dei progetti e delle collaborazioni verranno pubblicate qui, senza filtri.",
       serv1Price: "<strong>Sito web: a partire da 250€+</strong>",
       serv2Price: "<strong>Mantenimento: a partire da 30€+/mese</strong>",
       serv2Note: "* Servizio riservato esclusivamente ai siti realizzati da me",
@@ -906,10 +957,11 @@ document.addEventListener("DOMContentLoaded", function () {
       tlSchoolDesc: "Informatica e Telecomunicazioni. Fondamenti di programmazione, reti, sistemi e sviluppo applicativo full-stack.",
       tlSchoolDate: "2023 \u2014 Presente",
       footerNavHome: "Home",
-      footerNavServices: "Collaborazioni",
+      footerNavServices: "Servizi",
       footerNavProjects: "Progetti",
+      footerNavCollab: "Collaborations",
       footerNavContact: "Contatti",
-      comparisonTitle: "Dall'idea al risultato finale",
+      comparisonTitle: "Dalla creazione al risultato finale",
       customlyTagline: "make it yours",
       certCS50Title: "CS50x: Intro to Computer Science",
       certCS50Sub: "Harvard University",
@@ -935,8 +987,20 @@ document.addEventListener("DOMContentLoaded", function () {
       navSocials: "Social",
       navContact: "Contact",
       heroBtn1: "View Projects",
-      heroBtn2: "Contact Me",
+      heroBtn2: "Let's collaborate",
       heroAvail: "Available for new projects",
+      letsTitle: "Let's build something",
+      letsTagline: "You don't have to pick a service from a catalog. Bring an idea and let's figure out together how to build it.",
+      letsWebTitle: "WEB",
+      letsWebDesc: "Websites, web apps, digital products and online projects.",
+      letsFashionTitle: "FASHION & SEWING",
+      letsFashionDesc: "Custom fashion, design, sewing, prototyping and garment development.",
+      letsContentTitle: "CONTENT",
+      letsContentDesc: "Video, social media, content and communication projects.",
+      letsElseTitle: "SOMETHING ELSE",
+      letsElseDesc: "Have an idea that doesn't fit here? Let's talk about it.",
+      letsNote:
+        "I work on different projects in different fields: if you have something in mind — even if you don't quite know what yet — <a href=\"#contact\">tell me about it</a> and let's see where to start.",
       aboutTitle: "About me",
       aboutSub: "Developer, creator & student",
       aboutP1:
@@ -1001,8 +1065,8 @@ document.addEventListener("DOMContentLoaded", function () {
       projPersonal: "Personal Project",
       projTitle: "Projects",
       projCollab: "Collaborations",
-      collabTitle: "Let's build something",
-      collabTagline: "Have an idea? Let's build it together.",
+      collabTitle: "Selected collaborations",
+      collabTagline: "Brands, people & projects I've worked with.",
       collabWebTitle: "WEB",
       collabWebDesc: "Websites, landing pages, web apps and digital products.",
       collabFashionTitle: "FASHION & SEWING",
@@ -1025,7 +1089,7 @@ document.addEventListener("DOMContentLoaded", function () {
       timelineSub: "Experience",
       expTitle: "Experience",
       toolsTitle: "Tools",
-      connectTitle: "Have an idea?",
+      connectTitle: "Let's build something together.",
       tl0Title: "Customly \u2014 Founder",
       tl0Date: "Aug 2026 \u2014 Present",
       tl0Desc:
@@ -1068,7 +1132,7 @@ document.addEventListener("DOMContentLoaded", function () {
       faq5Q: "Can I contact you just for an idea?",
       faq5A:
         "Yes, you can write to me even in the early stages. We can figure out together whether the idea can become a real project.",
-      contactSub: "Whether it's a digital project, a brand, a garment, an app, a website or something you haven't fully defined yet, tell me what's on your mind.",
+      contactSub: "If you have a project, an idea, a brand, a garment to develop, a website, a web app or just something you want to try building, tell me about it.",
       contactDesc: "Write me for collaborations, ideas or projects.",
       ctaLabel: "Have an idea or a project?",
       ctaTitle:
@@ -1078,7 +1142,17 @@ document.addEventListener("DOMContentLoaded", function () {
       ctaBtn: "Let's talk",
       contactName: "Your name",
       contactEmail: "Your email",
-      contactEmailPh: "Your email",
+      contactEmailPh: "Where can I reply?",
+      contactType: "Project type (optional)",
+      contactTypeOpts: [
+        "Web",
+        "Fashion & Sewing",
+        "Content",
+        "Brand",
+        "Tech",
+        "Collaboration",
+        "Something else",
+      ],
       contactCompany: "Company name (optional)",
       contactCompanyEmail: "Company email (optional)",
       contactPhone: "Phone number",
@@ -1091,7 +1165,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cfBusiness: "Company / Business / Professional",
       cfNome: "First name",
       cfCognome: "Last name",
-      cfNomePh: "Your first name",
+      cfNomePh: "What's your name?",
       cfCognomePh: "Your last name",
       cfPrivatoScopo: "What do you need the site for?",
       cfPrivatoScopoPh: "Portfolio, CV, artist, project...",
@@ -1119,7 +1193,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cfAziendaSitoPh: "https://...",
       cfAziendaSocial: "Instagram / Social",
       cfAziendaSocialPh: "https://...",
-      cfMessaggio: "Tell me about the project",
+      cfMessaggio: "Message",
       cfPageHome: "Home",
       cfIncluded: "(included)",
       cfPageAbout: "About",
@@ -1193,7 +1267,7 @@ document.addEventListener("DOMContentLoaded", function () {
       bookingInPerson: "In person",
       bookingHint: "Choose your meeting type:",
       cfWaBtn: "Message me on WhatsApp",
-      contactSend: "Let's start talking →",
+      contactSend: "Let's build it →",
       contactService: "Service",
       contactServiceOpts: [
         "Web Development & Management",
@@ -1201,7 +1275,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Collab & Sponsor",
       ],
       contactSubject: "Subject",
-      contactMsg: "Tell me what's on your mind...",
+      contactMsg: "Tell me about your idea...",
       contactBtn: "Send quote",
       contactPrezzoNota: "The price is not final: it will be confirmed based on your project details.",
       contactBtnAlt: "Send message",
@@ -1260,26 +1334,56 @@ document.addEventListener("DOMContentLoaded", function () {
       configF14Info: "Continuously scrolling text, curtain effect.",
       configF15: "Progress bars",
       configF15Info: "Animated filling bars to show skills or values.",
-      footerTag: "Developer, fashion, tech & Customly founder",
+      footerTag: "Developer, creator & Customly founder",
       footerPages: "Pages",
       footerSocial: "Social",
       footerContact: "Contact",
       footerAvailable: "Available for collaborations",
       footerCopy: "© 2026 Lorenzo Perassi — All rights reserved",
       navCustomly: "Customly",
-      comparisonSub: "I turn ideas into concrete projects, combining technology, creativity and attention to detail.",
+      comparisonSub: "Every project starts as an idea: I design it, build it and take it all the way to the final result — whatever the field.",
+      comparisonNote: "From idea to design, from building to result: that's how I work, whether it's a website, a garment or a piece of content.",
       comparisonBeforeLabel: "Source Code",
       comparisonAfterLabel: "Final Result",
       whyTitle: "Why choose me over an agency?",
-      whySub: "Why work directly with me: no inflated costs, no middlemen.",
-      whyCard1Title: "REDUCED COSTS & ZERO WASTE",
-      whyCard1Body: "It's just me, so there's no huge structure built around your project: you only pay for the real value of the work, with no inflated costs.",
-      whyCard2Title: "DIRECT & TRANSPARENT RELATIONSHIP",
-      whyCard2Body: "You talk directly with the person developing, designing and working on the project — no sales reps or middlemen. Total transparency at every stage.",
-      whyCard3Title: "FLEXIBLE & CLOSE TO THE PROJECT",
-      whyCard3Body: "You don't have to fit your idea into a predefined package: I join the project and work together with you instead of just delivering something.",
-      whyCard4Title: "HAVE AN IDEA ALREADY?",
-      whyCard4Body: "Tell me what's on your mind and let's figure out together how to build it.",
+      whySub: "Not because agencies are wrong: sometimes working directly with one person is just simpler.",
+      whyCard1Title: "DIRECT RELATIONSHIP",
+      whyCard1Body: "You talk with the person designing and building the project, not with a sales rep. What you say is what gets built.",
+      whyCard2Title: "NO PREDEFINED PACKAGES",
+      whyCard2Body: "You don't have to fit your idea into a catalog: we start from what's on your mind and build around it.",
+      whyCard3Title: "LEAN STRUCTURE, CLEAR COSTS",
+      whyCard3Body: "No layers, no middlemen: you always know who you're talking to and what you're paying for.",
+      whyCard4Title: "HAVE AN IDEA?",
+      whyCard4Body: "Tell me about it and let's see if it makes sense to build it together.",
+      whyCard4Cta: "Let's talk",
+      maniTitle: "So who the hell do you think you are?",
+      maniSub: "Fair question. Let me answer with facts.",
+      maniP1:
+        "A Computer Science student who keeps building things in the meantime. I study at IIS Vallauri, but I didn't wait for graduation to start: I founded Customly, a custom fashion platform combining fashion and technology, and I work on it every week.",
+      maniP2:
+        "Along the way I've sewn and prototyped garments with CRYBU, built websites, created video and social content, and collaborated with local brands like Aleyesure and creative pages like StageStreetwear.",
+      maniP3:
+        "I've worked on digital content with Omnia4Web, done an IT internship at Bertolotto Porte between management software and digital archives, earned a NASA certification on remote sensing and I'm taking Harvard's CS50x. I learn by doing, not by collecting certificates.",
+      maniP4:
+        "I don't have an agency, a price list or pre-made packages. I have projects — some finished, some still open — and the will to keep building.",
+      maniP5:
+        "If you were looking for someone with a service catalog, that's not me. If you were looking for someone to build something with, you're in the right place.",
+      maniCta: "Let's talk",
+      convTitle: "Not convinced yet?",
+      convSub: "The questions you're probably asking yourself — with honest answers.",
+      conv1Title: "BUT HAVE YOU WORKED WITH ANYONE?",
+      conv1Body:
+        "Yes: brands, creative pages and real projects. You'll find them in my <a href=\"#collaborations\">collaborations</a> and <a href=\"#projects\">projects</a>.",
+      conv2Title: "WHAT IF MY PROJECT IS DIFFERENT?",
+      conv2Body: "There's no rigid catalog: we start from the idea, whatever it is.",
+      conv3Title: "HOW CAN I TELL WHAT YOU CAN DO?",
+      conv3Body:
+        "Look at my <a href=\"#projects\">projects</a>, <a href=\"#experience\">experience</a> and <a href=\"#certifications\">certifications</a>: they speak louder than any promise.",
+      conv4Title: "CAN I JUST TELL YOU ABOUT MY IDEA?",
+      conv4Body: "Yes, that's the best way to start. <a href=\"#contact\">Write to me</a>.",
+      convRevTitle: "Verified reviews",
+      convRevBody:
+        "<strong>Verified reviews</strong> — reviews of my projects and collaborations will be published here, unfiltered.",
       whyCard4Cta: "Let's talk",
       serv1Price: "<strong>Website: starting from 250€+</strong>",
       serv2Price: "<strong>Maintenance: starting from 30€+/month</strong>",
@@ -1293,10 +1397,11 @@ document.addEventListener("DOMContentLoaded", function () {
       tlSchoolDesc: "Computer Science & Telecoms. Fundamentals of programming, networks, systems and full-stack app development.",
       tlSchoolDate: "2023 \u2014 Present",
       footerNavHome: "Home",
-      footerNavServices: "Collaborations",
+      footerNavServices: "Services",
       footerNavProjects: "Projects",
+      footerNavCollab: "Collaborations",
       footerNavContact: "Contact",
-      comparisonTitle: "From idea to the final result",
+      comparisonTitle: "From creation to the final result",
       customlyTagline: "make it yours",
       certCS50Title: "CS50x: Intro to Computer Science",
       certCS50Sub: "Harvard University",
@@ -1436,516 +1541,25 @@ document.addEventListener("DOMContentLoaded", function () {
       label.setAttribute("for", control.id);
     });
 
-  /* ===== Configuratore Sito ===== */
-  var configuratore = document.getElementById("configuratore-sito");
-  var reasonSelect = document.getElementById("contactReason");
-  var prezzoTotale = document.getElementById("config-prezzo-totale");
-  var prezzoMensile = document.getElementById("config-prezzo-mensile");
-  var tipoSito = document.querySelectorAll('input[name="config-tipo-sito"]');
-  var pagineWrap = document.getElementById("config-pagine-wrap");
-  var pagineGrid = document.getElementById("config-pages-grid");
-  var imgTypeWrap = document.getElementById("config-img-type-wrap");
-  var lingueDisplay = document.getElementById("config-lingue-display");
-  var lingueHidden = document.getElementById("config-lingue");
-  var pagineAltroDisplay = document.getElementById("config-pagine-altro-display");
-  var pagineAltroHidden = document.getElementById("config-pagine-altro");
-  var cfPrivato = document.getElementById("cf-privato");
-  var cfAzienda = document.getElementById("cf-azienda");
-
-  function getTipo() {
-    var t = document.querySelector('input[name="config-tipo-sito"]:checked');
-    return t ? t.value : "landing";
-  }
-
-  function getPagineExtra() {
-    var n = 0;
-    if (pagineGrid) {
-      pagineGrid
-        .querySelectorAll('input[data-page]:checked:not([disabled])')
-        .forEach(function () {
-          n++;
-        });
-    }
-    n += parseInt(pagineAltroDisplay ? pagineAltroDisplay.textContent : "0") || 0;
-    return n;
-  }
-
-  function getPagineAltro() {
-    return parseInt(pagineAltroDisplay ? pagineAltroDisplay.textContent : "0") || 0;
-  }
-
-  function setPagineAltro(n) {
-    if (n < 0) n = 0;
-    if (pagineAltroDisplay) pagineAltroDisplay.textContent = n;
-    if (pagineAltroHidden) pagineAltroHidden.value = n;
-  }
-
-  function getLingue() {
-    return parseInt(lingueDisplay ? lingueDisplay.textContent : "1") || 1;
-  }
-
-  function setLingue(n) {
-    if (n < 1) n = 1;
-    if (lingueDisplay) lingueDisplay.textContent = n;
-    if (lingueHidden) lingueHidden.value = n;
-  }
-
-  function getAdmin() {
-    var t = document.querySelector('input[name="config-admin"]:checked');
-    return t && t.value === "si";
-  }
-
-  function getMaint() {
-    var t = document.querySelector('input[name="config-manutenzione"]:checked');
-    return t && t.value === "si";
-  }
-
-  function getPrezzoUnaTantum() {
-    var tipo = getTipo();
-    var prezzo = tipo === "multipage" ? 250 + getPagineExtra() * 50 : 250;
-    var lingue = getLingue();
-    if (lingue > 1) prezzo += (lingue - 1) * 50;
-    if (getAdmin()) prezzo += 150;
-    var funz = 0;
-    document
-      .querySelectorAll("#config-features-grid input[data-feature]:checked")
-      .forEach(function () {
-        funz++;
-      });
-    prezzo += funz * 10;
-    return prezzo;
-  }
-
-  function getCanoneMensile() {
-    if (!getMaint()) return 0;
-    return getAdmin() ? 15 : 30;
-  }
-
-  function aggiornaPaginePerTipo() {
-    var tipo = getTipo();
-    if (pagineWrap) pagineWrap.style.display = tipo === "multipage" ? "block" : "none";
-    aggiornaPrezzo();
-  }
-
-  function aggiornaContenuti() {
-    var t = document.querySelector('input[name="config-contenuti"]:checked');
-    var needImg = t && (t.value === "serve-img" || t.value === "serve-entrambi");
-    if (imgTypeWrap) imgTypeWrap.style.display = needImg ? "block" : "none";
-  }
-
-  function aggiornaPrezzo() {
-    var prezzo = getPrezzoUnaTantum();
-    if (prezzoTotale) prezzoTotale.textContent = prezzo + " €";
-    var canone = getCanoneMensile();
-    if (prezzoMensile) {
-      if (canone > 0) {
-        prezzoMensile.style.display = "block";
-        prezzoMensile.textContent = "+ " + canone + " €/mese";
-      } else {
-        prezzoMensile.style.display = "none";
-      }
-    }
-  }
-
-  var _cfStep = 0; /* 0 = configuratore, 1 = dati cliente */
-
-  /* Altezza dello slider = pannello attivo, così non resta spazio vuoto
-     quando i due pannelli hanno lunghezze diverse */
-  function aggiornaAltezzaSlider() {
-    var slider = document.getElementById("cf-slider");
-    var track = document.getElementById("cf-track");
-    if (!slider || !track) return;
-    var mobile =
-      window.matchMedia("(max-width:900px)").matches &&
-      document.querySelector(".lp-contact-form--config");
-    var active = track.children[_cfStep] || track.children[0];
-    if (mobile && active) {
-      slider.style.height = active.offsetHeight + "px";
-    } else {
-      slider.style.height = "";
-    }
-  }
-
-  function applicaStepMobile() {
-    var track = document.getElementById("cf-track");
-    var wrap = document.getElementById("cf-dati-wrap");
-    var sub = document.getElementById("lp-btn-config-mobile");
-    var prevB = document.getElementById("cf-step-prev");
-    var nextB = document.getElementById("cf-step-next");
-    var dots = document.querySelectorAll(".lp-cf-dot");
-    var dati = _cfStep === 1;
-    if (wrap) wrap.classList.remove("lp-dati-collapsed");
-    if (track) track.classList.toggle("is-step-dati", dati);
-    if (sub) sub.style.display = dati ? "inline-flex" : "none";
-    if (prevB) prevB.disabled = !dati;
-    if (nextB) nextB.disabled = dati;
-    Array.prototype.forEach.call(dots, function (d) {
-      d.classList.toggle("is-active", Number(d.dataset.step) === _cfStep);
-    });
-    aggiornaAltezzaSlider();
-  }
-
-  function aggStatoConfig() {
-    var isConfig = reasonSelect && reasonSelect.value === "configura-sito";
-    var totalBox = document.querySelector(".lp-total-box");
-    if (totalBox) {
-      totalBox.style.display = isConfig ? "block" : "none";
-      totalBox.classList.toggle("lp-total-box--config", isConfig);
-    }
-    var summaryEl = document.getElementById("contact-summary");
-    var altEl = document.querySelector(".lp-contact-alternative");
-    var contactGrid = document.querySelector(".lp-contact-grid");
-    var colMain = document.querySelector(".lp-contact-col-main");
-    var isMobileLayout =
-      window.matchMedia &&
-      window.matchMedia("(max-width: 900px)").matches;
-    if (summaryEl) {
-      summaryEl.style.display = "block";
-      summaryEl.classList.toggle("lp-contact-summary--inline", isConfig);
-    var stepNavEl = document.getElementById("cf-step-nav");
-    var slotCfg = document.getElementById("cf-slot-config");
-    var stepMode = isMobileLayout && isConfig;
-    if (!stepMode) _cfStep = 0;
-    if (stepNavEl) stepNavEl.style.display = stepMode ? "flex" : "none";
-    if (configuratore) {
-      configuratore.style.display = isConfig ? "block" : "none";
-    }
-    if (isMobileLayout && contactGrid) {
-      /* Mobile config a slider: pannello configuratore dentro lo slot del track */
-      if (stepMode && configuratore && slotCfg &&
-          configuratore.parentNode !== slotCfg) {
-        slotCfg.appendChild(configuratore);
-      }
-      if (altEl) contactGrid.appendChild(altEl);
-      contactGrid.appendChild(summaryEl);
-    } else {
-      /* Desktop: ripristina l'ordine originale del DOM */
-      if (altEl && colMain && altEl.parentNode !== colMain) {
-        colMain.appendChild(altEl);
-      }
-      if (isConfig && altEl) {
-        /* Config: riepilogo inline nella colonna sinistra, dopo l'alternativa */
-        if (summaryEl.parentNode !== altEl.parentNode ||
-            summaryEl.previousElementSibling !== altEl) {
-          altEl.parentNode.insertBefore(summaryEl, altEl.nextSibling);
-        }
-      } else if (!isConfig && contactGrid) {
-        /* Non-config: summary e configuratore tornano colonne dirette della
-           griglia, nell'ordine originale (colMain, summary, configuratore).
-           Se restassero dentro colMain dopo un toggle, la colonna destra
-           apparirebbe sotto alla sinistra. */
-        if (configuratore && configuratore.parentNode !== contactGrid) {
-          contactGrid.appendChild(configuratore);
-        }
-        var cfgInGrid =
-          configuratore && configuratore.parentNode === contactGrid;
-        if (summaryEl.parentNode !== contactGrid ||
-            (cfgInGrid && summaryEl.nextElementSibling !== configuratore)) {
-          contactGrid.insertBefore(summaryEl, cfgInGrid ? configuratore : null);
-        }
-      }
-    }
-    }
-    var nonConfigBtn = document.getElementById("lp-btn-nonconfig");
-    if (nonConfigBtn) nonConfigBtn.style.display = isConfig ? "none" : "inline-flex";
-    var contactFormEl = document.querySelector(".lp-contact-form");
-    var wrapperEl = document.querySelector(".contact-form-wrapper");
-    if (contactFormEl) contactFormEl.classList.toggle("lp-contact-form--config", isConfig);
-    if (wrapperEl) wrapperEl.classList.toggle("lp-contact-form--config", isConfig);
-    var tipoClienteEl = document.getElementById("cf-tipo-cliente");
-    var privatoEl = document.getElementById("cf-privato");
-    var aziendaEl = document.getElementById("cf-azienda");
-    if (tipoClienteEl) tipoClienteEl.style.display = isConfig ? "block" : "none";
-    if (privatoEl) privatoEl.style.display = isConfig ? "block" : "none";
-    if (aziendaEl) aziendaEl.style.display = "none";
-    applicaStepMobile();
-  setLang(_lang);
-  }
-
-  if (reasonSelect) {
-    reasonSelect.addEventListener("change", aggStatoConfig);
-    aggStatoConfig();
-
-    /* Deep-link dalle demo template: /?config=1#contact apre direttamente il configuratore */
-    try {
-      if (new URLSearchParams(window.location.search).get("config") === "1") {
-        reasonSelect.value = "configura-sito";
-        aggStatoConfig();
-      }
-    } catch (err) { /* URLSearchParams non supportato: ignora */ }
-  }
-
-  /* Navigazione a step mobile: ‹ [Configurazione | I tuoi dati] › */
-  var reduceMotionStep =
-    window.matchMedia &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function vaiAStep(s) {
-    if (s === _cfStep) return;
-    _cfStep = s;
-    applicaStepMobile();
-    if (s === 1) {
-      var slider = document.getElementById("cf-slider");
-      if (slider) {
-        slider.scrollIntoView({
-          behavior: reduceMotionStep ? "auto" : "smooth",
-          block: "start",
-        });
-      }
-    }
-  }
-  var stepPrevBtn = document.getElementById("cf-step-prev");
-  var stepNextBtn = document.getElementById("cf-step-next");
-  if (stepPrevBtn) {
-    stepPrevBtn.addEventListener("click", function () {
-      vaiAStep(0);
-    });
-  }
-  if (stepNextBtn) {
-    stepNextBtn.addEventListener("click", function () {
-      vaiAStep(1);
-    });
-  }
-  Array.prototype.forEach.call(
-    document.querySelectorAll(".lp-cf-dot"),
-    function (d) {
-      d.addEventListener("click", function () {
-        vaiAStep(Number(d.dataset.step));
-      });
-    }
-  );
-  window.addEventListener("resize", aggiornaAltezzaSlider);
-  window.addEventListener("load", aggiornaAltezzaSlider);
-  if (document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(aggiornaAltezzaSlider);
-  }
-  var contactFormStep = document.querySelector(".lp-contact-form");
-  if (contactFormStep) {
-    contactFormStep.addEventListener(
-      "invalid",
-      function (e) {
-        var wrap = document.getElementById("cf-dati-wrap");
-        if (wrap && wrap.contains(e.target)) vaiAStep(1);
-      },
-      true
-    );
-  }
-
-  /* Accordion gruppi funzionalità: solo visualizzazione, checkbox intatte.
-     Su desktop i gruppi restano comunque aperti (CSS >900px). */
-  Array.prototype.forEach.call(
-    document.querySelectorAll(".lp-cf-fgroup-head"),
-    function (head) {
-      head.addEventListener("click", function () {
-        var g = head.closest(".lp-cf-fgroup");
-        if (!g) return;
-        var open = g.classList.toggle("is-open");
-        head.setAttribute("aria-expanded", open ? "true" : "false");
-      });
-    }
-  );
-
-  var _mqContactMobile = window.matchMedia("(max-width: 900px)");
-  if (_mqContactMobile.addEventListener) {
-    _mqContactMobile.addEventListener("change", aggStatoConfig);
-  } else if (_mqContactMobile.addListener) {
-    _mqContactMobile.addListener(aggStatoConfig);
-  }
-
-  /* Video preview card stile: orizzontali su desktop, verticali su mobile.
-     Caricamento lazy al primo ingresso in viewport, play/pause su visibilità. */
-  (function () {
-    var mqVid = window.matchMedia("(max-width: 767px)");
-    var reduceMotion =
-      window.matchMedia &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var vids = Array.prototype.slice.call(
-      document.querySelectorAll(".lp-style-video")
-    );
-    if (!vids.length) return;
-    function syncSrc(v) {
-      var want = mqVid.matches ? v.dataset.srcMob : v.dataset.srcDesk;
-      if (want && v.getAttribute("src") !== want) {
-        v.setAttribute("src", want);
-        v.load();
-      }
-    }
-    function playSafe(v) {
-      if (reduceMotion) return;
-      var p = v.play();
-      if (p && p.catch) p.catch(function () {});
-    }
-    vids.forEach(syncSrc);
-    function onMq() {
-      vids.forEach(function (v) {
-        var wasPlaying = !v.paused;
-        syncSrc(v);
-        if (wasPlaying) playSafe(v);
-      });
-    }
-    if (mqVid.addEventListener) mqVid.addEventListener("change", onMq);
-    else if (mqVid.addListener) mqVid.addListener(onMq);
-    if ("IntersectionObserver" in window) {
-      var ioVideo = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (en) {
-            var v = en.target;
-            if (en.isIntersecting) {
-              syncSrc(v);
-              playSafe(v);
-            } else {
-              v.pause();
-            }
-          });
-        },
-        { threshold: 0.25 }
-      );
-      vids.forEach(function (v) {
-        ioVideo.observe(v);
-      });
-    } else {
-      vids.forEach(playSafe);
-    }
-  })();
-
-  document.querySelectorAll("[data-config-trigger]").forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      if (reasonSelect) {
-        reasonSelect.value = "configura-sito";
-        aggStatoConfig();
-        reasonSelect.dispatchEvent(new Event("change"));
-      }
-      var contactEl = document.getElementById("contact");
-      if (contactEl) contactEl.scrollIntoView({ behavior: "smooth" });
-    });
-  });
-
-  tipoSito.forEach(function (radio) {
-    radio.addEventListener("change", aggiornaPaginePerTipo);
-  });
-  if (pagineGrid)
-    pagineGrid.addEventListener("change", aggiornaPrezzo);
-  document
-    .querySelectorAll("#config-lingue-stepper [data-lang-step]")
-    .forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        setLingue(getLingue() + parseInt(this.dataset.langStep));
-        aggiornaPrezzo();
-      });
-    });
-  document
-    .querySelectorAll("[data-altro-step]")
-    .forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        setPagineAltro(getPagineAltro() + parseInt(this.dataset.altroStep));
-        aggiornaPrezzo();
-      });
-    });
-  document
-    .querySelectorAll('#config-pages-grid input[data-page], #config-features-grid input[data-feature]')
-    .forEach(function (cb) {
-      cb.addEventListener("change", aggiornaPrezzo);
-    });
-  document
-    .querySelectorAll('input[name="config-contenuti"]')
-    .forEach(function (r) {
-      r.addEventListener("change", aggiornaContenuti);
-    });
-  document
-    .querySelectorAll('input[name="config-admin"], input[name="config-manutenzione"]')
-    .forEach(function (r) {
-      r.addEventListener("change", aggiornaPrezzo);
-    });
-
-  // Tipo cliente: mostra/nascondi blocchi
-  document
-    .querySelectorAll('input[name="tipo-cliente"]')
-    .forEach(function (r) {
-      r.addEventListener("change", function () {
-        var isAzienda = this.value === "azienda";
-        if (cfPrivato) cfPrivato.style.display = isAzienda ? "none" : "block";
-        if (cfAzienda) cfAzienda.style.display = isAzienda ? "block" : "none";
-      });
-    });
-
-  aggiornaPaginePerTipo();
-  aggiornaContenuti();
-  aggiornaPrezzo();
+  /* ===== Form contatto semplice: Nome, Email, Tipo (facoltativo), Messaggio ===== */
 
   var contactForm = document.querySelector(".lp-contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      var isConfig =
-        reasonSelect && reasonSelect.value === "configura-sito";
-
-      var tipoCliente = (document.querySelector('input[name="tipo-cliente"]:checked') || {}).value || "";
-      var nome = (document.querySelector('input[name="nome"]') || {}).value || "";
-      var cognome = (document.querySelector('input[name="cognome"]') || {}).value || "";
-      var email = (document.querySelector('input[name="email"]') || {}).value || "";
-      var telefono = (document.querySelector('input[name="telefono"]') || {}).value || "";
-      var messaggio = (document.querySelector('textarea[name="messaggio"]') || {}).value || "";
+      var nome = (contactForm.querySelector('input[name="nome"]') || {}).value || "";
+      var email = (contactForm.querySelector('input[name="email"]') || {}).value || "";
+      var tipoSel = contactForm.querySelector('select[name="tipo-progetto"]');
+      var tipo = tipoSel && tipoSel.selectedIndex > 0
+        ? tipoSel.options[tipoSel.selectedIndex].text
+        : "";
+      var messaggio = (contactForm.querySelector('textarea[name="messaggio"]') || {}).value || "";
 
       var lines = [];
-      lines.push("DATI CLIENTE");
-      lines.push("Nome: " + nome + " " + cognome);
+      lines.push("Nome: " + nome);
       lines.push("Email: " + email);
-      lines.push("Telefono: " + telefono);
-      lines.push("Tipo cliente: " + (tipoCliente === "azienda" ? "Azienda" : "Privato"));
-
-      if (tipoCliente === "azienda") {
-        var v = function (n) { return (document.querySelector('input[name="' + n + '"]') || {}).value || ""; };
-        lines.push("Azienda: " + v("azienda-nome"));
-        lines.push("Settore: " + ((document.querySelector('select[name="azienda-settore"]') || {}).value || ""));
-        lines.push("Località: " + v("azienda-localita"));
-        lines.push("Cosa fa: " + v("azienda-cosa"));
-        lines.push("Sito: " + v("azienda-sito"));
-        lines.push("Social: " + v("azienda-social"));
-      } else {
-        var v2 = function (n) { return (document.querySelector('input[name="' + n + '"]') || {}).value || ""; };
-        lines.push("Scopo: " + v2("privato-scopo"));
-        lines.push("Esistente: " + v2("privato-esistente"));
-      }
+      if (tipo) lines.push("Tipo di progetto: " + tipo);
       lines.push("Messaggio: " + messaggio);
-
-      if (isConfig) {
-        lines.push("");
-        lines.push("CONFIGURAZIONE");
-        var tipo = getTipo();
-        lines.push("Tipo: " + (tipo === "multipage" ? "Sito vetrina" : "Landing page"));
-        if (tipo === "multipage") {
-          var pagine = ["Home"];
-          pagineGrid.querySelectorAll('input[data-page]:checked:not([disabled])').forEach(function (cb) {
-            var l = cb.closest("label");
-            pagine.push(l ? l.querySelector("span").textContent.trim() : cb.value);
-          });
-          var altro = getPagineAltro();
-          for (var a = 0; a < altro; a++) pagine.push("Altro");
-          lines.push("Pagine: " + pagine.join(", "));
-        }
-        var contenuti = (document.querySelector('input[name="config-contenuti"]:checked') || {}).value || "";
-        lines.push("Contenuti: " + contenuti);
-        if (contenuti === "serve-img" || contenuti === "serve-entrambi") {
-          lines.push("Tipo immagini: " + ((document.querySelector('select[name="config-img-type"]') || {}).value || ""));
-        }
-        lines.push("Lingue: " + getLingue());
-        lines.push("Stile: " + ((document.querySelector('input[name="config-style"]:checked') || {}).value || ""));
-        var features = [];
-        document.querySelectorAll("#config-features-grid input[data-feature]:checked").forEach(function (cb) {
-          var l = cb.closest("label");
-          features.push(l ? l.querySelector("span").textContent.trim() : "");
-        });
-        lines.push("Funzionalità (" + features.length + "): " + (features.length ? features.join(", ") : "nessuna"));
-        lines.push("Admin Panel: " + (getAdmin() ? "Sì" : "No"));
-        lines.push("Manutenzione: " + (getMaint() ? "Sì" : "No"));
-        lines.push("Budget: " + ((document.querySelector('select[name="config-budget"]') || {}).value || ""));
-        var progetto = (document.querySelector('textarea[name="config-progetto"]') || {}).value || "";
-        lines.push("Progetto: " + progetto);
-        lines.push("");
-        lines.push("Preventivo una tantum: " + getPrezzoUnaTantum() + " €");
-        if (getCanoneMensile() > 0) lines.push("Canone mensile: +" + getCanoneMensile() + " €/mese");
-        lines.push("Il prezzo potrebbe cambiare, ma dovrebbe aggirarsi su quella cifra.");
-      }
 
       var summary = lines.join("\n");
       var oldRiepilogo = contactForm.querySelector('input[name="config-riepilogo"]');
@@ -1955,16 +1569,6 @@ document.addEventListener("DOMContentLoaded", function () {
       configHidden.name = "config-riepilogo";
       configHidden.value = summary;
       contactForm.appendChild(configHidden);
-
-      var selFeatures = document.querySelector('input[name="config-selected-features"]');
-      if (selFeatures) {
-        var feats = [];
-        document.querySelectorAll("#config-features-grid input[data-feature]:checked").forEach(function (cb) {
-          var l = cb.closest("label");
-          feats.push(l ? l.querySelector("span").textContent.trim() : "");
-        });
-        selFeatures.value = feats.join(", ");
-      }
 
       /* Invio AJAX con feedback inline (nessun redirect esterno) */
       var statusEl = contactForm.querySelector(".lp-form-status");
