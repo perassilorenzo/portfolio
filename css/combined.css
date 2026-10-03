@@ -5344,22 +5344,32 @@ body {
 .lp-story-trio {
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:16px;
+  gap:0;
   align-items:start;
-  margin:2.75rem 0 3rem
+  max-width:620px;
+  margin:2.75rem auto 3rem
 }
 .lp-story-trio .lp-story-figure {
   margin:0
+}
+.lp-story-trio .lp-story-figure:nth-child(2) {
+  margin-left:-34px;
+  z-index:2
+}
+.lp-story-trio .lp-story-figure:nth-child(3) {
+  margin-left:-34px;
+  z-index:1
 }
 .lp-story-trio img,
 .lp-story-trio video {
   width:100%;
   aspect-ratio:9/16;
   object-fit:cover;
-  border-radius:20px;
+  border-radius:14px;
   border:1px solid var(--border-color);
   display:block;
-  background:var(--bg-card)
+  background:var(--bg-card);
+  box-shadow:0 18px 40px rgba(0,0,0,.45)
 }
 .lp-story-trio-cap {
   position:relative;
@@ -5386,11 +5396,12 @@ body {
   .lp-story-trio {
     display:flex;
     flex-direction:column;
-    gap:26px
+    gap:0;
+    max-width:none
   }
   .lp-story-trio .lp-story-figure {
     flex:none;
-    width:min(270px,70vw);
+    width:min(200px,54vw);
     margin:0
   }
   .lp-story-trio .lp-story-figure:nth-child(1) {
@@ -5399,11 +5410,13 @@ body {
   }
   .lp-story-trio .lp-story-figure:nth-child(2) {
     align-self:flex-end;
-    transform:rotate(2deg)
+    transform:rotate(2deg);
+    margin-top:-26px
   }
   .lp-story-trio .lp-story-figure:nth-child(3) {
     align-self:flex-start;
-    transform:rotate(-2deg)
+    transform:rotate(-2deg);
+    margin-top:-26px
   }
   .lp-story-trio .is-mid {
     transform:rotate(2deg)
