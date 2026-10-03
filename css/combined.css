@@ -5414,9 +5414,7 @@ body {
     margin-top:-20px
   }
   .lp-story-trio .lp-story-figure:nth-child(3) {
-    align-self:flex-start;
-    transform:rotate(-2deg);
-    margin-top:-20px
+    display:none
   }
   .lp-story-trio .is-mid {
     transform:rotate(2deg)
