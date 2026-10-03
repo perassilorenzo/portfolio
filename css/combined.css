@@ -5022,7 +5022,7 @@ body.glow-active .lp-bg-glow {
   margin-top:clamp(24px,6vw,56px)
 }
 #collaborations.lp-section {
-  margin-top:20px
+  margin-top:36px
 }
 .lp-collab-label {
   font-family:var(--font-mono);
