@@ -5303,7 +5303,7 @@ body {
   grid-template-columns:repeat(3,1fr);
   gap:16px;
   align-items:start;
-  margin:2.75rem 0 1rem
+  margin:2.75rem 0 3rem
 }
 .lp-story-trio .lp-story-figure {
   margin:0
@@ -5319,9 +5319,14 @@ body {
   background:var(--bg-card)
 }
 .lp-story-trio-cap {
+  position:relative;
+  z-index:1;
   font-family:var(--font-mono);
-  font-size:.78rem;
-  letter-spacing:1px
+  font-size:.85rem;
+  font-weight:600;
+  letter-spacing:1px;
+  color:var(--text-primary);
+  margin-top:.5rem
 }
 @media (min-width: 768px) {
   .lp-story-trio .is-mid {
