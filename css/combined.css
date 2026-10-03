@@ -5257,11 +5257,18 @@ body.glow-active .lp-bg-glow {
 }
 @media (max-width: 767px) {
   .lp-story-point {
-    grid-template-columns:40px 1fr;
-    gap:12px
+    grid-template-columns:1fr;
+    gap:8px;
+    text-align:center;
+    justify-items:center
   }
   .lp-story-duo {
     gap:10px
+  }
+  .lp-story-col > p,
+  .lp-story-lead,
+  .lp-story-trio-cap {
+    text-align:center
   }
 }
 
@@ -5372,17 +5379,18 @@ body {
 @media (max-width: 767px) {
   .lp-story-trio {
     display:flex;
-    overflow-x:auto;
-    scroll-snap-type:x mandatory;
-    padding-bottom:10px;
-    margin-left:-24px;
-    margin-right:-24px;
-    padding-left:24px;
-    padding-right:24px
+    flex-direction:column;
+    align-items:center;
+    gap:22px;
+    margin-left:0;
+    margin-right:0;
+    padding-left:0;
+    padding-right:0
   }
   .lp-story-trio .lp-story-figure {
-    flex:0 0 62vw;
-    scroll-snap-align:center
+    flex:none;
+    width:min(300px,78vw);
+    margin:0 auto
   }
   .lp-story-trio .is-mid {
     transform:none
