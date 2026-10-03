@@ -992,6 +992,7 @@ document.addEventListener("DOMContentLoaded", function () {
       contactCopyEmail: "copiami l'email",
       contactWaFaster: "Sarò più veloce a rispondere su WhatsApp",
       waBtnText: "Scrivimi su WhatsApp",
+      reviewsBtn: "Leggi le recensioni su Google →",
       configPerPageCost: "+50 € a pagina",
     },
     en: {
@@ -1453,6 +1454,7 @@ document.addEventListener("DOMContentLoaded", function () {
       contactCopyEmail: "copy my email",
       contactWaFaster: "I'll be faster to reply on WhatsApp",
       waBtnText: "Message me on WhatsApp",
+      reviewsBtn: "Read reviews on Google →",
       configPerPageCost: "+50 € per page",
     },
   };
