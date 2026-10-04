@@ -5470,19 +5470,12 @@ body {
   }
 }
 
-/* MOBILE polish: centered headers, hero and filters */
+/* MOBILE: breathing room for edge-touching titles */
 @media (max-width: 767px) {
-  .lp-hero-content {
-    align-items:center;
-    text-align:center
-  }
-  .lp-hero-content .d-flex {
-    justify-content:center
-  }
-  .lp-section-header {
-    text-align:center
-  }
-  .lp-filter-bar {
-    justify-content:center
+  .lp-story-display,
+  .lp-story-kicker,
+  .lp-collab-label {
+    padding-left:20px;
+    padding-right:20px
   }
 }
