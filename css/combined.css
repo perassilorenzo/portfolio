@@ -5398,6 +5398,7 @@ body {
   .lp-story-trio {
     display:flex;
     flex-direction:row;
+    flex-wrap:wrap;
     align-items:center;
     gap:0;
     max-width:none
@@ -5420,8 +5421,8 @@ body {
   }
   .lp-story-trio-side {
     display:block;
-    flex:1 1 auto;
-    margin:0 0 0 16px;
+    flex:1 1 100%;
+    margin:14px 0 0;
     text-align:left
   }
   .lp-story-trio-cap {
