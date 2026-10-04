@@ -5469,3 +5469,20 @@ body {
     height:56px
   }
 }
+
+/* MOBILE polish: centered headers, hero and filters */
+@media (max-width: 767px) {
+  .lp-hero-content {
+    align-items:center;
+    text-align:center
+  }
+  .lp-hero-content .d-flex {
+    justify-content:center
+  }
+  .lp-section-header {
+    text-align:center
+  }
+  .lp-filter-bar {
+    justify-content:center
+  }
+}

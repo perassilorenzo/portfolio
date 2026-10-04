@@ -918,7 +918,7 @@ document.addEventListener("DOMContentLoaded", function () {
       maniTitle: "«Ma chi cazzo pensi di essere?»",
       maniSub: "Bella domanda. Ti rispondo con i fatti.",
       maniP1:
-        "Uno studente di Informatica che nel frattempo continua a costruire cose. Studio all’<a href=\"https://vallauri.edu\" target=\"_blank\" rel=\"noopener\">IIS Vallauri</a>, ma non ho aspettato il diploma per iniziare: ho fondato <a href=\"https://customly.it\" target=\"_blank\" rel=\"noopener\">Customly</a>, una piattaforma di custom fashion che unisce moda e tecnologia, e ci lavoro sopra ogni settimana.",
+        "Uno studente di Informatica che nel frattempo continua a costruire cose. Studio all’<a href=\"http://www.vallauri.edu/public/ita/pagina.asp\" target=\"_blank\" rel=\"noopener\">IIS Vallauri</a>, ma non ho aspettato il diploma per iniziare: ho fondato <a href=\"https://customly.it\" target=\"_blank\" rel=\"noopener\">Customly</a>, una piattaforma di custom fashion che unisce moda e tecnologia, e ci lavoro sopra ogni settimana.",
       maniP2:
         "Nel frattempo sto continuando a lavorare sul design e sulla prototipazione di capi con <a href=\"https://crybu.io\" target=\"_blank\" rel=\"noopener\">CRYBU</a>, un progetto su cui continuerò a lavorare. Creo capi custom per chi vuole distinguersi, sviluppo siti web, continuo a creare contenuti video su varie piattaforme e ho collaborato con brand di abbigliamento come <a href=\"https://aleyesure.com\" target=\"_blank\" rel=\"noopener\">Aleyesure</a> e <a href=\"https://stagestreeware.it\" target=\"_blank\" rel=\"noopener\">StageStreetwear</a>.",
       maniP3:
@@ -1380,7 +1380,7 @@ document.addEventListener("DOMContentLoaded", function () {
       maniTitle: "\u201cSo who the hell do you think you are?\u201d",
       maniSub: "Fair question. Let me answer with facts.",
       maniP1:
-        "A Computer Science student who keeps building things in the meantime. I study at <a href=\"https://vallauri.edu\" target=\"_blank\" rel=\"noopener\">IIS Vallauri</a>, but I didn't wait for graduation to start: I founded <a href=\"https://customly.it\" target=\"_blank\" rel=\"noopener\">Customly</a>, a custom fashion platform combining fashion and technology, and I work on it every week.",
+        "A Computer Science student who keeps building things in the meantime. I study at <a href=\"http://www.vallauri.edu/public/ita/pagina.asp\" target=\"_blank\" rel=\"noopener\">IIS Vallauri</a>, but I didn't wait for graduation to start: I founded <a href=\"https://customly.it\" target=\"_blank\" rel=\"noopener\">Customly</a>, a custom fashion platform combining fashion and technology, and I work on it every week.",
       maniP2:
         "In the meantime I'm continuing to work on the design and prototyping of garments with <a href=\"https://crybu.io\" target=\"_blank\" rel=\"noopener\">CRYBU</a>, a project I'll keep working on. I create custom garments for those who want to stand out, I build websites, I keep creating video content across platforms, and I've collaborated with clothing brands like <a href=\"https://aleyesure.com\" target=\"_blank\" rel=\"noopener\">Aleyesure</a> and <a href=\"https://stagestreeware.it\" target=\"_blank\" rel=\"noopener\">StageStreetwear</a>.",
       maniP3:
